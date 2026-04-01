@@ -1,0 +1,195 @@
+.resume-section {
+  padding: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-inner {
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  padding: 64px 72px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  /* clip-path set by JS */
+}
+
+/* Top-right glow blob */
+.resume-inner::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(0,245,255,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Top accent line */
+.resume-inner::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--cyan) 40%, transparent 100%);
+  opacity: 0.5;
+}
+
+/* Animated grid dots background */
+.resume-dots {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(0,245,255,0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.resume-left {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.resume-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.resume-eyebrow::before {
+  content: '';
+  width: 24px; height: 1px;
+  background: var(--cyan);
+}
+
+.resume-headline {
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.resume-headline .accent { color: var(--cyan); }
+
+.resume-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  max-width: 480px;
+}
+
+/* Info chips */
+.resume-chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.resume-chip {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+  padding: 4px 12px;
+}
+
+.resume-right {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Main download button */
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 44px;
+  background: var(--cyan);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.2s;
+  cursor: none;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.resume-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.resume-btn:hover {
+  box-shadow: 0 0 50px rgba(0,245,255,0.4), 0 0 100px rgba(0,245,255,0.1);
+  transform: translateY(-2px);
+}
+.resume-btn:hover::before { transform: scaleX(1); }
+
+.resume-btn-icon {
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+.resume-btn:hover .resume-btn-icon { transform: translateY(2px); }
+
+.resume-btn-label { position: relative; z-index: 1; }
+
+.resume-note {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Animated pulse ring on button */
+.resume-btn-wrap {
+  position: relative;
+}
+.resume-pulse-ring {
+  position: absolute;
+  inset: -6px;
+  border: 1px solid var(--cyan);
+  opacity: 0;
+  animation: pulse-ring 2.5s ease-out infinite;
+  pointer-events: none;
+}
+.resume-pulse-ring:nth-child(2) { animation-delay: 0.8s; }
+
+@keyframes pulse-ring {
+  0% { opacity: 0.4; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.12); }
+}
+
+@media (max-width: 900px) {
+  .resume-section { padding: 60px 24px; }
+  .resume-inner { flex-direction: column; padding: 40px 28px; text-align: center; }
+  .resume-eyebrow { justify-content: center; }
+  .resume-chips { justify-content: center; }
+  .resume-desc { max-width: 100%; }
+}

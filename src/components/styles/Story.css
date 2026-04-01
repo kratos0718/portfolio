@@ -1,0 +1,110 @@
+.story {
+  padding: 100px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── WHY section ── */
+.story-why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-top: 16px;
+  margin-bottom: 100px;
+}
+
+.story-left {}
+
+.story-intro {
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+  /* clip-path set by JS */
+}
+.story-intro .accent { color: var(--cyan); }
+
+.story-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  /* clip-path set by JS */
+}
+
+.story-entry {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.3s;
+}
+.story-entry:first-child { border-top: 1px solid var(--border); }
+.story-entry:hover { border-color: rgba(0,245,255,0.2); }
+
+.story-entry-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 8px;
+}
+.story-entry-text {
+  font-size: 14.5px;
+  line-height: 1.78;
+  color: var(--text-dim);
+}
+
+/* ── Right: visual/quote ── */
+.story-right {
+  /* clip-path set by JS */
+}
+
+.story-quote-card {
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-quote-card::before {
+  content: '"';
+  position: absolute;
+  top: -10px; left: 20px;
+  font-size: 120px;
+  font-weight: 700;
+  color: var(--cyan);
+  opacity: 0.06;
+  line-height: 1;
+  font-family: var(--font-sans);
+  pointer-events: none;
+}
+
+.story-quote-text {
+  font-size: clamp(16px, 1.6vw, 20px);
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 28px;
+}
+
+.story-quote-attr {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (max-width: 900px) {
+  .story { padding: 80px 24px; }
+  .story-why { grid-template-columns: 1fr; gap: 40px; }
+}
