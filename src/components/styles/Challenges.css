@@ -1,0 +1,95 @@
+.challenges {
+  padding: 80px 80px 100px;
+  position: relative;
+}
+
+.challenges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.challenge-card {
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+  cursor: none;
+}
+.challenge-card:hover { border-color: rgba(0,245,255,0.22); }
+
+/* Left accent bar */
+.challenge-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--cyan);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s ease;
+}
+.challenge-card:hover::before { transform: scaleY(1); }
+
+.challenge-col {
+  padding: 24px 22px;
+  border-right: 1px solid var(--border);
+}
+.challenge-col:last-child { border-right: none; }
+
+.challenge-col-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.challenge-col-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.challenge-problem {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.challenge-context {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--text-dim);
+}
+.challenge-fix {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--text-dim);
+}
+.challenge-result {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .challenge-card { grid-template-columns: 1fr; }
+  .challenge-col { border-right: none; border-bottom: 1px solid var(--border); }
+  .challenge-col:last-child { border-bottom: none; }
+}
+
+@media (max-width: 768px) {
+  .challenges { padding: 60px 24px 80px; }
+}

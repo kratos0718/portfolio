@@ -1,0 +1,72 @@
+.whatido {
+  padding: 100px 80px;
+  position: relative;
+}
+
+.whatido::before {
+  content: '';
+  position: absolute;
+  right: -100px; top: 50%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(0,245,255,0.025) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.whatido-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.whatido-card {
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+  transition: border-color 0.3s, transform 0.3s;
+  /* clip-path set inline by JS */
+}
+
+.whatido-card::before, .whatido-card::after {
+  content: '';
+  position: absolute;
+  width: 0; height: 0;
+  transition: width 0.35s ease, height 0.35s ease, opacity 0.3s;
+  opacity: 0;
+}
+.whatido-card::before { top: 0; left: 0; border-top: 1px solid var(--cyan); border-left: 1px solid var(--cyan); }
+.whatido-card::after  { bottom: 0; right: 0; border-bottom: 1px solid var(--cyan); border-right: 1px solid var(--cyan); }
+.whatido-card:hover { border-color: transparent; transform: translateY(-5px); }
+.whatido-card:hover::before, .whatido-card:hover::after { opacity: 1; width: 28px; height: 28px; }
+
+.whatido-card-glow {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(0,245,255,0.07) 0%, transparent 55%);
+  opacity: 0; transition: opacity 0.4s;
+  pointer-events: none;
+}
+.whatido-card:hover .whatido-card-glow { opacity: 1; }
+
+.whatido-card-num {
+  position: absolute; top: 24px; right: 24px;
+  font-family: var(--font-mono); font-size: 11px;
+  color: var(--text-muted); letter-spacing: 0.1em;
+}
+.whatido-icon { font-size: 34px; margin-bottom: 24px; position: relative; z-index: 1; }
+.whatido-card-title {
+  font-size: 19px; font-weight: 600; color: var(--text);
+  margin-bottom: 12px; position: relative; z-index: 1; letter-spacing: -0.01em;
+}
+.whatido-card-desc {
+  font-size: 13.5px; line-height: 1.75; color: var(--text-dim);
+  position: relative; z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .whatido { padding: 80px 24px; }
+  .whatido-grid { grid-template-columns: 1fr; }
+}
