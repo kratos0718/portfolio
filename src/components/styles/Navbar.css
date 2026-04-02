@@ -94,6 +94,40 @@
 .navbar-cta:hover { color: var(--bg); }
 .navbar-cta span { position: relative; z-index: 1; }
 
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-cv {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, border-color 0.3s;
+}
+.navbar-cv::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--border);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.navbar-cv:hover::before { transform: scaleX(1); }
+.navbar-cv:hover { color: var(--text); border-color: rgba(0,245,255,0.15); }
+.navbar-cv span, .navbar-cv svg { position: relative; z-index: 1; }
+
 @media (max-width: 768px) {
   .navbar { padding: 16px 24px; }
   .navbar.scrolled { padding: 12px 24px; }

@@ -79,7 +79,7 @@ export default function About() {
             {[
               { icon: '🎓', title: 'B.Tech CSE (AI/ML) · Gitam University', sub: '2023 – 2027 · Visakhapatnam, Andhra Pradesh' },
               { icon: '🧠', title: 'ML & AI Intern · OneStop AI', sub: 'Improved model accuracy +12%, reduced latency -18%' },
-              { icon: '⚔️', title: 'Smart India Hackathon Finalist', sub: 'Built SoulSync — AI mental health chatbot' },
+              { icon: '⚔️', title: 'Smart India Hackathon 2024', sub: 'Built SoulSync — AI mental health chatbot' },
               { icon: '📍', title: `Based in ${personalInfo.location}`, sub: 'Open to remote & on-site internships' },
             ].map(h => (
               <div key={h.title} className="about-highlight">
