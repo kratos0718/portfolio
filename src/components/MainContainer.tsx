@@ -48,12 +48,12 @@ export default function MainContainer() {
         <Divider />
         <Career />
         <Divider />
-        <Achievements />
-        <Divider />
         <Work />
         <Divider />
+        <Achievements />
+        <Divider />
 
-        {/* Tech stack right after projects */}
+        {/* Tech stack after achievements */}
         <Suspense fallback={
           <div style={{ height: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--cyan)', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.3em' }}>
             LOADING NEURAL GRAPH...
