@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { FiDownload } from 'react-icons/fi';
 import './styles/Navbar.css';
 
 const links = [
@@ -31,9 +32,20 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      <a href="#contact" className="navbar-cta">
-        <span>Hire me</span>
-      </a>
+      <div className="navbar-actions">
+        <a
+          href="/Abhinav_Tarigoppula_Resume.pdf"
+          download="Abhinav_Tarigoppula_Resume.pdf"
+          className="navbar-cv"
+          data-hover
+        >
+          <FiDownload size={12} />
+          <span>CV</span>
+        </a>
+        <a href="#contact" className="navbar-cta">
+          <span>Hire me</span>
+        </a>
+      </div>
     </nav>
   );
 }

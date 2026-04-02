@@ -26,7 +26,7 @@ export const whyIDoThis = {
     },
     {
       label: "Where I am right now",
-      text: "Third year of a four-year degree. Already interned at OneStop AI, shipped live products with RAG pipelines and LLM integrations, solved 250+ DSA problems with consistency. I'm not trying to look ready. I'm trying to be ready.",
+      text: "Third year of a four-year degree. Already interned at OneStop AI, shipped live products with RAG pipelines and LLM integrations, solved 200+ DSA problems with consistency. I'm not trying to look ready. I'm trying to be ready.",
     },
   ],
 };
@@ -94,19 +94,19 @@ export const achievements = [
     icon: '🏢',
   },
   {
-    title: 'Smart India Hackathon — Finalist',
+    title: 'Smart India Hackathon — Participant',
     org: 'Government of India',
     year: '2024',
     type: 'Hackathon',
-    description: "Built SoulSync — an AI mental health chatbot — and reached finalist stage in India's largest national hackathon, competing against 1M+ student participants.",
+    description: "Built SoulSync — an AI mental health chatbot — and participated in India's largest national hackathon, competing against 1M+ student participants.",
     icon: '🇮🇳',
   },
   {
-    title: '250+ DSA Problems — 90-Day Streak',
+    title: '200+ DSA Problems — 90-Day Streak',
     org: 'Self-directed · LeetCode: coderboy11',
     year: '2024',
     type: 'Achievement',
-    description: '250+ problems solved across Arrays, Trees, Graphs, Dynamic Programming, and Recursion. Zero breaks. Documented on GitHub and verifiable on LeetCode.',
+    description: '200+ problems solved across Arrays, Trees, Graphs, Dynamic Programming, and Recursion. Zero breaks. Documented on GitHub and verifiable on LeetCode.',
     icon: '⚔️',
   },
   {
@@ -132,8 +132,8 @@ export const projects = [
   },
   {
     title: 'SoulSync',
-    subtitle: 'AI Mental Health Chatbot · SIH Finalist',
-    description: 'Transformer-based emotion classification system delivering personalised emotional support with context-aware multi-turn conversation tracking. Modular NLP architecture enables plug-and-play model upgrades. Smart India Hackathon finalist project.',
+    subtitle: 'AI Mental Health Chatbot · SIH 2024',
+    description: 'Transformer-based emotion classification system delivering personalised emotional support with context-aware multi-turn conversation tracking. Modular NLP architecture enables plug-and-play model upgrades. Built for Smart India Hackathon 2024.',
     tech: ['Python', 'NLP', 'Transformers', 'FastAPI'],
     live: 'https://soulsyncfinal.vercel.app/',
     github: 'https://github.com/kratos0718/SoulSync',
@@ -153,7 +153,7 @@ export const projects = [
   {
     title: 'DSA Progress Tracker',
     subtitle: '90-Day Consistency Challenge',
-    description: '250+ LeetCode problems solved across Arrays, Trees, Graphs, Dynamic Programming, and Recursion — with optimal time/space complexity solutions. Unbroken GitHub contribution streak across 90 days. Every solution documented.',
+    description: '200+ LeetCode problems solved across Arrays, Trees, Graphs, Dynamic Programming, and Recursion — with optimal time/space complexity solutions. Unbroken GitHub contribution streak across 90 days. Every solution documented.',
     tech: ['Java', 'GitHub', 'Algorithms'],
     live: 'https://leetcode.com/coderboy11',
     github: 'https://github.com/kratos0718/Abhinavs-DSA-progress',
