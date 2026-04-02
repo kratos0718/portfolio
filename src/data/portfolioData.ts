@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm Abhinav — a CSE student at Gitam University who decided early that waiting for the right opportunity wasn't a strategy. I started building real systems, broke things, fixed them, and shipped them. My focus is AI engineering: understanding how models actually learn, where they fail, and how to make them useful in production.",
+  bio: "I'm Abhinav — a CSE student at Gitam University building production-grade ML systems and LLM pipelines. I've interned at OneStop AI, shipped live products used by real people, and I'm deep into the LLM/RAG stack. My focus is AI engineering: making intelligent systems work outside the notebook.",
 };
 
 export const whyIDoThis = {
@@ -26,17 +26,17 @@ export const whyIDoThis = {
     },
     {
       label: "Where I am right now",
-      text: "Third year of a four-year degree. Already interned at OneStop AI, shipped three live products, solved 250+ DSA problems with consistency. I'm not trying to look ready. I'm trying to be ready.",
+      text: "Third year of a four-year degree. Already interned at OneStop AI, shipped live products with RAG pipelines and LLM integrations, solved 250+ DSA problems with consistency. I'm not trying to look ready. I'm trying to be ready.",
     },
   ],
 };
 
 export const challenges = [
   {
-    problem: "SoulSync: emotion classification at 34% accuracy",
-    context: "Initial transformer model couldn't distinguish neutral text from distress. Generic embeddings were the issue.",
-    fix: "Switched to a fine-tuned sentence-transformer on a mental-health-specific dataset. Added multi-label emotion scoring instead of single-class output.",
-    result: "Classification accuracy rose to 81%. Context tracking reduced irrelevant responses by ~60%.",
+    problem: "PathForge: RAG responses were generic — not personalised to user skill gaps",
+    context: "Initial RAG pipeline retrieved top-k chunks without filtering by user's current knowledge level. Output was accurate but not actionable.",
+    fix: "Added a skill-gap scoring layer before retrieval — user profile embeddings filtered vector search results to context relevant to their level. Rewrote prompt templates to inject gap analysis into every query.",
+    result: "Response relevance improved significantly. Prompt engineering reduced average token usage per query by ~30%.",
   },
   {
     problem: "OneStop AI: inference latency at 2.4s per request",
@@ -45,10 +45,10 @@ export const challenges = [
     result: "Latency dropped to 1.97s — 18% reduction. Three production projects impacted.",
   },
   {
-    problem: "DSA: hitting walls on graph problems after day 40",
-    context: "Could brute-force most problems but couldn't get sub-O(n²) without looking up patterns.",
-    fix: "Spent two weeks only on graph traversal patterns (BFS/DFS/topological sort) before touching new problems. Stopped measuring problems-per-day, started measuring pattern coverage.",
-    result: "Solved 60 graph problems in the next 30 days. Now consistently reach O(n log n) on tree/graph problems without hints.",
+    problem: "SoulSync: emotion classification at 34% accuracy",
+    context: "Generic sentence embeddings couldn't distinguish neutral text from emotional distress — the vocabulary overlap was too high.",
+    fix: "Fine-tuned a sentence-transformer on a mental-health-specific dataset. Replaced single-class output with multi-label emotion scoring.",
+    result: "Classification accuracy reached 81%. Context tracking cut irrelevant responses by ~60%.",
   },
 ];
 
@@ -65,7 +65,7 @@ export const career = [
     period: '2024 – Present',
     type: 'Programme',
     points: [
-      'Selected for PwC LaunchPad Advisory Programme — a competitive cohort for high-potential emerging tech talent.',
+      'Selected for PwC LaunchPad Advisory Programme — a competitive cohort for high-potential emerging tech talent across India.',
       'Gained exposure to enterprise AI strategy, digital transformation frameworks, and professional advisory methodology.',
       'Collaborated with industry mentors on real-world business and technology challenges.',
     ],
@@ -76,9 +76,10 @@ export const career = [
     period: 'May 2025 – Aug 2025',
     type: 'Remote',
     points: [
-      'Inherited three production ML pipelines with accumulating accuracy debt — brought model performance up 12% through targeted hyperparameter tuning and architecture review.',
-      'Diagnosed a 2.4s inference bottleneck traced to synchronous preprocessing; restructured as async pipeline, cutting latency to 1.97s.',
-      'Built end-to-end data pipelines: preprocessing → feature engineering → scalable inference, reducing manual intervention.',
+      'Improved model accuracy by 12% across 3 production AI projects via hyperparameter tuning and architecture optimization.',
+      'Reduced real-time inference latency by 18% through async pipeline refactoring and model-level optimizations.',
+      'Engineered end-to-end data pipelines — preprocessing, feature engineering, scalable inference — processing thousands of records per batch.',
+      'Strengthened deployment reliability by integrating monitoring and model performance tracking with senior engineers.',
     ],
   },
 ];
@@ -89,7 +90,7 @@ export const achievements = [
     org: 'PricewaterhouseCoopers',
     year: '2024',
     type: 'Programme',
-    description: 'Selected for PwC\'s advisory programme for emerging tech talent. One of a limited cohort chosen from competitive applications across India.',
+    description: "Selected for PwC's advisory programme for emerging tech talent. One of a limited cohort chosen from competitive applications across India.",
     icon: '🏢',
   },
   {
@@ -97,15 +98,15 @@ export const achievements = [
     org: 'Government of India',
     year: '2024',
     type: 'Hackathon',
-    description: 'Built SoulSync — an AI mental health chatbot — and reached finalist stage in India\'s largest national hackathon. Competed against 1M+ student participants across the country.',
+    description: "Built SoulSync — an AI mental health chatbot — and reached finalist stage in India's largest national hackathon, competing against 1M+ student participants.",
     icon: '🇮🇳',
   },
   {
-    title: '90-Day DSA Consistency Challenge',
-    org: 'Self-directed · LeetCode',
+    title: '250+ DSA Problems — 90-Day Streak',
+    org: 'Self-directed · LeetCode: coderboy11',
     year: '2024',
     type: 'Achievement',
-    description: '250+ problems solved across Arrays, Trees, Graphs, Dynamic Programming, and Recursion. Zero breaks. The streak is documented on GitHub and verifiable on LeetCode (coderboy11).',
+    description: '250+ problems solved across Arrays, Trees, Graphs, Dynamic Programming, and Recursion. Zero breaks. Documented on GitHub and verifiable on LeetCode.',
     icon: '⚔️',
   },
   {
@@ -113,81 +114,84 @@ export const achievements = [
     org: 'OneStop AI · Internship',
     year: '2025',
     type: 'Technical',
-    description: 'Delivered measurable performance improvements across 3 live ML systems — not demos, not side projects, actual production pipelines serving real users.',
+    description: 'Delivered measurable performance improvements across 3 live ML systems — not demos, not side projects. Actual production pipelines, measured results.',
     icon: '🚀',
   },
 ];
 
 export const projects = [
   {
+    title: 'PathForge',
+    subtitle: 'AI Placement Preparation System',
+    description: 'Production-grade end-to-end AI platform for placement prep. RAG pipeline over FAISS/Pinecone vector databases for context-aware Q&A. Intelligent roadmap engine analyses skill gaps and generates structured learning paths. LLM modules handle dynamic question generation, resume scoring, and mock interview simulation.',
+    tech: ['Python', 'LangChain', 'OpenAI API', 'FAISS', 'FastAPI', 'React'],
+    live: 'https://pathforge-hazel.vercel.app/dashboard',
+    github: 'https://github.com/kratos0718',
+    year: '2025',
+    challenge: 'RAG responses were generic — added skill-gap scoring layer before retrieval. Prompt engineering cut token usage ~30%.',
+  },
+  {
     title: 'SoulSync',
-    subtitle: 'AI Mental Health Chatbot',
-    description: 'Built after watching someone struggle without access to mental health support. NLP-based system with transformer embeddings, multi-label emotion classification, and context tracking. Started at 34% accuracy, shipped at 81%.',
+    subtitle: 'AI Mental Health Chatbot · SIH Finalist',
+    description: 'Transformer-based emotion classification system delivering personalised emotional support with context-aware multi-turn conversation tracking. Modular NLP architecture enables plug-and-play model upgrades. Smart India Hackathon finalist project.',
     tech: ['Python', 'NLP', 'Transformers', 'FastAPI'],
     live: 'https://soulsyncfinal.vercel.app/',
     github: 'https://github.com/kratos0718/SoulSync',
     year: '2024',
-    challenge: 'Emotion classification accuracy was 34% on generic embeddings — fine-tuned on domain-specific data to reach 81%.',
+    challenge: 'Generic embeddings gave 34% accuracy — fine-tuned on domain-specific dataset, added multi-label scoring, reached 81%.',
   },
   {
     title: 'Click N Cut',
-    subtitle: 'Camera Rental Platform',
-    description: 'Full-stack platform for premium camera rental and editing services. Built the full pipeline: UI, backend API, booking logic, and deployment. First project where I owned the entire stack solo.',
+    subtitle: 'Full-Stack Camera Rental Platform',
+    description: 'Full-stack camera rental and editing services platform. Optimised state management, RESTful backend, real-time availability updates, and seamless booking workflows. First project where I owned the entire stack solo.',
     tech: ['React.js', 'Node.js', 'REST APIs'],
     live: 'https://clickn-cut.vercel.app/',
     github: 'https://github.com/kratos0718',
     year: '2024',
-    challenge: 'State management for concurrent bookings across time slots — solved with optimistic UI + server-side conflict detection.',
-  },
-  {
-    title: 'PathForge',
-    subtitle: 'Developer Roadmap Dashboard',
-    description: 'Dashboard for tracking structured learning paths and career milestones. Solves the "what to learn next" problem with curated, sequenced roadmaps that don\'t overwhelm.',
-    tech: ['React.js', 'Node.js', 'REST APIs'],
-    live: 'https://pathforge-hazel.vercel.app/dashboard',
-    github: 'https://github.com/kratos0718',
-    year: '2025',
-    challenge: 'Keeping roadmap data flexible enough for different roles without turning the UI into a config nightmare.',
+    challenge: 'Concurrent booking conflicts — solved with optimistic UI + server-side conflict detection.',
   },
   {
     title: 'DSA Progress Tracker',
     subtitle: '90-Day Consistency Challenge',
-    description: 'Solved 250+ problems across every major data structure and algorithm category. The repo documents every solution with complexity analysis. Hit walls on graphs — came back stronger.',
+    description: '250+ LeetCode problems solved across Arrays, Trees, Graphs, Dynamic Programming, and Recursion — with optimal time/space complexity solutions. Unbroken GitHub contribution streak across 90 days. Every solution documented.',
     tech: ['Java', 'GitHub', 'Algorithms'],
     live: 'https://leetcode.com/coderboy11',
     github: 'https://github.com/kratos0718/Abhinavs-DSA-progress',
     year: '2024',
-    challenge: 'Graph problems stalled progress at day 40. Took two weeks to isolate and master traversal patterns before continuing.',
+    challenge: 'Graph problems stalled at day 40 — isolated traversal patterns for two weeks before continuing. Now O(n log n) without hints.',
   },
 ];
 
 export const techStack = [
-  'Python', 'JavaScript', 'Java', 'React.js', 'Node.js',
-  'TensorFlow', 'PyTorch', 'FastAPI', 'Docker', 'AWS',
-  'SQL', 'Git', 'Linux', 'Kubernetes', 'OpenCV',
+  'Python', 'JavaScript', 'Java',
+  'LangChain', 'OpenAI API', 'RAG',
+  'TensorFlow', 'PyTorch', 'Scikit-learn',
+  'React.js', 'Node.js', 'FastAPI',
+  'FAISS', 'Docker', 'AWS',
+  'SQL', 'Kubernetes', 'OpenCV',
 ];
 
 export const whatIDo = [
   {
+    title: 'LLM & RAG Engineering',
+    description: 'Building production LLM pipelines with LangChain, OpenAI API, and vector databases (FAISS/Pinecone). RAG systems that retrieve context, not just keywords.',
+    icon: '🤖',
+  },
+  {
     title: 'AI & Machine Learning',
-    description: 'Training, fine-tuning, and shipping models with TensorFlow, PyTorch, and Scikit-learn. Focused on making AI work outside the notebook.',
+    description: 'Training, fine-tuning, and shipping models with TensorFlow, PyTorch, and Scikit-learn. From notebook to production inference pipeline.',
     icon: '🧠',
   },
   {
     title: 'Full Stack Development',
-    description: 'End-to-end web systems with React.js, Node.js, FastAPI, and cloud deployment. I own the stack from UI to infrastructure.',
+    description: 'End-to-end systems with React.js, Node.js, and FastAPI. I own the stack from UI to cloud infrastructure.',
     icon: '⚡',
-  },
-  {
-    title: 'Data Structures & Algorithms',
-    description: '250+ problems solved with documented complexity analysis. Strong on graphs, trees, and DP — areas that broke me before they didn\'t.',
-    icon: '🔢',
   },
 ];
 
 export const education = [
   {
-    degree: 'B.Tech in Computer Science (AI/ML)',
+    degree: 'B.Tech in Computer Science & Engineering (AI/ML)',
     institution: 'Gitam University',
     location: 'Visakhapatnam, Andhra Pradesh',
     period: '2023 – 2027',
