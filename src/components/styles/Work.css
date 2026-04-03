@@ -177,3 +177,9 @@
   }
   .work-bg-text { display: none; }
 }
+
+@media (max-width: 480px) {
+  .work { padding: 60px 20px; }
+  .work-mobile-card { padding: 20px 18px; }
+  .work-grid-mobile { gap: 12px; }
+}

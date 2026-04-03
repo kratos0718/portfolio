@@ -70,3 +70,9 @@
   .whatido { padding: 80px 24px; }
   .whatido-grid { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 480px) {
+  .whatido { padding: 60px 20px; }
+  .whatido-card { padding: 28px 22px; }
+  .whatido-grid { gap: 12px; }
+}

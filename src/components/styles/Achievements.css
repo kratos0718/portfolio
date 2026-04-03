@@ -123,3 +123,9 @@
   .achievements-grid { grid-template-columns: 1fr; }
   .achievements-bg-text { display: none; }
 }
+
+@media (max-width: 480px) {
+  .achievements { padding: 60px 20px; }
+  .achievement-card { padding: 24px 20px; }
+  .achievements-grid { gap: 12px; }
+}

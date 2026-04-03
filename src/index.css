@@ -44,5 +44,17 @@ a { text-decoration: none; color: inherit; }
 button { cursor: none; border: none; background: none; font-family: var(--font-sans); }
 ::selection { background: var(--cyan-glow-strong); color: var(--cyan); }
 
-/* Hide default cursor everywhere */
+/* Hide default cursor everywhere — except touch devices */
 * { cursor: none !important; }
+
+@media (pointer: coarse) {
+  * { cursor: auto !important; }
+  body { cursor: auto; }
+  a, button, [role="button"] { cursor: pointer !important; }
+}
+
+/* ── Mobile base ── */
+@media (max-width: 480px) {
+  html { font-size: 15px; }
+  ::-webkit-scrollbar { width: 0px; }
+}

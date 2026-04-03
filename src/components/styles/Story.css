@@ -106,5 +106,11 @@
 
 @media (max-width: 900px) {
   .story { padding: 80px 24px; }
-  .story-why { grid-template-columns: 1fr; gap: 40px; }
+  .story-why { grid-template-columns: 1fr; gap: 40px; margin-bottom: 60px; }
+}
+
+@media (max-width: 480px) {
+  .story { padding: 60px 20px; }
+  .story-quote-card { padding: 28px 22px; }
+  .story-intro { font-size: 17px; }
 }

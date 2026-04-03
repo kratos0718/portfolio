@@ -163,3 +163,14 @@
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+@media (max-width: 480px) {
+  .loading-enter {
+    padding: 14px 28px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    min-width: 200px;
+    justify-content: center;
+  }
+  .loading-grid { grid-template-columns: repeat(4, 1fr); }
+}
