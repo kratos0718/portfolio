@@ -93,3 +93,9 @@
 @media (max-width: 768px) {
   .challenges { padding: 60px 24px 80px; }
 }
+
+@media (max-width: 480px) {
+  .challenges { padding: 60px 20px; }
+  .challenge-col { padding: 18px 16px; }
+  .challenge-col-label { font-size: 8px; }
+}

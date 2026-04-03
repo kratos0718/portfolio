@@ -87,5 +87,11 @@
 @media (max-width: 900px) {
   .techstack { padding: 80px 24px; }
   .techstack-inner { grid-template-columns: 1fr; gap: 32px; }
-  .techstack-canvas-wrap { height: 380px; }
+  .techstack-canvas-wrap { height: 360px; }
+}
+
+@media (max-width: 480px) {
+  .techstack { padding: 60px 20px; }
+  .techstack-canvas-wrap { height: 300px; }
+  .techstack-desc { font-size: 14px; }
 }

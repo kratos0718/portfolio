@@ -193,3 +193,10 @@
   .resume-chips { justify-content: center; }
   .resume-desc { max-width: 100%; }
 }
+
+@media (max-width: 480px) {
+  .resume-section { padding: 40px 20px; }
+  .resume-inner { padding: 32px 22px; }
+  .resume-btn { padding: 15px 28px; font-size: 12px; width: 100%; justify-content: center; }
+  .resume-headline { font-size: clamp(22px, 7vw, 32px); }
+}

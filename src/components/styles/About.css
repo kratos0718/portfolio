@@ -205,3 +205,10 @@
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-bg-text { display: none; }
 }
+
+@media (max-width: 480px) {
+  .about { padding: 60px 20px; }
+  .section-title { margin-bottom: 40px; }
+  .model-card { padding: 20px 18px 16px; }
+  .model-stat-grid { grid-template-columns: 1fr 1fr; }
+}

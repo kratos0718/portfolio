@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './styles/Cursor.css';
 
-export default function Cursor() {
+function CursorInner() {
   const blobRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
   const pos = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
@@ -42,7 +42,6 @@ export default function Cursor() {
     };
     attachHover();
 
-    // Re-attach when DOM changes (lazy-loaded sections)
     const obs = new MutationObserver(attachHover);
     obs.observe(document.body, { childList: true, subtree: true });
 
@@ -63,4 +62,11 @@ export default function Cursor() {
       <div ref={ringRef} className="cursor-ring" />
     </>
   );
+}
+
+// Skip custom cursor entirely on touch/mobile devices
+export default function Cursor() {
+  const isTouch = window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
+  if (isTouch) return null;
+  return <CursorInner />;
 }

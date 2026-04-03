@@ -119,3 +119,11 @@
   .career { padding: 80px 24px; }
   .career-item { padding-left: 32px; }
 }
+
+@media (max-width: 480px) {
+  .career { padding: 60px 20px; }
+  .career-item { padding-left: 28px; margin-bottom: 36px; }
+  .career-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .career-role { font-size: 17px; }
+  .career-points li { font-size: 13px; }
+}
