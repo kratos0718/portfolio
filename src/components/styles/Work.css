@@ -58,6 +58,160 @@
   letter-spacing: 0.1em;
 }
 
+/* ── PathForge Live Toast ── */
+.work-live-toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-3);
+  border: 1px solid rgba(0,245,255,0.35);
+  padding: 14px 18px;
+  box-shadow: 0 0 40px rgba(0,245,255,0.12), 0 8px 32px rgba(0,0,0,0.5);
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.4s;
+  max-width: 340px;
+}
+.work-live-toast.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+.work-live-toast-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan);
+  flex-shrink: 0;
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+.work-live-toast-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.work-live-toast-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--cyan);
+  padding: 6px 14px;
+  white-space: nowrap;
+  transition: box-shadow 0.2s;
+  flex-shrink: 0;
+}
+.work-live-toast-btn:hover {
+  box-shadow: 0 0 20px rgba(0,245,255,0.4);
+}
+.work-live-toast-close {
+  font-size: 16px;
+  color: var(--text-muted);
+  padding: 0 2px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+.work-live-toast-close:hover { color: var(--text); }
+
+/* ── Live badge on title ── */
+.work-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  background: rgba(0,245,255,0.07);
+  border: 1px solid rgba(0,245,255,0.25);
+  padding: 2px 8px;
+  margin-left: 12px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+.work-live-badge-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 6px var(--cyan);
+  display: inline-block;
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+/* ── Featured "Test Live" link ── */
+.work-item-link-live {
+  color: var(--cyan) !important;
+  border: 1px solid rgba(0,245,255,0.3);
+  padding: 4px 12px;
+  background: rgba(0,245,255,0.05);
+  transition: background 0.2s, box-shadow 0.2s, gap 0.2s !important;
+}
+.work-item-link-live:hover {
+  background: rgba(0,245,255,0.12);
+  box-shadow: 0 0 16px rgba(0,245,255,0.2);
+}
+
+/* ── Featured item row ── */
+.work-item-featured {
+  background: rgba(0,245,255,0.015);
+}
+
+/* ── Preview live badge ── */
+.work-preview-live-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-top: 8px;
+}
+.work-preview-live-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 6px var(--cyan);
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+/* ── Mobile featured card ── */
+.work-mobile-card-featured {
+  border-color: rgba(0,245,255,0.2) !important;
+  background: rgba(0,245,255,0.02) !important;
+}
+.work-mobile-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  border: 1px solid rgba(0,245,255,0.25);
+  background: rgba(0,245,255,0.06);
+  padding: 2px 8px;
+}
+
 /* ── Project list (text-only, hover reveals preview) ── */
 .work-list {
   margin-top: 16px;
