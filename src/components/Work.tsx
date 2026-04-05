@@ -13,6 +13,23 @@ export default function Work() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const previewRef = useRef<HTMLDivElement>(null);
   const [activeProject, setActiveProject] = useState<typeof projects[0] | null>(null);
+  const [liveToast, setLiveToast] = useState(false);
+
+  // Show PathForge live toast once on scroll into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setLiveToast(true), 800);
+          setTimeout(() => setLiveToast(false), 5000);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   // Move preview with mouse
   useEffect(() => {
@@ -70,6 +87,22 @@ export default function Work() {
         Things I've <span className="accent">built</span>
       </h2>
 
+      {/* PathForge live toast notification */}
+      <div className={`work-live-toast${liveToast ? ' visible' : ''}`}>
+        <span className="work-live-toast-dot" />
+        <span className="work-live-toast-text">PathForge is live in production</span>
+        <a
+          href="https://www.pathforge.online/auth"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="work-live-toast-btn"
+          onClick={() => setLiveToast(false)}
+        >
+          Try it <FiExternalLink size={10} />
+        </a>
+        <button className="work-live-toast-close" onClick={() => setLiveToast(false)}>×</button>
+      </div>
+
       {/* Floating preview */}
       <div
         ref={previewRef}
@@ -79,6 +112,11 @@ export default function Work() {
         <div className="work-preview-inner">
           <div className="work-preview-title">{activeProject?.title}</div>
           <div className="work-preview-url">{activeProject?.live.replace('https://', '')}</div>
+          {(activeProject as any)?.liveNow && (
+            <div className="work-preview-live-badge">
+              <span className="work-preview-live-dot" /> LIVE NOW
+            </div>
+          )}
         </div>
       </div>
 
@@ -87,14 +125,17 @@ export default function Work() {
         {projects.map((p, i) => (
           <div
             key={p.title}
-            className="work-item"
+            className={`work-item${(p as any).liveNow ? ' work-item-featured' : ''}`}
             data-hover
             onMouseEnter={() => setActiveProject(p)}
             onMouseLeave={() => setActiveProject(null)}
           >
             <span className="work-item-num">0{i + 1}</span>
             <div className="work-item-info">
-              <div className="work-item-title">{p.title}</div>
+              <div className="work-item-title">
+                {p.title}
+                {(p as any).liveNow && <span className="work-live-badge"><span className="work-live-badge-dot" />live</span>}
+              </div>
               <div className="work-item-sub">{p.subtitle}</div>
             </div>
             <div className="work-item-tech">
@@ -103,9 +144,15 @@ export default function Work() {
               ))}
             </div>
             <div className="work-item-links">
-              <a href={p.live} target="_blank" rel="noopener noreferrer" className="work-item-link">
-                Live <FiExternalLink size={11} />
-              </a>
+              {(p as any).liveNow ? (
+                <a href={p.live} target="_blank" rel="noopener noreferrer" className="work-item-link work-item-link-live">
+                  Test Live <FiExternalLink size={11} />
+                </a>
+              ) : (
+                <a href={p.live} target="_blank" rel="noopener noreferrer" className="work-item-link">
+                  Live <FiExternalLink size={11} />
+                </a>
+              )}
               <a href={p.github} target="_blank" rel="noopener noreferrer" className="work-item-link-ghost">
                 <FiGithub size={11} /> <FiArrowRight size={10} />
               </a>
@@ -117,15 +164,26 @@ export default function Work() {
       {/* Mobile: card grid */}
       <div className="work-grid-mobile">
         {projects.map(p => (
-          <div key={p.title} className="work-mobile-card">
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--cyan)', letterSpacing: '0.1em', marginBottom: 8 }}>{p.year}</div>
+          <div key={p.title} className={`work-mobile-card${(p as any).liveNow ? ' work-mobile-card-featured' : ''}`}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--cyan)', letterSpacing: '0.1em' }}>{p.year}</span>
+              {(p as any).liveNow && (
+                <span className="work-mobile-live-badge"><span className="work-live-badge-dot" />live</span>
+              )}
+            </div>
             <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--text)', marginBottom: 4 }}>{p.title}</div>
             <div style={{ fontSize: 12, color: 'var(--text-dim)', marginBottom: 16, lineHeight: 1.65 }}>{p.description}</div>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 16 }}>
               {p.tech.map(t => <span key={t} className="work-tech-pill">{t}</span>)}
             </div>
-            <div style={{ display: 'flex', gap: 16 }}>
-              <a href={p.live} target="_blank" rel="noopener noreferrer" className="work-item-link">Live <FiExternalLink size={11} /></a>
+            <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+              {(p as any).liveNow ? (
+                <a href={p.live} target="_blank" rel="noopener noreferrer" className="work-item-link work-item-link-live">
+                  Test Live <FiExternalLink size={11} />
+                </a>
+              ) : (
+                <a href={p.live} target="_blank" rel="noopener noreferrer" className="work-item-link">Live <FiExternalLink size={11} /></a>
+              )}
               <a href={p.github} target="_blank" rel="noopener noreferrer" className="work-item-link-ghost"><FiGithub size={11} /> Code</a>
             </div>
           </div>
