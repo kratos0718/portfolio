@@ -60,14 +60,15 @@ export const socials = {
 
 export const career = [
   {
-    role: 'Advisory Programme Member',
-    company: 'PwC LaunchPad',
-    period: '2024 – Present',
-    type: 'Programme',
+    role: 'AI & Data Advisory Intern',
+    company: 'PwC Launchpad Advisory Program',
+    period: 'Feb 2026 – Present',
+    type: 'Intern',
     points: [
-      'Selected for PwC LaunchPad Advisory Programme — a competitive cohort for high-potential emerging tech talent across India.',
-      'Gained exposure to enterprise AI strategy, digital transformation frameworks, and professional advisory methodology.',
-      'Collaborated with industry mentors on real-world business and technology challenges.',
+      "Selected for PwC's flagship program focused on GenAI, Prompt Engineering, and Data Systems.",
+      'Built and optimized LLM prompt workflows for real-world enterprise use cases.',
+      'Gained hands-on exposure to enterprise data architectures & AI-driven solutions.',
+      'Achieved Level 10 | 1500+ XP demonstrating top performance in the cohort.',
     ],
   },
   {
@@ -86,11 +87,11 @@ export const career = [
 
 export const achievements = [
   {
-    title: 'PwC LaunchPad Advisory Programme',
-    org: 'PricewaterhouseCoopers',
-    year: '2024',
-    type: 'Programme',
-    description: "Selected for PwC's advisory programme for emerging tech talent. One of a limited cohort chosen from competitive applications across India.",
+    title: 'PwC Launchpad Advisory Program — AI & Data Advisory Intern',
+    org: 'PricewaterhouseCoopers India',
+    year: '2026',
+    type: 'Internship',
+    description: "Selected for PwC's flagship GenAI & Data Advisory internship. Built LLM prompt workflows, explored enterprise AI architectures, and achieved Level 10 | 1500+ XP — top performance in the cohort.",
     icon: '🏢',
   },
   {
@@ -207,6 +208,6 @@ export const education = [
     degree: 'Schooling (Class I – X)',
     institution: 'Sri Prakash Vidyaniketan',
     location: 'Visakhapatnam, Andhra Pradesh',
-    period: '– 2020',
+    period: '2015 – 2020',
   },
 ];

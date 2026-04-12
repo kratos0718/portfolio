@@ -72,6 +72,11 @@ export default function About() {
 
       <div className="about-grid">
         <div>
+          <div className="about-photo-wrap">
+            <img src="/images/abhinav.jpg" alt="Abhinav Tarigoppula" className="about-photo" />
+            <div className="about-photo-glow" />
+          </div>
+
           <p ref={bioRef} className="about-bio">
             {about.bio}
           </p>
