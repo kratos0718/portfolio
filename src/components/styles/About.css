@@ -59,6 +59,36 @@
   z-index: 1;
 }
 
+/* ── Profile Photo ── */
+.about-photo-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 32px;
+}
+.about-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid rgba(0,245,255,0.35);
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: border-color 0.3s;
+}
+.about-photo-wrap:hover .about-photo {
+  border-color: rgba(0,245,255,0.8);
+}
+.about-photo-glow {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,245,255,0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* ── Left: Bio ── */
 .about-bio {
   font-size: clamp(16px, 1.4vw, 19px);
