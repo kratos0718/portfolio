@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --cyan: #00f5ff;
-  --cyan-dim: #00c8d4;
-  --cyan-muted: #005f6a;
-  --cyan-glow: rgba(0,245,255,0.1);
-  --cyan-glow-strong: rgba(0,245,255,0.28);
-  --bg: #05080b;
-  --bg-2: #080d12;
-  --bg-3: #0e1620;
-  --bg-card: rgba(8,13,18,0.92);
-  --text: #ddeef5;
-  --text-dim: #6088a0;
-  --text-muted: #2a4a58;
-  --border: rgba(0,245,255,0.09);
-  --border-hover: rgba(0,245,255,0.28);
+  --cyan: #111111;
+  --cyan-dim: #333333;
+  --cyan-muted: #777777;
+  --cyan-glow: rgba(0,0,0,0.05);
+  --cyan-glow-strong: rgba(0,0,0,0.12);
+  --bg: #f8f7f4;
+  --bg-2: #f2f0eb;
+  --bg-3: #e8e4dc;
+  --bg-card: rgba(255,255,255,0.85);
+  --text: #111111;
+  --text-dim: #555555;
+  --text-muted: #999999;
+  --border: rgba(0,0,0,0.09);
+  --border-hover: rgba(0,0,0,0.22);
   --font-sans: 'Space Grotesk', sans-serif;
   --font-mono: 'Space Mono', monospace;
 }
@@ -42,7 +42,7 @@ body {
 
 a { text-decoration: none; color: inherit; }
 button { cursor: none; border: none; background: none; font-family: var(--font-sans); }
-::selection { background: var(--cyan-glow-strong); color: var(--cyan); }
+::selection { background: rgba(0,0,0,0.1); color: var(--text); }
 
 /* Hide default cursor everywhere — except touch devices */
 * { cursor: none !important; }

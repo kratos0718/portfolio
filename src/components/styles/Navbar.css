@@ -12,7 +12,7 @@
 }
 
 .navbar.scrolled {
-  background: rgba(6, 10, 13, 0.92);
+  background: rgba(248, 247, 244, 0.95);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   padding: 14px 60px;
@@ -99,7 +99,7 @@
   transition: transform 0.3s ease;
 }
 .navbar-cv:hover::before { transform: scaleX(1); }
-.navbar-cv:hover { color: var(--text); border-color: rgba(0,245,255,0.15); }
+.navbar-cv:hover { color: var(--text); border-color: rgba(0,0,0,0.18); }
 .navbar-cv span, .navbar-cv svg { position: relative; z-index: 1; }
 
 /* ── Hire me CTA ── */
@@ -147,7 +147,7 @@
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(5, 8, 11, 0.7);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 998;
   opacity: 0;
   pointer-events: none;

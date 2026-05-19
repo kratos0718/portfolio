@@ -22,12 +22,12 @@ function CoreSphere({ mouse }: { mouse: React.MutableRefObject<{ x: number; y: n
       <mesh>
         <icosahedronGeometry args={[1.0, 2]} />
         <meshStandardMaterial
-          color="#00f5ff"
+          color="#333333"
           wireframe
           transparent
-          opacity={0.25}
-          emissive="#00f5ff"
-          emissiveIntensity={0.4}
+          opacity={0.2}
+          emissive="#111111"
+          emissiveIntensity={0.1}
         />
       </mesh>
 
@@ -35,37 +35,37 @@ function CoreSphere({ mouse }: { mouse: React.MutableRefObject<{ x: number; y: n
       <mesh>
         <icosahedronGeometry args={[0.75, 1]} />
         <meshStandardMaterial
-          color="#001820"
+          color="#e8e4dc"
           transparent
           opacity={0.95}
-          roughness={0.1}
-          metalness={0.8}
+          roughness={0.15}
+          metalness={0.4}
           envMapIntensity={1}
         />
       </mesh>
 
-      {/* Cyan glow sphere */}
+      {/* Subtle sphere */}
       <mesh>
         <sphereGeometry args={[0.72, 32, 32]} />
         <meshStandardMaterial
-          color="#00f5ff"
+          color="#aaaaaa"
           transparent
-          opacity={0.06}
-          emissive="#00f5ff"
-          emissiveIntensity={1}
+          opacity={0.04}
+          emissive="#333333"
+          emissiveIntensity={0.1}
         />
       </mesh>
 
       {/* Outer ring 1 */}
       <mesh rotation={[Math.PI / 2, 0, 0]}>
         <torusGeometry args={[1.5, 0.008, 8, 120]} />
-        <meshStandardMaterial color="#00f5ff" transparent opacity={0.4} emissive="#00f5ff" emissiveIntensity={0.6} />
+        <meshStandardMaterial color="#333333" transparent opacity={0.35} emissive="#111111" emissiveIntensity={0.1} />
       </mesh>
 
       {/* Outer ring 2 */}
       <mesh rotation={[Math.PI / 3, Math.PI / 6, 0]}>
         <torusGeometry args={[1.7, 0.006, 8, 120]} />
-        <meshStandardMaterial color="#00c8d4" transparent opacity={0.25} emissive="#00c8d4" emissiveIntensity={0.4} />
+        <meshStandardMaterial color="#666666" transparent opacity={0.2} emissive="#444444" emissiveIntensity={0.1} />
       </mesh>
 
       {/* Orbiting satellite dots */}
@@ -95,7 +95,7 @@ function OrbitDot({ index }: { index: number }) {
   return (
     <mesh ref={ref}>
       <sphereGeometry args={[0.04, 8, 8]} />
-      <meshStandardMaterial color="#00f5ff" emissive="#00f5ff" emissiveIntensity={2} />
+      <meshStandardMaterial color="#444444" emissive="#222222" emissiveIntensity={0.3} />
     </mesh>
   );
 }
@@ -115,10 +115,10 @@ export default function Scene() {
 
   return (
     <>
-      <ambientLight intensity={0.15} />
-      <pointLight position={[3, 3, 3]} color="#00f5ff" intensity={3} />
-      <pointLight position={[-3, -2, 2]} color="#004455" intensity={2} />
-      <pointLight position={[0, -4, 1]} color="#000a0f" intensity={1} />
+      <ambientLight intensity={0.9} />
+      <pointLight position={[3, 3, 3]} color="#ffffff" intensity={1.5} />
+      <pointLight position={[-3, -2, 2]} color="#f0ede8" intensity={1} />
+      <pointLight position={[0, -4, 1]} color="#e8e4dc" intensity={0.5} />
       <CoreSphere mouse={mouse} />
     </>
   );
