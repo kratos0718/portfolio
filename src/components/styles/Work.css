@@ -12,7 +12,7 @@
   font-weight: 700;
   letter-spacing: -0.05em;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(0,0,0,0.06);
+  -webkit-text-stroke: 1px rgba(0,245,255,0.04);
   pointer-events: none;
   user-select: none;
 }
@@ -68,9 +68,9 @@
   align-items: center;
   gap: 12px;
   background: var(--bg-3);
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(0,245,255,0.35);
   padding: 14px 18px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  box-shadow: 0 0 40px rgba(0,245,255,0.12), 0 8px 32px rgba(0,0,0,0.5);
   transform: translateY(20px);
   opacity: 0;
   pointer-events: none;
@@ -114,7 +114,7 @@
   flex-shrink: 0;
 }
 .work-live-toast-btn:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 0 20px rgba(0,245,255,0.4);
 }
 .work-live-toast-close {
   font-size: 16px;
@@ -136,8 +136,8 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--cyan);
-  background: rgba(0,0,0,0.04);
-  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(0,245,255,0.07);
+  border: 1px solid rgba(0,245,255,0.25);
   padding: 2px 8px;
   margin-left: 12px;
   vertical-align: middle;
@@ -157,19 +157,19 @@
 /* ── Featured "Test Live" link ── */
 .work-item-link-live {
   color: var(--cyan) !important;
-  border: 1px solid rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,245,255,0.3);
   padding: 4px 12px;
-  background: rgba(0,0,0,0.04);
+  background: rgba(0,245,255,0.05);
   transition: background 0.2s, box-shadow 0.2s, gap 0.2s !important;
 }
 .work-item-link-live:hover {
-  background: rgba(0,0,0,0.07);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: rgba(0,245,255,0.12);
+  box-shadow: 0 0 16px rgba(0,245,255,0.2);
 }
 
 /* ── Featured item row ── */
 .work-item-featured {
-  background: rgba(0,0,0,0.02);
+  background: rgba(0,245,255,0.015);
 }
 
 /* ── Preview live badge ── */
@@ -183,7 +183,6 @@
   text-transform: uppercase;
   color: var(--cyan);
   margin-top: 8px;
-  background: var(--bg-card);
 }
 .work-preview-live-dot {
   width: 5px;
@@ -196,8 +195,8 @@
 
 /* ── Mobile featured card ── */
 .work-mobile-card-featured {
-  border-color: rgba(0,0,0,0.12) !important;
-  background: rgba(0,0,0,0.02) !important;
+  border-color: rgba(0,245,255,0.2) !important;
+  background: rgba(0,245,255,0.02) !important;
 }
 .work-mobile-live-badge {
   display: inline-flex;
@@ -208,8 +207,8 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--cyan);
-  border: 1px solid rgba(0,0,0,0.12);
-  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,245,255,0.25);
+  background: rgba(0,245,255,0.06);
   padding: 2px 8px;
 }
 
@@ -232,7 +231,7 @@
   clip-path: inset(0 0 100% 0);
 }
 .work-item:first-child { border-top: 1px solid var(--border); }
-.work-item:hover { border-color: rgba(0,0,0,0.2); }
+.work-item:hover { border-color: rgba(0,245,255,0.3); }
 
 .work-item-num {
   font-family: var(--font-mono);
@@ -277,7 +276,7 @@
   transition: border-color 0.2s, color 0.2s;
 }
 .work-item:hover .work-tech-pill {
-  border-color: rgba(0,0,0,0.15);
+  border-color: rgba(0,245,255,0.2);
   color: var(--text);
 }
 

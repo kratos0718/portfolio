@@ -66,7 +66,7 @@
 .techstack-canvas-wrap {
   height: 520px;
   border: 1px solid var(--border);
-  background: radial-gradient(ellipse at center, rgba(220,218,212,0.6) 0%, var(--bg) 100%);
+  background: radial-gradient(ellipse at center, rgba(0,20,30,0.8) 0%, var(--bg) 100%);
   position: relative;
   overflow: hidden;
 }
