@@ -140,7 +140,7 @@ export default function About() {
           <div className="model-card">
             <div className="model-card-header">
               <span className="model-card-title">Current Status</span>
-              <span className="model-card-badge" style={{ color: 'var(--cyan)', borderColor: 'rgba(0,245,255,0.3)' }}>● Active</span>
+              <span className="model-card-badge" style={{ color: 'var(--cyan)', borderColor: 'rgba(0,0,0,0.15)' }}>● Active</span>
             </div>
             {[
               ['Mode', 'Internship Seeker'],

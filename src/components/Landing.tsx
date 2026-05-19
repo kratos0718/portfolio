@@ -73,11 +73,11 @@ function NeuralCanvas() {
           const dy = nodes[i].y - nodes[j].y;
           const d = Math.sqrt(dx * dx + dy * dy);
           if (d < CONNECT_DIST) {
-            const alpha = (1 - d / CONNECT_DIST) * 0.35;
+            const alpha = (1 - d / CONNECT_DIST) * 0.22;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(0,245,255,${alpha})`;
+            ctx.strokeStyle = `rgba(17,17,17,${alpha * 0.65})`;
             ctx.lineWidth = alpha * 1.2;
             ctx.stroke();
           }
@@ -90,14 +90,14 @@ function NeuralCanvas() {
         const r = n.r + glow * 1.2;
         ctx.beginPath();
         ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0,245,255,${0.35 + glow * 0.45})`;
+        ctx.fillStyle = `rgba(17,17,17,${0.18 + glow * 0.22})`;
         ctx.fill();
 
         // Glow ring on bigger nodes
         if (n.r > 2.2) {
           ctx.beginPath();
           ctx.arc(n.x, n.y, r + 3, 0, Math.PI * 2);
-          ctx.strokeStyle = `rgba(0,245,255,${0.08 + glow * 0.1})`;
+          ctx.strokeStyle = `rgba(17,17,17,${0.04 + glow * 0.06})`;
           ctx.lineWidth = 1;
           ctx.stroke();
         }
@@ -117,7 +117,7 @@ function NeuralCanvas() {
   return (
     <canvas
       ref={canvasRef}
-      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.55 }}
+      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.4 }}
     />
   );
 }

@@ -15,10 +15,10 @@ type TechNode = {
 };
 
 const GROUPS = [
-  { label: 'AI / ML', color: '#00f5ff', items: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenCV'] },
-  { label: 'Web Dev', color: '#00c8d4', items: ['React.js', 'Node.js', 'FastAPI', 'JavaScript'] },
-  { label: 'DevOps / Cloud', color: '#006a75', items: ['AWS', 'Docker', 'Kubernetes', 'Git', 'Linux'] },
-  { label: 'Data / Lang', color: '#40f8ff', items: ['SQL', 'Java', 'GitHub Actions', 'Google Colab'] },
+  { label: 'AI / ML', color: '#111111', items: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenCV'] },
+  { label: 'Web Dev', color: '#444444', items: ['React.js', 'Node.js', 'FastAPI', 'JavaScript'] },
+  { label: 'DevOps / Cloud', color: '#777777', items: ['AWS', 'Docker', 'Kubernetes', 'Git', 'Linux'] },
+  { label: 'Data / Lang', color: '#333333', items: ['SQL', 'Java', 'GitHub Actions', 'Google Colab'] },
 ];
 
 function buildNodes(W: number, H: number): TechNode[] {
@@ -162,14 +162,14 @@ function NeuralGraph({ visible }: { visible: boolean }) {
         // Node circle
         ctx.beginPath();
         ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = n.hovered ? col + 'cc' : '#0d1820';
+        ctx.fillStyle = n.hovered ? col + '18' : '#ffffff';
         ctx.strokeStyle = col;
         ctx.lineWidth = n.hovered ? 2 : 1 + glow * 0.5;
         ctx.fill();
         ctx.stroke();
 
         // Label
-        ctx.fillStyle = n.hovered ? '#000' : col;
+        ctx.fillStyle = n.hovered ? '#111111' : col;
         ctx.font = `${n.hovered ? 700 : 500} ${n.hovered ? 11.5 : 10.5}px 'Space Grotesk', sans-serif`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';

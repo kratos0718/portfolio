@@ -40,7 +40,7 @@
   transition: border-color 0.3s;
 }
 .story-entry:first-child { border-top: 1px solid var(--border); }
-.story-entry:hover { border-color: rgba(0,245,255,0.2); }
+.story-entry:hover { border-color: rgba(0,0,0,0.15); }
 
 .story-entry-label {
   font-family: var(--font-mono);

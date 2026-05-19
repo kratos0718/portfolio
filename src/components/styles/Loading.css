@@ -42,7 +42,7 @@
 .loading-name-part { color: var(--text); }
 .loading-name-accent {
   color: var(--cyan);
-  text-shadow: 0 0 30px rgba(0,245,255,0.5);
+  
 }
 .loading-cursor-blink {
   display: inline-block;
@@ -67,7 +67,7 @@
 .loading-bar-track {
   width: clamp(240px, 35vw, 420px);
   height: 1px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.1);
   position: relative;
   overflow: hidden;
 }
@@ -75,7 +75,7 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg, var(--cyan-muted), var(--cyan));
-  box-shadow: 0 0 12px var(--cyan);
+  
   transform-origin: left;
 }
 
