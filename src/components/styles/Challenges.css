@@ -20,7 +20,7 @@
   transition: border-color 0.3s;
   cursor: none;
 }
-.challenge-card:hover { border-color: rgba(0,0,0,0.15); }
+.challenge-card:hover { border-color: rgba(0,245,255,0.22); }
 
 /* Left accent bar */
 .challenge-card::before {
