@@ -8,6 +8,27 @@
   background: var(--bg);
 }
 
+/* ── Large editorial background number ── */
+.landing-bg-num {
+  position: absolute;
+  right: 0;
+  bottom: -0.05em;
+  font-size: clamp(220px, 28vw, 420px);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.055);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  animation: num-breathe 8s ease-in-out infinite;
+}
+@keyframes num-breathe {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 1; }
+}
+
 /* ── Neural canvas background ── */
 .landing-canvas {
   position: absolute;
@@ -18,7 +39,7 @@
 /* ── Main content ── */
 .landing-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   padding: 0 80px;
   width: 100%;
   max-width: 900px;

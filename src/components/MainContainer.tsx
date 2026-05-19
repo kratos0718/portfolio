@@ -12,6 +12,8 @@ import ResumeDownload from './ResumeDownload';
 import Contact from './Contact';
 import SmoothScroll from './SmoothScroll';
 import Grain from './Grain';
+import AmbientLayer from './AmbientLayer';
+import TickerStrip from './TickerStrip';
 import './styles/MainContainer.css';
 
 const TechStack = lazy(() => import('./TechStack'));
@@ -32,6 +34,7 @@ export default function MainContainer() {
     <>
       <SmoothScroll />
       <Grain />
+      <AmbientLayer />
       <div className="grid-overlay">
         {Array.from({ length: 12 }).map((_, i) => (
           <div key={i} className="grid-col" />
@@ -41,7 +44,10 @@ export default function MainContainer() {
       <div className="main-container">
         <Navbar />
         <Landing />
-        <Divider />
+
+        {/* Scrolling keyword strip between hero and about */}
+        <TickerStrip />
+
         <About />
         <Divider />
         <WhatIDo />
@@ -49,16 +55,14 @@ export default function MainContainer() {
         <Career />
         <Divider />
         <Work />
-        <Divider />
+
+        {/* Second ticker between Work and Achievements */}
+        <TickerStrip reverse />
+
         <Achievements />
         <Divider />
 
-        {/* Tech stack after achievements */}
-        <Suspense fallback={
-          <div style={{ height: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--cyan)', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.3em' }}>
-            LOADING NEURAL GRAPH...
-          </div>
-        }>
+        <Suspense fallback={null}>
           <TechStack />
         </Suspense>
         <Divider />

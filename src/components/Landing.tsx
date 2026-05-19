@@ -204,6 +204,9 @@ export default function Landing() {
         <NeuralCanvas />
       </div>
 
+      {/* Large editorial background number */}
+      <div className="landing-bg-num" aria-hidden="true">01</div>
+
       <div className="landing-content">
         <div ref={pillRef} className="landing-pill">
           <span className="landing-pill-dot" />
@@ -267,7 +270,7 @@ export default function Landing() {
 
       {/* Corner label */}
       <div ref={cornerRef} className="landing-corner">
-        <span className="landing-corner-text">Portfolio · 2025</span>
+        <span className="landing-corner-text">Portfolio · 2026</span>
       </div>
     </section>
   );
