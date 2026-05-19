@@ -6,7 +6,7 @@ export const personalInfo = {
   email: 'abhinaaavvv07187@gmail.com',
   phone: '+91-9121611029',
   location: 'Visakhapatnam, India',
-  resumeUrl: '/Abhinav_Tarigoppula_Resume.pdf',
+  resumeUrl: '/ABHINAV_RESUME.pdf',
 };
 
 export const about = {
