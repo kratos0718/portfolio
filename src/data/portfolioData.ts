@@ -131,6 +131,7 @@ export const projects = [
     github: 'https://github.com/kratos0718',
     year: '2025',
     stat: { num: '-30%', label: 'token usage' },
+    images: ['/images/pathforge-1.png', '/images/pathforge-2.png'],
     caseStudy: {
       problem: 'RAG retrieved generic chunks — responses weren\'t personalised to the user\'s actual skill gaps.',
       fix: 'Built a skill-gap scoring layer before retrieval. User profile embeddings filter vector search to level-relevant context. Rewrote prompt templates to inject gap analysis into every query.',
@@ -147,6 +148,7 @@ export const projects = [
     github: 'https://github.com/kratos0718/MarkMe',
     year: '2025',
     stat: { num: '0', label: 'proxy incidents' },
+    images: ['/images/markme-1.png'],
     caseStudy: null,
   },
   {
@@ -158,6 +160,7 @@ export const projects = [
     github: 'https://github.com/kratos0718/SoulSync',
     year: '2024',
     stat: { num: '81%', label: 'accuracy' },
+    images: [] as string[],
     caseStudy: null,
   },
   {
@@ -169,6 +172,7 @@ export const projects = [
     github: 'https://github.com/kratos0718',
     year: '2024',
     stat: { num: 'solo', label: 'full-stack' },
+    images: [] as string[],
     caseStudy: null,
   },
 ];

@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import './styles/About.css';
-import { about, personalInfo } from '../data/portfolioData';
+import { about, personalInfo, socials } from '../data/portfolioData';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -153,6 +154,39 @@ export default function About() {
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text)' }}>{v}</span>
               </div>
             ))}
+          </div>
+
+          {/* GitHub activity card */}
+          <div className="gh-card">
+            <div className="gh-card-header">
+              <span className="gh-card-title"><FiGithub size={12} /> GitHub Activity</span>
+              <a href={socials.github} target="_blank" rel="noopener noreferrer" className="gh-card-link">
+                kratos0718 <FiExternalLink size={10} />
+              </a>
+            </div>
+            <div className="gh-stat-row">
+              {[
+                { num: '236', label: 'Contributions\nlast year' },
+                { num: '82', label: 'Longest\nstreak (days)' },
+                { num: '202', label: 'Total\ncontributions' },
+                { num: '250+', label: 'DSA\nproblems' },
+              ].map(s => (
+                <div key={s.label} className="gh-stat-cell">
+                  <span className="gh-stat-num">{s.num}</span>
+                  <span className="gh-stat-label">{s.label}</span>
+                </div>
+              ))}
+            </div>
+            <div className="gh-repos">
+              {['pathforge', 'MarkMe', 'Abhinavs-DSA-progress'].map(repo => (
+                <a key={repo}
+                  href={`https://github.com/kratos0718/${repo}`}
+                  target="_blank" rel="noopener noreferrer"
+                  className="gh-repo-pill">
+                  ⬡ {repo}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -230,6 +230,111 @@
   color: var(--text-muted);
 }
 
+/* ── GitHub Activity Card ── */
+.gh-card {
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  padding: 20px 22px 16px;
+  backdrop-filter: blur(8px);
+  transition: border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.gh-card:hover { border-color: rgba(0,0,0,0.18); }
+.gh-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 0;
+  background: var(--cyan);
+  transition: height 0.4s ease;
+}
+.gh-card:hover::before { height: 100%; }
+
+.gh-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.gh-card-title {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.gh-card-link {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+.gh-card-link:hover { color: var(--text); }
+
+.gh-stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+.gh-stat-cell {
+  background: var(--bg-2);
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.2s;
+}
+.gh-stat-cell:hover { background: var(--bg-3); }
+.gh-stat-num {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cyan);
+  line-height: 1;
+}
+.gh-stat-label {
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.4;
+}
+
+.gh-repos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.gh-repo-pill {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  padding: 3px 10px;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.gh-repo-pill:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: var(--cyan-glow);
+}
+
 @media (max-width: 900px) {
   .about { padding: 80px 24px; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
