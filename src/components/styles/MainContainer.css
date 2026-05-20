@@ -1,3 +1,70 @@
+/* ── Full-page glow blobs ── */
+.page-glow-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.page-glow {
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Top-right — large indigo halo */
+.pg-1 {
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(99,102,241,0.13) 0%, transparent 65%);
+  top: 0%;
+  right: -280px;
+  filter: blur(60px);
+}
+
+/* Upper-left — softer accent */
+.pg-2 {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(129,140,248,0.10) 0%, transparent 65%);
+  top: 18%;
+  left: -200px;
+  filter: blur(70px);
+}
+
+/* Mid-right */
+.pg-3 {
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(99,102,241,0.09) 0%, transparent 65%);
+  top: 42%;
+  right: -200px;
+  filter: blur(80px);
+}
+
+/* Lower-left */
+.pg-4 {
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(circle, rgba(129,140,248,0.10) 0%, transparent 65%);
+  top: 64%;
+  left: -180px;
+  filter: blur(70px);
+}
+
+/* Bottom-right */
+.pg-5 {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(99,102,241,0.11) 0%, transparent 65%);
+  top: 83%;
+  right: -150px;
+  filter: blur(65px);
+}
+
 .main-container {
   position: relative;
   width: 100%;
@@ -27,7 +94,7 @@
   z-index: 0;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  opacity: 0.015;
+  opacity: 0.06;
 }
 
 .grid-col {

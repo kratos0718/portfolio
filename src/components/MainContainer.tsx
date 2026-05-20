@@ -44,6 +44,15 @@ export default function MainContainer() {
       </div>
 
       <div className="main-container">
+        {/* Full-page gradient blobs spanning entire scroll height */}
+        <div className="page-glow-layer" aria-hidden="true">
+          <div className="page-glow pg-1" />
+          <div className="page-glow pg-2" />
+          <div className="page-glow pg-3" />
+          <div className="page-glow pg-4" />
+          <div className="page-glow pg-5" />
+        </div>
+
         <Navbar />
         <Landing />
 
