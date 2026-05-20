@@ -7,7 +7,7 @@ import { about, personalInfo } from '../data/portfolioData';
 gsap.registerPlugin(ScrollTrigger);
 
 const metrics = [
-  { label: 'Problem Solving (DSA)', val: '150+ solved', pct: 82 },
+  { label: 'Problem Solving (DSA)', val: '250+ solved', pct: 88 },
   { label: 'ML / AI Proficiency', val: 'Production-grade', pct: 76 },
   { label: 'Full Stack Development', val: 'React · Node · FastAPI', pct: 80 },
   { label: 'Cloud & DevOps (AWS/Docker)', val: 'Deployed', pct: 68 },
@@ -124,7 +124,7 @@ export default function About() {
           {/* Quick stats grid */}
           <div className="model-stat-grid">
             {[
-              { num: '150+', label: 'LeetCode Solved' },
+              { num: '250+', label: 'LeetCode Solved' },
               { num: '3', label: 'Prod ML Projects' },
               { num: '+12%', label: 'Accuracy Gain' },
               { num: '-18%', label: 'Latency Cut' },
@@ -145,7 +145,7 @@ export default function About() {
             {[
               ['Mode', 'Internship Seeker'],
               ['Training on', 'LLMs & RAG Systems'],
-              ['Currently building', 'SoulSync v2'],
+              ['Currently building', 'PathForge'],
               ['Loss', '↓ Decreasing'],
             ].map(([k, v]) => (
               <div key={k} style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 0', borderBottom: '1px solid var(--border)', fontSize: 13 }}>

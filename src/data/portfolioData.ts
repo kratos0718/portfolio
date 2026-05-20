@@ -103,11 +103,11 @@ export const achievements = [
     icon: '🇮🇳',
   },
   {
-    title: '200+ DSA Problems — 90-Day Streak',
+    title: '250+ DSA Problems — Consistent Streak',
     org: 'Self-directed · LeetCode: coderboy11',
     year: '2024',
     type: 'Achievement',
-    description: '200+ problems solved across Arrays, Trees, Graphs, Dynamic Programming, and Recursion. Zero breaks. Documented on GitHub and verifiable on LeetCode.',
+    description: '250+ problems solved across Arrays, Trees, Graphs, Dynamic Programming, and Recursion. Consistent grind. Documented on GitHub and verifiable on LeetCode.',
     icon: '⚔️',
   },
   {
