@@ -1,0 +1,100 @@
+.fc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 490;
+  pointer-events: all;
+  user-select: none;
+  will-change: transform;
+  /* cursor handled globally as custom cursor */
+}
+
+/* SVG controller */
+.fc-svg {
+  width: 52px;
+  height: 32px;
+  color: var(--cyan);
+  opacity: 0.22;
+  filter: none;
+  transition: opacity 0.35s ease, filter 0.35s ease, width 0.2s ease, height 0.2s ease;
+  display: block;
+}
+
+/* Hovered state */
+.fc-hov .fc-svg {
+  opacity: 0.85;
+  filter: drop-shadow(0 0 10px rgba(99,102,241,0.55))
+          drop-shadow(0 0 24px rgba(99,102,241,0.25));
+  width: 62px;
+  height: 39px;
+}
+
+/* Tooltip */
+.fc-tip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 5px 12px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  animation: tip-in 0.2s ease;
+}
+
+.fc-tip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--border);
+}
+
+.fc-tip-score {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cyan);
+}
+
+/* Click score pop-up */
+.fc-pop {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cyan);
+  pointer-events: none;
+  animation: pop-float 0.9s ease-out forwards;
+}
+
+@keyframes tip-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(4px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes pop-float {
+  0%   { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-28px); }
+}
+
+/* Hide on touch/mobile — too small to interact with */
+@media (pointer: coarse) {
+  .fc { display: none; }
+}
