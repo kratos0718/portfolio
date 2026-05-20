@@ -8,8 +8,8 @@ import { about, personalInfo, socials } from '../data/portfolioData';
 gsap.registerPlugin(ScrollTrigger);
 
 const metrics = [
-  { label: 'Problem Solving (DSA)', val: '250+ solved', pct: 88 },
-  { label: 'ML / AI Proficiency', val: 'Production-grade', pct: 76 },
+  { label: 'Problem Solving (DSA)', val: '212 solved · 82-day streak', pct: 85 },
+  { label: 'ML / AI Proficiency', val: 'Outstanding (O) — Sem 5', pct: 92 },
   { label: 'Full Stack Development', val: 'React · Node · FastAPI', pct: 80 },
   { label: 'Cloud & DevOps (AWS/Docker)', val: 'Deployed', pct: 68 },
 ];
@@ -83,7 +83,7 @@ export default function About() {
           </p>
           <div ref={hlRef} className="about-highlights">
             {[
-              { icon: '🎓', title: 'B.Tech CSE (AI/ML) · Gitam University', sub: '2023 – 2027 · Visakhapatnam, Andhra Pradesh' },
+              { icon: '🎓', title: 'B.Tech CSE (AI/ML) · Gitam University · CGPA 8.04', sub: 'O in ML · A+ in AI & Deep Learning · SGPA 8.83 (best sem)' },
               { icon: '🧠', title: 'ML & AI Intern · OneStop AI', sub: 'Improved model accuracy +12%, reduced latency -18%' },
               { icon: '⚔️', title: 'Smart India Hackathon 2024', sub: 'Built SoulSync — AI mental health chatbot' },
               { icon: '📍', title: `Based in ${personalInfo.location}`, sub: 'Open to remote & on-site internships' },
@@ -125,8 +125,8 @@ export default function About() {
           {/* Quick stats grid */}
           <div className="model-stat-grid">
             {[
-              { num: '250+', label: 'LeetCode Solved' },
-              { num: '3', label: 'Prod ML Projects' },
+              { num: '212', label: 'LeetCode Solved' },
+              { num: '8.04', label: 'CGPA (5 sems)' },
               { num: '+12%', label: 'Accuracy Gain' },
               { num: '-18%', label: 'Latency Cut' },
             ].map(s => (
@@ -169,7 +169,7 @@ export default function About() {
                 { num: '236', label: 'Contributions\nlast year' },
                 { num: '82', label: 'Longest\nstreak (days)' },
                 { num: '202', label: 'Total\ncontributions' },
-                { num: '250+', label: 'DSA\nproblems' },
+                { num: '212', label: 'LeetCode\nsolved' },
               ].map(s => (
                 <div key={s.label} className="gh-stat-cell">
                   <span className="gh-stat-num">{s.num}</span>
