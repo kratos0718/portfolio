@@ -56,16 +56,16 @@ function CoreSphere({ mouse }: { mouse: React.MutableRefObject<{ x: number; y: n
         />
       </mesh>
 
-      {/* Outer ring 1 */}
+      {/* Outer ring 1 — accent indigo */}
       <mesh rotation={[Math.PI / 2, 0, 0]}>
         <torusGeometry args={[1.5, 0.008, 8, 120]} />
-        <meshStandardMaterial color="#333333" transparent opacity={0.35} emissive="#111111" emissiveIntensity={0.1} />
+        <meshStandardMaterial color="#6366f1" transparent opacity={0.4} emissive="#6366f1" emissiveIntensity={0.2} />
       </mesh>
 
-      {/* Outer ring 2 */}
+      {/* Outer ring 2 — lighter indigo */}
       <mesh rotation={[Math.PI / 3, Math.PI / 6, 0]}>
         <torusGeometry args={[1.7, 0.006, 8, 120]} />
-        <meshStandardMaterial color="#666666" transparent opacity={0.2} emissive="#444444" emissiveIntensity={0.1} />
+        <meshStandardMaterial color="#818cf8" transparent opacity={0.22} emissive="#818cf8" emissiveIntensity={0.1} />
       </mesh>
 
       {/* Orbiting satellite dots */}
@@ -95,7 +95,7 @@ function OrbitDot({ index }: { index: number }) {
   return (
     <mesh ref={ref}>
       <sphereGeometry args={[0.04, 8, 8]} />
-      <meshStandardMaterial color="#444444" emissive="#222222" emissiveIntensity={0.3} />
+      <meshStandardMaterial color="#6366f1" emissive="#6366f1" emissiveIntensity={0.6} />
     </mesh>
   );
 }
