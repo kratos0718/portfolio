@@ -4,8 +4,8 @@ import './styles/Navbar.css';
 
 const links = [
   { label: 'About', href: '#about' },
-  { label: 'Story', href: '#story' },
   { label: 'Work', href: '#work' },
+  { label: 'Research', href: '#research' },
   { label: 'Wins', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
 ];
