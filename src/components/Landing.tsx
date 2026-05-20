@@ -263,7 +263,7 @@ export default function Landing() {
       {/* Right stats */}
       <div ref={rightRef} className="landing-right">
         {[
-          { num: '250+', label: 'LeetCode Solved' },
+          { num: '212', label: 'LeetCode Solved' },
           { num: '3+', label: 'Live Projects' },
           { num: '+12%', label: 'ML Accuracy Gain' },
         ].map(s => (
