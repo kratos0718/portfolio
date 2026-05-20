@@ -21,6 +21,7 @@ function FeaturedCard({ project }: { project: Project }) {
   const ref = useRef<HTMLDivElement>(null);
   const banner = banners[project.title]!;
   const cs = project.caseStudy!;
+  const hasImages = project.images && project.images.length > 0;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -35,12 +36,32 @@ function FeaturedCard({ project }: { project: Project }) {
   return (
     <div ref={ref} className="proj-featured">
       {/* Left — banner panel */}
-      <div className="proj-featured-banner" style={{ background: banner.gradient }}>
-        <span className="pfeat-icon">{banner.icon}</span>
-        <div className="pfeat-stat">
-          <span className="pfeat-stat-num">{project.stat!.num}</span>
-          <span className="pfeat-stat-label">{project.stat!.label}</span>
-        </div>
+      <div className="proj-featured-banner" style={{ background: banner.gradient, overflow: 'hidden', position: 'relative' }}>
+        {hasImages ? (
+          <>
+            {/* Screenshot collage */}
+            <div className="pfeat-screenshots">
+              {project.images!.slice(0, 2).map((src, i) => (
+                <img key={i} src={src} alt="" className={`pfeat-screenshot pfeat-screenshot-${i}`}
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              ))}
+            </div>
+            {/* Dark overlay so stats remain readable */}
+            <div className="pfeat-screenshot-overlay" />
+            <div className="pfeat-stat pfeat-stat-overlay">
+              <span className="pfeat-stat-num">{project.stat!.num}</span>
+              <span className="pfeat-stat-label">{project.stat!.label}</span>
+            </div>
+          </>
+        ) : (
+          <>
+            <span className="pfeat-icon">{banner.icon}</span>
+            <div className="pfeat-stat">
+              <span className="pfeat-stat-num">{project.stat!.num}</span>
+              <span className="pfeat-stat-label">{project.stat!.label}</span>
+            </div>
+          </>
+        )}
         <span className="proj-live-badge">
           <span className="proj-live-dot" /> LIVE
         </span>
@@ -95,6 +116,7 @@ function FeaturedCard({ project }: { project: Project }) {
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const banner = banners[project.title] ?? { gradient: 'linear-gradient(135deg,#111,#333)', icon: '⚡' };
+  const hasImage = project.images && project.images.length > 0;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -109,7 +131,28 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <div ref={ref} className="proj-card">
       <div className="proj-banner" style={{ background: banner.gradient }}>
-        <span className="proj-banner-icon">{banner.icon}</span>
+        {hasImage ? (
+          <>
+            <img
+              src={project.images![0]}
+              alt={project.title}
+              className="proj-banner-img"
+              onError={(e) => {
+                const el = e.target as HTMLImageElement;
+                el.style.display = 'none';
+                (el.closest('.proj-banner') as HTMLElement).style.background = banner.gradient;
+              }}
+            />
+            <div className="proj-banner-img-overlay" />
+          </>
+        ) : (
+          <span className="proj-banner-icon">{banner.icon}</span>
+        )}
+        {project.liveNow && (
+          <span className="proj-live-badge" style={{ top: 14, left: 14, right: 'auto' }}>
+            <span className="proj-live-dot" /> LIVE
+          </span>
+        )}
         {project.stat && (
           <div className="proj-banner-stat">
             <span className="proj-banner-stat-num">{project.stat.num}</span>
