@@ -14,6 +14,7 @@ import SmoothScroll from './SmoothScroll';
 import Grain from './Grain';
 import AmbientLayer from './AmbientLayer';
 import TickerStrip from './TickerStrip';
+import SocialProof from './SocialProof';
 import './styles/MainContainer.css';
 
 const TechStack = lazy(() => import('./TechStack'));
@@ -47,6 +48,9 @@ export default function MainContainer() {
 
         {/* Scrolling keyword strip between hero and about */}
         <TickerStrip />
+
+        {/* Credibility / social proof bar */}
+        <SocialProof />
 
         <About />
         <Divider />
