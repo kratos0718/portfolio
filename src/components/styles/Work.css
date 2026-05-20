@@ -203,14 +203,15 @@
   color: var(--text);
 }
 .proj-link-live {
-  background: var(--text);
-  color: var(--bg) !important;
-  border-color: var(--text);
+  background: var(--cyan);
+  color: #fff !important;
+  border-color: var(--cyan);
 }
 .proj-link-live:hover {
-  background: #333333;
-  border-color: #333333;
-  color: var(--bg) !important;
+  background: var(--cyan-dim);
+  border-color: var(--cyan-dim);
+  color: #fff !important;
+  box-shadow: 0 4px 16px var(--cyan-glow-strong);
 }
 
 /* ── PathForge live toast ── */
