@@ -4,6 +4,7 @@ import Landing from './Landing';
 import About from './About';
 import WhatIDo from './WhatIDo';
 import Career from './Career';
+import Research from './Research';
 import Achievements from './Achievements';
 import Work from './Work';
 import Challenges from './Challenges';
@@ -57,6 +58,8 @@ export default function MainContainer() {
         <WhatIDo />
         <Divider />
         <Career />
+        <Divider />
+        <Research />
         <Divider />
         <Work />
 

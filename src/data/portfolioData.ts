@@ -139,7 +139,7 @@ export const projects = [
     github: 'https://github.com/kratos0718',
     year: '2025',
     stat: { num: '-30%', label: 'token usage' },
-    images: ['/images/pathforge-1.png', '/images/pathforge-2.png'],
+    images: ['/images/PHOTO-2026-04-18-13-20-43.jpg', '/images/PHOTO-2026-04-18-13-20-43 2.jpg'],
     caseStudy: {
       problem: 'RAG retrieved generic chunks — responses weren\'t personalised to the user\'s actual skill gaps.',
       fix: 'Built a skill-gap scoring layer before retrieval. User profile embeddings filter vector search to level-relevant context. Rewrote prompt templates to inject gap analysis into every query.',
@@ -156,7 +156,7 @@ export const projects = [
     github: 'https://github.com/kratos0718/MarkMe',
     year: '2025',
     stat: { num: '0', label: 'proxy incidents' },
-    images: ['/images/markme-1.png'],
+    images: [] as string[],
     caseStudy: null,
   },
   {
@@ -182,6 +182,33 @@ export const projects = [
     stat: { num: 'solo', label: 'full-stack' },
     images: [] as string[],
     caseStudy: null,
+  },
+];
+
+export const publications = [
+  {
+    title: 'HAPS: A Hybrid AI Proctoring System for Unified Online and Offline Examination Integrity Using 2-Longitudinal-Stream CNNs, YOLO, and Multi-Modal Behavioral Analysis',
+    shortTitle: 'HAPS: Hybrid AI Proctoring System',
+    type: 'Conference Paper',
+    date: 'May 2026',
+    reads: 12,
+    coAuthors: ['Abhinav Tarigoppula', 'Deepak Jaggupalli', 'Jaggupalli Pujith'],
+    abstract: 'A hybrid AI-driven proctoring architecture combining dual-stream CNNs, YOLO object detection, and multi-modal behavioural signals to ensure examination integrity across both online and offline settings.',
+    tags: ['CNNs', 'YOLO', 'Computer Vision', 'Multi-Modal AI'],
+    link: 'https://www.researchgate.net/profile/Abhinav-Tarigoppula',
+    featured: true,
+  },
+  {
+    title: 'AI, ML and DL-Based Integrated Drone Detection and Autonomous Defence Systems: A Review',
+    shortTitle: 'AI/ML/DL Drone Detection & Autonomous Defence',
+    type: 'Conference Paper',
+    date: 'March 2026',
+    reads: 45,
+    coAuthors: ['Deepak Jaggupalli', 'Abhinav Tarigoppula', 'Jaggupalli Pujith'],
+    abstract: 'Comprehensive review of AI, Machine Learning, and Deep Learning techniques applied to drone detection and autonomous defence, surveying state-of-the-art architectures and deployment strategies.',
+    tags: ['Deep Learning', 'Drone Detection', 'Computer Vision', 'Autonomous Systems'],
+    link: 'https://www.researchgate.net/profile/Abhinav-Tarigoppula',
+    featured: false,
   },
 ];
 
