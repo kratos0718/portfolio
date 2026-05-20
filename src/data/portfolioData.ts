@@ -189,7 +189,7 @@ export const publications = [
   {
     title: 'HAPS: A Hybrid AI Proctoring System for Unified Online and Offline Examination Integrity Using 2-Longitudinal-Stream CNNs, YOLO, and Multi-Modal Behavioral Analysis',
     shortTitle: 'HAPS: Hybrid AI Proctoring System',
-    type: 'Conference Paper',
+    type: 'Preprint',
     date: 'May 2026',
     reads: 12,
     coAuthors: ['Abhinav Tarigoppula', 'Deepak Jaggupalli', 'Jaggupalli Pujith'],
@@ -201,7 +201,7 @@ export const publications = [
   {
     title: 'AI, ML and DL-Based Integrated Drone Detection and Autonomous Defence Systems: A Review',
     shortTitle: 'AI/ML/DL Drone Detection & Autonomous Defence',
-    type: 'Conference Paper',
+    type: 'Preprint',
     date: 'March 2026',
     reads: 45,
     coAuthors: ['Deepak Jaggupalli', 'Abhinav Tarigoppula', 'Jaggupalli Pujith'],

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abhinav Tarigoppula — Resume</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { font-size: 10.8px; }
+
+  body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    color: #111;
+    background: #fff;
+    padding: 36px 44px;
+    max-width: 820px;
+    margin: 0 auto;
+    line-height: 1.45;
+  }
+
+  /* ── Name ── */
+  .name {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  /* ── Contact row ── */
+  .contact {
+    text-align: center;
+    font-size: 9.4px;
+    color: #444;
+    margin-bottom: 3px;
+  }
+  .contact a { color: #2563eb; text-decoration: none; }
+  .links {
+    text-align: center;
+    font-size: 9.4px;
+    margin-bottom: 16px;
+  }
+  .links a { color: #2563eb; text-decoration: none; margin: 0 4px; }
+
+  /* ── Section ── */
+  .section { margin-bottom: 13px; }
+  .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border-bottom: 1.5px solid #111;
+    padding-bottom: 2px;
+    margin-bottom: 7px;
+  }
+
+  /* ── Two-col header for experience/education ── */
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .entry-title { font-size: 10.5px; font-weight: 700; }
+  .entry-sub   { font-size: 10px; color: #444; margin-bottom: 4px; }
+  .entry-date  { font-size: 9.5px; color: #555; white-space: nowrap; flex-shrink: 0; }
+
+  /* ── Bullets ── */
+  ul { padding-left: 14px; }
+  ul li {
+    font-size: 9.8px;
+    color: #222;
+    margin-bottom: 2.5px;
+    line-height: 1.5;
+  }
+  ul li::marker { color: #555; }
+
+  /* ── Skills ── */
+  .skills-row { font-size: 9.8px; margin-bottom: 3px; }
+  .skills-row strong { font-weight: 600; }
+
+  /* ── Project tech line ── */
+  .tech-line {
+    font-size: 9.2px;
+    color: #555;
+    margin-bottom: 3px;
+    font-style: italic;
+  }
+
+  /* ── Research ── */
+  .paper { margin-bottom: 8px; }
+  .paper-title { font-size: 10px; font-weight: 600; margin-bottom: 1px; }
+  .paper-meta  { font-size: 9.2px; color: #555; }
+
+  /* ── Achievements ── */
+  .ach-row { font-size: 9.8px; margin-bottom: 3px; }
+  .ach-row strong { font-weight: 600; }
+
+  /* ── Print ── */
+  @media print {
+    body { padding: 24px 36px; }
+    @page { margin: 0; size: A4; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════ HEADER ════════════ -->
+<div class="name">ABHINAV TARIGOPPULA</div>
+<div class="contact">
+  Visakhapatnam, India &nbsp;|&nbsp; +91-9121611029 &nbsp;|&nbsp; abhinaaavvv07187@gmail.com
+</div>
+<div class="links">
+  <a href="https://www.linkedin.com/in/abhinav0702/">LinkedIn</a> |
+  <a href="https://github.com/kratos0718">GitHub</a> |
+  <a href="https://abhinavbuilds.online">Portfolio</a> |
+  <a href="https://leetcode.com/coderboy11">LeetCode</a>
+</div>
+
+<!-- ════════════ SUMMARY ════════════ -->
+<div class="section">
+  <div class="section-title">Professional Summary</div>
+  <p style="font-size:9.8px; line-height:1.55;">
+    Machine Learning Engineer with hands-on experience building and deploying production ML systems — from data pipeline engineering to real-time model serving and inference optimisation. Skilled in LLM pipelines, RAG architectures, Computer Vision, and end-to-end model lifecycle management using Python, LangChain, and FastAPI. Driven by measurable impact: improved model accuracy by 12% and reduced inference latency by 18% across production environments. Published independent AI research and shipped live products used by real users.
+  </p>
+</div>
+
+<!-- ════════════ SKILLS ════════════ -->
+<div class="section">
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-row"><strong>Languages:</strong> Python, Java, JavaScript</div>
+  <div class="skills-row"><strong>ML &amp; AI:</strong> TensorFlow, PyTorch, Scikit-learn, LangChain, OpenAI API, Hugging Face Transformers, RAG, Generative AI, Deep Learning, NLP, Computer Vision, Model Quantization</div>
+  <div class="skills-row"><strong>LLM &amp; Prompt Engineering:</strong> Large Language Models (LLMs), Prompt Engineering, FAISS, Pinecone, OpenAI API, LangChain Agents</div>
+  <div class="skills-row"><strong>Backend &amp; APIs:</strong> FastAPI, Node.js, REST APIs, Vector Databases</div>
+  <div class="skills-row"><strong>Frontend:</strong> React.js, Next.js</div>
+  <div class="skills-row"><strong>Cloud &amp; DevOps:</strong> AWS, Docker, GitHub Actions, CI/CD</div>
+  <div class="skills-row"><strong>Tools:</strong> Git, SQL, Linux, OpenCV</div>
+</div>
+
+<!-- ════════════ EXPERIENCE ════════════ -->
+<div class="section">
+  <div class="section-title">Work Experience</div>
+
+  <!-- PwC -->
+  <div style="margin-bottom:9px;">
+    <div class="entry-header">
+      <span class="entry-title">AI &amp; Data Advisory Intern — PwC Launchpad (PwC India)</span>
+      <span class="entry-date">Feb 2026 – Present</span>
+    </div>
+    <ul>
+      <li>Selected for PwC's flagship GenAI &amp; Data Advisory programme focused on Large Language Models, Prompt Engineering, and enterprise data systems.</li>
+      <li>Built and optimised LLM prompt workflows for real-world enterprise use cases involving structured and unstructured data.</li>
+      <li>Gained hands-on exposure to enterprise AI architectures and AI-driven decision systems.</li>
+      <li>Achieved Level 10 | 1500+ XP — top performance in cohort.</li>
+    </ul>
+  </div>
+
+  <!-- OneStop AI -->
+  <div>
+    <div class="entry-header">
+      <span class="entry-title">Machine Learning &amp; AI Intern — OneStop AI</span>
+      <span class="entry-date">May 2025 – Aug 2025 · Remote</span>
+    </div>
+    <ul>
+      <li>Improved classification accuracy by 12% (78% → 90%) across 3 production models via hyperparameter tuning, architecture search, and model quantization.</li>
+      <li>Reduced real-time inference latency by 18% (220ms → 180ms) by refactoring preprocessing pipeline and decoupling batch processing from inference.</li>
+      <li>Engineered scalable end-to-end data pipelines covering preprocessing, feature engineering, and batch inference — integrated with CI/CD for continuous model delivery.</li>
+      <li>Integrated monitoring and performance tracking pipelines for production inference stability in collaboration with senior engineers.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ════════════ PROJECTS ════════════ -->
+<div class="section">
+  <div class="section-title">Projects</div>
+
+  <!-- PathForge -->
+  <div style="margin-bottom:9px;">
+    <div class="entry-header">
+      <span class="entry-title">PathForge — AI Placement Preparation System</span>
+      <span class="entry-date"><a href="https://www.pathforge.online/auth">pathforge.online</a> · <a href="https://github.com/kratos0718">GitHub</a></span>
+    </div>
+    <div class="tech-line">Python, FastAPI, LangChain, OpenAI API, FAISS/Pinecone, React</div>
+    <ul>
+      <li>Architected an end-to-end AI placement preparation platform using LLM pipelines to deliver role-specific study material and mock interviews.</li>
+      <li>Implemented Retrieval-Augmented Generation (RAG) with FAISS/Pinecone vector databases for context-aware Q&amp;A and personalised study material generation.</li>
+      <li>Built a skill-gap scoring layer before retrieval — user profile embeddings filter vector search to level-relevant context, cutting token usage ~30%.</li>
+      <li>Engineered LLM-driven modules for dynamic question generation, resume scoring, and mock interview simulation.</li>
+    </ul>
+  </div>
+
+  <!-- MarkMe -->
+  <div style="margin-bottom:9px;">
+    <div class="entry-header">
+      <span class="entry-title">MarkMe — Smart Attendance System</span>
+      <span class="entry-date"><a href="https://mark-me-ih3h.vercel.app/">Live</a> · <a href="https://github.com/kratos0718/MarkMe">GitHub</a></span>
+    </div>
+    <div class="tech-line">Python, JavaScript, OpenCV, Face Recognition, GPS Geo-fencing, Liveness Detection</div>
+    <ul>
+      <li>Engineered a triple-layer attendance verification system combining real-time face recognition (Computer Vision), GPS geo-fencing (100m radius), and rotating 6-digit session keys — eliminating proxy attendance.</li>
+      <li>Implemented client-side face detection ensuring biometric data never leaves the device; liveness detection blocks photo spoofing attacks.</li>
+      <li>Deployed live at GITAM University with session-based key expiry and real-time attendance tracking dashboard.</li>
+    </ul>
+  </div>
+
+  <!-- SoulSync -->
+  <div>
+    <div class="entry-header">
+      <span class="entry-title">SoulSync — AI Mental Health Chatbot</span>
+      <span class="entry-date">Smart India Hackathon 2024 · <a href="https://github.com/kratos0718/SoulSync">GitHub</a></span>
+    </div>
+    <div class="tech-line">Python, NLP, Hugging Face Transformers, FastAPI</div>
+    <ul>
+      <li>Fine-tuned a sentence-transformer on a mental-health-specific dataset for emotion classification; replaced single-class output with multi-label emotion scoring — accuracy improved from 34% to 81%.</li>
+      <li>Built multi-turn context tracking to reduce irrelevant responses by ~60%; submitted at Smart India Hackathon 2024 (1M+ participants).</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ════════════ RESEARCH ════════════ -->
+<div class="section">
+  <div class="section-title">Research &amp; Preprints</div>
+  <div class="paper">
+    <div class="paper-title">HAPS: A Hybrid AI Proctoring System Using 2-Longitudinal-Stream CNNs, YOLO, and Multi-Modal Behavioral Analysis</div>
+    <div class="paper-meta">Abhinav Tarigoppula, Deepak Jaggupalli, Jaggupalli Pujith &nbsp;·&nbsp; ResearchGate Preprint, May 2026 &nbsp;·&nbsp; 12 reads</div>
+  </div>
+  <div class="paper">
+    <div class="paper-title">AI, ML and DL-Based Integrated Drone Detection and Autonomous Defence Systems: A Review</div>
+    <div class="paper-meta">Deepak Jaggupalli, Abhinav Tarigoppula, Jaggupalli Pujith &nbsp;·&nbsp; ResearchGate Preprint, March 2026 &nbsp;·&nbsp; 45 reads</div>
+  </div>
+</div>
+
+<!-- ════════════ EDUCATION ════════════ -->
+<div class="section">
+  <div class="section-title">Education</div>
+
+  <div style="margin-bottom:6px;">
+    <div class="entry-header">
+      <span class="entry-title">GITAM University — B.Tech Computer Science &amp; Engineering (AI/ML Specialisation)</span>
+      <span class="entry-date">Aug 2023 – 2027</span>
+    </div>
+    <div class="entry-sub">CGPA: 8.04 &nbsp;·&nbsp; Best semester SGPA: 8.83 (ML-heavy sem) &nbsp;·&nbsp; Outstanding (O) in Machine Learning &nbsp;·&nbsp; A+ in AI &amp; Deep Learning</div>
+  </div>
+
+  <div>
+    <div class="entry-header">
+      <span class="entry-title">FIITJEE Junior College — Intermediate MPC</span>
+      <span class="entry-date">2021 – 2023</span>
+    </div>
+    <div class="entry-sub">Andhra Pradesh · Mathematics, Physics, Chemistry</div>
+  </div>
+</div>
+
+<!-- ════════════ ACHIEVEMENTS ════════════ -->
+<div class="section">
+  <div class="section-title">Achievements</div>
+  <div class="ach-row"><strong>Smart India Hackathon 2024 —</strong> Built SoulSync (AI mental health chatbot), competing among 1M+ student participants nationwide.</div>
+  <div class="ach-row"><strong>LeetCode —</strong> 212 problems solved (91 Easy · 108 Medium · 13 Hard) · 82-day max streak · 127 active days · coderboy11</div>
+  <div class="ach-row"><strong>PwC Launchpad —</strong> Achieved Level 10 | 1500+ XP, top-ranked performance in cohort.</div>
+</div>
+
+</body>
+</html>
