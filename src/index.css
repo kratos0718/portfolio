@@ -24,7 +24,10 @@
 html { scroll-behavior: auto; /* Lenis handles this */ }
 
 body {
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle, rgba(99,102,241,0.13) 1px, transparent 1px);
+  background-size: 26px 26px;
   color: var(--text);
   font-family: var(--font-sans);
   overflow-x: hidden;
