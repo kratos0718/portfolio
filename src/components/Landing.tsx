@@ -1,7 +1,8 @@
 import { useEffect, useRef, useCallback } from 'react';
 import gsap from 'gsap';
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import './styles/Landing.css';
-import { personalInfo } from '../data/portfolioData';
+import { personalInfo, socials } from '../data/portfolioData';
 
 /* ─── Neural Network Canvas ─── */
 function NeuralCanvas() {
@@ -245,13 +246,24 @@ export default function Landing() {
           <MagneticBtn href="#contact" className="btn-outline-mag">
             <span>Let's Talk</span>
           </MagneticBtn>
+
+          <div className="landing-socials">
+            <a href={socials.github} target="_blank" rel="noopener noreferrer" className="landing-social-link">
+              <FiGithub size={15} />
+              <span>GitHub</span>
+            </a>
+            <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="landing-social-link">
+              <FiLinkedin size={15} />
+              <span>LinkedIn</span>
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Right stats */}
       <div ref={rightRef} className="landing-right">
         {[
-          { num: '150+', label: 'LeetCode Solved' },
+          { num: '250+', label: 'LeetCode Solved' },
           { num: '3+', label: 'Live Projects' },
           { num: '+12%', label: 'ML Accuracy Gain' },
         ].map(s => (
