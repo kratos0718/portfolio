@@ -1,6 +1,6 @@
 import './styles/TickerStrip.css';
 
-const SEGMENT = 'AI Engineer · Full Stack Developer · Machine Learning · RAG Systems · LLM Pipelines · Open to Opportunities · Python · React · LangChain · Agentic AI · Open Source · Meta PyTorch · FAISS · Computer Vision · Springer Author · ';
+const SEGMENT = 'AI Engineer · Full Stack Developer · Machine Learning · RAG Systems · LLM Pipelines · Open to Opportunities · Python · React · LangChain · Agentic AI · Open Source · PR under review @ pytorch/torchtune · PR under review @ marimo (YC) · FAISS · Computer Vision · Springer Author · ';
 
 export default function TickerStrip({ reverse }: { reverse?: boolean }) {
   const doubled = SEGMENT + SEGMENT;
