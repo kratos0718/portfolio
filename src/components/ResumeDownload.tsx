@@ -46,7 +46,7 @@ export default function ResumeDownload() {
             <div className="resume-pulse-ring" />
             <a
               href={personalInfo.resumeUrl}
-              download="Abhinav_Tarigoppula_Resume.pdf"
+              download="ABHINAV_RESUME.pdf"
               className="resume-btn"
               data-hover
             >

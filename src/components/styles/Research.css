@@ -89,7 +89,7 @@
 }
 
 .rp-card-inner {
-  padding: 32px 32px 28px;
+  padding: 38px 38px 32px;
 }
 
 /* ── Card top row ── */
@@ -101,7 +101,7 @@
 }
 .rp-type {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--cyan);
@@ -116,13 +116,13 @@
 }
 .rp-reads {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-muted);
   letter-spacing: 0.08em;
 }
 .rp-date {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-muted);
   letter-spacing: 0.08em;
 }
@@ -141,7 +141,7 @@
 
 /* ── Abstract ── */
 .rp-abstract {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.72;
   color: var(--text-dim);
   margin-bottom: 16px;
@@ -156,7 +156,7 @@
 }
 .rp-tag {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-dim);
@@ -180,7 +180,7 @@
   border-top: 1px solid var(--border);
 }
 .rp-authors {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-muted);
   line-height: 1.6;
   flex: 1;
@@ -191,7 +191,7 @@
 }
 .rp-view {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--cyan);

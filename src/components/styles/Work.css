@@ -69,7 +69,7 @@
 }
 .pfeat-stat-label {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.5);
@@ -90,7 +90,7 @@
 }
 .pfeat-tag {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--cyan);
@@ -108,7 +108,7 @@
 }
 .pfeat-subtitle {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -129,13 +129,13 @@
 .pfeat-case-col { display: flex; flex-direction: column; gap: 6px; }
 .pfeat-case-label {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--cyan);
 }
 .pfeat-case-text {
-  font-size: 12px;
+  font-size: 13.5px;
   line-height: 1.65;
   color: var(--text-dim);
 }
@@ -218,7 +218,7 @@
 .proj-banner-stat-label {
   display: block;
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.45);
@@ -235,7 +235,7 @@
   align-items: center;
   gap: 6px;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #ffffff;
@@ -255,7 +255,7 @@
 
 /* ── Card body ── */
 .proj-body {
-  padding: 24px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -266,7 +266,7 @@
 }
 .proj-year {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.18em;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -283,7 +283,7 @@
 
 .proj-subtitle {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -291,7 +291,7 @@
 }
 
 .proj-desc {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.7;
   color: var(--text-dim);
   margin-bottom: 18px;
@@ -307,7 +307,7 @@
 }
 .proj-tag {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-dim);

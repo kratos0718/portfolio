@@ -3,6 +3,11 @@
   position: relative;
 }
 
+/* Long heading — cap size so it doesn't break awkwardly */
+.challenges .section-title {
+  font-size: clamp(28px, 4vw, 52px);
+}
+
 .challenges-list {
   display: flex;
   flex-direction: column;
@@ -36,14 +41,14 @@
 .challenge-card:hover::before { transform: scaleY(1); }
 
 .challenge-col {
-  padding: 24px 22px;
+  padding: 28px 24px;
   border-right: 1px solid var(--border);
 }
 .challenge-col:last-child { border-right: none; }
 
 .challenge-col-label {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--cyan);
@@ -60,25 +65,25 @@
 }
 
 .challenge-problem {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text);
   margin-bottom: 6px;
   line-height: 1.4;
 }
 .challenge-context {
-  font-size: 12.5px;
+  font-size: 13.5px;
   line-height: 1.7;
   color: var(--text-dim);
 }
 .challenge-fix {
-  font-size: 12.5px;
+  font-size: 13.5px;
   line-height: 1.7;
   color: var(--text-dim);
 }
 .challenge-result {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.7;
   color: var(--cyan);
   font-weight: 600;
@@ -97,5 +102,5 @@
 @media (max-width: 480px) {
   .challenges { padding: 60px 20px; }
   .challenge-col { padding: 18px 16px; }
-  .challenge-col-label { font-size: 8px; }
+  .challenge-col-label { font-size: 10px; }
 }

@@ -111,11 +111,11 @@ export const achievements = [
     icon: '⚔️',
   },
   {
-    title: 'CGPA 8.04 — Top semester in ML-heavy sem (SGPA 8.83)',
+    title: 'CGPA 8.12 — Top semester in ML-heavy sem (SGPA 8.83)',
     org: 'GITAM University · B.Tech CSE AI/ML',
     year: '2025',
     type: 'Academic',
-    description: 'Outstanding (O) in Machine Learning, A+ in AI & Deep Learning (Sem 6), A+ in DBMS & Automata. CGPA trajectory improved each semester — 7.66 → 7.75 → 7.82 → 8.04 — with best SGPA (8.83) in the most ML-intensive semester.',
+    description: 'Outstanding (O) in Machine Learning, A+ in AI & Deep Learning (Sem 6), A+ in DBMS & Automata. CGPA trajectory improved each semester — 7.66 → 7.75 → 7.82 → 8.12 — with best SGPA (8.83) in the most ML-intensive semester.',
     icon: '🎓',
   },
   {
@@ -183,6 +183,33 @@ export const projects = [
     images: [] as string[],
     caseStudy: null,
   },
+  {
+    title: 'PaperMind',
+    subtitle: 'RAG-Powered arXiv Paper Explainer',
+    description: 'RAG pipeline that explains arXiv papers with streaming responses and D3.js knowledge graphs. Built with LangChain, Next.js, OpenAI API — deployed on Vercel.',
+    tech: ['Python', 'LangChain', 'Next.js', 'D3.js', 'RAG', 'Vercel'],
+    live: 'https://github.com/kratos0718',
+    liveNow: false,
+    github: 'https://github.com/kratos0718',
+    year: '2025',
+    stat: { num: 'RAG', label: 'arxiv explainer' },
+    images: [] as string[],
+    caseStudy: null,
+  },
+  {
+    title: 'pytorch/torchtune',
+    subtitle: 'Open Source Contribution · PR #2964',
+    description: 'Fixed distributed training bug where config printed on every GPU rank instead of once. Root cause: rank-detection utility didn\'t account for period before torch.distributed initialization.',
+    tech: ['PyTorch', 'Distributed Training', 'Python', 'Open Source'],
+    live: 'https://github.com/pytorch/torchtune/pull/2964',
+    liveNow: false,
+    github: 'https://github.com/pytorch/torchtune/pull/2964',
+    linkLabel: 'View PR',
+    year: '2025',
+    stat: { num: 'PR', label: 'merged · Meta' },
+    images: [] as string[],
+    caseStudy: null,
+  },
 ];
 
 export const publications = [
@@ -245,7 +272,7 @@ export const education = [
     institution: 'Gitam University',
     location: 'Visakhapatnam, Andhra Pradesh',
     period: '2023 – 2027',
-    cgpa: '8.04',
+    cgpa: '8.12',
     highlight: 'O in Machine Learning · A+ in AI & Deep Learning',
   },
   {

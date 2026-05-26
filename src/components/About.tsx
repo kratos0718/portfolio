@@ -83,7 +83,7 @@ export default function About() {
           </p>
           <div ref={hlRef} className="about-highlights">
             {[
-              { icon: '🎓', title: 'B.Tech CSE (AI/ML) · Gitam University · CGPA 8.04', sub: 'O in ML · A+ in AI & Deep Learning · SGPA 8.83 (best sem)' },
+              { icon: '🎓', title: 'B.Tech CSE (AI/ML) · Gitam University · CGPA 8.12', sub: 'O in ML · A+ in AI & Deep Learning · SGPA 8.83 (best sem)' },
               { icon: '🧠', title: 'ML & AI Intern · OneStop AI', sub: 'Improved model accuracy +12%, reduced latency -18%' },
               { icon: '⚔️', title: 'Smart India Hackathon 2024', sub: 'Built SoulSync — AI mental health chatbot' },
               { icon: '📍', title: `Based in ${personalInfo.location}`, sub: 'Open to remote & on-site internships' },
@@ -126,7 +126,7 @@ export default function About() {
           <div className="model-stat-grid">
             {[
               { num: '212', label: 'LeetCode Solved' },
-              { num: '8.04', label: 'CGPA (5 sems)' },
+              { num: '8.12', label: 'CGPA (6 sems)' },
               { num: '+12%', label: 'Accuracy Gain' },
               { num: '-18%', label: 'Latency Cut' },
             ].map(s => (
