@@ -44,8 +44,8 @@ export default function Navbar() {
         </ul>
         <div className="navbar-actions">
           <a
-            href="/Abhinav_Tarigoppula_Resume.pdf"
-            download="Abhinav_Tarigoppula_Resume.pdf"
+            href="/ABHINAV_RESUME.pdf"
+            download="ABHINAV_RESUME.pdf"
             className="navbar-cv"
             data-hover
           >
@@ -80,8 +80,8 @@ export default function Navbar() {
         </ul>
         <div className="navbar-mobile-footer">
           <a
-            href="/Abhinav_Tarigoppula_Resume.pdf"
-            download="Abhinav_Tarigoppula_Resume.pdf"
+            href="/ABHINAV_RESUME.pdf"
+            download="ABHINAV_RESUME.pdf"
             className="navbar-mobile-cv-btn"
             onClick={closeMenu}
           >

@@ -22,7 +22,7 @@
 
 .section-tag {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--cyan);
@@ -117,8 +117,8 @@
 .about-highlight:first-child { border-top: 1px solid var(--border); }
 .about-highlight:hover { border-color: rgba(0,0,0,0.18); }
 .about-highlight-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
-.about-highlight-text { font-size: 13px; line-height: 1.65; color: var(--text-dim); }
-.about-highlight-text strong { color: var(--text); display: block; margin-bottom: 1px; font-weight: 600; font-size: 14px; }
+.about-highlight-text { font-size: 14px; line-height: 1.65; color: var(--text-dim); }
+.about-highlight-text strong { color: var(--text); display: block; margin-bottom: 1px; font-weight: 600; font-size: 15px; }
 
 /* ── Right: Model Metrics card ── */
 .about-right {
@@ -131,7 +131,7 @@
 .model-card {
   border: 1px solid var(--border);
   background: var(--bg-card);
-  padding: 28px 28px 20px;
+  padding: 35px 35px 26px;
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(8px);
@@ -156,14 +156,14 @@
 }
 .model-card-title {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--cyan);
 }
 .model-card-badge {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.15em;
   color: var(--text-muted);
   border: 1px solid var(--border);
@@ -173,17 +173,17 @@
 
 /* Bar metric */
 .model-metric {
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 .model-metric-row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
 }
-.model-metric-label { font-size: 12px; color: var(--text-dim); }
+.model-metric-label { font-size: 13px; color: var(--text-dim); }
 .model-metric-val {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text);
   font-weight: 600;
 }
@@ -211,7 +211,7 @@
 }
 .model-stat-cell {
   background: var(--bg-card);
-  padding: 16px 18px;
+  padding: 20px 22px;
   transition: background 0.2s;
 }
 .model-stat-cell:hover { background: var(--bg-3); }
@@ -224,7 +224,7 @@
   margin-bottom: 4px;
 }
 .model-stat-label {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -259,7 +259,7 @@
 }
 .gh-card-title {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--cyan);
@@ -269,7 +269,7 @@
 }
 .gh-card-link {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.12em;
   color: var(--text-muted);
   display: flex;
@@ -305,7 +305,7 @@
   line-height: 1;
 }
 .gh-stat-label {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -321,7 +321,7 @@
 }
 .gh-repo-pill {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.1em;
   color: var(--text-dim);
   border: 1px solid var(--border);

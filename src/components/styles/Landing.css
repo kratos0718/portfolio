@@ -100,12 +100,12 @@
   gap: 0;
   margin-bottom: 32px;
   overflow: hidden;
-  height: 28px;
+  height: 30px;
 }
 .landing-role-item {
   font-family: var(--font-mono);
-  font-size: clamp(11px, 1.1vw, 14px);
-  letter-spacing: 0.2em;
+  font-size: clamp(13px, 1.2vw, 15px);
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--text-dim);
   white-space: nowrap;
@@ -120,7 +120,7 @@
 
 /* ── Tagline ── */
 .landing-tagline {
-  font-size: clamp(15px, 1.6vw, 20px);
+  font-size: clamp(18px, 1.9vw, 22px);
   line-height: 1.65;
   color: var(--text-dim);
   max-width: 500px;
@@ -151,7 +151,7 @@
   align-items: center;
   gap: 6px;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -235,7 +235,7 @@
   line-height: 1;
 }
 .landing-stat-label {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-muted);

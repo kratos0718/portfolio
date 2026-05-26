@@ -10,7 +10,7 @@
 
 .sp-eyebrow {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -43,7 +43,7 @@
 
 .sp-tag {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--cyan);
@@ -64,7 +64,7 @@
 
 .sp-detail {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-muted);
   letter-spacing: 0.05em;
   white-space: nowrap;

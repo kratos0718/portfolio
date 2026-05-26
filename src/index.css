@@ -30,6 +30,8 @@ body {
   background-size: 26px 26px;
   color: var(--text);
   font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
   overflow-x: hidden;
   cursor: none;
   -webkit-font-smoothing: antialiased;
@@ -58,6 +60,6 @@ button { cursor: none; border: none; background: none; font-family: var(--font-s
 
 /* ── Mobile base ── */
 @media (max-width: 480px) {
-  html { font-size: 15px; }
+  html { font-size: 16px; }
   ::-webkit-scrollbar { width: 0px; }
 }

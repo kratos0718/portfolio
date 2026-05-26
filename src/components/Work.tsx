@@ -10,10 +10,12 @@ gsap.registerPlugin(ScrollTrigger);
 type Project = typeof projects[0];
 
 const banners: Record<string, { gradient: string; icon: string }> = {
-  PathForge:     { gradient: 'linear-gradient(135deg, #0f0c29 0%, #1a1a4e 50%, #24243e 100%)', icon: '🧭' },
-  MarkMe:        { gradient: 'linear-gradient(135deg, #0d1b2a 0%, #1b3a4b 50%, #1b5e40 100%)', icon: '📍' },
-  SoulSync:      { gradient: 'linear-gradient(135deg, #1a0533 0%, #2d1b69 60%, #3d2080 100%)', icon: '🧠' },
-  'Click N Cut': { gradient: 'linear-gradient(135deg, #1a0a00 0%, #6b2d00 60%, #b84500 100%)', icon: '📷' },
+  PathForge:          { gradient: 'linear-gradient(135deg, #0f0c29 0%, #1a1a4e 50%, #24243e 100%)', icon: '🧭' },
+  MarkMe:             { gradient: 'linear-gradient(135deg, #0d1b2a 0%, #1b3a4b 50%, #1b5e40 100%)', icon: '📍' },
+  SoulSync:           { gradient: 'linear-gradient(135deg, #1a0533 0%, #2d1b69 60%, #3d2080 100%)', icon: '🧠' },
+  'Click N Cut':      { gradient: 'linear-gradient(135deg, #1a0a00 0%, #6b2d00 60%, #b84500 100%)', icon: '📷' },
+  PaperMind:          { gradient: 'linear-gradient(135deg, #001a2c 0%, #002d4a 50%, #00405e 100%)', icon: '📄' },
+  'pytorch/torchtune':{ gradient: 'linear-gradient(135deg, #1a0000 0%, #4a0e0e 50%, #7a1c1c 100%)', icon: '🔥' },
 };
 
 /* ── Featured card (PathForge) — full-width case study ── */
@@ -174,7 +176,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             <FiGithub size={13} /> Code
           </a>
           <a href={project.live} target="_blank" rel="noopener noreferrer" className="proj-link">
-            <FiExternalLink size={13} /> Demo
+            <FiExternalLink size={13} /> {(project as any).linkLabel ?? 'Demo'}
           </a>
         </div>
       </div>

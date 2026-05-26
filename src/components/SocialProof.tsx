@@ -8,9 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 const orgs = [
   { name: 'OneStop AI',             detail: 'ML & AI Intern · 2025',          tag: 'Internship' },
   { name: 'PwC',                    detail: 'AI & Data Advisory · 2026',       tag: 'Internship' },
-  { name: '2 Conference Papers',    detail: 'ResearchGate · 57 Total Reads',   tag: 'Published'  },
+  { name: '2 Research Preprints',   detail: 'ResearchGate · 57 Total Reads',   tag: 'Preprint'   },
   { name: 'Smart India Hackathon',  detail: 'Participant · 1M+ Competitors',   tag: 'Hackathon'  },
-  { name: 'GITAM University',       detail: 'B.Tech CSE AI/ML · CGPA 8.04',   tag: 'Education'  },
+  { name: 'GITAM University',       detail: 'B.Tech CSE AI/ML · CGPA 8.12',   tag: 'Education'  },
 ];
 
 export default function SocialProof() {
