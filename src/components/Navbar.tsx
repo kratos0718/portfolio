@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { FiDownload, FiMenu, FiX } from 'react-icons/fi';
+import { FiDownload, FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi';
 import './styles/Navbar.css';
 
 const links = [
@@ -13,6 +13,11 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<'dark' | 'light'>(() =>
+    typeof window !== 'undefined'
+      ? (localStorage.getItem('theme') as 'dark' | 'light') ?? 'dark'
+      : 'dark'
+  );
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -21,6 +26,11 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
   // Lock body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -28,6 +38,7 @@ export default function Navbar() {
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
+  const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark');
 
   return (
     <>
@@ -43,6 +54,13 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="navbar-actions">
+          <button
+            className="navbar-theme-toggle"
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? <FiSun size={15} /> : <FiMoon size={15} />}
+          </button>
           <a
             href="/ABHINAV_RESUME.pdf"
             download="ABHINAV_RESUME.pdf"

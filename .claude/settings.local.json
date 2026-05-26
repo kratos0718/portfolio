@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:godly.website)",
+      "WebFetch(domain:cydstumpel.nl)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "Bash(find /usr/local /opt -name \"node\" -type f 2>/dev/null | head -5; ls ~/.nvm/versions/node 2>/dev/null || echo \"no nvm\")",
+      "Read(//usr/local/**)",
+      "Read(//Users/abhinav/.nvm/versions/**)",
+      "Read(//Users/abhinav/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(command -v node)",
+      "Bash(git --version)",
+      "Bash(git init *)",
+      "Bash(git remote *)"
+    ]
+  }
+}

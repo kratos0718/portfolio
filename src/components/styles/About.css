@@ -13,7 +13,7 @@
   font-weight: 700;
   letter-spacing: -0.05em;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(0,0,0,0.06);
+  -webkit-text-stroke: 1px var(--stroke-subtle);
   pointer-events: none;
   user-select: none;
   white-space: nowrap;
@@ -71,14 +71,14 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  border: 2px solid rgba(0,0,0,0.2);
+  border: 2px solid var(--border-hover);
   display: block;
   position: relative;
   z-index: 1;
   transition: border-color 0.3s;
 }
 .about-photo-wrap:hover .about-photo {
-  border-color: rgba(0,0,0,0.5);
+  border-color: var(--cyan);
 }
 .about-photo-glow {
   position: absolute;
@@ -115,7 +115,7 @@
   cursor: none;
 }
 .about-highlight:first-child { border-top: 1px solid var(--border); }
-.about-highlight:hover { border-color: rgba(0,0,0,0.18); }
+.about-highlight:hover { border-color: var(--border-hover); }
 .about-highlight-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
 .about-highlight-text { font-size: 14px; line-height: 1.65; color: var(--text-dim); }
 .about-highlight-text strong { color: var(--text); display: block; margin-bottom: 1px; font-weight: 600; font-size: 15px; }
@@ -137,7 +137,7 @@
   backdrop-filter: blur(8px);
   transition: border-color 0.3s;
 }
-.model-card:hover { border-color: rgba(0,0,0,0.18); }
+.model-card:hover { border-color: var(--border-hover); }
 .model-card::before {
   content: '';
   position: absolute;
@@ -240,7 +240,7 @@
   position: relative;
   overflow: hidden;
 }
-.gh-card:hover { border-color: rgba(0,0,0,0.18); }
+.gh-card:hover { border-color: var(--border-hover); }
 .gh-card::before {
   content: '';
   position: absolute;

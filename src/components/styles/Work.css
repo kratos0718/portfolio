@@ -12,7 +12,7 @@
   font-weight: 700;
   letter-spacing: -0.05em;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(0,0,0,0.06);
+  -webkit-text-stroke: 1px var(--stroke-subtle);
   pointer-events: none;
   user-select: none;
 }
@@ -31,7 +31,7 @@
 }
 .proj-featured:hover {
   box-shadow: 0 24px 60px rgba(0,0,0,0.1);
-  border-color: rgba(0,0,0,0.16);
+  border-color: var(--border-hover);
 }
 
 /* Featured — left banner panel */
@@ -169,7 +169,7 @@
 .proj-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 48px rgba(0,0,0,0.1);
-  border-color: rgba(0,0,0,0.18);
+  border-color: var(--border-hover);
 }
 
 /* ── Banner ── */
@@ -343,7 +343,7 @@
   transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 .proj-link:hover {
-  border-color: rgba(0,0,0,0.22);
+  border-color: var(--border-hover);
   color: var(--text);
   background: var(--bg-3);
 }

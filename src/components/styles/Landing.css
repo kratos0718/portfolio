@@ -18,7 +18,7 @@
   letter-spacing: -0.06em;
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(0,0,0,0.055);
+  -webkit-text-stroke: 1px var(--stroke-subtle);
   pointer-events: none;
   user-select: none;
   z-index: 0;
@@ -51,7 +51,7 @@
   align-items: center;
   gap: 8px;
   border: 1px solid var(--border);
-  background: rgba(0,0,0,0.04);
+  background: var(--bg-card);
   padding: 6px 16px;
   margin-bottom: 28px;
   clip-path: inset(0 100% 0 0);
@@ -174,7 +174,7 @@
 .btn-primary-mag {
   padding: 15px 40px;
   background: var(--cyan);
-  color: var(--bg);
+  color: #fff;
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 700;
@@ -187,7 +187,7 @@
 }
 .btn-outline-mag {
   padding: 15px 40px;
-  border: 1px solid rgba(0,0,0,0.22);
+  border: 1px solid var(--border-hover);
   color: var(--text);
   font-family: var(--font-mono);
   font-size: 12px;
