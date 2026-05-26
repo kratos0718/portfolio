@@ -12,7 +12,7 @@
 }
 
 .navbar.scrolled {
-  background: rgba(248, 247, 244, 0.95);
+  background: var(--navbar-scrolled-bg);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   padding: 14px 60px;
@@ -99,7 +99,26 @@
   transition: transform 0.3s ease;
 }
 .navbar-cv:hover::before { transform: scaleX(1); }
-.navbar-cv:hover { color: var(--text); border-color: rgba(0,0,0,0.18); }
+.navbar-cv:hover { color: var(--text); border-color: var(--border-hover); }
+
+/* ── Theme toggle ── */
+.navbar-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  transition: color 0.3s, border-color 0.3s, background 0.3s;
+  position: relative;
+  z-index: 1001;
+}
+.navbar-theme-toggle:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: var(--cyan-glow);
+}
 .navbar-cv span, .navbar-cv svg { position: relative; z-index: 1; }
 
 /* ── Hire me CTA ── */
@@ -125,7 +144,7 @@
   transition: transform 0.3s ease;
 }
 .navbar-cta:hover::before { transform: scaleX(1); }
-.navbar-cta:hover { color: var(--bg); }
+.navbar-cta:hover { color: #fff; }
 .navbar-cta span { position: relative; z-index: 1; }
 
 /* ── Hamburger button (hidden on desktop) ── */

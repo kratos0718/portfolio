@@ -1,22 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
+/* ══════════════════════════════════════════
+   DARK THEME (default)
+   ══════════════════════════════════════════ */
 :root {
+  /* Accent — electric blue */
+  --cyan: #3B82F6;
+  --cyan-dim: #60A5FA;
+  --cyan-muted: #93C5FD;
+  --cyan-glow: rgba(59,130,246,0.10);
+  --cyan-glow-strong: rgba(59,130,246,0.22);
+
+  /* Backgrounds */
+  --bg: #080C14;
+  --bg-2: #0F172A;
+  --bg-3: #1E293B;
+  --bg-card: rgba(15,23,42,0.85);
+
+  /* Text */
+  --text: #F1F5F9;
+  --text-dim: #94A3B8;
+  --text-muted: #475569;
+
+  /* Borders */
+  --border: rgba(255,255,255,0.07);
+  --border-hover: rgba(255,255,255,0.22);
+
+  /* Fonts */
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Helpers */
+  --stroke-subtle: rgba(255,255,255,0.06);
+  --dot-color: rgba(59,130,246,0.18);
+  --blob-a: rgba(59,130,246,0.18);
+  --blob-b: rgba(96,165,250,0.14);
+  --blob-c: rgba(59,130,246,0.13);
+  --canvas-opacity: 0.55;
+  --navbar-scrolled-bg: rgba(8,12,20,0.95);
+}
+
+/* ══════════════════════════════════════════
+   LIGHT THEME
+   ══════════════════════════════════════════ */
+[data-theme="light"] {
   --cyan: #6366f1;
   --cyan-dim: #818cf8;
   --cyan-muted: #a5b4fc;
   --cyan-glow: rgba(99,102,241,0.08);
   --cyan-glow-strong: rgba(99,102,241,0.18);
+
   --bg: #f8f7f4;
   --bg-2: #f2f0eb;
   --bg-3: #e8e4dc;
   --bg-card: rgba(255,255,255,0.85);
+
   --text: #111111;
   --text-dim: #555555;
   --text-muted: #999999;
+
   --border: rgba(0,0,0,0.09);
   --border-hover: rgba(0,0,0,0.22);
-  --font-sans: 'Space Grotesk', sans-serif;
-  --font-mono: 'Space Mono', monospace;
+
+  --stroke-subtle: rgba(0,0,0,0.06);
+  --dot-color: rgba(99,102,241,0.13);
+  --blob-a: rgba(99,102,241,0.13);
+  --blob-b: rgba(129,140,248,0.10);
+  --blob-c: rgba(99,102,241,0.11);
+  --canvas-opacity: 0.4;
+  --navbar-scrolled-bg: rgba(248,247,244,0.95);
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -25,8 +77,7 @@ html { scroll-behavior: auto; /* Lenis handles this */ }
 
 body {
   background-color: var(--bg);
-  background-image:
-    radial-gradient(circle, rgba(99,102,241,0.13) 1px, transparent 1px);
+  background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
   background-size: 26px 26px;
   color: var(--text);
   font-family: var(--font-sans);
@@ -47,7 +98,7 @@ body {
 
 a { text-decoration: none; color: inherit; }
 button { cursor: none; border: none; background: none; font-family: var(--font-sans); }
-::selection { background: rgba(0,0,0,0.1); color: var(--text); }
+::selection { background: var(--cyan-glow-strong); color: var(--text); }
 
 /* Hide default cursor everywhere — except touch devices */
 * { cursor: none !important; }
