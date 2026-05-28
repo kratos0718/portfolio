@@ -2,7 +2,7 @@ export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   firstName: 'Abhinav',
   tagline: 'I build LLM & RAG systems that work in production — not just demos.',
-  role: 'AI Engineer & Full Stack Developer',
+  role: 'AI Engineer · Full Stack Developer · Open Source Contributor',
   email: 'abhinaaavvv07187@gmail.com',
   phone: '+91-9121611029',
   location: 'Visakhapatnam, India',
@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm Abhinav — a CSE student at Gitam University building production-grade ML systems and LLM pipelines. I've interned at OneStop AI, shipped live products used by real people, and I'm deep into the LLM/RAG stack. My focus is AI engineering: making intelligent systems work outside the notebook.",
+  bio: "I'm Abhinav — a CSE student at GITAM University building production-grade ML systems and LLM pipelines. Open source contributor to HuggingFace, Meta PyTorch, and marimo (YC). I've interned at OneStop AI, shipped live products used by real people, and I'm deep into the LLM/RAG stack. My focus is AI engineering: making intelligent systems work outside the notebook.",
 };
 
 export const whyIDoThis = {
