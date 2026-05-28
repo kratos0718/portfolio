@@ -234,9 +234,9 @@ export default function Landing() {
         <div ref={roleRef} className="landing-role-strip">
           <span className="landing-role-item">AI Engineer</span>
           <span className="landing-role-sep">·</span>
-          <span className="landing-role-item">Full Stack Dev</span>
+          <span className="landing-role-item">Open Source Contributor</span>
           <span className="landing-role-sep">·</span>
-          <span className="landing-role-item">ML Enthusiast</span>
+          <span className="landing-role-item">Full Stack Dev</span>
         </div>
 
         <p ref={taglineRef} className="landing-tagline">

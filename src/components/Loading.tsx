@@ -68,7 +68,7 @@ export default function Loading() {
         </div>
 
         {/* Role */}
-        <div className="loading-role">AI Engineer &amp; Full Stack Developer</div>
+        <div className="loading-role">AI Engineer · Open Source Contributor</div>
 
         {/* Bar */}
         <div className="loading-bar-track">
