@@ -87,6 +87,14 @@ export const career = [
 
 export const achievements = [
   {
+    title: 'Merged into HuggingFace — huggingface_hub · PR #4289',
+    org: 'HuggingFace · huggingface/huggingface_hub',
+    year: '2026',
+    type: 'Open Source',
+    description: 'PR reviewed and merged by Lucain Pouget (Wauplin) — lead maintainer at HuggingFace. Documented missing Args: entries in lfs.py, hf_file_system.py, and repocard_data.py. Ships to every Python developer who installs huggingface_hub — one of the most downloaded AI libraries on PyPI.',
+    icon: '🤗',
+  },
+  {
     title: 'PwC Launchpad Advisory Program — AI & Data Advisory Intern',
     org: 'PricewaterhouseCoopers India',
     year: '2026',
@@ -193,6 +201,20 @@ export const projects = [
     github: 'https://github.com/kratos0718',
     year: '2025',
     stat: { num: 'RAG', label: 'arxiv explainer' },
+    images: [] as string[],
+    caseStudy: null,
+  },
+  {
+    title: 'huggingface/huggingface_hub',
+    subtitle: 'Merged into HuggingFace · PR #4289 · Approved by Lead Maintainer',
+    description: 'Documented missing Args: entries across lfs.py, hf_file_system.py, and repocard_data.py in the official huggingface_hub library. PR reviewed and merged by Lucain Pouget (Wauplin) — lead maintainer at HuggingFace. Ships to every Python developer who runs pip install huggingface_hub.',
+    tech: ['Python', 'HuggingFace', 'Open Source', 'Documentation'],
+    live: 'https://github.com/huggingface/huggingface_hub/pull/4289',
+    liveNow: false,
+    github: 'https://github.com/huggingface/huggingface_hub/pull/4289',
+    linkLabel: 'View Merged PR',
+    year: '2026',
+    stat: { num: '✓', label: 'merged · HuggingFace' },
     images: [] as string[],
     caseStudy: null,
   },
