@@ -62,9 +62,14 @@ export default function Research() {
           >
             <div className="rp-card-inner">
               <div className="rp-card-top">
-                <span className="rp-type">{p.type}</span>
+                <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+                  <span className="rp-type">{p.type}</span>
+                  {(p as any).status && (
+                    <span className="rp-type rp-type-review">{(p as any).status}</span>
+                  )}
+                </div>
                 <div className="rp-stats">
-                  <span className="rp-reads">{p.reads} reads</span>
+                  {p.reads > 0 && <span className="rp-reads">{p.reads} reads</span>}
                   <span className="rp-date">{p.date}</span>
                 </div>
               </div>
@@ -79,7 +84,7 @@ export default function Research() {
               <div className="rp-footer">
                 <div className="rp-authors">
                   {p.coAuthors.map((a, j) => (
-                    <span key={a} className={`rp-author${a === 'Abhinav Tarigoppula' ? ' rp-author-me' : ''}`}>
+                    <span key={a} className={`rp-author${(a === 'Abhinav Tarigoppula' || a === 'Tarigoppula Sree Sai Abhinav') ? ' rp-author-me' : ''}`}>
                       {a}{j < p.coAuthors.length - 1 ? ' · ' : ''}
                     </span>
                   ))}
