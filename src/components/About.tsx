@@ -187,6 +187,18 @@ export default function About() {
                 </a>
               ))}
             </div>
+            <div className="gh-streak-wrap">
+              <img
+                className="gh-streak-dark"
+                src="https://streak-stats.demolab.com/?user=kratos0718&background=0F172A&ring=3B82F6&fire=3B82F6&currStreakLabel=3B82F6&sideLabels=64748B&dates=64748B&border=1E293B&stroke=1E293B"
+                alt="GitHub streak stats"
+              />
+              <img
+                className="gh-streak-light"
+                src="https://streak-stats.demolab.com/?user=kratos0718&background=FDFCF7&ring=6366F1&fire=6366F1&currStreakLabel=6366F1&sideLabels=64748B&dates=64748B&border=E8E5DC&stroke=E8E5DC"
+                alt="GitHub streak stats"
+              />
+            </div>
           </div>
         </div>
       </div>

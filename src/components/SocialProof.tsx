@@ -6,11 +6,13 @@ import './styles/SocialProof.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const orgs = [
-  { name: 'OneStop AI',             detail: 'ML & AI Intern · 2025',          tag: 'Internship' },
-  { name: 'PwC',                    detail: 'AI & Data Advisory · 2026',       tag: 'Internship' },
-  { name: '2 Research Preprints',   detail: 'ResearchGate · 57 Total Reads',   tag: 'Preprint'   },
-  { name: 'Smart India Hackathon',  detail: 'Participant · 1M+ Competitors',   tag: 'Hackathon'  },
-  { name: 'GITAM University',       detail: 'B.Tech CSE AI/ML · CGPA 8.12',   tag: 'Education'  },
+  { name: 'HuggingFace',            detail: 'Merged PR #4289 · v1.17.0',       tag: 'Open Source' },
+  { name: 'agno (25k★)',            detail: '4 Merged PRs · @kausmeows',        tag: 'Open Source' },
+  { name: 'pydantic (22k★)',        detail: 'Merged PR #13239',                 tag: 'Open Source' },
+  { name: 'marimo (YC)',            detail: 'Merged PR #9667 · New feature',    tag: 'Open Source' },
+  { name: 'OneStop AI',             detail: 'ML & AI Intern · 2025',            tag: 'Internship'  },
+  { name: 'PwC',                    detail: 'AI & Data Advisory · 2026',        tag: 'Internship'  },
+  { name: 'GITAM University',       detail: 'B.Tech CSE AI/ML · CGPA 8.12',    tag: 'Education'   },
 ];
 
 export default function SocialProof() {
