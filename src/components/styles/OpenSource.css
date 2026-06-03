@@ -60,6 +60,46 @@
   color: var(--text-muted);
 }
 
+/* ── GitHub achievement badges ── */
+.os-gh-badges {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-right: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.os-gh-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 16px 20px;
+  border-right: 1px solid var(--border);
+  text-decoration: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.os-gh-badge:last-child { border-right: none; }
+
+.os-gh-badge:hover { background: var(--bg-2); }
+
+.os-gh-badge-icon {
+  font-size: 22px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 6px rgba(59,130,246,0.3));
+}
+
+.os-gh-badge-name {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
 .os-stat-links {
   display: flex;
   align-items: center;
@@ -367,43 +407,61 @@
 
 .os-card:hover::before { height: 100%; }
 
-/* Open PR cards */
-.os-open-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  position: relative;
-  z-index: 1;
-}
-
-.os-open-card {
+/* ── Compact open PRs ── */
+.os-open-compact {
+  margin-top: 48px;
   border: 1px solid var(--border);
   background: var(--bg-card);
-  padding: 24px 22px 20px;
+  padding: 20px 24px;
+}
+
+.os-open-compact-head {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  position: relative;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.os-open-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.os-open-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  padding: 4px 10px;
   text-decoration: none;
-  transition: border-color 0.3s, transform 0.3s;
-  overflow: hidden;
+  transition: border-color 0.2s, color 0.2s;
 }
 
-.os-open-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 2px; height: 0;
-  background: var(--cyan);
-  transition: height 0.35s ease;
-}
-
-.os-open-card:hover {
+.os-open-pill:hover {
   border-color: var(--cyan-glow-strong);
-  transform: translateY(-3px);
+  color: var(--cyan);
 }
 
-.os-open-card:hover::before { height: 100%; }
+.os-open-pill-tool {
+  border-color: rgba(245,158,11,0.25);
+  color: var(--text-dim);
+}
+
+.os-open-pill-tool:hover {
+  border-color: rgba(245,158,11,0.5);
+  color: #f59e0b;
+}
+
+.os-pill-repo { color: var(--text); }
+.os-pill-num  { color: var(--cyan); opacity: 0.75; font-size: 10px; }
+.os-pill-ch   { color: #f59e0b; font-size: 10px; }
 
 /* Shared card internals */
 .os-card-top {

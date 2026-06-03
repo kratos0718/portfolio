@@ -274,13 +274,34 @@ export default function OpenSource() {
           { num: '7', label: 'Merged PRs' },
           { num: '17', label: 'Open PRs' },
           { num: '18+', label: 'Organizations' },
-          { num: '🦈', label: 'Pull Shark' },
         ].map(s => (
           <div key={s.label} className="os-stat-item">
             <span className="os-stat-num">{s.num}</span>
             <span className="os-stat-label">{s.label}</span>
           </div>
         ))}
+
+        {/* GitHub achievement badges */}
+        <div className="os-gh-badges">
+          {[
+            { icon: '🦈', name: 'Pull Shark', desc: 'PRs merged by others' },
+            { icon: '👯', name: 'Pair Extraordinaire', desc: 'Co-authored commits' },
+            { icon: '⚡', name: 'Quickdraw', desc: 'Closed within 5 min' },
+          ].map(b => (
+            <a
+              key={b.name}
+              href="https://github.com/kratos0718"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="os-gh-badge"
+              title={b.desc}
+            >
+              <span className="os-gh-badge-icon">{b.icon}</span>
+              <span className="os-gh-badge-name">{b.name}</span>
+            </a>
+          ))}
+        </div>
+
         <div className="os-stat-links">
           <a href="https://github.com/kratos0718" target="_blank" rel="noopener noreferrer" className="os-stat-btn">
             <FiGithub size={13} /> GitHub
@@ -364,60 +385,28 @@ export default function OpenSource() {
       </div>
 
       {/* ══════════════════════════════════
-          OPEN PRs UNDER REVIEW
+          OPEN PRs — compact pill list
           ══════════════════════════════════ */}
-      <div className="os-subhead-row" style={{ marginTop: 64 }}>
-        <span className="os-subhead-badge os-review-badge">⟳ Under Review</span>
-        <span className="os-subhead-label">OpenAI · litellm × 2 · ragas · agno × 2 · mem0 · pydantic-ai · crewAI × 3 · llama_index · instructor · HF accelerate/datasets/peft · torchtune</span>
-      </div>
-
-      <div className="os-open-grid">
-        {openPRs.map(pr => (
-          <a
-            key={pr.number}
-            href={pr.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="os-open-card"
-          >
-            <div className="os-card-top">
-              <div className="os-card-repo-row">
-                <span className="os-card-repo">{pr.repo}</span>
-                {pr.stars && <span className="os-card-stars">★ {pr.stars}</span>}
-              </div>
-              <div className="os-card-badges">
-                {pr.codehound && <span className="os-badge-tool">⚙ codehound</span>}
-                <span className="os-badge-review">⟳ Review</span>
-              </div>
-            </div>
-            <div className="os-card-pr">PR #{pr.number} · {pr.org}</div>
-            <p className="os-card-what">{pr.what}</p>
-            {pr.quote && (
-              <blockquote className="os-quote os-quote-sm">
-                <span className="os-quote-text">"{pr.quote}"</span>
-                <span className="os-quote-who">— {pr.quotewho}</span>
-              </blockquote>
-            )}
-            <FiExternalLink className="os-card-ext" size={12} />
-          </a>
-        ))}
-      </div>
-
-      <div className="os-earlier-bar">
-        <span className="os-earlier-label">+ earlier PRs</span>
-        {earlierPRs.map(pr => (
-          <a
-            key={`${pr.repo}-${pr.number}`}
-            href={pr.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="os-earlier-pill os-earlier-pill-link"
-          >
-            {pr.repo.split('/')[1]} <span className="os-earlier-pr">#{pr.number}</span>
-            {pr.stars && <span className="os-earlier-stars">★{pr.stars}</span>}
-          </a>
-        ))}
-        <span className="os-earlier-label">— 18+ orgs total</span>
+      <div className="os-open-compact">
+        <div className="os-open-compact-head">
+          <span className="os-subhead-badge os-review-badge">⟳ 17 Open PRs</span>
+          <span className="os-subhead-label">under review across 18+ organizations</span>
+        </div>
+        <div className="os-open-pills">
+          {[...openPRs, ...earlierPRs].map(pr => (
+            <a
+              key={`${pr.repo}-${pr.number}`}
+              href={pr.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`os-open-pill${'codehound' in pr && pr.codehound ? ' os-open-pill-tool' : ''}`}
+            >
+              <span className="os-pill-repo">{pr.repo.split('/')[1]}</span>
+              <span className="os-pill-num">#{pr.number}</span>
+              {'codehound' in pr && pr.codehound && <span className="os-pill-ch">⚙</span>}
+            </a>
+          ))}
+        </div>
       </div>
 
       {/* ══════════════════════════════════
