@@ -3,7 +3,7 @@ import { FiDownload, FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi';
 import './styles/Navbar.css';
 
 const links = [
-  { label: 'OSS', href: '#open-source' },
+  { label: 'Open Source', href: '#open-source' },
   { label: 'About', href: '#about' },
   { label: 'Work', href: '#work' },
   { label: 'Research', href: '#research' },
