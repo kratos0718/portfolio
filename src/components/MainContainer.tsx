@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import Navbar from './Navbar';
 import Landing from './Landing';
+import OpenSource from './OpenSource';
 import About from './About';
 import WhatIDo from './WhatIDo';
 import Career from './Career';
@@ -56,7 +57,10 @@ export default function MainContainer() {
         <Navbar />
         <Landing />
 
-        {/* Scrolling keyword strip between hero and about */}
+        {/* Open source — the main identity section, right after hero */}
+        <OpenSource />
+
+        {/* Scrolling keyword strip */}
         <TickerStrip />
 
         {/* Credibility / social proof bar */}

@@ -335,6 +335,20 @@
   background: var(--cyan-glow);
 }
 
+.gh-streak-wrap {
+  margin-top: 14px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  line-height: 0;
+}
+.gh-streak-wrap img {
+  width: 100%;
+  display: block;
+}
+.gh-streak-light { display: none; }
+[data-theme="light"] .gh-streak-dark  { display: none; }
+[data-theme="light"] .gh-streak-light { display: block; }
+
 @media (max-width: 900px) {
   .about { padding: 80px 24px; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
