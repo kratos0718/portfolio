@@ -3,9 +3,9 @@ import { FiDownload, FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi';
 import './styles/Navbar.css';
 
 const links = [
-  { label: 'Open Source', href: '#open-source' },
   { label: 'About', href: '#about' },
   { label: 'Work', href: '#work' },
+  { label: 'Open Source', href: '#open-source' },
   { label: 'Research', href: '#research' },
   { label: 'Wins', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
