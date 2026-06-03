@@ -86,7 +86,7 @@ export default function About() {
               { icon: '🎓', title: 'B.Tech CSE (AI/ML) · Gitam University · CGPA 8.12', sub: 'O in ML · A+ in AI & Deep Learning · SGPA 8.83 (best sem)' },
               { icon: '🧠', title: 'ML & AI Intern · OneStop AI', sub: 'Improved model accuracy +12%, reduced latency -18%' },
               { icon: '⚔️', title: 'Smart India Hackathon 2024', sub: 'Built SoulSync — AI mental health chatbot' },
-              { icon: '📍', title: `Based in ${personalInfo.location}`, sub: 'Open to remote & on-site internships' },
+              { icon: '📍', title: `Based in ${personalInfo.location}`, sub: 'Open to remote & on-site — Internship · PPO · Full-time' },
             ].map(h => (
               <div key={h.title} className="about-highlight">
                 <span className="about-highlight-icon">{h.icon}</span>
@@ -145,7 +145,7 @@ export default function About() {
             </div>
             {[
               ['Year', 'Final Year · 2023–2027'],
-              ['Mode', 'Internship Seeker'],
+              ['Mode', 'Internship · PPO · Job Ready'],
               ['Training on', 'LLMs & RAG Systems'],
               ['Loss', '↓ Decreasing'],
             ].map(([k, v]) => (

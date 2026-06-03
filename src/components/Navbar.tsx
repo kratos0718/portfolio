@@ -107,7 +107,7 @@ export default function Navbar() {
             <FiDownload size={14} />
             Download CV
           </a>
-          <p className="navbar-mobile-tagline">AI/ML Engineer · Open to Internships</p>
+          <p className="navbar-mobile-tagline">AI/ML Engineer · Open to Internships · PPO · Jobs</p>
         </div>
       </div>
     </>

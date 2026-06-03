@@ -40,10 +40,10 @@ export default function Contact() {
         <div ref={leftRef} className="contact-left">
           <h3 className="contact-headline">
             Open to internships,<br />
-            <span className="accent">collabs & projects.</span>
+            <span className="accent">PPO & full-time roles.</span>
           </h3>
           <p className="contact-subtext">
-            I'm actively looking for AI/ML and full-stack internship opportunities.
+            Final-year AI/ML student ready for internships, PPO conversions, and full-time roles.
             If you're building something interesting or just want to talk tech — reach out.
           </p>
 
