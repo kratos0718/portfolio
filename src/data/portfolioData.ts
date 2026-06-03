@@ -208,6 +208,19 @@ export const projects = [
 
 export const publications = [
   {
+    title: 'Behavior-Driven Adaptive Learning Agents for Personalized and Intelligent Education',
+    shortTitle: 'Behavior-Driven Adaptive Learning Agents',
+    type: 'IEEE',
+    date: '2026',
+    reads: 0,
+    coAuthors: ['Deepak Jaggupalli', 'Tarigoppula Sree Sai Abhinav', 'Chandrakanta Mahanty'],
+    abstract: 'Proposes a behavior-driven adaptive learning framework using intelligent agents to deliver personalised education experiences. The system analyses learner behavior patterns to dynamically adjust content, pacing, and difficulty — enabling truly intelligent, responsive education at scale.',
+    tags: ['Adaptive Learning', 'Intelligent Agents', 'Personalization', 'AI in Education', 'Behavior Analysis'],
+    link: 'https://www.researchgate.net/profile/Abhinav-Tarigoppula',
+    featured: true,
+    status: 'Under Review — IEEE',
+  },
+  {
     title: 'HAPS: A Hybrid AI Proctoring System for Unified Online and Offline Examination Integrity Using 2-Longitudinal-Stream CNNs, YOLO, and Multi-Modal Behavioral Analysis',
     shortTitle: 'HAPS: Hybrid AI Proctoring System',
     type: 'Preprint',
