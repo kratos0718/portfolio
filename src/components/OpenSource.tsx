@@ -130,6 +130,16 @@ const openPRs = [
     codehound: true,
   },
   {
+    repo: 'BerriAI/litellm',
+    org: 'litellm',
+    stars: '15k',
+    number: 29162,
+    url: 'https://github.com/BerriAI/litellm/pull/29162',
+    what: 'Second litellm contribution — under review.',
+    quote: null,
+    codehound: false,
+  },
+  {
     repo: 'vibrantlabsai/ragas',
     org: 'ragas',
     stars: null,
@@ -150,6 +160,48 @@ const openPRs = [
     quotewho: 'Reviewer',
     codehound: false,
   },
+  {
+    repo: 'agno-agi/agno',
+    org: 'agno',
+    stars: '25k',
+    number: 8152,
+    url: 'https://github.com/agno-agi/agno/pull/8152',
+    what: 'Under review.',
+    quote: null,
+    codehound: false,
+  },
+  {
+    repo: 'mem0ai/mem0',
+    org: 'mem0',
+    stars: '20k',
+    number: 5302,
+    url: 'https://github.com/mem0ai/mem0/pull/5302',
+    what: 'Under review.',
+    quote: null,
+    codehound: false,
+  },
+  {
+    repo: 'pydantic/pydantic-ai',
+    org: 'pydantic-ai',
+    stars: '8k',
+    number: 5700,
+    url: 'https://github.com/pydantic/pydantic-ai/pull/5700',
+    what: 'Under review.',
+    quote: null,
+    codehound: false,
+  },
+];
+
+const earlierPRs = [
+  { repo: 'crewAIInc/crewAI', number: 5970, url: 'https://github.com/crewAIInc/crewAI/pull/5970', stars: '25k' },
+  { repo: 'crewAIInc/crewAI', number: 5969, url: 'https://github.com/crewAIInc/crewAI/pull/5969', stars: '25k' },
+  { repo: 'crewAIInc/crewAI', number: 5968, url: 'https://github.com/crewAIInc/crewAI/pull/5968', stars: '25k' },
+  { repo: 'run-llama/llama_index', number: 21797, url: 'https://github.com/run-llama/llama_index/pull/21797', stars: '35k' },
+  { repo: '567-labs/instructor', number: 2325, url: 'https://github.com/567-labs/instructor/pull/2325', stars: '10k' },
+  { repo: 'huggingface/accelerate', number: 4051, url: 'https://github.com/huggingface/accelerate/pull/4051', stars: '8k' },
+  { repo: 'huggingface/datasets', number: 8223, url: 'https://github.com/huggingface/datasets/pull/8223', stars: '18k' },
+  { repo: 'huggingface/peft', number: 3271, url: 'https://github.com/huggingface/peft/pull/3271', stars: '16k' },
+  { repo: 'pytorch/torchtune', number: 2964, url: 'https://github.com/pytorch/torchtune/pull/2964', stars: '4k' },
 ];
 
 const otherRepos = [
@@ -220,8 +272,8 @@ export default function OpenSource() {
       <div className="os-stats-bar">
         {[
           { num: '7', label: 'Merged PRs' },
+          { num: '17', label: 'Open PRs' },
           { num: '18+', label: 'Organizations' },
-          { num: '25k★', label: 'agno' },
           { num: '🦈', label: 'Pull Shark' },
         ].map(s => (
           <div key={s.label} className="os-stat-item">
@@ -316,7 +368,7 @@ export default function OpenSource() {
           ══════════════════════════════════ */}
       <div className="os-subhead-row" style={{ marginTop: 64 }}>
         <span className="os-subhead-badge os-review-badge">⟳ Under Review</span>
-        <span className="os-subhead-label">OpenAI · litellm · ragas · agno · crewAI × 3 · mem0 · and more</span>
+        <span className="os-subhead-label">OpenAI · litellm × 2 · ragas · agno × 2 · mem0 · pydantic-ai · crewAI × 3 · llama_index · instructor · HF accelerate/datasets/peft · torchtune</span>
       </div>
 
       <div className="os-open-grid">
@@ -352,11 +404,20 @@ export default function OpenSource() {
       </div>
 
       <div className="os-earlier-bar">
-        <span className="os-earlier-label">Earlier contributions across</span>
-        {['crewAI ×3', 'mem0', 'pytorch/torchtune', 'HF PEFT', 'HF datasets', 'HF accelerate', 'instructor', 'llama_index'].map(org => (
-          <span key={org} className="os-earlier-pill">{org}</span>
+        <span className="os-earlier-label">+ earlier PRs</span>
+        {earlierPRs.map(pr => (
+          <a
+            key={`${pr.repo}-${pr.number}`}
+            href={pr.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="os-earlier-pill os-earlier-pill-link"
+          >
+            {pr.repo.split('/')[1]} <span className="os-earlier-pr">#{pr.number}</span>
+            {pr.stars && <span className="os-earlier-stars">★{pr.stars}</span>}
+          </a>
         ))}
-        <span className="os-earlier-label">— 18+ organizations total</span>
+        <span className="os-earlier-label">— 18+ orgs total</span>
       </div>
 
       {/* ══════════════════════════════════
