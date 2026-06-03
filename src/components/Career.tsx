@@ -64,7 +64,7 @@ export default function Career() {
             <span className="career-type-badge">Open</span>
           </div>
           <p style={{ fontSize: 13, color: 'var(--text-muted)', fontStyle: 'italic' }}>
-            Actively seeking internship opportunities in AI/ML and full-stack engineering.
+            Ready for internships, PPO, and full-time roles in AI/ML and full-stack engineering.
           </p>
         </div>
       </div>

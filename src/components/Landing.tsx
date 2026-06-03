@@ -215,7 +215,7 @@ export default function Landing() {
       <div className="landing-content">
         <div ref={pillRef} className="landing-pill">
           <span className="landing-pill-dot" />
-          <span className="landing-pill-text">Open to AI/ML internships</span>
+          <span className="landing-pill-text">Open to Internships · PPO · Full-time</span>
         </div>
 
         <h1 className="landing-name">
