@@ -1,8 +1,8 @@
 export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   firstName: 'Abhinav',
-  tagline: '7 PRs merged into HuggingFace, pydantic, marimo & agno (25k★). Built codehound — a static analyzer that found real bugs in agno and OpenAI\'s Agents SDK.',
-  role: 'AI Engineer · Full Stack Developer · Open Source Contributor',
+  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 7 PRs merged into HuggingFace, pydantic, marimo & agno.',
+  role: 'Final-Year AI/ML Student · Open Source Contributor · Full Stack Dev',
   email: 'abhinaaavvv07187@gmail.com',
   phone: '+91-9121611029',
   location: 'Visakhapatnam, India',
@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm Abhinav — a CSE student at GITAM University building production-grade ML systems and LLM pipelines. Open source contributor to HuggingFace, Meta PyTorch, and marimo (YC). I've interned at OneStop AI, shipped live products used by real people, and I'm deep into the LLM/RAG stack. My focus is AI engineering: making intelligent systems work outside the notebook.",
+  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. Open source contributor to HuggingFace, pydantic, agno, and marimo (YC). I've interned at OneStop AI, built production RAG & LLM pipelines, and shipped live products used by real people. My focus is AI engineering: making intelligent systems work outside the notebook.",
 };
 
 export const whyIDoThis = {
@@ -26,7 +26,7 @@ export const whyIDoThis = {
     },
     {
       label: "Where I am right now",
-      text: "Third year of a four-year degree. Already interned at OneStop AI, shipped live products with RAG pipelines and LLM integrations, solved 200+ DSA problems with consistency. I'm not trying to look ready. I'm trying to be ready.",
+      text: "Final year of a four-year degree. Interned at OneStop AI, shipped production RAG pipelines, merged PRs into HuggingFace and 10+ other orgs, solved 200+ DSA problems. I'm not trying to look ready. I'm trying to be ready.",
     },
   ],
 };
@@ -305,9 +305,9 @@ export const whatIDo = [
 export const education = [
   {
     degree: 'B.Tech in Computer Science & Engineering (AI/ML)',
-    institution: 'Gitam University',
+    institution: 'GITAM University',
     location: 'Visakhapatnam, Andhra Pradesh',
-    period: '2023 – 2027',
+    period: '2023 – 2027 · Final Year',
     cgpa: '8.12',
     highlight: 'O in Machine Learning · A+ in AI & Deep Learning',
   },
