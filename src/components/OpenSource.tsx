@@ -284,9 +284,9 @@ export default function OpenSource() {
         {/* GitHub achievement badges */}
         <div className="os-gh-badges">
           {[
-            { icon: '🦈', name: 'Pull Shark', desc: 'PRs merged by others' },
-            { icon: '👯', name: 'Pair Extraordinaire', desc: 'Co-authored commits' },
-            { icon: '⚡', name: 'Quickdraw', desc: 'Closed within 5 min' },
+            { icon: '🫛', name: 'Pair Extraordinaire', desc: 'Co-authored commits merged' },
+            { icon: '🦈', name: 'Pull Shark', desc: 'Opened PRs that got merged' },
+            { icon: '🤠', name: 'YOLO', desc: 'Merged a PR without review' },
           ].map(b => (
             <a
               key={b.name}
