@@ -232,11 +232,11 @@ export default function Landing() {
         </h1>
 
         <div ref={roleRef} className="landing-role-strip">
-          <span className="landing-role-item">AI Engineer</span>
+          <span className="landing-role-item">AI / ML Engineer</span>
           <span className="landing-role-sep">·</span>
           <span className="landing-role-item">Open Source Contributor</span>
           <span className="landing-role-sep">·</span>
-          <span className="landing-role-item">Full Stack Dev</span>
+          <span className="landing-role-item">Final Year CSE</span>
         </div>
 
         <p ref={taglineRef} className="landing-tagline">
@@ -268,8 +268,8 @@ export default function Landing() {
       <div ref={rightRef} className="landing-right">
         {[
           { num: '7', label: 'Merged PRs' },
-          { num: '18+', label: 'Organizations' },
-          { num: '25k★', label: 'agno stars' },
+          { num: '212', label: 'LeetCode Solved' },
+          { num: '+12%', label: 'ML Accuracy Gain' },
         ].map(s => (
           <div key={s.label} className="landing-stat">
             <div className="landing-stat-num">{s.num}</div>

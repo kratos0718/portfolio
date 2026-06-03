@@ -126,7 +126,7 @@ export default function About() {
           <div className="model-stat-grid">
             {[
               { num: '212', label: 'LeetCode Solved' },
-              { num: '8.12', label: 'CGPA (6 sems)' },
+              { num: '8.12', label: 'CGPA · Final Year' },
               { num: '+12%', label: 'Accuracy Gain' },
               { num: '-18%', label: 'Latency Cut' },
             ].map(s => (
@@ -144,9 +144,9 @@ export default function About() {
               <span className="model-card-badge" style={{ color: 'var(--cyan)', borderColor: 'rgba(0,0,0,0.15)' }}>● Active</span>
             </div>
             {[
+              ['Year', 'Final Year · 2023–2027'],
               ['Mode', 'Internship Seeker'],
               ['Training on', 'LLMs & RAG Systems'],
-              ['Currently building', 'PathForge'],
               ['Loss', '↓ Decreasing'],
             ].map(([k, v]) => (
               <div key={k} style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 0', borderBottom: '1px solid var(--border)', fontSize: 13 }}>

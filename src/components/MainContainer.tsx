@@ -57,9 +57,6 @@ export default function MainContainer() {
         <Navbar />
         <Landing />
 
-        {/* Open source — the main identity section, right after hero */}
-        <OpenSource />
-
         {/* Scrolling keyword strip */}
         <TickerStrip />
 
@@ -76,8 +73,11 @@ export default function MainContainer() {
         <Divider />
         <Work />
 
-        {/* Second ticker between Work and Achievements */}
+        {/* Second ticker then Open Source highlight */}
         <TickerStrip reverse />
+
+        <OpenSource />
+        <Divider />
 
         <Achievements />
         <Divider />
