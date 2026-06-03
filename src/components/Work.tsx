@@ -15,9 +15,6 @@ const banners: Record<string, { gradient: string; icon: string }> = {
   SoulSync:           { gradient: 'linear-gradient(135deg, #1a0533 0%, #2d1b69 60%, #3d2080 100%)', icon: '🧠' },
   'Click N Cut':      { gradient: 'linear-gradient(135deg, #1a0a00 0%, #6b2d00 60%, #b84500 100%)', icon: '📷' },
   PaperMind:          { gradient: 'linear-gradient(135deg, #001a2c 0%, #002d4a 50%, #00405e 100%)', icon: '📄' },
-  'huggingface/huggingface_hub': { gradient: 'linear-gradient(135deg, #1a1000 0%, #3d2800 50%, #6b4400 100%)', icon: '🤗' },
-  'pytorch/torchtune':{ gradient: 'linear-gradient(135deg, #1a0000 0%, #4a0e0e 50%, #7a1c1c 100%)', icon: '🔥' },
-  'marimo':           { gradient: 'linear-gradient(135deg, #001a0d 0%, #003320 50%, #004d2e 100%)', icon: '🟢' },
 };
 
 /* ── Featured card (PathForge) — full-width case study ── */
