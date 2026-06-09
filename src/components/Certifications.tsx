@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { FiX, FiChevronLeft, FiChevronRight, FiFileText } from 'react-icons/fi';
+import { FiX, FiChevronLeft, FiChevronRight, FiFileText, FiArrowRight } from 'react-icons/fi';
 import './styles/Certifications.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -118,11 +118,11 @@ const certs: Cert[] = [
     pdf: '/certs/futureskills-nasscom.pdf',
   },
   {
-    title: 'IBM Design',
-    subtitle: '',
-    issuer: 'IBM',
+    title: 'Code Gen & Optimization',
+    subtitle: 'Using IBM Granite',
+    issuer: 'IBM SkillsBuild',
     date: 'Jun 2026',
-    category: 'Design',
+    category: 'AI/ML',
     categoryColor: 'blue',
     pdf: '/certs/ibm-design.pdf',
   },
@@ -132,9 +132,9 @@ export default function Certifications() {
   const sectionRef = useRef<HTMLElement>(null);
   const tagRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
 
-  // Only image-having certs can be shown in lightbox
   const imageCerts = certs.filter(c => c.image);
   const imageIndexMap = certs.map(c =>
     c.image ? imageCerts.findIndex(ic => ic === c) : -1
@@ -155,6 +155,7 @@ export default function Certifications() {
     setLightboxIdx(cur => (cur !== null ? (cur + 1) % imageCerts.length : null));
   }, [imageCerts.length]);
 
+  // Keyboard nav
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (lightboxIdx === null) return;
@@ -166,11 +167,47 @@ export default function Certifications() {
     return () => window.removeEventListener('keydown', onKey);
   }, [lightboxIdx, closeLightbox, prev, next]);
 
+  // Lock scroll when lightbox open
   useEffect(() => {
     document.body.style.overflow = lightboxIdx !== null ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [lightboxIdx]);
 
+  // Drag-to-scroll
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    const onDown = (e: MouseEvent) => {
+      isDown = true;
+      track.classList.add('dragging');
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    };
+    const onUp = () => { isDown = false; track.classList.remove('dragging'); };
+    const onMove = (e: MouseEvent) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      track.scrollLeft = scrollLeft - (x - startX) * 1.2;
+    };
+
+    track.addEventListener('mousedown', onDown);
+    track.addEventListener('mouseleave', onUp);
+    track.addEventListener('mouseup', onUp);
+    track.addEventListener('mousemove', onMove);
+    return () => {
+      track.removeEventListener('mousedown', onDown);
+      track.removeEventListener('mouseleave', onUp);
+      track.removeEventListener('mouseup', onUp);
+      track.removeEventListener('mousemove', onMove);
+    };
+  }, []);
+
+  // GSAP animations
   useEffect(() => {
     const ctx = gsap.context(() => {
       const st = { trigger: sectionRef.current, start: 'top 72%' };
@@ -180,16 +217,10 @@ export default function Certifications() {
       gsap.to(titleRef.current, {
         clipPath: 'inset(0 0 0% 0)', duration: 0.9, ease: 'power3.out', delay: 0.1, scrollTrigger: st,
       });
-      gsap.utils.toArray<HTMLElement>('.cert-card').forEach((card, i) => {
-        gsap.to(card, {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          delay: (i % 4) * 0.07,
-          ease: 'power2.out',
-          scrollTrigger: { trigger: card, start: 'top 90%' },
-        });
-      });
+      gsap.fromTo(trackRef.current,
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, duration: 0.8, delay: 0.25, ease: 'power2.out', scrollTrigger: st }
+      );
     }, sectionRef);
     return () => ctx.revert();
   }, []);
@@ -200,52 +231,52 @@ export default function Certifications() {
         <div ref={tagRef} className="section-tag" style={{ clipPath: 'inset(0 100% 0 0)' }}>
           Certifications
         </div>
-        <h2 ref={titleRef} className="section-title" style={{ clipPath: 'inset(0 0 100% 0)' }}>
-          Learning & <span className="accent">credentials</span>
-        </h2>
-        <p className="cert-count">{certs.length} certificates · click any to view</p>
 
-        <div className="cert-grid">
-          {certs.map((cert, idx) => (
-            <div
-              key={cert.title + cert.issuer}
-              className={`cert-card cert-card--${cert.categoryColor}${cert.image ? ' cert-card--clickable' : ''}`}
-              onClick={() => cert.image ? openLightbox(idx) : window.open(cert.pdf, '_blank')}
-              role="button"
-              tabIndex={0}
-              onKeyDown={e => e.key === 'Enter' && (cert.image ? openLightbox(idx) : window.open(cert.pdf, '_blank'))}
-            >
-              {/* Thumbnail or PDF placeholder */}
-              <div className="cert-thumb-wrap">
-                {cert.image ? (
-                  <img
-                    src={cert.image}
-                    alt={cert.title}
-                    className="cert-thumb"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="cert-pdf-placeholder">
-                    <FiFileText size={28} />
-                    <span>View PDF</span>
+        <div className="cert-header-row">
+          <h2 ref={titleRef} className="section-title" style={{ clipPath: 'inset(0 0 100% 0)' }}>
+            Learning & <span className="accent">credentials</span>
+          </h2>
+          <span className="cert-scroll-hint">
+            Drag to scroll <FiArrowRight size={12} />
+          </span>
+        </div>
+
+        <div className="cert-track-wrap">
+          <div ref={trackRef} className="cert-track">
+            {certs.map((cert, idx) => (
+              <div
+                key={cert.title + cert.issuer}
+                className={`cert-card cert-card--${cert.categoryColor}`}
+                onClick={() => cert.image ? openLightbox(idx) : window.open(cert.pdf, '_blank')}
+                role="button"
+                tabIndex={0}
+                onKeyDown={e => e.key === 'Enter' && (cert.image ? openLightbox(idx) : window.open(cert.pdf, '_blank'))}
+              >
+                <div className="cert-thumb-wrap">
+                  {cert.image ? (
+                    <img src={cert.image} alt={cert.title} className="cert-thumb" loading="lazy" draggable="false" />
+                  ) : (
+                    <div className="cert-pdf-placeholder">
+                      <FiFileText size={26} />
+                      <span>View PDF</span>
+                    </div>
+                  )}
+                  <div className={`cert-category-badge cert-category--${cert.categoryColor}`}>
+                    {cert.category}
                   </div>
-                )}
-                <div className={`cert-category-badge cert-category--${cert.categoryColor}`}>
-                  {cert.category}
                 </div>
-              </div>
 
-              {/* Info below image */}
-              <div className="cert-info">
-                <div className="cert-title">{cert.title}</div>
-                {cert.subtitle && <div className="cert-subtitle">{cert.subtitle}</div>}
-                <div className="cert-footer">
-                  <span className="cert-issuer">{cert.issuer}</span>
-                  <span className="cert-date">{cert.date}</span>
+                <div className="cert-info">
+                  <div className="cert-title">{cert.title}</div>
+                  {cert.subtitle && <div className="cert-subtitle">{cert.subtitle}</div>}
+                  <div className="cert-footer">
+                    <span className="cert-issuer">{cert.issuer}</span>
+                    <span className="cert-date">{cert.date}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
@@ -253,10 +284,10 @@ export default function Certifications() {
       {lightboxIdx !== null && (
         <div className="cert-lightbox" onClick={closeLightbox}>
           <button className="cert-lb-close" onClick={closeLightbox} aria-label="Close">
-            <FiX size={20} />
+            <FiX size={18} />
           </button>
           <button className="cert-lb-nav cert-lb-prev" onClick={e => { e.stopPropagation(); prev(); }} aria-label="Previous">
-            <FiChevronLeft size={24} />
+            <FiChevronLeft size={22} />
           </button>
           <div className="cert-lb-content" onClick={e => e.stopPropagation()}>
             <img
@@ -270,7 +301,7 @@ export default function Certifications() {
             </div>
           </div>
           <button className="cert-lb-nav cert-lb-next" onClick={e => { e.stopPropagation(); next(); }} aria-label="Next">
-            <FiChevronRight size={24} />
+            <FiChevronRight size={22} />
           </button>
         </div>
       )}

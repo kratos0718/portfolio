@@ -276,10 +276,12 @@
   display: grid;
   grid-template-columns: 260px 1fr;
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  background: linear-gradient(145deg, var(--surface) 0%, rgba(8,12,20,0.9) 100%);
   position: relative;
   overflow: hidden;
   text-decoration: none;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
   transition: border-color 0.3s, box-shadow 0.3s;
   margin-bottom: 20px;
 }
@@ -380,14 +382,16 @@
 
 .os-card {
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  background: linear-gradient(145deg, var(--surface) 0%, rgba(8,12,20,0.9) 100%);
   padding: 24px 22px 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   position: relative;
   text-decoration: none;
-  transition: border-color 0.3s, transform 0.3s;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
 }
 
