@@ -115,7 +115,7 @@ const certs: Cert[] = [
     date: 'May 2026',
     category: 'Tech',
     categoryColor: 'muted',
-    pdf: '/certs/futureskills-nasscom.pdf',
+    image: '/certs/futureskills-nasscom.png',
   },
   {
     title: 'Code Gen & Optimization',
@@ -124,7 +124,7 @@ const certs: Cert[] = [
     date: 'Jun 2026',
     category: 'AI/ML',
     categoryColor: 'blue',
-    pdf: '/certs/ibm-design.pdf',
+    image: '/certs/ibm-granite.png',
   },
 ];
 
