@@ -74,15 +74,19 @@
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text-dim);
+  border: 1px solid var(--border-hover);
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.1em;
-  transition: border-color 0.3s, color 0.3s, background 0.3s;
+  border-radius: var(--radius-sm);
+  transition: border-color 0.3s, color 0.3s, background 0.3s, transform 0.2s;
   position: relative;
   overflow: hidden;
+}
+.contact-social-btn:hover {
+  transform: translateY(-2px);
 }
 
 .contact-social-btn::before {
