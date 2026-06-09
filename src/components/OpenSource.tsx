@@ -108,6 +108,20 @@ const mergedPRs = [
     codehound: false,
   },
   {
+    repo: 'huggingface/accelerate',
+    stars: '8k',
+    number: 4051,
+    url: 'https://github.com/huggingface/accelerate/pull/4051',
+    org: 'HuggingFace',
+    what: 'Documented missing public-API parameters in load_accelerator_state, find_executable_batch_size, and send_to_device.',
+    quotes: [
+      { text: 'Approved this pull request. Thanks!', who: '@SunMarc, maintainer' },
+    ],
+    shipped: null,
+    featured: false,
+    codehound: false,
+  },
+  {
     repo: 'agno-agi/agno',
     stars: '25k',
     number: 8138,
@@ -202,7 +216,6 @@ const earlierPRs = [
   { repo: 'crewAIInc/crewAI', number: 5968, url: 'https://github.com/crewAIInc/crewAI/pull/5968', stars: '25k' },
   { repo: 'run-llama/llama_index', number: 21797, url: 'https://github.com/run-llama/llama_index/pull/21797', stars: '35k' },
   { repo: '567-labs/instructor', number: 2325, url: 'https://github.com/567-labs/instructor/pull/2325', stars: '10k' },
-  { repo: 'huggingface/accelerate', number: 4051, url: 'https://github.com/huggingface/accelerate/pull/4051', stars: '8k' },
   { repo: 'huggingface/datasets', number: 8223, url: 'https://github.com/huggingface/datasets/pull/8223', stars: '18k' },
   { repo: 'huggingface/peft', number: 3271, url: 'https://github.com/huggingface/peft/pull/3271', stars: '16k' },
   { repo: 'pytorch/torchtune', number: 2964, url: 'https://github.com/pytorch/torchtune/pull/2964', stars: '4k' },
@@ -275,8 +288,8 @@ export default function OpenSource() {
       {/* ── Stats bar ── */}
       <div className="os-stats-bar">
         {[
-          { num: '8', label: 'Merged PRs' },
-          { num: '16', label: 'Open PRs' },
+          { num: '9', label: 'Merged PRs' },
+          { num: '15', label: 'Open PRs' },
           { num: '18+', label: 'Organizations' },
         ].map(s => (
           <div key={s.label} className="os-stat-item">
@@ -321,7 +334,7 @@ export default function OpenSource() {
           ══════════════════════════════════ */}
       <div className="os-subhead-row">
         <span className="os-subhead-badge os-merged-badge">✓ Merged</span>
-        <span className="os-subhead-label">8 pull requests · reviewed by lead maintainers</span>
+        <span className="os-subhead-label">9 pull requests · reviewed by lead maintainers</span>
       </div>
 
       {/* Featured HuggingFace card */}
@@ -355,7 +368,7 @@ export default function OpenSource() {
         <FiExternalLink className="os-featured-ext" size={16} />
       </a>
 
-      {/* Remaining 7 merged PRs */}
+      {/* Remaining 8 merged PRs */}
       <div className="os-grid">
         {mergedPRs.slice(1).map(pr => (
           <a
