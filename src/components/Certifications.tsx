@@ -1,6 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { FiX, FiChevronLeft, FiChevronRight, FiFileText } from 'react-icons/fi';
 import './styles/Certifications.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -12,7 +13,8 @@ interface Cert {
   date: string;
   category: string;
   categoryColor: string;
-  icon: string;
+  image?: string;
+  pdf?: string;
 }
 
 const certs: Cert[] = [
@@ -23,7 +25,7 @@ const certs: Cert[] = [
     date: 'Jun 2025',
     category: 'AI/ML',
     categoryColor: 'cyan',
-    icon: '🤖',
+    image: '/certs/ai-agents-udemy.jpg',
   },
   {
     title: 'What Is Generative AI?',
@@ -32,7 +34,7 @@ const certs: Cert[] = [
     date: 'Jun 2025',
     category: 'AI/ML',
     categoryColor: 'cyan',
-    icon: '🧠',
+    image: '/certs/genai-linkedin.jpg',
   },
   {
     title: 'AWS Solutions Architecture',
@@ -41,7 +43,7 @@ const certs: Cert[] = [
     date: 'Jul 2025',
     category: 'Cloud',
     categoryColor: 'blue',
-    icon: '☁️',
+    image: '/certs/aws-forage.jpg',
   },
   {
     title: 'AI Program & Internship',
@@ -50,7 +52,16 @@ const certs: Cert[] = [
     date: 'Jun 2025',
     category: 'AI/ML',
     categoryColor: 'cyan',
-    icon: '🎓',
+    image: '/certs/1stop-ai-iitg.png',
+  },
+  {
+    title: 'AI Internship Certificate',
+    subtitle: 'Personifwy · 1stop',
+    issuer: '1stop',
+    date: 'Jun 2025',
+    category: 'AI/ML',
+    categoryColor: 'cyan',
+    image: '/certs/1stop-internship.png',
   },
   {
     title: 'Alpha: DSA with Java',
@@ -59,7 +70,7 @@ const certs: Cert[] = [
     date: '2025',
     category: 'DSA',
     categoryColor: 'amber',
-    icon: '☕',
+    image: '/certs/dsa-java-apna.jpg',
   },
   {
     title: 'Python for Beginners',
@@ -68,16 +79,16 @@ const certs: Cert[] = [
     date: 'Jul 2025',
     category: 'Python',
     categoryColor: 'green',
-    icon: '🐍',
+    image: '/certs/python-scaler.jpg',
   },
   {
     title: 'MATLAB Fundamentals',
-    subtitle: '',
+    subtitle: '100% Self-Paced Course',
     issuer: 'MathWorks',
     date: 'Jan 2025',
     category: 'Engineering',
     categoryColor: 'blue',
-    icon: '📊',
+    image: '/certs/matlab-mathworks.jpg',
   },
   {
     title: 'AI/ML Workshop & Hackathon',
@@ -86,7 +97,16 @@ const certs: Cert[] = [
     date: 'Jan 2026',
     category: 'Workshop',
     categoryColor: 'purple',
-    icon: '🏆',
+    image: '/certs/techgyan-hackathon.jpg',
+  },
+  {
+    title: 'AI/ML Workshop',
+    subtitle: 'BITS Pilani Campus',
+    issuer: 'Techgyan Technologies',
+    date: 'Jan 2026',
+    category: 'Workshop',
+    categoryColor: 'purple',
+    image: '/certs/techgyan-workshop.jpg',
   },
   {
     title: 'Digital Application Fundamentals',
@@ -95,7 +115,7 @@ const certs: Cert[] = [
     date: 'May 2026',
     category: 'Tech',
     categoryColor: 'muted',
-    icon: '💻',
+    pdf: '/certs/futureskills-nasscom.pdf',
   },
   {
     title: 'IBM Design',
@@ -104,7 +124,7 @@ const certs: Cert[] = [
     date: 'Jun 2026',
     category: 'Design',
     categoryColor: 'blue',
-    icon: '🔷',
+    pdf: '/certs/ibm-design.pdf',
   },
 ];
 
@@ -112,6 +132,44 @@ export default function Certifications() {
   const sectionRef = useRef<HTMLElement>(null);
   const tagRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+
+  // Only image-having certs can be shown in lightbox
+  const imageCerts = certs.filter(c => c.image);
+  const imageIndexMap = certs.map(c =>
+    c.image ? imageCerts.findIndex(ic => ic === c) : -1
+  );
+
+  const openLightbox = useCallback((certIdx: number) => {
+    const imgIdx = imageIndexMap[certIdx];
+    if (imgIdx !== -1) setLightboxIdx(imgIdx);
+  }, [imageIndexMap]);
+
+  const closeLightbox = useCallback(() => setLightboxIdx(null), []);
+
+  const prev = useCallback(() => {
+    setLightboxIdx(cur => (cur !== null ? (cur - 1 + imageCerts.length) % imageCerts.length : null));
+  }, [imageCerts.length]);
+
+  const next = useCallback(() => {
+    setLightboxIdx(cur => (cur !== null ? (cur + 1) % imageCerts.length : null));
+  }, [imageCerts.length]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (lightboxIdx === null) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lightboxIdx, closeLightbox, prev, next]);
+
+  useEffect(() => {
+    document.body.style.overflow = lightboxIdx !== null ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [lightboxIdx]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -127,9 +185,9 @@ export default function Certifications() {
           opacity: 1,
           y: 0,
           duration: 0.6,
-          delay: (i % 4) * 0.08,
+          delay: (i % 4) * 0.07,
           ease: 'power2.out',
-          scrollTrigger: { trigger: card, start: 'top 88%' },
+          scrollTrigger: { trigger: card, start: 'top 90%' },
         });
       });
     }, sectionRef);
@@ -137,30 +195,85 @@ export default function Certifications() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="certifications" id="certifications">
-      <div ref={tagRef} className="section-tag" style={{ clipPath: 'inset(0 100% 0 0)' }}>
-        Certifications
-      </div>
-      <h2 ref={titleRef} className="section-title" style={{ clipPath: 'inset(0 0 100% 0)' }}>
-        Learning & <span className="accent">credentials</span>
-      </h2>
+    <>
+      <section ref={sectionRef} className="certifications" id="certifications">
+        <div ref={tagRef} className="section-tag" style={{ clipPath: 'inset(0 100% 0 0)' }}>
+          Certifications
+        </div>
+        <h2 ref={titleRef} className="section-title" style={{ clipPath: 'inset(0 0 100% 0)' }}>
+          Learning & <span className="accent">credentials</span>
+        </h2>
+        <p className="cert-count">{certs.length} certificates · click any to view</p>
 
-      <div className="cert-grid">
-        {certs.map((cert) => (
-          <div key={cert.title + cert.issuer} className={`cert-card cert-card--${cert.categoryColor}`}>
-            <div className="cert-top">
-              <span className="cert-icon">{cert.icon}</span>
-              <span className={`cert-category cert-category--${cert.categoryColor}`}>{cert.category}</span>
+        <div className="cert-grid">
+          {certs.map((cert, idx) => (
+            <div
+              key={cert.title + cert.issuer}
+              className={`cert-card cert-card--${cert.categoryColor}${cert.image ? ' cert-card--clickable' : ''}`}
+              onClick={() => cert.image ? openLightbox(idx) : window.open(cert.pdf, '_blank')}
+              role="button"
+              tabIndex={0}
+              onKeyDown={e => e.key === 'Enter' && (cert.image ? openLightbox(idx) : window.open(cert.pdf, '_blank'))}
+            >
+              {/* Thumbnail or PDF placeholder */}
+              <div className="cert-thumb-wrap">
+                {cert.image ? (
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="cert-thumb"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="cert-pdf-placeholder">
+                    <FiFileText size={28} />
+                    <span>View PDF</span>
+                  </div>
+                )}
+                <div className={`cert-category-badge cert-category--${cert.categoryColor}`}>
+                  {cert.category}
+                </div>
+              </div>
+
+              {/* Info below image */}
+              <div className="cert-info">
+                <div className="cert-title">{cert.title}</div>
+                {cert.subtitle && <div className="cert-subtitle">{cert.subtitle}</div>}
+                <div className="cert-footer">
+                  <span className="cert-issuer">{cert.issuer}</span>
+                  <span className="cert-date">{cert.date}</span>
+                </div>
+              </div>
             </div>
-            <div className="cert-title">{cert.title}</div>
-            {cert.subtitle && <div className="cert-subtitle">{cert.subtitle}</div>}
-            <div className="cert-footer">
-              <span className="cert-issuer">{cert.issuer}</span>
-              <span className="cert-date">{cert.date}</span>
+          ))}
+        </div>
+      </section>
+
+      {/* Lightbox */}
+      {lightboxIdx !== null && (
+        <div className="cert-lightbox" onClick={closeLightbox}>
+          <button className="cert-lb-close" onClick={closeLightbox} aria-label="Close">
+            <FiX size={20} />
+          </button>
+          <button className="cert-lb-nav cert-lb-prev" onClick={e => { e.stopPropagation(); prev(); }} aria-label="Previous">
+            <FiChevronLeft size={24} />
+          </button>
+          <div className="cert-lb-content" onClick={e => e.stopPropagation()}>
+            <img
+              src={imageCerts[lightboxIdx].image}
+              alt={imageCerts[lightboxIdx].title}
+              className="cert-lb-img"
+            />
+            <div className="cert-lb-meta">
+              <span className="cert-lb-title">{imageCerts[lightboxIdx].title}</span>
+              <span className="cert-lb-issuer">{imageCerts[lightboxIdx].issuer} · {imageCerts[lightboxIdx].date}</span>
             </div>
           </div>
-        ))}
-      </div>
-    </section>
+          <button className="cert-lb-nav cert-lb-next" onClick={e => { e.stopPropagation(); next(); }} aria-label="Next">
+            <FiChevronRight size={24} />
+          </button>
+        </div>
+      )}
+    </>
   );
 }
