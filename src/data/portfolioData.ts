@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   firstName: 'Abhinav',
-  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 7 PRs merged into HuggingFace, pydantic, marimo & agno.',
+  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 8 PRs merged into HuggingFace, pydantic, marimo, mem0 & agno.',
   role: 'Final-Year AI/ML Student · Open Source Contributor · Full Stack Dev',
   email: 'abhinaaavvv07187@gmail.com',
   phone: '+91-9121611029',
@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. Open source contributor to HuggingFace, pydantic, agno, and marimo (YC). I've interned at OneStop AI, built production RAG & LLM pipelines, and shipped live products used by real people. My focus is AI engineering: making intelligent systems work outside the notebook.",
+  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. Open source contributor to HuggingFace, pydantic, agno, mem0, and marimo (YC). I've interned at OneStop AI, built production RAG & LLM pipelines, and shipped live products used by real people. My focus is AI engineering: making intelligent systems work outside the notebook.",
 };
 
 export const whyIDoThis = {

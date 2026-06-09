@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import Navbar from './Navbar';
 import Landing from './Landing';
 import OpenSource from './OpenSource';
+import Certifications from './Certifications';
 import About from './About';
 import WhatIDo from './WhatIDo';
 import Career from './Career';
@@ -87,6 +88,8 @@ export default function MainContainer() {
         </Suspense>
         <Divider />
 
+        <Certifications />
+        <Divider />
         <Challenges />
         <Divider />
         <Story />

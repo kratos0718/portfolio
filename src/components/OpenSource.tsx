@@ -94,6 +94,20 @@ const mergedPRs = [
     codehound: false,
   },
   {
+    repo: 'mem0ai/mem0',
+    stars: '35k',
+    number: 5302,
+    url: 'https://github.com/mem0ai/mem0/pull/5302',
+    org: 'mem0',
+    what: 'Fixed mutable default arguments (B006) in Completions.create and BaseEmbedderConfig — with a regression test.',
+    quotes: [
+      { text: 'Approved and merged into main.', who: '@kartik-mem0, maintainer' },
+    ],
+    shipped: null,
+    featured: false,
+    codehound: false,
+  },
+  {
     repo: 'agno-agi/agno',
     stars: '25k',
     number: 8138,
@@ -166,16 +180,6 @@ const openPRs = [
     stars: '25k',
     number: 8152,
     url: 'https://github.com/agno-agi/agno/pull/8152',
-    what: 'Under review.',
-    quote: null,
-    codehound: false,
-  },
-  {
-    repo: 'mem0ai/mem0',
-    org: 'mem0',
-    stars: '20k',
-    number: 5302,
-    url: 'https://github.com/mem0ai/mem0/pull/5302',
     what: 'Under review.',
     quote: null,
     codehound: false,
@@ -271,8 +275,8 @@ export default function OpenSource() {
       {/* ── Stats bar ── */}
       <div className="os-stats-bar">
         {[
-          { num: '7', label: 'Merged PRs' },
-          { num: '17', label: 'Open PRs' },
+          { num: '8', label: 'Merged PRs' },
+          { num: '16', label: 'Open PRs' },
           { num: '18+', label: 'Organizations' },
         ].map(s => (
           <div key={s.label} className="os-stat-item">
@@ -317,7 +321,7 @@ export default function OpenSource() {
           ══════════════════════════════════ */}
       <div className="os-subhead-row">
         <span className="os-subhead-badge os-merged-badge">✓ Merged</span>
-        <span className="os-subhead-label">7 pull requests · reviewed by lead maintainers</span>
+        <span className="os-subhead-label">8 pull requests · reviewed by lead maintainers</span>
       </div>
 
       {/* Featured HuggingFace card */}
@@ -351,7 +355,7 @@ export default function OpenSource() {
         <FiExternalLink className="os-featured-ext" size={16} />
       </a>
 
-      {/* Remaining 6 merged PRs */}
+      {/* Remaining 7 merged PRs */}
       <div className="os-grid">
         {mergedPRs.slice(1).map(pr => (
           <a
