@@ -70,6 +70,7 @@
   border: 1px solid var(--border);
   padding: 4px 12px;
   white-space: nowrap;
+  border-radius: var(--radius-sm);
 }
 
 .career-company {

@@ -66,16 +66,18 @@
 .rp-card {
   display: block;
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  background: linear-gradient(145deg, var(--surface) 0%, rgba(8,12,20,0.9) 100%);
   position: relative;
   overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
   text-decoration: none;
 }
 .rp-card:hover {
   border-color: var(--cyan);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(99,102,241,0.08);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 12px 40px rgba(59,130,246,0.12);
 }
 
 /* Featured card — left accent bar */

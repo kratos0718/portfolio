@@ -32,12 +32,21 @@
 
   /* Helpers */
   --stroke-subtle: rgba(255,255,255,0.06);
-  --dot-color: rgba(59,130,246,0.18);
+  --dot-color: rgba(59,130,246,0.14);
   --blob-a: rgba(59,130,246,0.18);
   --blob-b: rgba(96,165,250,0.14);
   --blob-c: rgba(59,130,246,0.13);
   --canvas-opacity: 0.55;
   --navbar-scrolled-bg: rgba(8,12,20,0.95);
+
+  /* Radius system */
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+
+  /* Surfaces */
+  --surface: rgba(15,23,42,0.85);
+  --surface-raised: rgba(22,33,55,0.75);
 }
 
 /* ══════════════════════════════════════════
@@ -78,7 +87,7 @@ html { scroll-behavior: auto; /* Lenis handles this */ }
 body {
   background-color: var(--bg);
   background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
-  background-size: 26px 26px;
+  background-size: 32px 32px;
   color: var(--text);
   font-family: var(--font-sans);
   font-size: 16px;
