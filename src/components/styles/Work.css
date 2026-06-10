@@ -24,7 +24,7 @@
   display: grid;
   grid-template-columns: 320px 1fr;
   border: 1px solid var(--border);
-  background: linear-gradient(145deg, var(--surface) 0%, rgba(8,12,20,0.9) 100%);
+  background: linear-gradient(145deg, var(--surface) 0%, var(--bg-2) 100%);
   margin-top: 48px;
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -52,6 +52,13 @@
   line-height: 1;
   filter: drop-shadow(0 6px 20px rgba(0,0,0,0.5));
   transition: transform 0.35s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pfeat-icon svg {
+  width: 72px;
+  height: 72px;
 }
 .proj-featured:hover .pfeat-icon { transform: scale(1.1); }
 
@@ -162,7 +169,7 @@
 /* ── Individual card ── */
 .proj-card {
   border: 1px solid var(--border);
-  background: linear-gradient(145deg, var(--surface) 0%, rgba(8,12,20,0.9) 100%);
+  background: linear-gradient(145deg, var(--surface) 0%, var(--bg-2) 100%);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -199,6 +206,13 @@
   z-index: 1;
   filter: drop-shadow(0 4px 16px rgba(0,0,0,0.4));
   transition: transform 0.35s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.proj-banner-icon svg {
+  width: 64px;
+  height: 64px;
 }
 .proj-card:hover .proj-banner-icon { transform: scale(1.12); }
 
