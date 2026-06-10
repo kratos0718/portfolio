@@ -51,8 +51,6 @@ export default function MainContainer() {
           <div className="page-glow pg-1" />
           <div className="page-glow pg-2" />
           <div className="page-glow pg-3" />
-          <div className="page-glow pg-4" />
-          <div className="page-glow pg-5" />
         </div>
 
         <Navbar />
@@ -61,39 +59,44 @@ export default function MainContainer() {
         {/* Scrolling keyword strip */}
         <TickerStrip />
 
-        {/* Credibility / social proof bar */}
+        {/* Credibility / social proof bar — sits right under the hero */}
         <SocialProof />
 
+        {/* ── WHO I AM ─────────────────────────── */}
         <About />
-        <Divider />
         <WhatIDo />
-        <Divider />
-        <Career />
-        <Divider />
-        <Research />
-        <Divider />
-        <Work />
-
-        {/* Second ticker then Open Source highlight */}
-        <TickerStrip reverse />
-
-        <OpenSource />
+        <Story />
         <Divider />
 
-        <Achievements />
-        <Divider />
-
+        {/* ── SKILLS ───────────────────────────── */}
         <Suspense fallback={null}>
           <TechStack />
         </Suspense>
         <Divider />
 
-        <Certifications />
+        {/* ── EXPERIENCE ───────────────────────── */}
+        <Career />
         <Divider />
+
+        {/* ── PROJECTS ─────────────────────────── */}
+        <Work />
+        <Divider />
+
+        {/* ── OPEN SOURCE (the differentiator) ──── */}
+        <OpenSource />
+        <Divider />
+
+        {/* ── RECOGNITION & CREDENTIALS (one zone) ─ */}
+        <Achievements />
+        <Certifications />
         <Challenges />
         <Divider />
-        <Story />
+
+        {/* ── RESEARCH ─────────────────────────── */}
+        <Research />
         <Divider />
+
+        {/* ── CTA ──────────────────────────────── */}
         <ResumeDownload />
         <Divider />
         <Contact />
