@@ -62,6 +62,7 @@ export const career = [
   {
     role: 'AI/ML Intern — Computer Vision',
     company: 'APEPDCL (Eastern Power Distribution Co. of AP)',
+    logo: { text: 'AP', color: '#1f74b8' },
     period: 'Jun 2026 – Present',
     type: 'On-site · Visakhapatnam',
     points: [
@@ -73,8 +74,9 @@ export const career = [
   {
     role: 'AI & Data Advisory Intern',
     company: 'PwC Launchpad Advisory Program',
+    logo: { text: 'PwC', color: '#D04A02' },
     period: 'Feb 2026 – Present',
-    type: 'Intern',
+    type: 'Remote',
     points: [
       "Selected for PwC's flagship program focused on GenAI, Prompt Engineering, and Data Systems.",
       'Built and optimized LLM prompt workflows for real-world enterprise use cases.',
@@ -85,6 +87,7 @@ export const career = [
   {
     role: 'Machine Learning & AI Intern',
     company: 'OneStop AI',
+    logo: { text: 'OS', color: '#0f9d8f' },
     period: 'May 2025 – Aug 2025',
     type: 'Remote',
     points: [
