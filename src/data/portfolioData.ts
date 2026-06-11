@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   firstName: 'Abhinav',
-  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 9 PRs merged into HuggingFace, pydantic, marimo, mem0 & agno.',
+  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 10 PRs merged into unsloth, HuggingFace, pydantic, marimo, mem0 & agno.',
   role: 'Final-Year AI/ML Student · Open Source Contributor · Full Stack Dev',
   email: 'abhinaaavvv07187@gmail.com',
   phone: '+91-9121611029',
