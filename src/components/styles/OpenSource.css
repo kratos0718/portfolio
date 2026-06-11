@@ -318,15 +318,15 @@
 
 .os-featured-repo {
   font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
   word-break: break-all;
 }
 
 .os-featured-stars {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 12.5px;
   color: #f59e0b;
   letter-spacing: 0.05em;
 }
@@ -347,9 +347,9 @@
 }
 
 .os-featured-what {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--text-dim);
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--text);
 }
 
 .os-quotes {
@@ -483,15 +483,15 @@
 
 .os-card-repo {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
   word-break: break-all;
 }
 
 .os-card-stars {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11.5px;
   color: #f59e0b;
   letter-spacing: 0.05em;
 }
@@ -513,9 +513,9 @@
 }
 
 .os-card-what {
-  font-size: 13.5px;
-  line-height: 1.65;
-  color: var(--text-dim);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text);
   flex: 1;
 }
 
@@ -553,12 +553,12 @@
 
 .os-earlier-pill {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.08em;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
   color: var(--text-dim);
   border: 1px solid var(--border);
   background: var(--bg-3);
-  padding: 2px 8px;
+  padding: 3px 9px;
 }
 
 .os-earlier-pill-link {
