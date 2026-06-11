@@ -67,24 +67,25 @@
   margin-bottom: 32px;
 }
 .about-photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 190px;
+  height: 230px;
+  border-radius: 18px;
   object-fit: cover;
   object-position: center top;
   border: 2px solid var(--border-hover);
   display: block;
   position: relative;
   z-index: 1;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, transform 0.4s;
 }
 .about-photo-wrap:hover .about-photo {
   border-color: var(--cyan);
+  transform: scale(1.02);
 }
 .about-photo-glow {
   position: absolute;
   inset: -6px;
-  border-radius: 50%;
+  border-radius: 22px;
   background: radial-gradient(circle, rgba(0,0,0,0.06) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;

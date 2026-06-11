@@ -84,7 +84,7 @@ export default function About() {
           <div ref={hlRef} className="about-highlights">
             {[
               { icon: '🎓', title: 'B.Tech CSE (AI/ML) · Gitam University · CGPA 8.12', sub: 'O in ML · A+ in AI & Deep Learning · SGPA 8.83 (best sem)' },
-              { icon: '🧠', title: 'ML & AI Intern · OneStop AI', sub: 'Improved model accuracy +12%, reduced latency -18%' },
+              { icon: '🧠', title: 'AI/ML Intern (Computer Vision) · APEPDCL', sub: 'Detecting power-infrastructure defects with CV — on-site, Visakhapatnam' },
               { icon: '⚔️', title: 'Smart India Hackathon 2024', sub: 'Built SoulSync — AI mental health chatbot' },
               { icon: '📍', title: `Based in ${personalInfo.location}`, sub: 'Open to remote & on-site — Internship · PPO · Full-time' },
             ].map(h => (
