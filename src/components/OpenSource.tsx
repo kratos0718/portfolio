@@ -8,6 +8,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const mergedPRs = [
   {
+    repo: 'unslothai/unsloth',
+    stars: '40k',
+    number: 6135,
+    url: 'https://github.com/unslothai/unsloth/pull/6135',
+    org: 'unsloth',
+    what: 'Fixed a blocking time.sleep (up to 30s) that froze the async event loop in the model-export route — surfaced by my own static analyzer, codehound. Merged into main.',
+    quotes: [
+      { text: 'Merged #6135 into main.', who: '@wasimysaid, maintainer' },
+    ],
+    shipped: null,
+    featured: true,
+    codehound: true,
+  },
+  {
     repo: 'huggingface/huggingface_hub',
     stars: '40k',
     number: 4289,
@@ -288,7 +302,7 @@ export default function OpenSource() {
       {/* ── Stats bar ── */}
       <div className="os-stats-bar">
         {[
-          { num: '9', label: 'Merged PRs' },
+          { num: '10', label: 'Merged PRs' },
           { num: '15', label: 'Open PRs' },
           { num: '18+', label: 'Organizations' },
         ].map(s => (
@@ -334,7 +348,7 @@ export default function OpenSource() {
           ══════════════════════════════════ */}
       <div className="os-subhead-row">
         <span className="os-subhead-badge os-merged-badge">✓ Merged</span>
-        <span className="os-subhead-label">9 pull requests · reviewed by lead maintainers</span>
+        <span className="os-subhead-label">10 pull requests · reviewed by lead maintainers</span>
       </div>
 
       {/* Featured HuggingFace card */}
