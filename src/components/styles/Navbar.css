@@ -64,6 +64,11 @@
 .navbar-links a:hover { color: var(--cyan); }
 .navbar-links a:hover::after { width: 100%; }
 
+/* Highlighted nav item (Experience) */
+.navbar-links a.nav-highlight { color: var(--cyan); font-weight: 700; }
+.navbar-links a.nav-highlight::after { width: 100%; }
+.navbar-mobile-links a.nav-highlight { color: var(--cyan); font-weight: 700; }
+
 /* ── Right actions group ── */
 .navbar-actions {
   display: flex;

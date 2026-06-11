@@ -4,6 +4,7 @@ import './styles/Navbar.css';
 
 const links = [
   { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#career', highlight: true },
   { label: 'Work', href: '#work' },
   { label: 'Open Source', href: '#open-source' },
   { label: 'Research', href: '#research' },
@@ -49,7 +50,7 @@ export default function Navbar() {
         <ul className="navbar-links">
           {links.map(l => (
             <li key={l.href}>
-              <a href={l.href}>{l.label}</a>
+              <a href={l.href} className={l.highlight ? 'nav-highlight' : undefined}>{l.label}</a>
             </li>
           ))}
         </ul>
@@ -89,7 +90,7 @@ export default function Navbar() {
         <ul className="navbar-mobile-links">
           {links.map((l, i) => (
             <li key={l.href} style={{ '--delay': `${i * 0.06}s` } as React.CSSProperties}>
-              <a href={l.href} onClick={closeMenu}>
+              <a href={l.href} onClick={closeMenu} className={l.highlight ? 'nav-highlight' : undefined}>
                 <span className="navbar-mobile-num">0{i + 1}</span>
                 {l.label}
               </a>
