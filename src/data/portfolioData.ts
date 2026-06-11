@@ -62,7 +62,7 @@ export const career = [
   {
     role: 'AI/ML Intern — Computer Vision',
     company: 'APEPDCL (Eastern Power Distribution Co. of AP)',
-    logo: { text: 'AP', color: '#1f74b8' },
+    logo: { img: '/logos/apepdcl.jpg' },
     period: 'Jun 2026 – Present',
     type: 'On-site · Visakhapatnam',
     points: [
@@ -74,7 +74,7 @@ export const career = [
   {
     role: 'AI & Data Advisory Intern',
     company: 'PwC Launchpad Advisory Program',
-    logo: { text: 'PwC', color: '#D04A02' },
+    logo: { img: '/logos/pwc.jpg' },
     period: 'Feb 2026 – Present',
     type: 'Remote',
     points: [
@@ -87,7 +87,7 @@ export const career = [
   {
     role: 'Machine Learning & AI Intern',
     company: 'OneStop AI',
-    logo: { text: 'OS', color: '#0f9d8f' },
+    logo: { img: '/logos/onestop.jpg' },
     period: 'May 2025 – Aug 2025',
     type: 'Remote',
     points: [
