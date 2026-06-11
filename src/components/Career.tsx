@@ -44,8 +44,8 @@ export default function Career() {
             </div>
             <div className="career-company">
               {job.logo && (
-                <span className="career-logo" style={{ background: job.logo.color }}>
-                  {job.logo.text}
+                <span className="career-logo">
+                  <img src={job.logo.img} alt={`${job.company} logo`} loading="lazy" />
                 </span>
               )}
               <span className="career-company-name">{job.company}</span>
