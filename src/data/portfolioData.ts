@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. Open source contributor to HuggingFace, pydantic, agno, mem0, and marimo (YC). I've interned at OneStop AI, built production RAG & LLM pipelines, and shipped live products used by real people. My focus is AI engineering: making intelligent systems work outside the notebook.",
+  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. Currently an AI/ML (Computer Vision) intern at APEPDCL. Open source contributor to HuggingFace, pydantic, agno, mem0, and marimo (YC). I've interned at OneStop AI, built production RAG & LLM pipelines, and shipped live products used by real people. My focus is AI engineering: making intelligent systems work outside the notebook.",
 };
 
 export const whyIDoThis = {
@@ -59,6 +59,17 @@ export const socials = {
 };
 
 export const career = [
+  {
+    role: 'AI/ML Intern — Computer Vision',
+    company: 'APEPDCL (Eastern Power Distribution Co. of AP)',
+    period: 'Jun 2026 – Present',
+    type: 'On-site · Visakhapatnam',
+    points: [
+      'Developing computer-vision models to detect power-infrastructure defects from field imagery for a state power utility — bridging field operations and AI.',
+      'Preparing datasets end-to-end (image-capture protocols + annotation: classification, object detection, segmentation) and training/evaluating CV models in Python with TensorFlow/PyTorch.',
+      'Testing model-serving APIs and monitoring performance metrics on large-scale, real-world utility datasets.',
+    ],
+  },
   {
     role: 'AI & Data Advisory Intern',
     company: 'PwC Launchpad Advisory Program',
