@@ -161,7 +161,7 @@ export const projects = [
     github: 'https://github.com/kratos0718',
     year: '2025',
     stat: { num: '-30%', label: 'token usage' },
-    images: ['https://image.thum.io/get/width/1200/crop/800/https://www.pathforge.online'],
+    images: ['/logos/projects/pathforge.svg'],
     caseStudy: {
       problem: 'RAG retrieved generic chunks — responses weren\'t personalised to the user\'s actual skill gaps.',
       fix: 'Built a skill-gap scoring layer before retrieval. User profile embeddings filter vector search to level-relevant context. Rewrote prompt templates to inject gap analysis into every query.',
@@ -178,7 +178,7 @@ export const projects = [
     github: 'https://github.com/kratos0718/MarkMe',
     year: '2025',
     stat: { num: '0', label: 'proxy incidents' },
-    images: ['https://image.thum.io/get/width/1200/crop/800/https://mark-me-ih3h.vercel.app/'],
+    images: ['/logos/projects/markme.svg'],
     caseStudy: null,
   },
   {
@@ -190,7 +190,7 @@ export const projects = [
     github: 'https://github.com/kratos0718/SoulSync',
     year: '2024',
     stat: { num: '81%', label: 'accuracy' },
-    images: ['https://image.thum.io/get/width/1200/crop/800/https://soulsyncfinal.vercel.app/'],
+    images: ['/logos/projects/soulsync.svg'],
     caseStudy: null,
   },
   {
@@ -202,7 +202,7 @@ export const projects = [
     github: 'https://github.com/kratos0718',
     year: '2024',
     stat: { num: 'solo', label: 'full-stack' },
-    images: ['https://image.thum.io/get/width/1200/crop/800/https://clickn-cut.vercel.app/'],
+    images: ['/logos/projects/clickncut.svg'],
     caseStudy: null,
   },
   {
@@ -215,7 +215,7 @@ export const projects = [
     github: 'https://github.com/kratos0718',
     year: '2025',
     stat: { num: 'RAG', label: 'arxiv explainer' },
-    images: [] as string[],
+    images: ['/logos/projects/papermind.svg'],
     caseStudy: null,
   },
 ];

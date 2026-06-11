@@ -9,12 +9,115 @@ gsap.registerPlugin(ScrollTrigger);
 
 type Project = typeof projects[0];
 
-const banners: Record<string, { gradient: string; icon: string }> = {
-  PathForge:          { gradient: 'linear-gradient(135deg, #0f0c29 0%, #1a1a4e 50%, #24243e 100%)', icon: '🧭' },
-  MarkMe:             { gradient: 'linear-gradient(135deg, #0d1b2a 0%, #1b3a4b 50%, #1b5e40 100%)', icon: '📍' },
-  SoulSync:           { gradient: 'linear-gradient(135deg, #1a0533 0%, #2d1b69 60%, #3d2080 100%)', icon: '🧠' },
-  'Click N Cut':      { gradient: 'linear-gradient(135deg, #1a0a00 0%, #6b2d00 60%, #b84500 100%)', icon: '📷' },
-  PaperMind:          { gradient: 'linear-gradient(135deg, #001a2c 0%, #002d4a 50%, #00405e 100%)', icon: '📄' },
+/* ── Project SVG logos ── */
+const PathForgeLogo = () => (
+  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Outer hexagon */}
+    <path d="M32 6L56 19V45L32 58L8 45V19L32 6Z" stroke="rgba(255,255,255,0.18)" strokeWidth="1.2"/>
+    {/* Fork node left */}
+    <circle cx="16" cy="32" r="4" fill="white" opacity="0.9"/>
+    {/* Stem */}
+    <path d="M20 32H34" stroke="white" strokeWidth="2.2" strokeLinecap="round"/>
+    {/* Upper branch */}
+    <path d="M34 32L44 22" stroke="white" strokeWidth="2.2" strokeLinecap="round"/>
+    <circle cx="47" cy="19" r="4" fill="white" opacity="0.75"/>
+    {/* Lower branch */}
+    <path d="M34 32L44 42" stroke="white" strokeWidth="2.2" strokeLinecap="round"/>
+    <circle cx="47" cy="45" r="4" fill="white" opacity="0.75"/>
+    {/* AI spark/star at fork */}
+    <path d="M32 23L33.4 27.6L38 29L33.4 30.4L32 35L30.6 30.4L26 29L30.6 27.6L32 23Z" fill="white" opacity="0.95"/>
+  </svg>
+);
+
+const MarkMeLogo = () => (
+  <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+    {/* Face circle */}
+    <circle cx="32" cy="27" r="14" stroke="white" strokeWidth="1.6"/>
+    {/* Eyes */}
+    <circle cx="27" cy="25" r="2.2" fill="white" opacity="0.9"/>
+    <circle cx="37" cy="25" r="2.2" fill="white" opacity="0.9"/>
+    {/* Subtle smile */}
+    <path d="M26 31Q32 36.5 38 31" stroke="white" strokeWidth="1.6" strokeLinecap="round" fill="none"/>
+    {/* Scan corner brackets */}
+    <path d="M8 18V10H16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
+    <path d="M56 18V10H48" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
+    <path d="M8 46V54H16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
+    <path d="M56 46V54H48" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
+    {/* Checkmark badge */}
+    <circle cx="32" cy="50" r="8" fill="rgba(74,222,128,0.9)"/>
+    <path d="M28 50L31 53L37 47" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const SoulSyncLogo = () => (
+  <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+    {/* Left circle */}
+    <circle cx="24" cy="28" r="16" stroke="white" strokeWidth="1.5" opacity="0.8"/>
+    {/* Right circle */}
+    <circle cx="40" cy="28" r="16" stroke="white" strokeWidth="1.5" opacity="0.8"/>
+    {/* Heartbeat / EEG wave through the center */}
+    <path d="M8 38L16 38L19 32L22 42L25 36L28 42L31 36L34 42L37 36L40 38L48 38L56 38"
+      stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+    {/* Dot center glow */}
+    <circle cx="32" cy="28" r="3" fill="white" opacity="0.85"/>
+  </svg>
+);
+
+const ClickNCutLogo = () => (
+  <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+    {/* Camera body */}
+    <rect x="6" y="18" width="52" height="36" rx="5" stroke="white" strokeWidth="1.6"/>
+    {/* Viewfinder bump */}
+    <path d="M22 18V13H42V18" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+    {/* Outer lens ring */}
+    <circle cx="32" cy="36" r="13" stroke="white" strokeWidth="1.6"/>
+    {/* Mid lens ring */}
+    <circle cx="32" cy="36" r="8" stroke="white" strokeWidth="1.2" opacity="0.6"/>
+    {/* Aperture blades — 6 blades */}
+    <path d="M32 28L34 33L39 33L35 37L37 42L32 38L27 42L29 37L25 33L30 33Z" fill="white" opacity="0.25"/>
+    {/* Center pupil */}
+    <circle cx="32" cy="36" r="3" fill="white" opacity="0.8"/>
+    {/* Flash */}
+    <circle cx="51" cy="24" r="3.5" fill="white" opacity="0.55"/>
+    <circle cx="51" cy="24" r="1.5" fill="white"/>
+  </svg>
+);
+
+const PaperMindLogo = () => (
+  <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+    {/* Document body */}
+    <path d="M14 8H40L52 20V58H14V8Z" stroke="white" strokeWidth="1.6" strokeLinejoin="round" fill="none"/>
+    {/* Folded corner */}
+    <path d="M40 8V20H52" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" opacity="0.55"/>
+    {/* Knowledge graph nodes */}
+    <circle cx="28" cy="36" r="5" stroke="white" strokeWidth="1.6"/>
+    <circle cx="42" cy="28" r="3.5" fill="white" opacity="0.75"/>
+    <circle cx="42" cy="46" r="3.5" fill="white" opacity="0.75"/>
+    <circle cx="20" cy="42" r="2.5" fill="white" opacity="0.5"/>
+    {/* Connections */}
+    <line x1="33" y1="34" x2="38.5" y2="29.5" stroke="white" strokeWidth="1.2" opacity="0.7"/>
+    <line x1="33" y1="39" x2="38.5" y2="44.5" stroke="white" strokeWidth="1.2" opacity="0.7"/>
+    <line x1="23" y1="38" x2="22" y2="40" stroke="white" strokeWidth="1.2" opacity="0.5"/>
+    {/* Sparkle on center node */}
+    <circle cx="28" cy="36" r="2" fill="white" opacity="0.9"/>
+  </svg>
+);
+
+function ProjectLogo({ title }: { title: string }) {
+  if (title === 'PathForge')    return <PathForgeLogo />;
+  if (title === 'MarkMe')       return <MarkMeLogo />;
+  if (title === 'SoulSync')     return <SoulSyncLogo />;
+  if (title === 'Click N Cut')  return <ClickNCutLogo />;
+  if (title === 'PaperMind')    return <PaperMindLogo />;
+  return null;
+}
+
+const banners: Record<string, { gradient: string }> = {
+  PathForge:          { gradient: 'linear-gradient(135deg, #0f0c29 0%, #1a1a4e 50%, #24243e 100%)' },
+  MarkMe:             { gradient: 'linear-gradient(135deg, #0d1b2a 0%, #1b3a4b 50%, #1b5e40 100%)' },
+  SoulSync:           { gradient: 'linear-gradient(135deg, #1a0533 0%, #2d1b69 60%, #3d2080 100%)' },
+  'Click N Cut':      { gradient: 'linear-gradient(135deg, #1a0a00 0%, #6b2d00 60%, #b84500 100%)' },
+  PaperMind:          { gradient: 'linear-gradient(135deg, #001a2c 0%, #002d4a 50%, #00405e 100%)' },
 };
 
 /* ── Featured card (PathForge) — full-width case study ── */
@@ -56,7 +159,7 @@ function FeaturedCard({ project }: { project: Project }) {
           </>
         ) : (
           <>
-            <span className="pfeat-icon">{banner.icon}</span>
+            <span className="pfeat-icon"><ProjectLogo title={project.title} /></span>
             <div className="pfeat-stat">
               <span className="pfeat-stat-num">{project.stat!.num}</span>
               <span className="pfeat-stat-label">{project.stat!.label}</span>
@@ -116,7 +219,7 @@ function FeaturedCard({ project }: { project: Project }) {
 /* ── Regular project card ── */
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
-  const banner = banners[project.title] ?? { gradient: 'linear-gradient(135deg,#111,#333)', icon: '⚡' };
+  const banner = banners[project.title] ?? { gradient: 'linear-gradient(135deg,#111,#333)' };
   const hasImage = project.images && project.images.length > 0;
 
   useEffect(() => {
@@ -147,7 +250,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             <div className="proj-banner-img-overlay" />
           </>
         ) : (
-          <span className="proj-banner-icon">{banner.icon}</span>
+          <span className="proj-banner-icon"><ProjectLogo title={project.title} /></span>
         )}
         {project.liveNow && (
           <span className="proj-live-badge" style={{ top: 14, left: 14, right: 'auto' }}>

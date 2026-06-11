@@ -99,8 +99,10 @@
   align-items: center;
   gap: 0;
   margin-bottom: 32px;
-  overflow: hidden;
-  height: 30px;
+  overflow: visible;
+  height: auto;
+  flex-wrap: wrap;
+  row-gap: 4px;
 }
 .landing-role-item {
   font-family: var(--font-mono);
