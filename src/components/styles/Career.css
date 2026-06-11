@@ -88,18 +88,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  padding: 4px 8px;
-  border-radius: 7px;
+  height: 44px;
+  padding: 6px 13px;
+  border-radius: 10px;
   background: #fff;
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.20);
+  border: 1px solid rgba(0,0,0,0.06);
 }
 
 .career-logo img {
-  height: 20px;
+  height: 30px;
   width: auto;
-  max-width: 78px;
+  max-width: 120px;
   object-fit: contain;
   display: block;
 }
