@@ -10,7 +10,6 @@ import Research from './Research';
 import Achievements from './Achievements';
 import Work from './Work';
 import Challenges from './Challenges';
-import Story from './Story';
 import ResumeDownload from './ResumeDownload';
 import Contact from './Contact';
 import SmoothScroll from './SmoothScroll';
@@ -65,7 +64,6 @@ export default function MainContainer() {
         {/* ── WHO I AM ─────────────────────────── */}
         <About />
         <WhatIDo />
-        <Story />
         <Divider />
 
         {/* ── SKILLS ───────────────────────────── */}
