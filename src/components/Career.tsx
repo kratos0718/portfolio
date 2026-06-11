@@ -43,7 +43,12 @@ export default function Career() {
               <div className="career-period">{job.period}</div>
             </div>
             <div className="career-company">
-              {job.company}
+              {job.logo && (
+                <span className="career-logo" style={{ background: job.logo.color }}>
+                  {job.logo.text}
+                </span>
+              )}
+              <span className="career-company-name">{job.company}</span>
               <span className="career-type-badge">{job.type}</span>
             </div>
             <ul className="career-points">
