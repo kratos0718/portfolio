@@ -103,12 +103,27 @@ const PaperMindLogo = () => (
   </svg>
 );
 
+const CodeHoundLogo = () => (
+  <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+    {/* Magnifier ring */}
+    <circle cx="28" cy="28" r="15" stroke="white" strokeWidth="1.8"/>
+    {/* Magnifier handle */}
+    <path d="M39 39L52 52" stroke="white" strokeWidth="2.4" strokeLinecap="round"/>
+    {/* Code brackets inside lens */}
+    <path d="M24 22L18 28L24 34" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M32 22L38 28L32 34" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+    {/* Bug dot */}
+    <circle cx="28" cy="28" r="2.4" fill="white" opacity="0.85"/>
+  </svg>
+);
+
 function ProjectLogo({ title }: { title: string }) {
   if (title === 'PathForge')    return <PathForgeLogo />;
   if (title === 'MarkMe')       return <MarkMeLogo />;
   if (title === 'SoulSync')     return <SoulSyncLogo />;
   if (title === 'Click N Cut')  return <ClickNCutLogo />;
   if (title === 'PaperMind')    return <PaperMindLogo />;
+  if (title === 'CodeHound')    return <CodeHoundLogo />;
   return null;
 }
 
@@ -118,12 +133,13 @@ const banners: Record<string, { gradient: string }> = {
   SoulSync:           { gradient: 'linear-gradient(135deg, #1a0533 0%, #2d1b69 60%, #3d2080 100%)' },
   'Click N Cut':      { gradient: 'linear-gradient(135deg, #1a0a00 0%, #6b2d00 60%, #b84500 100%)' },
   PaperMind:          { gradient: 'linear-gradient(135deg, #001a2c 0%, #002d4a 50%, #00405e 100%)' },
+  CodeHound:          { gradient: 'linear-gradient(135deg, #0a0a0a 0%, #1f2933 55%, #2d3a2d 100%)' },
 };
 
 /* ── Featured card (PathForge) — full-width case study ── */
 function FeaturedCard({ project }: { project: Project }) {
   const ref = useRef<HTMLDivElement>(null);
-  const banner = banners[project.title]!;
+  const banner = banners[project.title] ?? { gradient: 'linear-gradient(135deg,#111,#333)' };
   const cs = project.caseStudy!;
   const hasImages = project.images && project.images.length > 0;
 

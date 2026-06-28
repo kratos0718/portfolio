@@ -189,12 +189,9 @@ export const projects = [
     github: 'https://github.com/kratos0718/codehound',
     year: '2026',
     stat: { num: '12+', label: 'bugs found & merged' },
-    images: ['/logos/projects/codehound.svg'],
-    caseStudy: {
-      problem: 'AI frameworks like agno and unsloth had subtle async-safety bugs — blocking calls inside async handlers, fire-and-forget tasks that silently drop work — that linters like flake8 and ruff miss entirely.',
-      fix: 'Built 6 AST-level checks distilled from real bugs I had already fixed manually. Each check walks the AST to detect the exact pattern — no regex, no string matching.',
-      result: 'Found 2 new real bugs in agno independently. Fixes merged upstream. Tool is live on GitHub with full CI, unit tests, and a FINDINGS.md provenance table linking each check to its upstream merged PR.',
-    },
+    images: [],
+    linkLabel: 'GitHub',
+    caseStudy: null,
   },
   {
     title: 'PathForge',
