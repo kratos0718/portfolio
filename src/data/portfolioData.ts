@@ -1,8 +1,8 @@
 export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   firstName: 'Abhinav',
-  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 10 PRs merged into unsloth, HuggingFace, pydantic, marimo, mem0 & agno.',
-  role: 'Final-Year AI/ML Student · Open Source Contributor · Full Stack Dev',
+  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 12 PRs merged into unsloth (40k★), HuggingFace, agno (25k★), mem0 (35k★), pydantic & more.',
+  role: 'Final-Year AI/ML Student · Open Source Contributor · CV Intern @ APEPDCL',
   email: 'abhinaaavvv07187@gmail.com',
   phone: '+91-9121611029',
   location: 'Visakhapatnam, India',
@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. Currently an AI/ML (Computer Vision) intern at APEPDCL. Open source contributor to HuggingFace, pydantic, agno, mem0, and marimo (YC). I've interned at OneStop AI, built production RAG & LLM pipelines, and shipped live products used by real people. My focus is AI engineering: making intelligent systems work outside the notebook.",
+  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. Currently an AI/ML (Computer Vision) intern at APEPDCL, building YOLOv8 + MiDaS defect-detection pipelines for real power infrastructure. 12 PRs merged into unsloth (40k★), HuggingFace, agno (25k★), mem0 (35k★), pydantic, and marimo (YC). I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. Research paper accepted at IEEE ISED 2026 (NIT Warangal). My focus is AI engineering: making intelligent systems work outside the notebook.",
 };
 
 export const whyIDoThis = {
@@ -85,6 +85,18 @@ export const career = [
     ],
   },
   {
+    role: 'AI/ML Engineering Intern',
+    company: 'AVAIntern',
+    logo: { img: '/logos/avaintern.jpg' },
+    period: 'May 2026 – Jun 2026',
+    type: 'On-site · Visakhapatnam',
+    points: [
+      'Developed and evaluated 5+ ML models on datasets of 10,000+ records, achieving up to 92% prediction accuracy through feature engineering and hyperparameter tuning.',
+      'Automated data preprocessing and analysis workflows using Python, Pandas, and Scikit-learn, reducing manual data preparation time by 40%.',
+      'Performed EDA and model evaluation across 15+ features, improving model performance by 18%; communicated findings to stakeholders via interactive visualizations.',
+    ],
+  },
+  {
     role: 'Machine Learning & AI Intern',
     company: 'OneStop AI',
     logo: { img: '/logos/onestop.jpg' },
@@ -100,6 +112,22 @@ export const career = [
 ];
 
 export const achievements = [
+  {
+    title: 'Research Paper Accepted — IEEE ISED 2026 · NIT Warangal',
+    org: 'IEEE · ISED 2026 at NIT Warangal',
+    year: '2026',
+    type: 'Research',
+    description: 'Paper on ML-based student performance prediction (ensemble methods + XAI) accepted at IEEE ISED 2026. First author. Co-authored with Dr. Chandrakanta Mahanty (GITAM). Additional target venues: AISP-2026, IEEE Engineering Informatics 2026.',
+    icon: '📄',
+  },
+  {
+    title: 'Top 5 — AI & ML Hackathon · BITS Pilani Hyderabad',
+    org: 'Techgyan Technologies · BITS Pilani',
+    year: '2025',
+    type: 'Hackathon',
+    description: 'Ranked Top 5 at the AI & Machine Learning Hackathon hosted by Techgyan Technologies at BITS Pilani, Hyderabad — 24-hour in-person competition.',
+    icon: '🏆',
+  },
   {
     title: 'Merged into HuggingFace — huggingface_hub · PR #4289',
     org: 'HuggingFace · huggingface/huggingface_hub',
@@ -151,6 +179,23 @@ export const achievements = [
 ];
 
 export const projects = [
+  {
+    title: 'CodeHound',
+    subtitle: 'Python AST Static Analyzer',
+    description: 'AST-based static analysis tool that detects async-safety and correctness bugs in Python — blocking calls in async, fire-and-forget tasks, mutable defaults, unclosed file handles. Bugs it surfaced were merged into unsloth (40k★) and agno (25k★). ~750 LOC, zero dependencies, CI-ready.',
+    tech: ['Python', 'ast', 'pytest', 'GitHub Actions'],
+    live: 'https://github.com/kratos0718/codehound',
+    liveNow: true,
+    github: 'https://github.com/kratos0718/codehound',
+    year: '2026',
+    stat: { num: '12+', label: 'bugs found & merged' },
+    images: ['/logos/projects/codehound.svg'],
+    caseStudy: {
+      problem: 'AI frameworks like agno and unsloth had subtle async-safety bugs — blocking calls inside async handlers, fire-and-forget tasks that silently drop work — that linters like flake8 and ruff miss entirely.',
+      fix: 'Built 6 AST-level checks distilled from real bugs I had already fixed manually. Each check walks the AST to detect the exact pattern — no regex, no string matching.',
+      result: 'Found 2 new real bugs in agno independently. Fixes merged upstream. Tool is live on GitHub with full CI, unit tests, and a FINDINGS.md provenance table linking each check to its upstream merged PR.',
+    },
+  },
   {
     title: 'PathForge',
     subtitle: 'AI Placement Preparation System',
@@ -265,8 +310,8 @@ export const techStack = [
   'LangChain', 'OpenAI API', 'RAG',
   'TensorFlow', 'PyTorch', 'Scikit-learn',
   'React.js', 'Node.js', 'FastAPI',
-  'FAISS', 'Docker', 'AWS',
-  'SQL', 'Kubernetes', 'OpenCV',
+  'FAISS', 'Docker', 'Kubernetes',
+  'AWS', 'OpenCV', 'SQL',
 ];
 
 export const whatIDo = [
