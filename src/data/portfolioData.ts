@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   firstName: 'Abhinav',
-  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 12 PRs merged into unsloth (40k★), HuggingFace, agno (25k★), mem0 (35k★), pydantic & more.',
+  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 14 PRs merged into unsloth (40k★), HuggingFace, agno (25k★), pydantic-ai, mem0 (35k★), prowler & more.',
   role: 'Final-Year AI/ML Student · Open Source Contributor · CV Intern @ APEPDCL',
   email: 'abhinaaavvv07187@gmail.com',
   phone: '+91-9121611029',
@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. Currently an AI/ML (Computer Vision) intern at APEPDCL, building YOLOv8 + MiDaS defect-detection pipelines for real power infrastructure. 12 PRs merged into unsloth (40k★), HuggingFace, agno (25k★), mem0 (35k★), pydantic, and marimo (YC). I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. Research paper accepted at IEEE ISED 2026 (NIT Warangal). My focus is AI engineering: making intelligent systems work outside the notebook.",
+  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. Currently an AI/ML (Computer Vision) intern at APEPDCL, building YOLOv8 + MiDaS defect-detection pipelines for real power infrastructure. 14 PRs merged into unsloth (40k★), HuggingFace, agno (25k★), pydantic-ai, mem0 (35k★), prowler, and marimo (YC). I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. My focus is AI engineering: making intelligent systems work outside the notebook.",
 };
 
 export const whyIDoThis = {
@@ -113,11 +113,11 @@ export const career = [
 
 export const achievements = [
   {
-    title: 'Research Paper Accepted — IEEE ISED 2026 · NIT Warangal',
+    title: 'Research Paper Submitted — IEEE ISED 2026 · NIT Warangal',
     org: 'IEEE · ISED 2026 at NIT Warangal',
     year: '2026',
     type: 'Research',
-    description: 'Paper on ML-based student performance prediction (ensemble methods + XAI) accepted at IEEE ISED 2026. First author. Co-authored with Dr. Chandrakanta Mahanty (GITAM). Additional target venues: AISP-2026, IEEE Engineering Informatics 2026.',
+    description: 'Paper on ML-based student performance prediction (ensemble methods + XAI) submitted to IEEE ISED 2026 (currently under review). First author, co-authored with Dr. Chandrakanta Mahanty (GITAM).',
     icon: '📄',
   },
   {
@@ -182,13 +182,13 @@ export const projects = [
   {
     title: 'CodeHound',
     subtitle: 'Python AST Static Analyzer',
-    description: 'AST-based static analysis tool that detects async-safety and correctness bugs in Python — blocking calls in async, fire-and-forget tasks, mutable defaults, unclosed file handles. Bugs it surfaced were merged into unsloth (40k★) and agno (25k★). ~750 LOC, zero dependencies, CI-ready.',
+    description: 'AST-based static analysis tool that detects async-safety and correctness bugs in Python — blocking calls in async, fire-and-forget tasks, mutable defaults, unclosed file handles. Bugs it surfaced were merged into unsloth (40k★), agno (25k★) & pydantic-ai. ~750 LOC, zero dependencies, CI-ready.',
     tech: ['Python', 'ast', 'pytest', 'GitHub Actions'],
     live: 'https://github.com/kratos0718/codehound',
     liveNow: true,
     github: 'https://github.com/kratos0718/codehound',
     year: '2026',
-    stat: { num: '12+', label: 'bugs found & merged' },
+    stat: { num: '4+', label: 'bugs found & merged' },
     images: [],
     linkLabel: 'GitHub',
     caseStudy: null,
