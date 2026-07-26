@@ -1,14 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#6366f1"/>
-      <stop offset="1" stop-color="#06b6d4"/>
-    </linearGradient>
-  </defs>
-  <rect width="640" height="380" fill="url(#g)"/>
-  <circle cx="540" cy="70" r="160" fill="#ffffff" opacity="0.08"/>
-  <circle cx="120" cy="340" r="120" fill="#ffffff" opacity="0.06"/>
-  <text x="48" y="150" font-size="72" opacity="0.92">📄</text>
-  <text x="50" y="240" font-size="58" font-weight="700" fill="#ffffff" letter-spacing="0.5">PaperMind</text>
-  <text x="52" y="282" font-size="22" fill="#ffffff" opacity="0.82" letter-spacing="1.5" font-family="monospace">RAG ARXIV EXPLAINER</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#131317"/><stop offset="1" stop-color="#08080b"/></linearGradient></defs>
+  <rect width="640" height="380" fill="url(#bg)"/>
+  <rect x="20" y="20" width="600" height="340" rx="10" fill="none" stroke="#c9a24b" stroke-opacity="0.22"/>
+  <g fill="none" stroke="#c9a24b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" transform="translate(320,126)">
+    <path d="M-34,-46 h46 l22,22 v70 h-68 Z" stroke-opacity="0.55"/>
+    <path d="M12,-46 v22 h22" stroke-opacity="0.55"/>
+    <g stroke="#c9a24b">
+      <circle cx="-14" cy="6" r="4" fill="#c9a24b"/><circle cx="16" cy="-6" r="4" fill="#c9a24b"/>
+      <circle cx="18" cy="24" r="4" fill="#c9a24b"/><circle cx="-10" cy="30" r="4" fill="#c9a24b"/>
+      <path d="M-14,6 L16,-6 M16,-6 L18,24 M18,24 L-10,30 M-10,30 L-14,6" stroke-opacity="0.6"/>
+    </g>
+  </g>
+  <text x="320" y="252" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="46" fill="#ece6da" letter-spacing="1.5">PaperMind</text>
+  <rect x="290" y="270" width="60" height="1.5" fill="#c9a24b" fill-opacity="0.8"/>
+  <text x="320" y="304" text-anchor="middle" font-family="'Courier New',monospace" font-size="13" fill="#8a8578" letter-spacing="4">RAG ARXIV EXPLAINER</text>
 </svg>
