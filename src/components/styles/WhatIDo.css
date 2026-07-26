@@ -26,7 +26,7 @@
   padding: 50px 40px;
   position: relative;
   overflow: hidden;
-  cursor: none;
+  cursor: pointer;
   transition: border-color 0.3s, transform 0.3s;
   /* clip-path set inline by JS */
 }

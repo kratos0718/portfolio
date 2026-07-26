@@ -97,7 +97,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: none;
+  cursor: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -110,17 +110,11 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--cyan-muted); border-radius: 2px; }
 
 a { text-decoration: none; color: inherit; }
-button { cursor: none; border: none; background: none; font-family: var(--font-sans); }
+button { cursor: pointer; border: none; background: none; font-family: var(--font-sans); }
 ::selection { background: var(--cyan-glow-strong); color: var(--text); }
 
-/* Hide default cursor everywhere — except touch devices */
-* { cursor: none !important; }
-
-@media (pointer: coarse) {
-  * { cursor: auto !important; }
-  body { cursor: auto; }
-  a, button, [role="button"] { cursor: pointer !important; }
-}
+/* Normal cursors: default everywhere, pointer on interactive elements */
+a, button, [role="button"] { cursor: pointer; }
 
 /* ── Mobile base ── */
 @media (max-width: 480px) {

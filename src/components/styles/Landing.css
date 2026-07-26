@@ -177,7 +177,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  cursor: none;
+  cursor: pointer;
 }
 .btn-primary-mag {
   padding: 15px 40px;
