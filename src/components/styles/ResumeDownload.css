@@ -132,7 +132,7 @@
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s, transform 0.2s;
-  cursor: none;
+  cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
 }

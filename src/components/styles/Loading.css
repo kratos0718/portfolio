@@ -108,7 +108,7 @@
   font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  cursor: none;
+  cursor: pointer;
   opacity: 0;
   transform: translateY(12px);
   transition: border-color 0.3s, color 0.3s, background 0.3s;

@@ -23,7 +23,7 @@
   position: relative;
   overflow: hidden;
   transition: border-color 0.3s;
-  cursor: none;
+  cursor: pointer;
 }
 .challenge-card:hover { border-color: var(--border-hover); }
 
