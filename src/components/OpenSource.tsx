@@ -147,92 +147,171 @@ const mergedPRs = [
     featured: false,
     codehound: false,
   },
-];
-
-const openPRs = [
   {
-    repo: 'openai/openai-agents-python',
-    org: 'OpenAI (official)',
-    stars: null,
-    number: 3553,
-    url: 'https://github.com/openai/openai-agents-python/pull/3553',
-    what: 'Fire-and-forget asyncio tasks silently dropping error events. Found by codehound.',
-    quote: null,
+    repo: 'prowler-cloud/prowler',
+    stars: '12k',
+    number: 11761,
+    url: 'https://github.com/prowler-cloud/prowler/pull/11761',
+    org: 'Prowler (cloud security)',
+    what: 'Azure check read Flexible Server log retention from the wrong config key, so compliant servers were reported as failing. Fixed the lookup and added a regression test.',
+    quotes: [
+      { text: 'Approved and merged into master.', who: '@danibarranqueroo, maintainer' },
+    ],
+    shipped: null,
+    featured: false,
+    codehound: false,
+  },
+  {
+    repo: 'weaviate/weaviate-python-client',
+    stars: '13k',
+    number: 2104,
+    url: 'https://github.com/weaviate/weaviate-python-client/pull/2104',
+    org: 'Weaviate',
+    what: 'Async wait_for_weaviate used a blocking time.sleep in its retry loop, stalling the entire event loop for a full second per retry. Surfaced by codehound.',
+    quotes: [
+      { text: 'Merged into main.', who: '@tsmith023, maintainer' },
+    ],
+    shipped: null,
+    featured: false,
     codehound: true,
   },
   {
-    repo: 'BerriAI/litellm',
-    org: 'litellm',
-    stars: '15k',
-    number: 29417,
-    url: 'https://github.com/BerriAI/litellm/pull/29417',
-    what: 'Fire-and-forget cache-write tasks silently failing. Found by codehound.',
-    quote: 'This PR fixes a silent cache-write failure caused by asyncio\'s weak-reference semantics.',
-    quotewho: 'greptile AI reviewer',
+    repo: 'xorbitsai/inference',
+    stars: '7k',
+    number: 5055,
+    url: 'https://github.com/xorbitsai/inference/pull/5055',
+    org: 'Xorbits',
+    what: 'Blocking call inside async update_model_type froze the event loop. Surfaced by codehound.',
+    quotes: [],
+    shipped: null,
+    featured: false,
     codehound: true,
   },
   {
-    repo: 'BerriAI/litellm',
-    org: 'litellm',
-    stars: '15k',
-    number: 29162,
-    url: 'https://github.com/BerriAI/litellm/pull/29162',
-    what: 'Second litellm contribution — under review.',
-    quote: null,
-    codehound: false,
-  },
-  {
-    repo: 'vibrantlabsai/ragas',
-    org: 'ragas',
-    stars: null,
-    number: 2757,
-    url: 'https://github.com/vibrantlabsai/ragas/pull/2757',
-    what: 'Deprecated asyncio API fix.',
-    quote: null,
-    codehound: false,
-  },
-  {
-    repo: 'agno-agi/agno',
-    org: 'agno',
-    stars: '25k',
-    number: 8183,
-    url: 'https://github.com/agno-agi/agno/pull/8183',
-    what: 'Span-exporter fix.',
-    quote: 'Nice fix — the root cause is well-understood and well-documented... the canonical pattern for this.',
-    quotewho: 'Reviewer',
-    codehound: false,
-  },
-  {
-    repo: 'agno-agi/agno',
-    org: 'agno',
-    stars: '25k',
-    number: 8152,
-    url: 'https://github.com/agno-agi/agno/pull/8152',
-    what: 'Under review.',
-    quote: null,
+    repo: 'huggingface/peft',
+    stars: '16k',
+    number: 3271,
+    url: 'https://github.com/huggingface/peft/pull/3271',
+    org: 'HuggingFace',
+    what: 'Fixed an incorrect parameter name in the set_requires_grad docstrings — the documented name did not match the actual signature.',
+    quotes: [],
+    shipped: null,
+    featured: false,
     codehound: false,
   },
   {
     repo: 'pydantic/pydantic-ai',
-    org: 'pydantic-ai',
-    stars: '8k',
-    number: 5700,
-    url: 'https://github.com/pydantic/pydantic-ai/pull/5700',
-    what: 'Under review.',
+    stars: '12k',
+    number: 6189,
+    url: 'https://github.com/pydantic/pydantic-ai/pull/6189',
+    org: 'Pydantic',
+    what: 'Mutable default argument (B006) in process_tool_calls — shared state leaking between calls. Surfaced by codehound.',
+    quotes: [],
+    shipped: null,
+    featured: false,
+    codehound: true,
+  },
+];
+
+const openPRs = [
+  {
+    repo: 'mercari/pipeline',
+    org: 'Mercari (Java)',
+    stars: null,
+    number: 119,
+    url: 'https://github.com/mercari/pipeline/pull/119',
+    what: 'Avro timestamp-micros lost sub-millisecond precision when bound to a JDBC statement — integer division collapsed distinct timestamps onto the same value. Also fixed pre-1970 rounding.',
     quote: null,
     codehound: false,
+  },
+  {
+    repo: 'lextudio/pysnmp',
+    org: 'pysnmp (SNMP)',
+    stars: null,
+    number: 248,
+    url: 'https://github.com/lextudio/pysnmp/pull/248',
+    what: 'InetAddressType unknown(0) has no textual convention, so index decoding scanned past it to an unrelated column — breaking every route row with no next hop. Fixed both decode and encode paths.',
+    quote: null,
+    codehound: false,
+  },
+  {
+    repo: 'vllm-project/vllm',
+    org: 'vLLM',
+    stars: '87k',
+    number: 45249,
+    url: 'https://github.com/vllm-project/vllm/pull/45249',
+    what: 'Background abort task could be garbage-collected mid-flight — asyncio holds only a weak reference. Found by codehound.',
+    quote: null,
+    codehound: true,
+  },
+  {
+    repo: 'microsoft/autogen',
+    org: 'Microsoft',
+    stars: '60k',
+    number: 7825,
+    url: 'https://github.com/microsoft/autogen/pull/7825',
+    what: 'Websocket stream task dropped without a strong reference, and its failures were swallowed. Extended after maintainer review to log exceptions.',
+    quote: null,
+    codehound: true,
+  },
+  {
+    repo: 'BerriAI/litellm',
+    org: 'litellm',
+    stars: '55k',
+    number: 34711,
+    url: 'https://github.com/BerriAI/litellm/pull/34711',
+    what: 'Hanging-request Slack alerts read the key/team alias from a location not yet populated at pre-call time, so alerts lost attribution. Narrow fallback plus a regression test.',
+    quote: null,
+    codehound: false,
+  },
+  {
+    repo: 'dask/dask',
+    org: 'Dask',
+    stars: '13k',
+    number: 12482,
+    url: 'https://github.com/dask/dask/pull/12482',
+    what: 'str.split(expand=True) dropped the extension dtype on the resulting columns.',
+    quote: null,
+    codehound: false,
+  },
+  {
+    repo: 'agno-agi/agno',
+    org: 'agno',
+    stars: '41k',
+    number: 8183,
+    url: 'https://github.com/agno-agi/agno/pull/8183',
+    what: 'Trace-export tasks could be collected before completing, silently dropping traces. Also replaced deprecated get_event_loop().',
+    quote: null,
+    codehound: true,
+  },
+  {
+    repo: 'future-agi/future-agi',
+    org: 'Future AGI',
+    stars: '1.5k',
+    number: 821,
+    url: 'https://github.com/future-agi/future-agi/pull/821',
+    what: 'PromptStreamConsumer spawned background tasks without retaining references; added tracking, cancellation on disconnect, and unit tests.',
+    quote: null,
+    codehound: true,
   },
 ];
 
 const earlierPRs = [
-  { repo: 'crewAIInc/crewAI', number: 5970, url: 'https://github.com/crewAIInc/crewAI/pull/5970', stars: '25k' },
-  { repo: 'crewAIInc/crewAI', number: 5969, url: 'https://github.com/crewAIInc/crewAI/pull/5969', stars: '25k' },
-  { repo: 'crewAIInc/crewAI', number: 5968, url: 'https://github.com/crewAIInc/crewAI/pull/5968', stars: '25k' },
-  { repo: 'run-llama/llama_index', number: 21797, url: 'https://github.com/run-llama/llama_index/pull/21797', stars: '35k' },
-  { repo: '567-labs/instructor', number: 2325, url: 'https://github.com/567-labs/instructor/pull/2325', stars: '10k' },
-  { repo: 'huggingface/datasets', number: 8223, url: 'https://github.com/huggingface/datasets/pull/8223', stars: '18k' },
-  { repo: 'huggingface/peft', number: 3271, url: 'https://github.com/huggingface/peft/pull/3271', stars: '16k' },
-  { repo: 'pytorch/torchtune', number: 2964, url: 'https://github.com/pytorch/torchtune/pull/2964', stars: '4k' },
+  { repo: 'infiniflow/ragflow', number: 16101, url: 'https://github.com/infiniflow/ragflow/pull/16101', stars: '86k' },
+  { repo: 'sgl-project/sglang', number: 28029, url: 'https://github.com/sgl-project/sglang/pull/28029', stars: '31k' },
+  { repo: 'crewAIInc/crewAI', number: 5970, url: 'https://github.com/crewAIInc/crewAI/pull/5970', stars: '56k' },
+  { repo: 'crewAIInc/crewAI', number: 5969, url: 'https://github.com/crewAIInc/crewAI/pull/5969', stars: '56k' },
+  { repo: 'crewAIInc/crewAI', number: 5968, url: 'https://github.com/crewAIInc/crewAI/pull/5968', stars: '56k' },
+  { repo: 'run-llama/llama_index', number: 22030, url: 'https://github.com/run-llama/llama_index/pull/22030', stars: '51k' },
+  { repo: 'run-llama/llama_index', number: 21797, url: 'https://github.com/run-llama/llama_index/pull/21797', stars: '51k' },
+  { repo: 'khoj-ai/khoj', number: 1342, url: 'https://github.com/khoj-ai/khoj/pull/1342', stars: '36k' },
+  { repo: 'jina-ai/serve', number: 6243, url: 'https://github.com/jina-ai/serve/pull/6243', stars: '21k' },
+  { repo: 'huggingface/datasets', number: 8223, url: 'https://github.com/huggingface/datasets/pull/8223', stars: '21k' },
+  { repo: 'vibrantlabsai/ragas', number: 2757, url: 'https://github.com/vibrantlabsai/ragas/pull/2757', stars: '15k' },
+  { repo: 'ogx-ai/ogx', number: 6226, url: 'https://github.com/ogx-ai/ogx/pull/6226', stars: '8k' },
+  { repo: 'BerriAI/litellm', number: 29417, url: 'https://github.com/BerriAI/litellm/pull/29417', stars: '55k' },
+  { repo: 'BerriAI/litellm', number: 29162, url: 'https://github.com/BerriAI/litellm/pull/29162', stars: '55k' },
+  { repo: 'meta-pytorch/torchtune', number: 2964, url: 'https://github.com/meta-pytorch/torchtune/pull/2964', stars: '5k' },
 ];
 
 const otherRepos = [
@@ -302,8 +381,8 @@ export default function OpenSource() {
       {/* ── Stats bar ── */}
       <div className="os-stats-bar">
         {[
-          { num: '10', label: 'Merged PRs' },
-          { num: '15', label: 'Open PRs' },
+          { num: '15', label: 'Merged PRs' },
+          { num: '23', label: 'Open PRs' },
           { num: '18+', label: 'Organizations' },
         ].map(s => (
           <div key={s.label} className="os-stat-item">
@@ -348,7 +427,7 @@ export default function OpenSource() {
           ══════════════════════════════════ */}
       <div className="os-subhead-row">
         <span className="os-subhead-badge os-merged-badge">✓ Merged</span>
-        <span className="os-subhead-label">10 pull requests · reviewed by lead maintainers</span>
+        <span className="os-subhead-label">15 pull requests · reviewed by lead maintainers</span>
       </div>
 
       {/* Featured HuggingFace card */}
@@ -382,7 +461,7 @@ export default function OpenSource() {
         <FiExternalLink className="os-featured-ext" size={16} />
       </a>
 
-      {/* Remaining 8 merged PRs */}
+      {/* Remaining merged PRs */}
       <div className="os-grid">
         {mergedPRs.slice(1).map(pr => (
           <a
@@ -420,7 +499,7 @@ export default function OpenSource() {
           ══════════════════════════════════ */}
       <div className="os-open-compact">
         <div className="os-open-compact-head">
-          <span className="os-subhead-badge os-review-badge">⟳ 17 Open PRs</span>
+          <span className="os-subhead-badge os-review-badge">⟳ 23 Open PRs</span>
           <span className="os-subhead-label">under review across 18+ organizations</span>
         </div>
         <div className="os-open-pills">

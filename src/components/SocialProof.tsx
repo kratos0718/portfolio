@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const orgs = [
   { name: 'HuggingFace',            detail: 'Merged PR #4289 · v1.17.0',       tag: 'Open Source' },
-  { name: 'agno (25k★)',            detail: '4 Merged PRs · @kausmeows',        tag: 'Open Source' },
+  { name: 'agno (41k★)',            detail: '4 Merged PRs · @kausmeows',        tag: 'Open Source' },
   { name: 'pydantic (22k★)',        detail: 'Merged PR #13239',                 tag: 'Open Source' },
   { name: 'marimo (YC)',            detail: 'Merged PR #9667 · New feature',    tag: 'Open Source' },
   { name: 'OneStop AI',             detail: 'ML & AI Intern · 2025',            tag: 'Internship'  },
