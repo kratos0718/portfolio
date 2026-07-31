@@ -2,7 +2,7 @@ export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   firstName: 'Abhinav',
   tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 14 PRs merged into unsloth (40k★), HuggingFace, agno (25k★), pydantic-ai, mem0 (35k★), prowler & more.',
-  role: 'Final-Year AI/ML Student · Open Source Contributor · CV Intern @ APEPDCL',
+  role: 'Final-Year AI/ML Student · Open Source Contributor · AI Engineering',
   email: 'abhinaaavvv07187@gmail.com',
   phone: '+91-9121611029',
   location: 'Visakhapatnam, India',
@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. Currently an AI/ML (Computer Vision) intern at APEPDCL, building YOLOv8 + MiDaS defect-detection pipelines for real power infrastructure. 14 PRs merged into unsloth (40k★), HuggingFace, agno (25k★), pydantic-ai, mem0 (35k★), prowler, and marimo (YC). I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. My focus is AI engineering: making intelligent systems work outside the notebook.",
+  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. I fine-tuned a vision-language model with QLoRA for document extraction and forgery detection, and have 15 PRs merged into unsloth (40k★), HuggingFace, agno (25k★), pydantic-ai, mem0 (35k★), prowler, and marimo (YC) — with code shipping in huggingface_hub v1.17.0 on PyPI. I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. My focus is AI engineering: making intelligent systems work outside the notebook.",
 };
 
 export const whyIDoThis = {
@@ -60,22 +60,10 @@ export const socials = {
 
 export const career = [
   {
-    role: 'AI/ML Intern — Computer Vision',
-    company: 'APEPDCL (Eastern Power Distribution Co. of AP)',
-    logo: { img: '/logos/apepdcl.jpg' },
-    period: 'Jun 2026 – Present',
-    type: 'On-site · Visakhapatnam',
-    points: [
-      'Developing computer-vision models to detect power-infrastructure defects from field imagery for a state power utility — bridging field operations and AI.',
-      'Preparing datasets end-to-end (image-capture protocols + annotation: classification, object detection, segmentation) and training/evaluating CV models in Python with TensorFlow/PyTorch.',
-      'Testing model-serving APIs and monitoring performance metrics on large-scale, real-world utility datasets.',
-    ],
-  },
-  {
     role: 'AI & Data Advisory Intern',
     company: 'PwC Launchpad Advisory Program',
     logo: { img: '/logos/pwc.jpg' },
-    period: 'Feb 2026 – Present',
+    period: 'Feb 2026 – Jul 2026',
     type: 'Remote',
     points: [
       "Selected for PwC's flagship program focused on GenAI, Prompt Engineering, and Data Systems.",
