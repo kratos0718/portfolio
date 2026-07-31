@@ -101,11 +101,11 @@ export const career = [
 
 export const achievements = [
   {
-    title: 'Research Paper Submitted — IEEE ISED 2026 · NIT Warangal',
+    title: 'Research Paper Accepted — IEEE ISED 2026 · NIT Warangal',
     org: 'IEEE · ISED 2026 at NIT Warangal',
     year: '2026',
     type: 'Research',
-    description: 'Paper on ML-based student performance prediction (ensemble methods + XAI) submitted to IEEE ISED 2026 (currently under review). First author, co-authored with Dr. Chandrakanta Mahanty (GITAM).',
+    description: 'Co-authored paper on ML-based student performance prediction using ensemble methods and explainable AI (SHAP), accepted at the 14th International Conference on Intelligent Systems and Embedded Design (ISED 2026), NIT Warangal — published by IEEE.',
     icon: '📄',
   },
   {
