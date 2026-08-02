@@ -303,7 +303,6 @@ const earlierPRs = [
   { repo: 'crewAIInc/crewAI', number: 5969, url: 'https://github.com/crewAIInc/crewAI/pull/5969', stars: '56k' },
   { repo: 'crewAIInc/crewAI', number: 5968, url: 'https://github.com/crewAIInc/crewAI/pull/5968', stars: '56k' },
   { repo: 'run-llama/llama_index', number: 22030, url: 'https://github.com/run-llama/llama_index/pull/22030', stars: '51k' },
-  { repo: 'run-llama/llama_index', number: 21797, url: 'https://github.com/run-llama/llama_index/pull/21797', stars: '51k' },
   { repo: 'khoj-ai/khoj', number: 1342, url: 'https://github.com/khoj-ai/khoj/pull/1342', stars: '36k' },
   { repo: 'jina-ai/serve', number: 6243, url: 'https://github.com/jina-ai/serve/pull/6243', stars: '21k' },
   { repo: 'huggingface/datasets', number: 8223, url: 'https://github.com/huggingface/datasets/pull/8223', stars: '21k' },
@@ -382,7 +381,7 @@ export default function OpenSource() {
       <div className="os-stats-bar">
         {[
           { num: '15', label: 'Merged PRs' },
-          { num: '23', label: 'Open PRs' },
+          { num: '22', label: 'Open PRs' },
           { num: '18+', label: 'Organizations' },
         ].map(s => (
           <div key={s.label} className="os-stat-item">
@@ -499,7 +498,7 @@ export default function OpenSource() {
           ══════════════════════════════════ */}
       <div className="os-open-compact">
         <div className="os-open-compact-head">
-          <span className="os-subhead-badge os-review-badge">⟳ 23 Open PRs</span>
+          <span className="os-subhead-badge os-review-badge">⟳ 22 Open PRs</span>
           <span className="os-subhead-label">under review across 18+ organizations</span>
         </div>
         <div className="os-open-pills">
