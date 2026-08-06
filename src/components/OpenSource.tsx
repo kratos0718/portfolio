@@ -211,6 +211,34 @@ const mergedPRs = [
     featured: false,
     codehound: true,
   },
+  {
+    repo: 'apache/maven-source-plugin',
+    stars: '37',
+    number: 318,
+    url: 'https://github.com/apache/maven-source-plugin/pull/318',
+    org: 'Apache Maven',
+    what: 'Both testNoSources cases asserted on the project target directory rather than the artifact, so neither actually checked that no source archive was produced. Reworked them to assert the specific jar.',
+    quotes: [
+      { text: 'Merged #318 into master.', who: '@elharo, committer' },
+    ],
+    shipped: null,
+    featured: false,
+    codehound: false,
+  },
+  {
+    repo: 'mercari/pipeline',
+    stars: '79',
+    number: 119,
+    url: 'https://github.com/mercari/pipeline/pull/119',
+    org: 'Mercari',
+    what: 'Avro timestamp-micros values were truncated to millisecond precision on the JDBC path, silently losing sub-millisecond data. Java, outside the Python/AI stack.',
+    quotes: [
+      { text: 'Thank you for your contribution!', who: '@orfeon, maintainer' },
+    ],
+    shipped: null,
+    featured: false,
+    codehound: false,
+  },
 ];
 
 const openPRs = [
@@ -380,7 +408,7 @@ export default function OpenSource() {
       {/* ── Stats bar ── */}
       <div className="os-stats-bar">
         {[
-          { num: '15', label: 'Merged PRs' },
+          { num: '17', label: 'Merged PRs' },
           { num: '22', label: 'Open PRs' },
           { num: '18+', label: 'Organizations' },
         ].map(s => (

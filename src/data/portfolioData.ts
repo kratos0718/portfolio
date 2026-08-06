@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   firstName: 'Abhinav',
-  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 15 PRs merged across 9 orgs including unsloth (40k★), HuggingFace, agno (41k★), pydantic, mem0 (35k★), prowler & Weaviate.',
+  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 17 PRs merged across 11 orgs including unsloth (40k★), HuggingFace, agno (41k★), pydantic, mem0 (35k★), prowler, Weaviate, Apache Maven & Mercari.',
   role: 'Final-Year AI/ML Student · Open Source Contributor · AI Engineering',
   email: 'abhinaaavvv07187@gmail.com',
   phone: '+91-9121611029',
@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. I fine-tuned a vision-language model with QLoRA for document extraction and forgery detection, and have 15 PRs merged across 9 organisations — unsloth (40k★), HuggingFace, agno (41k★), pydantic, mem0 (35k★), prowler, Weaviate and marimo (YC) — with code shipping in huggingface_hub v1.17.0 on PyPI. I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. My focus is AI engineering: making intelligent systems work outside the notebook.",
+  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. I fine-tuned a vision-language model with QLoRA for document extraction and forgery detection, and have 17 PRs merged across 11 organisations — unsloth (40k★), HuggingFace, agno (41k★), pydantic, mem0 (35k★), prowler, Weaviate, marimo (YC), Apache Maven and Mercari — with code shipping in huggingface_hub v1.17.0 on PyPI. I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. My focus is AI engineering: making intelligent systems work outside the notebook.",
 };
 
 export const whyIDoThis = {
