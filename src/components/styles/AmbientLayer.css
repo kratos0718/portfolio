@@ -209,3 +209,10 @@
 @media (max-width: 480px) {
   .ambient-layer { display: none; }
 }
+
+/* ── Paper restraint ──────────────────────────────────────────────
+   The hanging lines, orbs and floating shapes were drawn for the dark
+   theme, where faint strokes read as depth. On the ivory paper they
+   read as stray marks instead, so the layer only runs in dark. */
+.ambient-layer { display: none; }
+[data-theme="dark"] .ambient-layer { display: block; }

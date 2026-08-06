@@ -4,40 +4,41 @@
    DARK THEME (default)
    ══════════════════════════════════════════ */
 :root {
-  /* Accent — electric blue */
-  --cyan: #3B82F6;
-  --cyan-dim: #60A5FA;
-  --cyan-muted: #93C5FD;
-  --cyan-glow: rgba(59,130,246,0.10);
-  --cyan-glow-strong: rgba(59,130,246,0.22);
+  /* Accent - oxblood. Variables keep their historical --cyan-* names so the
+     ~110 call sites across the component styles stay untouched. */
+  --cyan: #8B3A2E;
+  --cyan-dim: #A8543F;
+  --cyan-muted: #B87A66;
+  --cyan-glow: rgba(139,58,46,0.06);
+  --cyan-glow-strong: rgba(139,58,46,0.15);
 
-  /* Backgrounds */
-  --bg: #080C14;
-  --bg-2: #0F172A;
-  --bg-3: #1E293B;
-  --bg-card: rgba(15,23,42,0.85);
+  /* Backgrounds - warm paper */
+  --bg: #F7F4EF;
+  --bg-2: #EFEAE1;
+  --bg-3: #E4DCD0;
+  --bg-card: rgba(255,255,255,0.70);
 
   /* Text */
-  --text: #F1F5F9;
-  --text-dim: #94A3B8;
-  --text-muted: #475569;
+  --text: #14110D;
+  --text-dim: #665F54;
+  --text-muted: #948B7E;
 
   /* Borders */
-  --border: rgba(255,255,255,0.07);
-  --border-hover: rgba(255,255,255,0.22);
+  --border: rgba(20,17,13,0.11);
+  --border-hover: rgba(20,17,13,0.28);
 
   /* Fonts */
   --font-sans: 'Space Grotesk', sans-serif;
   --font-mono: 'Space Mono', monospace;
 
-  /* Helpers */
-  --stroke-subtle: rgba(255,255,255,0.06);
-  --dot-color: rgba(59,130,246,0.14);
-  --blob-a: rgba(59,130,246,0.18);
-  --blob-b: rgba(96,165,250,0.14);
-  --blob-c: rgba(59,130,246,0.13);
-  --canvas-opacity: 0.55;
-  --navbar-scrolled-bg: rgba(8,12,20,0.95);
+  /* Helpers - deliberately faint on paper; the dark theme carried these loud */
+  --stroke-subtle: rgba(20,17,13,0.05);
+  --dot-color: rgba(20,17,13,0.045);
+  --blob-a: rgba(139,58,46,0.05);
+  --blob-b: rgba(168,84,63,0.04);
+  --blob-c: rgba(139,58,46,0.035);
+  --canvas-opacity: 0.16;
+  --navbar-scrolled-bg: rgba(247,244,239,0.93);
 
   /* Radius system */
   --radius: 14px;
@@ -45,43 +46,42 @@
   --radius-lg: 20px;
 
   /* Surfaces */
-  --surface: rgba(15,23,42,0.85);
-  --surface-raised: rgba(22,33,55,0.75);
+  --surface: rgba(255,255,255,0.70);
+  --surface-raised: rgba(255,255,255,0.52);
 }
 
 /* ══════════════════════════════════════════
    LIGHT THEME
    ══════════════════════════════════════════ */
-[data-theme="light"] {
-  --cyan: #6366f1;
-  --cyan-dim: #818cf8;
-  --cyan-muted: #a5b4fc;
-  --cyan-glow: rgba(99,102,241,0.08);
-  --cyan-glow-strong: rgba(99,102,241,0.18);
+[data-theme="dark"] {
+  --cyan: #D2705A;
+  --cyan-dim: #E08D77;
+  --cyan-muted: #EBB3A2;
+  --cyan-glow: rgba(210,112,90,0.09);
+  --cyan-glow-strong: rgba(210,112,90,0.20);
 
-  --bg: #f8f7f4;
-  --bg-2: #f2f0eb;
-  --bg-3: #e8e4dc;
-  --bg-card: rgba(255,255,255,0.85);
+  --bg: #14110E;
+  --bg-2: #1E1A16;
+  --bg-3: #2A2520;
+  --bg-card: rgba(30,26,22,0.85);
 
-  --text: #111111;
-  --text-dim: #555555;
-  --text-muted: #999999;
+  --text: #F2EDE5;
+  --text-dim: #A79E91;
+  --text-muted: #6E675D;
 
-  --border: rgba(0,0,0,0.09);
-  --border-hover: rgba(0,0,0,0.22);
+  --border: rgba(255,255,255,0.08);
+  --border-hover: rgba(255,255,255,0.24);
 
-  --stroke-subtle: rgba(0,0,0,0.06);
-  --dot-color: rgba(99,102,241,0.13);
-  --blob-a: rgba(99,102,241,0.13);
-  --blob-b: rgba(129,140,248,0.10);
-  --blob-c: rgba(99,102,241,0.11);
-  --canvas-opacity: 0.4;
-  --navbar-scrolled-bg: rgba(248,247,244,0.95);
+  --stroke-subtle: rgba(255,255,255,0.06);
+  --dot-color: rgba(242,237,229,0.07);
+  --blob-a: rgba(210,112,90,0.13);
+  --blob-b: rgba(224,141,119,0.10);
+  --blob-c: rgba(210,112,90,0.10);
+  --canvas-opacity: 0.34;
+  --navbar-scrolled-bg: rgba(20,17,14,0.95);
 
-  /* Surfaces — must be overridden so cards aren't dark navy in light mode */
-  --surface: rgba(255,255,255,0.90);
-  --surface-raised: rgba(255,255,255,0.75);
+  --surface: rgba(30,26,22,0.85);
+  --surface-raised: rgba(42,37,32,0.75);
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
