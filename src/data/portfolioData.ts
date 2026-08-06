@@ -55,7 +55,7 @@ export const challenges = [
 export const socials = {
   github: 'https://github.com/kratos0718',
   linkedin: 'https://www.linkedin.com/in/abhinav0702/',
-  leetcode: 'https://leetcode.com/coderboy11',
+  leetcode: 'https://leetcode.com/u/GV2023000367/',
 };
 
 export const career = [
@@ -142,7 +142,7 @@ export const achievements = [
   },
   {
     title: '212 DSA Problems — 127 Active Days',
-    org: 'Self-directed · LeetCode: coderboy11',
+    org: 'Self-directed · LeetCode: GV2023000367',
     year: '2025',
     type: 'Achievement',
     description: '212 problems solved (91 Easy · 108 Medium · 13 Hard). 354 submissions in the past year, 127 active days, 82-day max streak. Consistent grind, not bursts.',
