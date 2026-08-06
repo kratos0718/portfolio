@@ -16,7 +16,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState<'dark' | 'light'>(() =>
     typeof window !== 'undefined'
-      ? (localStorage.getItem('theme') as 'dark' | 'light') ?? 'dark'
+      ? (localStorage.getItem('theme') as 'dark' | 'light') ?? 'light'
       : 'dark'
   );
   const navRef = useRef<HTMLElement>(null);
