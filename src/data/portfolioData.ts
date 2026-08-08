@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   firstName: 'Abhinav',
-  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 17 PRs merged across 11 orgs including unsloth (40k★), HuggingFace, agno (41k★), pydantic, mem0 (35k★), prowler, Weaviate, Apache Maven & Mercari.',
+  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 17 PRs merged across 11 orgs including unsloth (69k★), HuggingFace, agno (41k★), pydantic, mem0 (62k★), prowler, Weaviate, Apache Maven & Mercari.',
   role: 'Final-Year AI/ML Student · Open Source Contributor · AI Engineering',
   email: 'abhinaaavvv07187@gmail.com',
   phone: '+91-9121611029',
@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. I fine-tuned a vision-language model with QLoRA for document extraction and forgery detection, and have 17 PRs merged across 11 organisations — unsloth (40k★), HuggingFace, agno (41k★), pydantic, mem0 (35k★), prowler, Weaviate, marimo (YC), Apache Maven and Mercari — with code shipping in huggingface_hub v1.17.0 on PyPI. I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. My focus is AI engineering: making intelligent systems work outside the notebook.",
+  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. I fine-tuned a vision-language model with QLoRA for document extraction and forgery detection, and have 17 PRs merged across 11 organisations — unsloth (69k★), HuggingFace, agno (41k★), pydantic, mem0 (62k★), prowler, Weaviate, marimo (YC), Apache Maven and Mercari — with code shipping in huggingface_hub v1.17.0 on PyPI. I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. My focus is AI engineering: making intelligent systems work outside the notebook.",
 };
 
 export const whyIDoThis = {
@@ -26,7 +26,7 @@ export const whyIDoThis = {
     },
     {
       label: "Where I am right now",
-      text: "Final year of a four-year degree. Interned at OneStop AI, shipped production RAG pipelines, merged PRs into HuggingFace and 8 other orgs, solved 200+ DSA problems. I'm not trying to look ready. I'm trying to be ready.",
+      text: "Final year of a four-year degree. Interned at OneStop AI, shipped production RAG pipelines, merged PRs into HuggingFace and 10 other orgs, solved 200+ DSA problems. I'm not trying to look ready. I'm trying to be ready.",
     },
   ],
 };
@@ -170,13 +170,13 @@ export const projects = [
   {
     title: 'CodeHound',
     subtitle: 'Python AST Static Analyzer',
-    description: 'AST-based static analysis tool that detects async-safety and correctness bugs in Python — blocking calls in async, fire-and-forget tasks, mutable defaults, unclosed file handles. Bugs it surfaced were merged into unsloth (40k★), agno (25k★) & pydantic-ai. ~750 LOC, zero dependencies, CI-ready.',
+    description: 'AST-based static analysis tool that detects async-safety and correctness bugs in Python — blocking calls in async, fire-and-forget tasks, mutable defaults, unclosed file handles. Bugs it surfaced were merged upstream by maintainers at unsloth (69k★), mem0 (62k★), agno (41k★), weaviate, xorbitsai & pydantic-ai — 8 accepted fixes across 6 organisations. ~750 LOC, zero dependencies, CI-ready, archived with a citable DOI.',
     tech: ['Python', 'ast', 'pytest', 'GitHub Actions'],
     live: 'https://github.com/kratos0718/codehound',
     liveNow: true,
     github: 'https://github.com/kratos0718/codehound',
     year: '2026',
-    stat: { num: '4+', label: 'bugs found & merged' },
+    stat: { num: '8', label: 'bugs found & merged upstream' },
     images: [],
     linkLabel: 'GitHub',
     caseStudy: null,
