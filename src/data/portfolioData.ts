@@ -252,6 +252,19 @@ export const projects = [
 
 export const publications = [
   {
+    title: 'Machine Learning-Based Student Performance Prediction: A Comparative Study Using Ensemble Methods and Explainable AI',
+    shortTitle: 'Student Performance Prediction with Ensemble ML & XAI',
+    type: 'IEEE',
+    date: '2026',
+    reads: 0,
+    coAuthors: ['Deepak Jaggupalli', 'Tarigoppula Sree Sai Abhinav', 'Chandrakanta Mahanty'],
+    abstract: 'A comparative study of ensemble methods for predicting student academic performance, paired with SHAP-based explainability so the drivers behind each prediction are inspectable rather than opaque. Accepted at the 14th IEEE International Symposium on Intelligent Systems and Embedded Design (ISED 2026), NIT Warangal.',
+    tags: ['Ensemble Methods', 'Explainable AI', 'SHAP', 'Educational Data Mining', 'IEEE'],
+    link: 'https://www.researchgate.net/profile/Abhinav-Tarigoppula',
+    featured: true,
+    status: 'Accepted — IEEE ISED 2026 · NIT Warangal',
+  },
+  {
     title: 'Behavior-Driven Adaptive Learning Agents for Personalized and Intelligent Education',
     shortTitle: 'Behavior-Driven Adaptive Learning Agents',
     type: 'IEEE',
