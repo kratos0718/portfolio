@@ -4,84 +4,112 @@
    DARK THEME (default)
    ══════════════════════════════════════════ */
 :root {
-  /* Accent - oxblood. Variables keep their historical --cyan-* names so the
-     ~110 call sites across the component styles stay untouched. */
-  --cyan: #8B3A2E;
-  --cyan-dim: #A8543F;
-  --cyan-muted: #B87A66;
-  --cyan-glow: rgba(139,58,46,0.06);
-  --cyan-glow-strong: rgba(139,58,46,0.15);
+  /* Accent - vintage rosewood. Variables keep their historical --cyan-* names so
+     the ~110 call sites across the component styles stay untouched. */
+  --cyan: #7D4047;
+  --cyan-dim: #9A555C;
+  --cyan-muted: #B98289;
+  --cyan-glow: rgba(125,64,71,0.07);
+  --cyan-glow-strong: rgba(125,64,71,0.16);
 
-  /* Backgrounds - warm paper */
-  --bg: #F7F4EF;
-  --bg-2: #EFEAE1;
-  --bg-3: #E4DCD0;
-  --bg-card: rgba(255,255,255,0.70);
+  /* Backgrounds - alabaster cream / warm greige */
+  --bg: #F1ECE6;
+  --bg-2: #E8E1D9;
+  --bg-3: #DDD5CD;
+  --bg-card: rgba(255,253,250,0.55);
 
-  /* Text */
-  --text: #14110D;
-  --text-dim: #665F54;
-  --text-muted: #948B7E;
+  /* Text - charcoal espresso */
+  --text: #2E2E2E;
+  --text-dim: #5F5952;
+  --text-muted: #8E877E;
 
-  /* Borders */
-  --border: rgba(20,17,13,0.11);
-  --border-hover: rgba(20,17,13,0.28);
+  --border: rgba(46,46,46,0.10);
+  --border-hover: rgba(125,64,71,0.32);
 
-  /* Fonts */
   --font-sans: 'Space Grotesk', sans-serif;
   --font-mono: 'Space Mono', monospace;
 
-  /* Helpers - deliberately faint on paper; the dark theme carried these loud */
-  --stroke-subtle: rgba(20,17,13,0.05);
-  --dot-color: rgba(20,17,13,0.045);
-  --blob-a: rgba(139,58,46,0.05);
-  --blob-b: rgba(168,84,63,0.04);
-  --blob-c: rgba(139,58,46,0.035);
+  --stroke-subtle: rgba(46,46,46,0.05);
+  --dot-color: rgba(46,46,46,0.04);
+  --blob-a: rgba(125,64,71,0.07);
+  --blob-b: rgba(193,140,110,0.06);
+  --blob-c: rgba(125,64,71,0.045);
   --canvas-opacity: 0.16;
-  --navbar-scrolled-bg: rgba(247,244,239,0.93);
+  --navbar-scrolled-bg: rgba(241,236,230,0.72);
 
-  /* Radius system */
   --radius: 14px;
   --radius-sm: 8px;
   --radius-lg: 20px;
 
-  /* Surfaces */
-  --surface: rgba(255,255,255,0.70);
-  --surface-raised: rgba(255,255,255,0.52);
+  --surface: rgba(255,253,250,0.55);
+  --surface-raised: rgba(255,255,255,0.42);
+
+  /* ── Liquid glass ──
+     Translucency alone is not glass. Three things sell it: a real backdrop
+     blur with saturation lift, a bright 1px inner edge where light catches
+     the top lip, and an outer shadow so the pane floats above the page. */
+  --glass-blur: blur(20px) saturate(180%);
+  --glass-blur-strong: blur(34px) saturate(200%);
+  --glass-edge: inset 0 1px 0 rgba(255,255,255,0.85);
+  --glass-edge-soft: inset 0 1px 0 rgba(255,255,255,0.55);
+  --glass-shadow: 0 10px 34px -12px rgba(46,30,26,0.28);
+  --glass-shadow-lg: 0 22px 60px -18px rgba(46,30,26,0.34);
+  --glass-sheen: linear-gradient(
+      145deg,
+      rgba(255,255,255,0.55) 0%,
+      rgba(255,255,255,0.10) 34%,
+      rgba(255,255,255,0) 60%);
+  --glass-border: rgba(255,255,255,0.60);
 }
 
 /* ══════════════════════════════════════════
    LIGHT THEME
    ══════════════════════════════════════════ */
 [data-theme="dark"] {
-  --cyan: #D2705A;
-  --cyan-dim: #E08D77;
-  --cyan-muted: #EBB3A2;
-  --cyan-glow: rgba(210,112,90,0.09);
-  --cyan-glow-strong: rgba(210,112,90,0.20);
+  /* Accent - racing red, used sparingly; black cherry carries the glow */
+  --cyan: #DD0200;
+  --cyan-dim: #B02A22;
+  --cyan-muted: #E86A5E;
+  --cyan-glow: rgba(221,2,0,0.10);
+  --cyan-glow-strong: rgba(221,2,0,0.22);
 
-  --bg: #14110E;
-  --bg-2: #1E1A16;
-  --bg-3: #2A2520;
-  --bg-card: rgba(30,26,22,0.85);
+  /* Backgrounds - coffee bean deepening to near-black */
+  --bg: #120605;
+  --bg-2: #1A0706;
+  --bg-3: #2A0F0C;
+  --bg-card: rgba(255,236,232,0.055);
 
-  --text: #F2EDE5;
-  --text-dim: #A79E91;
-  --text-muted: #6E675D;
+  /* Text - alabaster */
+  --text: #EDE7E2;
+  --text-dim: #A99C96;
+  --text-muted: #726660;
 
-  --border: rgba(255,255,255,0.08);
-  --border-hover: rgba(255,255,255,0.24);
+  --border: rgba(255,236,232,0.10);
+  --border-hover: rgba(221,2,0,0.42);
 
-  --stroke-subtle: rgba(255,255,255,0.06);
-  --dot-color: rgba(242,237,229,0.07);
-  --blob-a: rgba(210,112,90,0.13);
-  --blob-b: rgba(224,141,119,0.10);
-  --blob-c: rgba(210,112,90,0.10);
+  --stroke-subtle: rgba(255,236,232,0.06);
+  --dot-color: rgba(237,231,226,0.055);
+  --blob-a: rgba(221,2,0,0.13);
+  --blob-b: rgba(85,16,13,0.30);
+  --blob-c: rgba(221,2,0,0.09);
   --canvas-opacity: 0.34;
-  --navbar-scrolled-bg: rgba(20,17,14,0.95);
+  --navbar-scrolled-bg: rgba(18,6,5,0.62);
 
-  --surface: rgba(30,26,22,0.85);
-  --surface-raised: rgba(42,37,32,0.75);
+  --surface: rgba(255,236,232,0.055);
+  --surface-raised: rgba(255,236,232,0.085);
+
+  --glass-blur: blur(20px) saturate(160%);
+  --glass-blur-strong: blur(34px) saturate(180%);
+  --glass-edge: inset 0 1px 0 rgba(255,236,232,0.16);
+  --glass-edge-soft: inset 0 1px 0 rgba(255,236,232,0.10);
+  --glass-shadow: 0 10px 34px -12px rgba(0,0,0,0.70);
+  --glass-shadow-lg: 0 22px 60px -18px rgba(0,0,0,0.80);
+  --glass-sheen: linear-gradient(
+      145deg,
+      rgba(255,236,232,0.14) 0%,
+      rgba(255,236,232,0.03) 34%,
+      rgba(255,236,232,0) 60%);
+  --glass-border: rgba(255,236,232,0.14);
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -120,4 +148,99 @@ a, button, [role="button"] { cursor: pointer; }
 @media (max-width: 480px) {
   html { font-size: 16px; }
   ::-webkit-scrollbar { width: 0px; }
+}
+
+/* ══════════════════════════════════════════
+   LIQUID GLASS
+   Applied to the surfaces that already read --bg-card, so the whole card
+   system lifts at once instead of each component being rewritten.
+
+   What actually sells glass, in order of importance:
+     1. a real backdrop blur WITH a saturation lift, so colour behind the
+        pane bleeds through richer rather than just blurred and grey
+     2. a bright 1px inner edge along the top lip, where light would catch
+     3. an outer shadow, so the pane reads as floating above the page
+   ══════════════════════════════════════════ */
+
+.model-stat-cell,
+.challenge-card,
+.contact-info-card,
+.fc-tip,
+.landing-pill,
+.os-stats-bar,
+.os-open-compact,
+.os-codehound-box,
+.os-repo-mini,
+.resume-inner,
+.story-quote-card,
+.tech-icon-card,
+.whatido-card {
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-edge), var(--glass-shadow);
+}
+
+/* Lift on hover: more blur, brighter edge, and the pane rises slightly.
+   Only the shadow and transform animate — blur is expensive to tween. */
+.challenge-card:hover,
+.contact-info-card:hover,
+.os-repo-mini:hover,
+.story-quote-card:hover,
+.tech-icon-card:hover,
+.whatido-card:hover {
+  box-shadow: var(--glass-edge), var(--glass-shadow-lg);
+  border-color: var(--border-hover);
+}
+
+/* Reusable primitive for anything built later. The sheen lives on ::after
+   so it never collides with the ::before several cards already use. */
+.glass {
+  position: relative;
+  background: var(--surface);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-edge), var(--glass-shadow);
+  overflow: hidden;
+}
+.glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--glass-sheen);
+  pointer-events: none;
+}
+.glass-strong {
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  backdrop-filter: var(--glass-blur-strong);
+  background: var(--surface-raised);
+  box-shadow: var(--glass-edge), var(--glass-shadow-lg);
+}
+
+/* Safari on iOS drops backdrop-filter under memory pressure and the pane
+   goes fully transparent, taking the text with it. Give it an opaque-ish
+   floor when blur is unsupported. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .model-stat-cell, .challenge-card, .contact-info-card, .fc-tip,
+  .landing-pill, .os-stats-bar, .os-open-compact, .os-codehound-box,
+  .os-repo-mini, .resume-inner, .story-quote-card, .tech-icon-card,
+  .whatido-card, .glass {
+    background: var(--bg-2);
+  }
+}
+
+/* Blur is GPU-expensive; drop it for users who asked for less motion/effects
+   and on very small screens where the cost is highest and the effect least
+   visible. */
+@media (prefers-reduced-transparency: reduce) {
+  .model-stat-cell, .challenge-card, .contact-info-card, .fc-tip,
+  .landing-pill, .os-stats-bar, .os-open-compact, .os-codehound-box,
+  .os-repo-mini, .resume-inner, .story-quote-card, .tech-icon-card,
+  .whatido-card, .glass {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: var(--bg-2);
+  }
 }
