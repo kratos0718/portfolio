@@ -173,7 +173,9 @@
   .hanging-a, .hanging-b { display: none; }
   .hanging-c { right: 8%; }
   .hanging-d { right: 2%; }
-    .fshape-rect, .fshape-diamond, }
+  .fshape-rect, .fshape-diamond { display: none; }
+}
+
 @media (max-width: 480px) {
   .ambient-layer { display: none; }
 }
