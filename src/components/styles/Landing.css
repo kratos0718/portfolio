@@ -325,3 +325,25 @@
   .btn-primary-mag, .btn-outline-mag { width: 100%; justify-content: center; padding: 14px 20px; }
   .landing-socials { margin-left: 0; padding-left: 0; border-left: none; }
 }
+
+/* ── Hero 3D field ──
+   Sits inside .landing-canvas (z-index 0) so it stays behind .landing-content
+   (z-index 3). Pointer events off: the parallax reads window-level pointer
+   position via R3F, so the canvas must not intercept clicks on the CTAs. */
+.hero-objects-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-objects-wrap canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* On narrow screens the geometry crowds the name; pull it back and let the
+   type dominate, which is what carries the hero anyway. */
+@media (max-width: 768px) {
+  .hero-objects-wrap { opacity: 0.55; }
+}

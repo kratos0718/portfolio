@@ -43,73 +43,42 @@
 
   --surface: rgba(255,253,250,0.55);
   --surface-raised: rgba(255,255,255,0.42);
-
-  /* ── Liquid glass ──
-     Translucency alone is not glass. Three things sell it: a real backdrop
-     blur with saturation lift, a bright 1px inner edge where light catches
-     the top lip, and an outer shadow so the pane floats above the page. */
-  --glass-blur: blur(20px) saturate(180%);
-  --glass-blur-strong: blur(34px) saturate(200%);
-  --glass-edge: inset 0 1px 0 rgba(255,255,255,0.85);
-  --glass-edge-soft: inset 0 1px 0 rgba(255,255,255,0.55);
-  --glass-shadow: 0 10px 34px -12px rgba(46,30,26,0.28);
-  --glass-shadow-lg: 0 22px 60px -18px rgba(46,30,26,0.34);
-  --glass-sheen: linear-gradient(
-      145deg,
-      rgba(255,255,255,0.55) 0%,
-      rgba(255,255,255,0.10) 34%,
-      rgba(255,255,255,0) 60%);
-  --glass-border: rgba(255,255,255,0.60);
 }
 
 /* ══════════════════════════════════════════
-   LIGHT THEME
+   DARK THEME - cool slate ground, warm copper accent
    ══════════════════════════════════════════ */
 [data-theme="dark"] {
-  /* Accent - racing red, used sparingly; black cherry carries the glow */
-  --cyan: #DD0200;
-  --cyan-dim: #B02A22;
-  --cyan-muted: #E86A5E;
-  --cyan-glow: rgba(221,2,0,0.10);
-  --cyan-glow-strong: rgba(221,2,0,0.22);
+  --cyan: #E8823C;
+  --cyan-dim: #C4682B;
+  --cyan-muted: #F2A972;
+  --cyan-glow: rgba(232,130,60,0.10);
+  --cyan-glow-strong: rgba(232,130,60,0.26);
 
   /* Backgrounds - coffee bean deepening to near-black */
-  --bg: #1C0908;
-  --bg-2: #3A100D;
-  --bg-3: #55100D;
-  --bg-card: rgba(255,228,222,0.085);
+  --bg: #0D171C;
+  --bg-2: #13212A;
+  --bg-3: #1B2E38;
+  --bg-card: rgba(214,238,246,0.055);
 
   /* Text - alabaster */
-  --text: #EDE7E2;
-  --text-dim: #A99C96;
-  --text-muted: #726660;
+  --text: #EDF3F5;
+  --text-dim: #9BAEB6;
+  --text-muted: #63757E;
 
-  --border: rgba(255,232,226,0.15);
+  --border: rgba(214,238,246,0.13);
   --border-hover: rgba(221,2,0,0.42);
 
-  --stroke-subtle: rgba(255,236,232,0.06);
-  --dot-color: rgba(237,231,226,0.055);
-  --blob-a: rgba(221,2,0,0.42);
-  --blob-b: rgba(85,16,13,0.85);
-  --blob-c: rgba(221,2,0,0.30);
+  --stroke-subtle: rgba(214,238,246,0.06);
+  --dot-color: rgba(214,238,246,0.05);
+  --blob-a: rgba(232,130,60,0.16);
+  --blob-b: rgba(13,40,52,0.65);
+  --blob-c: rgba(196,104,43,0.11);
   --canvas-opacity: 0.46;
-  --navbar-scrolled-bg: rgba(28,9,8,0.55);
+  --navbar-scrolled-bg: rgba(13,23,28,0.55);
 
-  --surface: rgba(255,228,222,0.085);
-  --surface-raised: rgba(255,228,222,0.13);
-
-  --glass-blur: blur(20px) saturate(160%);
-  --glass-blur-strong: blur(34px) saturate(180%);
-  --glass-edge: inset 0 1px 0 rgba(255,232,226,0.30);
-  --glass-edge-soft: inset 0 1px 0 rgba(255,232,226,0.18);
-  --glass-shadow: 0 10px 34px -12px rgba(0,0,0,0.70);
-  --glass-shadow-lg: 0 22px 60px -18px rgba(0,0,0,0.80);
-  --glass-sheen: linear-gradient(
-      145deg,
-      rgba(255,236,232,0.14) 0%,
-      rgba(255,236,232,0.03) 34%,
-      rgba(255,236,232,0) 60%);
-  --glass-border: rgba(255,232,226,0.20);
+  --surface: rgba(214,238,246,0.055);
+  --surface-raised: rgba(214,238,246,0.09);
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -151,96 +120,23 @@ a, button, [role="button"] { cursor: pointer; }
 }
 
 /* ══════════════════════════════════════════
-   LIQUID GLASS
-   Applied to the surfaces that already read --bg-card, so the whole card
-   system lifts at once instead of each component being rewritten.
-
-   What actually sells glass, in order of importance:
-     1. a real backdrop blur WITH a saturation lift, so colour behind the
-        pane bleeds through richer rather than just blurred and grey
-     2. a bright 1px inner edge along the top lip, where light would catch
-     3. an outer shadow, so the pane reads as floating above the page
+   AMBIENT FIELD
+   Four soft radial washes fixed behind the page. They give the slate ground
+   depth so it reads as lit space rather than flat fill, and keep the warm
+   copper of the hero from being the only warmth on screen. Dark only -- on
+   near-white they would read as smudges.
    ══════════════════════════════════════════ */
-
-.model-stat-cell,
-.challenge-card,
-.contact-info-card,
-.fc-tip,
-.landing-pill,
-.os-stats-bar,
-.os-open-compact,
-.os-codehound-box,
-.os-repo-mini,
-.resume-inner,
-.story-quote-card,
-.tech-icon-card,
-.whatido-card {
-  -webkit-backdrop-filter: var(--glass-blur);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-edge), var(--glass-shadow);
-}
-
-/* Lift on hover: more blur, brighter edge, and the pane rises slightly.
-   Only the shadow and transform animate — blur is expensive to tween. */
-.challenge-card:hover,
-.contact-info-card:hover,
-.os-repo-mini:hover,
-.story-quote-card:hover,
-.tech-icon-card:hover,
-.whatido-card:hover {
-  box-shadow: var(--glass-edge), var(--glass-shadow-lg);
-  border-color: var(--border-hover);
-}
-
-/* Reusable primitive for anything built later. The sheen lives on ::after
-   so it never collides with the ::before several cards already use. */
-.glass {
-  position: relative;
-  background: var(--surface);
-  -webkit-backdrop-filter: var(--glass-blur);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--glass-edge), var(--glass-shadow);
-  overflow: hidden;
-}
-.glass::after {
+[data-theme="dark"] body::before {
   content: '';
-  position: absolute;
+  position: fixed;
   inset: 0;
-  background: var(--glass-sheen);
+  z-index: -1;
   pointer-events: none;
-}
-.glass-strong {
-  -webkit-backdrop-filter: var(--glass-blur-strong);
-  backdrop-filter: var(--glass-blur-strong);
-  background: var(--surface-raised);
-  box-shadow: var(--glass-edge), var(--glass-shadow-lg);
-}
-
-/* Safari on iOS drops backdrop-filter under memory pressure and the pane
-   goes fully transparent, taking the text with it. Give it an opaque-ish
-   floor when blur is unsupported. */
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .model-stat-cell, .challenge-card, .contact-info-card, .fc-tip,
-  .landing-pill, .os-stats-bar, .os-open-compact, .os-codehound-box,
-  .os-repo-mini, .resume-inner, .story-quote-card, .tech-icon-card,
-  .whatido-card, .glass {
-    background: var(--bg-2);
-  }
+  background:
+    radial-gradient(60rem 40rem at 12% -8%,  var(--blob-b) 0%, transparent 62%),
+    radial-gradient(48rem 34rem at 92% 12%,  var(--blob-a) 0%, transparent 60%),
+    radial-gradient(52rem 40rem at 72% 88%,  var(--blob-c) 0%, transparent 62%),
+    radial-gradient(38rem 30rem at 28% 62%,  var(--blob-b) 0%, transparent 58%);
 }
 
-/* Blur is GPU-expensive; drop it for users who asked for less motion/effects
-   and on very small screens where the cost is highest and the effect least
-   visible. */
-@media (prefers-reduced-transparency: reduce) {
-  .model-stat-cell, .challenge-card, .contact-info-card, .fc-tip,
-  .landing-pill, .os-stats-bar, .os-open-compact, .os-codehound-box,
-  .os-repo-mini, .resume-inner, .story-quote-card, .tech-icon-card,
-  .whatido-card, .glass {
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-    background: var(--bg-2);
-  }
-}
+

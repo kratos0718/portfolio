@@ -14,9 +14,13 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  // Must agree with the bootstrap in index.html, which falls back to 'dark'.
+  // When these disagreed, the inline script painted dark and this effect
+  // immediately repainted light, so every first visit flashed and the stated
+  // default never actually applied.
   const [theme, setTheme] = useState<'dark' | 'light'>(() =>
     typeof window !== 'undefined'
-      ? (localStorage.getItem('theme') as 'dark' | 'light') ?? 'light'
+      ? ((localStorage.getItem('theme') as 'dark' | 'light' | null) ?? 'dark')
       : 'dark'
   );
   const navRef = useRef<HTMLElement>(null);
