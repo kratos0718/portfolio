@@ -19,6 +19,24 @@ interface Cert {
 
 const certs: Cert[] = [
   {
+    title: 'AI & ML Virtual Internship',
+    subtitle: '2 months · 120 hours · Govt. of A.P.',
+    issuer: 'APSCHE · SmartBridge',
+    date: 'Aug 2026',
+    category: 'AI/ML',
+    categoryColor: 'cyan',
+    pdf: '/certs/apsche-smartbridge.pdf',
+  },
+  {
+    title: 'Artificial Intelligence Intern',
+    subtitle: 'May – Jun 2026',
+    issuer: 'AvaIntern Edutech',
+    date: 'Jun 2026',
+    category: 'Internship',
+    categoryColor: 'purple',
+    pdf: '/certs/avaintern-ai.pdf',
+  },
+  {
     title: 'Mastering AI Agents Bootcamp',
     subtitle: 'Build Smart Chatbots & Tools',
     issuer: 'Udemy',

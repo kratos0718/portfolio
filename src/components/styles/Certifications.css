@@ -339,11 +339,4 @@
 }
 
 /* Light theme */
-[data-theme="light"] .cert-card {
-  background: #fff;
-}
 
-[data-theme="light"] .cert-thumb-wrap,
-[data-theme="light"] .cert-pdf-placeholder {
-  background: #f3f4f6;
-}
