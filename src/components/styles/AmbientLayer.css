@@ -30,7 +30,7 @@
 
 .hang-line {
   width: 1px;
-  background: linear-gradient(to bottom, transparent 0%, rgba(99,102,241,0.25) 100%);
+  background: linear-gradient(to bottom, transparent 0%, var(--cyan-glow-strong) 100%);
 }
 
 .hanging-a .hang-line { height: 110px; }
@@ -43,7 +43,7 @@
   height: 10px;
   border-radius: 50%;
   border: 1px solid rgba(99,102,241,0.28);
-  background: rgba(99,102,241,0.08);
+  background: var(--cyan-glow);
 }
 .hang-diamond {
   width: 10px;
@@ -56,7 +56,7 @@
   width: 9px;
   height: 9px;
   border: 1px solid rgba(99,102,241,0.22);
-  background: rgba(99,102,241,0.05);
+  background: var(--cyan-glow);
 }
 
 /* ================================================

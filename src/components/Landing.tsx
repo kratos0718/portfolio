@@ -1,4 +1,5 @@
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef, useCallback, useState } from 'react';
+import HeroObjects from './HeroObjects';
 import gsap from 'gsap';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import './styles/Landing.css';
@@ -148,7 +149,30 @@ function MagneticBtn({ children, className, href }: { children: React.ReactNode;
   );
 }
 
+/**
+ * Theme lives as local state in Navbar and is published to the document element,
+ * so there is no context to subscribe to. Watch the attribute directly — same
+ * source of truth the neural canvas already reads at draw time.
+ */
+function useIsDark() {
+  const [isDark, setIsDark] = useState(
+    () => document.documentElement.getAttribute('data-theme') !== 'light'
+  );
+
+  useEffect(() => {
+    const el = document.documentElement;
+    const sync = () => setIsDark(el.getAttribute('data-theme') !== 'light');
+    sync();
+    const observer = new MutationObserver(sync);
+    observer.observe(el, { attributes: true, attributeFilter: ['data-theme'] });
+    return () => observer.disconnect();
+  }, []);
+
+  return isDark;
+}
+
 export default function Landing() {
+  const isDark = useIsDark();
   const pillRef = useRef<HTMLDivElement>(null);
   const line1Ref = useRef<HTMLSpanElement>(null);
   const line2Ref = useRef<HTMLSpanElement>(null);
@@ -207,6 +231,11 @@ export default function Landing() {
     <section className="landing" id="home">
       <div className="landing-canvas">
         <NeuralCanvas />
+        {isDark && (
+          <div className="hero-objects-wrap" aria-hidden="true">
+            <HeroObjects />
+          </div>
+        )}
       </div>
 
       {/* Large editorial background number */}
