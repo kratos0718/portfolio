@@ -24,13 +24,10 @@ export default function AmbientLayer() {
 
       {/* ── Floating geometric shapes ── */}
       {/* Large thin circle — top right */}
-      <div className="fshape fshape-circle-lg" />
 
       {/* Medium circle — lower right */}
-      <div className="fshape fshape-circle-md" />
 
       {/* Small circle — mid left edge */}
-      <div className="fshape fshape-circle-sm" />
 
       {/* Diamond (rotated square) — upper left */}
       <div className="fshape fshape-diamond" />

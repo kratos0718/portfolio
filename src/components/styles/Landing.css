@@ -85,7 +85,12 @@
 }
 .landing-name-line {
   display: block;
+  /* The GSAP reveal slides .landing-name-inner up behind this mask, so the
+     mask has to clip. Without the extra room below, it also clips the
+     descenders -- the g and p in "Tarigoppula" were being cut off. */
   overflow: hidden;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
 }
 .landing-name-inner {
   display: block;
