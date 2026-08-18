@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   firstName: 'Abhinav',
-  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 17 PRs merged across 11 orgs including unsloth (69k★), HuggingFace, agno (41k★), pydantic, mem0 (62k★), prowler, Weaviate, Apache Maven & Mercari.',
+  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 18 PRs merged across 11 orgs including unsloth (69k★), HuggingFace, agno (41k★), pydantic, mem0 (62k★), prowler, Weaviate, Apache Maven & Mercari.',
   role: 'Final-Year AI/ML Student · Open Source Contributor · AI Engineering',
   email: 'abhinaaavvv07187@gmail.com',
   phone: '+91-9121611029',
@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. I fine-tuned a vision-language model with QLoRA for document extraction and forgery detection, and have 17 PRs merged across 11 organisations — unsloth (69k★), HuggingFace, agno (41k★), pydantic, mem0 (62k★), prowler, Weaviate, marimo (YC), Apache Maven and Mercari — with code shipping in huggingface_hub v1.17.0 on PyPI. I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. My focus is AI engineering: making intelligent systems work outside the notebook.",
+  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. I fine-tuned a vision-language model with QLoRA for document extraction and forgery detection, and have 18 PRs merged across 11 organisations — unsloth (69k★), HuggingFace, agno (41k★), pydantic, mem0 (62k★), prowler, Weaviate, marimo (YC), Apache Maven and Mercari — with code shipping in huggingface_hub v1.17.0 on PyPI. I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. My focus is AI engineering: making intelligent systems work outside the notebook.",
 };
 
 export const whyIDoThis = {
@@ -115,6 +115,14 @@ export const achievements = [
     type: 'Hackathon',
     description: 'Ranked Top 5 at the AI & Machine Learning Hackathon hosted by Techgyan Technologies at BITS Pilani, Hyderabad — 24-hour in-person competition.',
     icon: '🏆',
+  },
+  {
+    title: 'GitHub Galaxy Brain — Accepted Answers',
+    org: 'GitHub Achievements',
+    year: '2026',
+    type: 'Open Source',
+    description: 'Earned for answers marked as accepted by the people who asked them. Diagnosed a WebKitGTK DMA-BUF failure that was surfacing as a WebUI error, and found an unguarded confirmation prompt in Snipe-IT that made a documented --force flag ineffective — the second became an upstream pull request. Six of the seven obtainable GitHub achievements.',
+    icon: '🧠',
   },
   {
     title: 'Merged into HuggingFace — huggingface_hub · PR #4289',
