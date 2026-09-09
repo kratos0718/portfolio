@@ -1,84 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* ══════════════════════════════════════════
-   DARK THEME (default)
+   BLACK + SILVER (default)
+   Restrained luxury: near-black ground, one silver accent used sparingly.
+   Variables keep their historical --cyan-* names so the ~150 call sites
+   across the component styles stay untouched.
    ══════════════════════════════════════════ */
 :root {
-  /* Accent - vintage rosewood. Variables keep their historical --cyan-* names so
-     the ~110 call sites across the component styles stay untouched. */
-  --cyan: #7D4047;
-  --cyan-dim: #9A555C;
-  --cyan-muted: #B98289;
-  --cyan-glow: rgba(125,64,71,0.07);
-  --cyan-glow-strong: rgba(125,64,71,0.16);
+  /* Accent - brushed silver, used for numbers, active states, small labels */
+  --cyan: #BFC2C5;
+  --cyan-dim: #8B8D90;
+  --cyan-muted: #D7D9DB;
+  --cyan-glow: rgba(191,194,197,0.07);
+  --cyan-glow-strong: rgba(191,194,197,0.18);
 
-  /* Backgrounds - alabaster cream / warm greige */
-  --bg: #F1ECE6;
-  --bg-2: #E8E1D9;
-  --bg-3: #DDD5CD;
-  --bg-card: rgba(255,253,250,0.55);
+  /* Backgrounds - void deepening to card surface */
+  --bg: #08090A;
+  --bg-2: #0E0F10;
+  --bg-3: #131416;
+  --bg-card: rgba(241,241,239,0.035);
 
-  /* Text - charcoal espresso */
-  --text: #2E2E2E;
-  --text-dim: #5F5952;
-  --text-muted: #8E877E;
+  /* Text - off-white settling into graphite */
+  --text: #F1F1EF;
+  --text-dim: #85878A;
+  --text-muted: #5B5D60;
 
-  --border: rgba(46,46,46,0.10);
-  --border-hover: rgba(125,64,71,0.32);
+  --border: #25272A;
+  --border-hover: #34363A;
 
   --font-sans: 'Space Grotesk', sans-serif;
   --font-mono: 'Space Mono', monospace;
 
-  --stroke-subtle: rgba(46,46,46,0.05);
-  --dot-color: rgba(46,46,46,0.04);
-  --blob-a: rgba(125,64,71,0.07);
-  --blob-b: rgba(193,140,110,0.06);
-  --blob-c: rgba(125,64,71,0.045);
-  --canvas-opacity: 0.16;
-  --navbar-scrolled-bg: rgba(241,236,230,0.72);
+  --stroke-subtle: rgba(241,241,239,0.05);
+  --dot-color: rgba(241,241,239,0.035);
+  --blob-a: rgba(191,194,197,0.05);
+  --blob-b: rgba(19,20,22,0.65);
+  --blob-c: rgba(133,135,138,0.04);
+  --canvas-opacity: 0.4;
+  --navbar-scrolled-bg: rgba(8,9,10,0.75);
 
   --radius: 14px;
   --radius-sm: 8px;
   --radius-lg: 20px;
 
-  --surface: rgba(255,253,250,0.55);
-  --surface-raised: rgba(255,255,255,0.42);
+  --surface: rgba(241,241,239,0.035);
+  --surface-raised: rgba(241,241,239,0.065);
 }
 
 /* ══════════════════════════════════════════
-   DARK THEME - cool slate ground, warm copper accent
+   index.html sets data-theme="dark" on <html> at load, so this is the block
+   that actually applies. Kept identical to :root so the values agree
+   regardless of which selector wins.
    ══════════════════════════════════════════ */
 [data-theme="dark"] {
-  --cyan: #E8823C;
-  --cyan-dim: #C4682B;
-  --cyan-muted: #F2A972;
-  --cyan-glow: rgba(232,130,60,0.10);
-  --cyan-glow-strong: rgba(232,130,60,0.26);
+  --cyan: #BFC2C5;
+  --cyan-dim: #8B8D90;
+  --cyan-muted: #D7D9DB;
+  --cyan-glow: rgba(191,194,197,0.07);
+  --cyan-glow-strong: rgba(191,194,197,0.18);
 
-  /* Backgrounds - coffee bean deepening to near-black */
-  --bg: #0D171C;
-  --bg-2: #13212A;
-  --bg-3: #1B2E38;
-  --bg-card: rgba(214,238,246,0.055);
+  --bg: #08090A;
+  --bg-2: #0E0F10;
+  --bg-3: #131416;
+  --bg-card: rgba(241,241,239,0.035);
 
-  /* Text - alabaster */
-  --text: #EDF3F5;
-  --text-dim: #9BAEB6;
-  --text-muted: #63757E;
+  --text: #F1F1EF;
+  --text-dim: #85878A;
+  --text-muted: #5B5D60;
 
-  --border: rgba(214,238,246,0.13);
-  --border-hover: rgba(221,2,0,0.42);
+  --border: #25272A;
+  --border-hover: #34363A;
 
-  --stroke-subtle: rgba(214,238,246,0.06);
-  --dot-color: rgba(214,238,246,0.05);
-  --blob-a: rgba(232,130,60,0.16);
-  --blob-b: rgba(13,40,52,0.65);
-  --blob-c: rgba(196,104,43,0.11);
-  --canvas-opacity: 0.46;
-  --navbar-scrolled-bg: rgba(13,23,28,0.55);
+  --stroke-subtle: rgba(241,241,239,0.05);
+  --dot-color: rgba(241,241,239,0.035);
+  --blob-a: rgba(191,194,197,0.05);
+  --blob-b: rgba(19,20,22,0.65);
+  --blob-c: rgba(133,135,138,0.04);
+  --canvas-opacity: 0.4;
+  --navbar-scrolled-bg: rgba(8,9,10,0.75);
 
-  --surface: rgba(214,238,246,0.055);
-  --surface-raised: rgba(214,238,246,0.09);
+  --surface: rgba(241,241,239,0.035);
+  --surface-raised: rgba(241,241,239,0.065);
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -121,12 +123,13 @@ a, button, [role="button"] { cursor: pointer; }
 
 /* ══════════════════════════════════════════
    AMBIENT FIELD
-   Four soft radial washes fixed behind the page. They give the slate ground
-   depth so it reads as lit space rather than flat fill, and keep the warm
-   copper of the hero from being the only warmth on screen. Dark only -- on
-   near-white they would read as smudges.
+   Four soft radial washes fixed behind the page, monochrome graphite and
+   silver. They give the void ground depth so it reads as lit space rather
+   than flat fill. Was previously gated behind [data-theme="dark"], which
+   nothing in the app ever sets -- the base theme is dark now, so this runs
+   unconditionally.
    ══════════════════════════════════════════ */
-[data-theme="dark"] body::before {
+body::before {
   content: '';
   position: fixed;
   inset: 0;

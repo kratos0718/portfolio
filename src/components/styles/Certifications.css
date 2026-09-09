@@ -84,11 +84,11 @@
   box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 16px 48px rgba(0,0,0,0.3);
 }
 
-.cert-card--cyan:hover   { border-color: rgba(59, 130, 246, 0.4); }
-.cert-card--blue:hover   { border-color: rgba(59, 130, 246, 0.4); }
-.cert-card--green:hover  { border-color: rgba(34, 197, 94, 0.4); }
-.cert-card--amber:hover  { border-color: rgba(245, 158, 11, 0.4); }
-.cert-card--purple:hover { border-color: rgba(168, 85, 247, 0.4); }
+.cert-card--cyan:hover   { border-color: var(--cyan-glow-strong); }
+.cert-card--blue:hover   { border-color: rgba(215,217,219,0.4); }
+.cert-card--green:hover  { border-color: var(--cyan-glow-strong); }
+.cert-card--amber:hover  { border-color: rgba(215,217,219,0.4); }
+.cert-card--purple:hover { border-color: rgba(139,141,144,0.4); }
 .cert-card--muted:hover  { border-color: var(--border-hover); }
 
 /* ── Thumbnail ── */
@@ -155,11 +155,11 @@
   backdrop-filter: blur(6px);
 }
 
-.cert-category--cyan   { color: var(--cyan);   background: rgba(59,130,246,0.14);  border-color: rgba(59,130,246,0.3); }
-.cert-category--blue   { color: #60a5fa;        background: rgba(59,130,246,0.14);  border-color: rgba(59,130,246,0.3); }
-.cert-category--green  { color: #22c55e;        background: rgba(34,197,94,0.14);   border-color: rgba(34,197,94,0.3); }
-.cert-category--amber  { color: #f59e0b;        background: rgba(245,158,11,0.14);  border-color: rgba(245,158,11,0.3); }
-.cert-category--purple { color: #a855f7;        background: rgba(168,85,247,0.14);  border-color: rgba(168,85,247,0.3); }
+.cert-category--cyan   { color: var(--cyan);        background: var(--cyan-glow);          border-color: var(--cyan-glow-strong); }
+.cert-category--blue   { color: var(--cyan-muted);  background: rgba(215,217,219,0.10);    border-color: rgba(215,217,219,0.26); }
+.cert-category--green  { color: var(--cyan);        background: var(--cyan-glow);          border-color: var(--cyan-glow-strong); }
+.cert-category--amber  { color: var(--cyan-muted);  background: rgba(215,217,219,0.10);    border-color: rgba(215,217,219,0.26); }
+.cert-category--purple { color: var(--cyan-dim);    background: rgba(139,141,144,0.14);    border-color: rgba(139,141,144,0.3); }
 .cert-category--muted  { color: var(--text-muted); background: rgba(0,0,0,0.5); border-color: var(--border); }
 
 /* ── Info strip ── */
