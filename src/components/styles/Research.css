@@ -77,7 +77,7 @@
 .rp-card:hover {
   border-color: var(--cyan);
   transform: translateY(-4px);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 12px 40px rgba(59,130,246,0.12);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 12px 40px rgba(0,0,0,0.28);
 }
 
 /* Featured card — left accent bar */
@@ -113,9 +113,9 @@
   border-radius: var(--radius-sm);
 }
 .rp-type-review {
-  color: #f59e0b;
-  background: rgba(245,158,11,0.07);
-  border-color: rgba(245,158,11,0.28);
+  color: var(--cyan-muted);
+  background: rgba(215,217,219,0.07);
+  border-color: rgba(215,217,219,0.28);
 }
 .rp-stats {
   display: flex;
@@ -175,7 +175,7 @@
   transition: border-color 0.2s, color 0.2s;
 }
 .rp-card:hover .rp-tag {
-  border-color: rgba(99,102,241,0.2);
+  border-color: var(--border-hover);
   color: var(--text);
 }
 

@@ -6,11 +6,11 @@ import * as THREE from 'three';
 /**
  * Floating primitives behind the hero.
  *
- * The look depends on warm/cool contrast, not on the shapes: a cool slate
- * ground with a single warm key light raking across matte geometry, so the
- * lit edges read copper while the shadow sides fall into the background.
- * One small emissive sphere carries a bloom so there is a visible light
- * source motivating the warm rim.
+ * Dark chrome / graphite geometry lit by a single neutral key light, so the
+ * lit edges read as brushed metal while the shadow sides fall into the
+ * background. One small emissive sphere carries a bloom so there is a
+ * visible light source motivating the highlight -- silver-white now rather
+ * than the previous warm copper.
  */
 
 type SolidProps = {
@@ -41,9 +41,10 @@ function Solid({ position, rotation, scale, drift, spin, geometry }: SolidProps)
       ) : (
         <cylinderGeometry args={[0.42, 0.42, 1.5, 48]} />
       )}
-      {/* Matte, slightly metallic: enough sheen to catch the key light on an
-          edge without turning into a mirror, which would read as plastic. */}
-      <meshStandardMaterial color="#3B4753" roughness={0.46} metalness={0.30} />
+      {/* Dark graphite with real metalness: enough sheen to catch the key
+          light on an edge without turning into a mirror, which would read
+          as plastic. */}
+      <meshStandardMaterial color="#26282B" roughness={0.38} metalness={0.55} />
     </mesh>
   );
 }
@@ -57,7 +58,7 @@ function Orb() {
   return (
     <mesh ref={ref} position={[2.05, 2.15, 0.2]}>
       <sphereGeometry args={[0.42, 48, 48]} />
-      <meshBasicMaterial color="#FFB067" toneMapped={false} />
+      <meshBasicMaterial color="#E4E6E8" toneMapped={false} />
     </mesh>
   );
 }
@@ -99,12 +100,13 @@ export default function HeroObjects() {
       camera={{ position: [0, 0, 10.5], fov: 40 }}
       gl={{ antialias: true, alpha: true }}
     >
-      {/* Cool fill so the shadow sides sit in the slate ground rather than
-          going pure black, plus one warm key that does all the work. */}
-      <ambientLight intensity={0.12} color="#7FA6BD" />
-      <directionalLight position={[-4, 2, 3]} intensity={0.22} color="#8FB6CC" />
-      <pointLight position={[3.0, 3.0, 3.0]} intensity={150} distance={24} decay={2} color="#FF9A4D" />
-      <pointLight position={[-3.6, -2.4, 2.0]} intensity={26} distance={16} decay={2} color="#5C8FA8" />
+      {/* Neutral fill so the shadow sides sit in the graphite ground rather
+          than going pure black, plus one bright neutral key that does all
+          the work -- silver-white instead of the previous warm/blue mix. */}
+      <ambientLight intensity={0.14} color="#9A9C9F" />
+      <directionalLight position={[-4, 2, 3]} intensity={0.22} color="#C7C9CC" />
+      <pointLight position={[3.0, 3.0, 3.0]} intensity={150} distance={24} decay={2} color="#E8E9EA" />
+      <pointLight position={[-3.6, -2.4, 2.0]} intensity={26} distance={16} decay={2} color="#8B8D90" />
 
       {!reduced && <Rig />}
       {reduced && (

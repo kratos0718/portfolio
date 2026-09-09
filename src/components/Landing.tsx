@@ -68,8 +68,8 @@ function NeuralCanvas() {
         }
       }
 
-      // Copper, matching --cyan in the dark palette
-      const [cr, cg, cb] = [232, 130, 60];
+      // Silver, matching --cyan
+      const [cr, cg, cb] = [191, 194, 197];
 
       // Draw connections
       for (let i = 0; i < nodes.length; i++) {

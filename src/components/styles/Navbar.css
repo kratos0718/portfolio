@@ -145,13 +145,13 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--cyan);
+  background: var(--cyan-glow-strong);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 .navbar-cta:hover::before { transform: scaleX(1); }
-.navbar-cta:hover { color: #fff; }
+.navbar-cta:hover { color: var(--cyan-muted); border-color: var(--cyan-muted); }
 .navbar-cta span { position: relative; z-index: 1; }
 
 /* ── Hamburger button (hidden on desktop) ── */
