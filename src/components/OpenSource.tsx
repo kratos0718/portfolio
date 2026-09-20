@@ -239,6 +239,74 @@ const mergedPRs = [
     featured: false,
     codehound: false,
   },
+  {
+    repo: 'mercari/pipeline',
+    stars: '79',
+    number: 122,
+    url: 'https://github.com/mercari/pipeline/pull/122',
+    org: 'Mercari',
+    what: 'A millis-to-micros conversion for Avro timestamp-millis scaled the wrong way, corrupting sub-second precision on the same JDBC path as #119.',
+    quotes: [
+      { text: 'Thank you for your contribution!', who: '@orfeon, maintainer' },
+    ],
+    shipped: null,
+    featured: false,
+    codehound: false,
+  },
+  {
+    repo: 'apache/maven-help-plugin',
+    stars: '29',
+    number: 424,
+    url: 'https://github.com/apache/maven-help-plugin/pull/424',
+    org: 'Apache Maven',
+    what: 'A deprecated Maven 2 constant supplied the LATEST metaversion. The issue proposed replacing it with null, which would have emptied the version and broken two-part coordinates — kept the value and added the first tests for the method instead.',
+    quotes: [
+      { text: 'OK, we need to fix spotless then but not in this PR.', who: '@elharo, committer' },
+    ],
+    shipped: null,
+    featured: false,
+    codehound: false,
+  },
+  {
+    repo: 'grokability/snipe-it',
+    stars: '14.9k',
+    number: 19514,
+    url: 'https://github.com/grokability/snipe-it/pull/19514',
+    org: 'Snipe-IT',
+    what: '--force did not suppress a PHP-version prompt in ldap:troubleshoot, so the command hung in Docker where no one could answer it — the guard present on two neighbouring confirmations was missing on the third.',
+    quotes: [
+      { text: 'This looks great, thank you!', who: '@snipe, project owner' },
+    ],
+    shipped: null,
+    featured: false,
+    codehound: false,
+  },
+  {
+    repo: 'phasespace-labs/palinode',
+    stars: '41',
+    number: 132,
+    url: 'https://github.com/phasespace-labs/palinode/pull/132',
+    org: 'palinode',
+    what: "Two memories whose opening lines matched derived the same filename, silently overwriting one with the other. Fixing it exposed a second bug the maintainer caught in review — a memory pushed onto a suffixed path climbed to a new suffix on every re-save.",
+    quotes: [],
+    shipped: null,
+    featured: false,
+    codehound: false,
+  },
+  {
+    repo: 'apache/maven-shared-jar',
+    stars: '4',
+    number: 165,
+    url: 'https://github.com/apache/maven-shared-jar/pull/165',
+    org: 'Apache Maven',
+    what: "computeHash() computed and cached a jar's SHA-1 correctly but returned the stale null local instead of the new value, so every first-time lookup behaved as if the file couldn't be hashed.",
+    quotes: [
+      { text: 'Merged #165 into master.', who: '@slachiewicz, committer' },
+    ],
+    shipped: null,
+    featured: false,
+    codehound: false,
+  },
 ];
 
 const openPRs = [
@@ -408,7 +476,7 @@ export default function OpenSource() {
       {/* ── Stats bar ── */}
       <div className="os-stats-bar">
         {[
-          { num: '17', label: 'Merged PRs' },
+          { num: '22', label: 'Merged PRs' },
           { num: '22', label: 'Open PRs' },
           { num: '18+', label: 'Organizations' },
         ].map(s => (
@@ -454,7 +522,7 @@ export default function OpenSource() {
           ══════════════════════════════════ */}
       <div className="os-subhead-row">
         <span className="os-subhead-badge os-merged-badge">✓ Merged</span>
-        <span className="os-subhead-label">15 pull requests · reviewed by lead maintainers</span>
+        <span className="os-subhead-label">22 pull requests · reviewed by lead maintainers</span>
       </div>
 
       {/* Featured HuggingFace card */}
