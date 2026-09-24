@@ -311,12 +311,32 @@ const mergedPRs = [
 
 const openPRs = [
   {
-    repo: 'mercari/pipeline',
-    org: 'Mercari (Java)',
-    stars: null,
-    number: 119,
-    url: 'https://github.com/mercari/pipeline/pull/119',
-    what: 'Avro timestamp-micros lost sub-millisecond precision when bound to a JDBC statement — integer division collapsed distinct timestamps onto the same value. Also fixed pre-1970 rounding.',
+    repo: 'apache/airflow',
+    org: 'Apache Airflow',
+    stars: '47k',
+    number: 73617,
+    url: 'https://github.com/apache/airflow/pull/73617',
+    what: "SparkSubmitHook's log-masking regex could be driven into catastrophic backtracking by a crafted --password/--secret argument, hanging the task logger. Rewrote it as linear-time token scanning — caught a real tuple-vs-list bug in my own first draft via IDE diagnostics before it shipped.",
+    quote: null,
+    codehound: false,
+  },
+  {
+    repo: 'arrow-py/arrow',
+    org: 'Arrow',
+    stars: '9k',
+    number: 1361,
+    url: 'https://github.com/arrow-py/arrow/pull/1361',
+    what: "The timestamp() parser's regex had two alternatives that could both match a bare integer, causing quadratic backtracking on long digit strings. Fixed the regex and caught an existing single-digit-epoch parsing bug along the way.",
+    quote: null,
+    codehound: false,
+  },
+  {
+    repo: 'pygments/pygments',
+    org: 'Pygments',
+    stars: '2.2k',
+    number: 3324,
+    url: 'https://github.com/pygments/pygments/pull/3324',
+    what: 'A redundant regex alternative in the Common Lisp/Emacs Lisp symbol lexer caused catastrophic backtracking on long dot-runs. My first fix broke a real symbol-lexing test — caught it via the existing test suite and shipped a corrected, narrower fix instead.',
     quote: null,
     codehound: false,
   },
@@ -380,33 +400,31 @@ const openPRs = [
     quote: null,
     codehound: true,
   },
-  {
-    repo: 'future-agi/future-agi',
-    org: 'Future AGI',
-    stars: '1.5k',
-    number: 821,
-    url: 'https://github.com/future-agi/future-agi/pull/821',
-    what: 'PromptStreamConsumer spawned background tasks without retaining references; added tracking, cancellation on disconnect, and unit tests.',
-    quote: null,
-    codehound: true,
-  },
 ];
 
 const earlierPRs = [
-  { repo: 'infiniflow/ragflow', number: 16101, url: 'https://github.com/infiniflow/ragflow/pull/16101', stars: '86k' },
   { repo: 'sgl-project/sglang', number: 28029, url: 'https://github.com/sgl-project/sglang/pull/28029', stars: '31k' },
-  { repo: 'crewAIInc/crewAI', number: 5970, url: 'https://github.com/crewAIInc/crewAI/pull/5970', stars: '56k' },
-  { repo: 'crewAIInc/crewAI', number: 5969, url: 'https://github.com/crewAIInc/crewAI/pull/5969', stars: '56k' },
-  { repo: 'crewAIInc/crewAI', number: 5968, url: 'https://github.com/crewAIInc/crewAI/pull/5968', stars: '56k' },
-  { repo: 'run-llama/llama_index', number: 22030, url: 'https://github.com/run-llama/llama_index/pull/22030', stars: '51k' },
   { repo: 'khoj-ai/khoj', number: 1342, url: 'https://github.com/khoj-ai/khoj/pull/1342', stars: '36k' },
   { repo: 'jina-ai/serve', number: 6243, url: 'https://github.com/jina-ai/serve/pull/6243', stars: '21k' },
   { repo: 'huggingface/datasets', number: 8223, url: 'https://github.com/huggingface/datasets/pull/8223', stars: '21k' },
   { repo: 'vibrantlabsai/ragas', number: 2757, url: 'https://github.com/vibrantlabsai/ragas/pull/2757', stars: '15k' },
   { repo: 'ogx-ai/ogx', number: 6226, url: 'https://github.com/ogx-ai/ogx/pull/6226', stars: '8k' },
-  { repo: 'BerriAI/litellm', number: 29417, url: 'https://github.com/BerriAI/litellm/pull/29417', stars: '55k' },
   { repo: 'BerriAI/litellm', number: 29162, url: 'https://github.com/BerriAI/litellm/pull/29162', stars: '55k' },
   { repo: 'meta-pytorch/torchtune', number: 2964, url: 'https://github.com/meta-pytorch/torchtune/pull/2964', stars: '5k' },
+  { repo: 'huggingface/optimum', number: 2503, url: 'https://github.com/huggingface/optimum/pull/2503', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2504, url: 'https://github.com/huggingface/optimum/pull/2504', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2505, url: 'https://github.com/huggingface/optimum/pull/2505', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2506, url: 'https://github.com/huggingface/optimum/pull/2506', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2507, url: 'https://github.com/huggingface/optimum/pull/2507', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2508, url: 'https://github.com/huggingface/optimum/pull/2508', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2509, url: 'https://github.com/huggingface/optimum/pull/2509', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2510, url: 'https://github.com/huggingface/optimum/pull/2510', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2511, url: 'https://github.com/huggingface/optimum/pull/2511', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2512, url: 'https://github.com/huggingface/optimum/pull/2512', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2513, url: 'https://github.com/huggingface/optimum/pull/2513', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2514, url: 'https://github.com/huggingface/optimum/pull/2514', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2515, url: 'https://github.com/huggingface/optimum/pull/2515', stars: '3.5k' },
+  { repo: 'huggingface/optimum', number: 2516, url: 'https://github.com/huggingface/optimum/pull/2516', stars: '3.5k' },
 ];
 
 const otherRepos = [
@@ -477,8 +495,8 @@ export default function OpenSource() {
       <div className="os-stats-bar">
         {[
           { num: '22', label: 'Merged PRs' },
-          { num: '22', label: 'Open PRs' },
-          { num: '18+', label: 'Organizations' },
+          { num: '31', label: 'Open PRs' },
+          { num: '26+', label: 'Organizations' },
         ].map(s => (
           <div key={s.label} className="os-stat-item">
             <span className="os-stat-num">{s.num}</span>
@@ -594,8 +612,8 @@ export default function OpenSource() {
           ══════════════════════════════════ */}
       <div className="os-open-compact">
         <div className="os-open-compact-head">
-          <span className="os-subhead-badge os-review-badge">⟳ 22 Open PRs</span>
-          <span className="os-subhead-label">under review across 18+ organizations</span>
+          <span className="os-subhead-badge os-review-badge">⟳ 31 Open PRs</span>
+          <span className="os-subhead-label">under review across 26+ organizations</span>
         </div>
         <div className="os-open-pills">
           {[...openPRs, ...earlierPRs].map(pr => (
@@ -631,13 +649,13 @@ export default function OpenSource() {
           <div className="os-codehound-name">codehound</div>
           <div className="os-codehound-sub">AST static analyzer for Python</div>
           <div className="os-codehound-meta">
-            <span>~750 lines</span>
+            <span>104 checks</span>
             <span className="os-meta-sep">·</span>
             <span>zero dependencies</span>
             <span className="os-meta-sep">·</span>
             <span>CI on 3.9 / 3.11 / 3.12</span>
             <span className="os-meta-sep">·</span>
-            <span>6 checks</span>
+            <span>529 tests</span>
           </div>
           <div className="os-codehound-tags">
             <span className="os-badge-tool">⚙ Python</span>
@@ -647,14 +665,16 @@ export default function OpenSource() {
         </div>
         <div className="os-codehound-right">
           <p className="os-codehound-desc">
-            Each of the 6 checks is distilled from a real bug I found in production OSS codebases.
-            I ran codehound on agno and OpenAI's Agents SDK — it found new, unreported bugs.
-            One is already merged into agno. More are under review.
+            Every one of the 104 checks is backed by a real interpreter error or a real false-positive
+            scan across a ~29-framework validation corpus — none are theoretical lint rules. I run it
+            against real OSS codebases and it keeps finding bugs maintainers didn't know were there.
           </p>
           <div className="os-codehound-proof">
             <span className="os-proof-item">✓ Bug in agno → merged (PR #8186)</span>
-            <span className="os-proof-item">✓ Bug in OpenAI Agents SDK → under review (PR #3553)</span>
-            <span className="os-proof-item">✓ Bug in litellm → under review (PR #29417)</span>
+            <span className="os-proof-item">✓ Bug in weaviate-python-client → merged (PR #2104)</span>
+            <span className="os-proof-item">✓ Bug in pydantic-ai → merged (PR #6189)</span>
+            <span className="os-proof-item">✓ Bug in pydantic's schema engine → issue filed (pydantic #13857)</span>
+            <span className="os-proof-item">✓ Bug in vLLM → under review (PR #45249)</span>
           </div>
         </div>
         <FiExternalLink className="os-featured-ext" size={16} />
