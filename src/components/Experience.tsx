@@ -1,4 +1,5 @@
-import { career } from '../data/portfolioData';
+import { FiArrowUpRight } from 'react-icons/fi';
+import { career, personalInfo } from '../data/portfolioData';
 
 export default function Experience() {
   return (
@@ -29,6 +30,9 @@ export default function Experience() {
           </li>
         ))}
       </ol>
+      <a className="text-link resume-link" href={personalInfo.resumeUrl} target="_blank" rel="noopener noreferrer">
+        View full résumé <FiArrowUpRight size={14} />
+      </a>
     </section>
   );
 }

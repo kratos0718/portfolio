@@ -29,6 +29,20 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
+  // Mark the nav link for whichever section is in the middle of the screen.
+  const [active, setActive] = useState('');
+  useEffect(() => {
+    const sections = links
+      .map(l => document.querySelector<HTMLElement>(l.href))
+      .filter((el): el is HTMLElement => el !== null);
+    const io = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) setActive(`#${e.target.id}`); }),
+      { rootMargin: '-45% 0px -50% 0px' },
+    );
+    sections.forEach(el => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -40,7 +54,9 @@ export default function Navbar() {
         <ul className="navbar-links">
           {links.map(l => (
             <li key={l.href}>
-              <a href={l.href}>{l.label}</a>
+              <a href={l.href} className={active === l.href ? 'is-active' : undefined} aria-current={active === l.href ? 'true' : undefined}>
+                {l.label}
+              </a>
             </li>
           ))}
         </ul>

@@ -12,7 +12,11 @@ export default function Projects() {
               <strong>{p.stat.num}</strong>
               <span>{p.stat.label}</span>
             </div>
-            <h3 className="item-title">{p.title}</h3>
+            <h3 className="item-title">
+              <a className="title-link" href={p.links[0].url} target="_blank" rel="noopener noreferrer">
+                {p.title} <FiArrowUpRight size={15} aria-hidden="true" />
+              </a>
+            </h3>
             <p className="project-sub">{p.subtitle}</p>
             <p className="project-desc">{p.description}</p>
             <ul className="chips chips-sm">
