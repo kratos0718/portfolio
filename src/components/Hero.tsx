@@ -11,6 +11,7 @@ export default function Hero() {
           <p className="hero-role">{personalInfo.role}</p>
           <p className="hero-headline">{personalInfo.headline}</p>
           <p className="hero-intro">{personalInfo.intro}</p>
+          <p className="hero-now"><span className="label">Now</span> {personalInfo.now}</p>
 
           <div className="hero-actions">
             <a className="btn btn-primary" href={personalInfo.resumeUrl} download="Abhinav_Tarigoppula_Resume.pdf">
@@ -39,6 +40,7 @@ export default function Hero() {
           </div>
         ))}
       </dl>
+      <p className="stats-note">Counts from GitHub, updated {personalInfo.updated}</p>
 
       <div className="logo-rows">
         <div>

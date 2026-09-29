@@ -38,6 +38,7 @@ export default function MainContainer() {
   useReveal();
   return (
     <>
+      <a href="#about" className="skip-link">Skip to content</a>
       <Navbar />
       <main className="site">
         <Hero />

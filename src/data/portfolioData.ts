@@ -7,6 +7,8 @@ export const personalInfo = {
   location: 'Visakhapatnam, India',
   photo: '/images/abhinav.jpg',
   resumeUrl: '/ABHINAV_RESUME.pdf',
+  now: 'Fixing connection and event-loop bugs in Celery and asyncpg, and writing the full ICTIRL-2026 paper.',
+  updated: 'September 2026',
 };
 
 export const socials = {
