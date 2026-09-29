@@ -1,4 +1,5 @@
 import { FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { SiResearchgate } from 'react-icons/si';
 import { personalInfo, socials, stats, career, openSource } from '../data/portfolioData';
 
 export default function Hero() {
@@ -22,6 +23,9 @@ export default function Hero() {
             </a>
             <a className="btn" href={socials.linkedin} target="_blank" rel="noopener noreferrer">
               <FiLinkedin size={15} /> LinkedIn
+            </a>
+            <a className="btn" href={socials.researchgate} target="_blank" rel="noopener noreferrer">
+              <SiResearchgate size={15} /> ResearchGate
             </a>
             <a className="btn" href={`mailto:${personalInfo.email}`}>
               <FiMail size={15} /> Email

@@ -302,6 +302,19 @@ a.card:hover, .project:hover { transform: translateY(-2px); }
 .paper-venue { font-size: 13px; color: var(--text-dim); }
 .paper-authors { font-size: 13px; color: var(--cyan); }
 
+.research-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 28px; }
+.research-head .section-title { margin-bottom: 0; }
+.research-profiles { display: flex; flex-wrap: wrap; gap: 10px; }
+.profile-btn svg:first-child { transition: color 0.2s; }
+.profile-btn.rg svg:first-child { color: #00CCBB; }
+.profile-btn.orcid svg:first-child { color: #A6CE39; }
+.profile-btn.rg:hover { border-color: rgba(0, 204, 187, 0.5); background: rgba(0, 204, 187, 0.08); }
+.profile-btn.orcid:hover { border-color: rgba(166, 206, 57, 0.5); background: rgba(166, 206, 57, 0.08); }
+.research-stats { display: flex; flex-wrap: wrap; gap: 12px 40px; margin-bottom: 32px; }
+.research-stats div { display: flex; align-items: baseline; gap: 10px; }
+.research-stats dt { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.research-stats dd { font-size: 14px; color: var(--text-dim); }
+
 /* ── Achievements & certifications ───────── */
 .ach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .ach { display: grid; gap: 8px; align-content: start; }
