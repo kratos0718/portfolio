@@ -16,6 +16,7 @@ export const socials = {
   linkedin: 'https://www.linkedin.com/in/abhinav0702/',
   leetcode: 'https://leetcode.com/u/GV2023000367/',
   researchgate: 'https://www.researchgate.net/profile/Abhinav-Tarigoppula',
+  orcid: 'https://orcid.org/0009-0005-1542-0221',
 };
 
 // Checked 2026-09-29 with `gh search prs --author kratos0718 --merged`, own repos excluded.
@@ -280,6 +281,12 @@ export const openSource = {
     { repo: 'huggingface/huggingface_hub', number: 4289, title: 'Document missing parameters in lfs, hf_file_system and repocard_data' },
   ],
 };
+
+export const researchStats = [
+  { num: '5', label: 'research works' },
+  { num: '1', label: 'accepted at IEEE' },
+  { num: '3', label: 'as first author' },
+];
 
 export const research = [
   {

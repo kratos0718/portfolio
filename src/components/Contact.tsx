@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FiArrowUp, FiArrowUpRight, FiCheck, FiCode, FiCopy, FiGithub, FiLinkedin } from 'react-icons/fi';
+import { SiOrcid, SiResearchgate } from 'react-icons/si';
 import { personalInfo, socials } from '../data/portfolioData';
 
 export default function Contact() {
@@ -32,6 +33,8 @@ export default function Contact() {
           <a className="btn" href={socials.github} target="_blank" rel="noopener noreferrer"><FiGithub size={15} /> GitHub</a>
           <a className="btn" href={socials.linkedin} target="_blank" rel="noopener noreferrer"><FiLinkedin size={15} /> LinkedIn</a>
           <a className="btn" href={socials.leetcode} target="_blank" rel="noopener noreferrer"><FiCode size={15} /> LeetCode</a>
+          <a className="btn" href={socials.researchgate} target="_blank" rel="noopener noreferrer"><SiResearchgate size={15} /> ResearchGate</a>
+          <a className="btn" href={socials.orcid} target="_blank" rel="noopener noreferrer"><SiOrcid size={15} /> ORCID</a>
         </div>
         <div className="footer-bar">
           <p>© {new Date().getFullYear()} {personalInfo.name} · Last updated {personalInfo.updated}</p>
