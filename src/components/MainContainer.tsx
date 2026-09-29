@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 import Navbar from './Navbar';
 import Hero from './Hero';
+import About from './About';
 import Experience from './Experience';
 import Projects from './Projects';
 import OpenSource from './OpenSource';
 import Research from './Research';
+import Achievements from './Achievements';
 import Contact from './Contact';
 import './styles/site.css';
 
@@ -39,10 +41,12 @@ export default function MainContainer() {
       <Navbar />
       <main className="site">
         <Hero />
+        <About />
         <Experience />
         <Projects />
         <OpenSource />
         <Research />
+        <Achievements />
       </main>
       <Contact />
     </>
