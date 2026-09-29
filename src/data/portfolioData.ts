@@ -35,23 +35,63 @@ export const about = [
 export const whatIDo = [
   {
     title: 'LLM, RAG & agents',
-    description: 'Multi-agent systems with validated tool calls, RAG with citations, guardrails against prompt injection and PII leaks, and eval harnesses that catch regressions.',
+    accent: '#A78BFA',
+    proof: { num: '4', label: 'cooperating agents in AgentDesk' },
+    points: ['Multi-agent systems with validated tool calls', 'RAG that cites its sources', 'Prompt-injection and PII guardrails', 'Eval harnesses that catch regressions'],
   },
   {
     title: 'Model training & fine-tuning',
-    description: 'PyTorch, Transformers, PEFT/QLoRA and unsloth. From data prep to a measured result: DocGuard-VLM took field-extraction validity from 25% to 92%.',
+    accent: '#FB7185',
+    proof: { num: '25→92%', label: 'extraction validity after QLoRA fine-tuning' },
+    points: ['PyTorch, Transformers, PEFT / QLoRA', 'Vision-language models (Qwen2-VL)', 'Held-out and adversarial evaluation', 'Every result measured against a zero-shot baseline'],
   },
   {
     title: 'Backend & full stack',
-    description: 'FastAPI services, SQL, async Python and React front ends, deployed and monitored. I own a feature from the schema to the UI.',
+    accent: '#2DD4BF',
+    proof: { num: '−18%', label: 'inference latency at OneStop AI' },
+    points: ['FastAPI services and REST APIs', 'Async Python that never blocks the loop', 'SQL, Docker and CI/CD', 'React front ends, schema to UI'],
   },
 ];
 
+// icon keys map to brand logos in About.tsx; color is the brand color, lightened where it vanishes on black.
 export const skillGroups = [
-  { label: 'Languages', items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'SQL'] },
-  { label: 'AI / ML', items: ['PyTorch', 'Transformers', 'PEFT / QLoRA', 'unsloth', 'scikit-learn', 'OpenCV', 'SHAP'] },
-  { label: 'LLM', items: ['LangChain', 'RAG', 'Tool calling', 'MCP', 'FAISS', 'Prompt engineering', 'Evals'] },
-  { label: 'Engineering', items: ['FastAPI', 'asyncio', 'React', 'Node.js', 'Docker', 'AWS', 'GitHub Actions', 'pytest'] },
+  { label: 'Languages', items: [
+    { name: 'Python', icon: 'python', color: '#4B8BBE' },
+    { name: 'TypeScript', icon: 'typescript', color: '#3178C6' },
+    { name: 'JavaScript', icon: 'javascript', color: '#F7DF1E' },
+    { name: 'Java', icon: 'java', color: '#EA2D2E' },
+    { name: 'SQL', icon: 'postgres', color: '#6B8FE8' },
+  ] },
+  { label: 'AI / ML', items: [
+    { name: 'PyTorch', icon: 'pytorch', color: '#EE4C2C' },
+    { name: 'Transformers', icon: 'huggingface', color: '#FFD21E' },
+    { name: 'PEFT / QLoRA', icon: 'huggingface', color: '#FFD21E' },
+    { name: 'unsloth', img: '/logos/orgs/unslothai.png' },
+    { name: 'scikit-learn', icon: 'sklearn', color: '#F7931E' },
+    { name: 'OpenCV', icon: 'opencv', color: '#8B7BF0' },
+    { name: 'Pandas', icon: 'pandas', color: '#E70488' },
+  ] },
+  { label: 'LLM', items: [
+    { name: 'LangChain', icon: 'langchain', color: '#1FBF8F' },
+    { name: 'OpenAI API', icon: 'openai', color: '#F1F1EF' },
+    { name: 'Claude API', icon: 'claude', color: '#D97757' },
+    { name: 'MCP', icon: 'mcp', color: '#F1F1EF' },
+    { name: 'RAG', icon: 'rag', color: '#A78BFA' },
+    { name: 'FAISS', icon: 'search', color: '#60A5FA' },
+    { name: 'Tool calling', icon: 'tool', color: '#FBBF24' },
+    { name: 'Evals', icon: 'check', color: '#4ADE80' },
+  ] },
+  { label: 'Engineering', items: [
+    { name: 'FastAPI', icon: 'fastapi', color: '#05A898' },
+    { name: 'asyncio', icon: 'zap', color: '#FBBF24' },
+    { name: 'React', icon: 'react', color: '#61DAFB' },
+    { name: 'Node.js', icon: 'node', color: '#5FA04E' },
+    { name: 'Docker', icon: 'docker', color: '#2496ED' },
+    { name: 'AWS', icon: 'aws', color: '#FF9900' },
+    { name: 'GitHub Actions', icon: 'gha', color: '#2088FF' },
+    { name: 'pytest', icon: 'pytest', color: '#0A9EDC' },
+    { name: 'Git', icon: 'git', color: '#F05032' },
+  ] },
 ];
 
 export const education = [
