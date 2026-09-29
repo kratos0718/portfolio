@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FiDownload, FiMenu, FiX } from 'react-icons/fi';
 import './styles/Navbar.css';
 
 const links = [
   { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#career', highlight: true },
-  { label: 'Work', href: '#work' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
   { label: 'Open Source', href: '#open-source' },
   { label: 'Research', href: '#research' },
   { label: 'Contact', href: '#contact' },
@@ -14,7 +14,6 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -33,14 +32,14 @@ export default function Navbar() {
 
   return (
     <>
-      <nav ref={navRef} className={`navbar${scrolled ? ' scrolled' : ''}`}>
-        <div className="navbar-logo">
-          <span>AT</span>_portfolio
-        </div>
+      <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
+        <a href="#top" className="navbar-logo">
+          <span>AT</span>
+        </a>
         <ul className="navbar-links">
           {links.map(l => (
             <li key={l.href}>
-              <a href={l.href} className={l.highlight ? 'nav-highlight' : undefined}>{l.label}</a>
+              <a href={l.href}>{l.label}</a>
             </li>
           ))}
         </ul>
@@ -49,13 +48,9 @@ export default function Navbar() {
             href="/ABHINAV_RESUME.pdf"
             download="ABHINAV_RESUME.pdf"
             className="navbar-cv"
-            data-hover
           >
             <FiDownload size={12} />
             <span>CV</span>
-          </a>
-          <a href="#contact" className="navbar-cta">
-            <span>Hire me</span>
           </a>
           <button
             className={`navbar-hamburger${menuOpen ? ' open' : ''}`}
@@ -73,8 +68,7 @@ export default function Navbar() {
         <ul className="navbar-mobile-links">
           {links.map((l, i) => (
             <li key={l.href} style={{ '--delay': `${i * 0.06}s` } as React.CSSProperties}>
-              <a href={l.href} onClick={closeMenu} className={l.highlight ? 'nav-highlight' : undefined}>
-                <span className="navbar-mobile-num">0{i + 1}</span>
+              <a href={l.href} onClick={closeMenu}>
                 {l.label}
               </a>
             </li>
@@ -90,7 +84,7 @@ export default function Navbar() {
             <FiDownload size={14} />
             Download CV
           </a>
-          <p className="navbar-mobile-tagline">AI/ML Engineer · Open to Internships · PPO · Jobs</p>
+          <p className="navbar-mobile-tagline">AI/ML engineer · open to roles</p>
         </div>
       </div>
     </>
