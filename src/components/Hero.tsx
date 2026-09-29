@@ -13,7 +13,7 @@ export default function Hero() {
           <p className="hero-intro">{personalInfo.intro}</p>
 
           <div className="hero-actions">
-            <a className="btn btn-primary" href={personalInfo.resumeUrl} download="ABHINAV_RESUME.pdf">
+            <a className="btn btn-primary" href={personalInfo.resumeUrl} download="Abhinav_Tarigoppula_Resume.pdf">
               <FiDownload size={15} /> Download resume
             </a>
             <a className="btn" href={socials.github} target="_blank" rel="noopener noreferrer">

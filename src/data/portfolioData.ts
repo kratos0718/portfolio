@@ -105,7 +105,7 @@ export const career = [
     type: 'Remote',
     points: [
       'Improved model accuracy by 12% across 3 production AI projects through hyperparameter tuning and architecture changes.',
-      'Cut real-time inference latency by 18% (2.4s to 1.97s) by moving preprocessing into an async pipeline.',
+      'Cut inference latency by 18% (220 ms to 180 ms) by refactoring preprocessing and applying model quantization.',
       'Built end-to-end data pipelines for preprocessing, feature engineering and batched inference.',
       'Added monitoring and model performance tracking with the senior engineers to make deployments more reliable.',
     ],
