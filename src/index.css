@@ -85,12 +85,11 @@
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
-html { scroll-behavior: auto; /* Lenis handles this */ }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
   background-color: var(--bg);
-  background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
-  background-size: 32px 32px;
   color: var(--text);
   font-family: var(--font-sans);
   font-size: 16px;
@@ -104,9 +103,9 @@ body {
 #root { width: 100%; min-height: 100vh; }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--cyan-muted); border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 3px; }
 
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font-family: var(--font-sans); }
@@ -120,26 +119,3 @@ a, button, [role="button"] { cursor: pointer; }
   html { font-size: 16px; }
   ::-webkit-scrollbar { width: 0px; }
 }
-
-/* ══════════════════════════════════════════
-   AMBIENT FIELD
-   Four soft radial washes fixed behind the page, monochrome graphite and
-   silver. They give the void ground depth so it reads as lit space rather
-   than flat fill. Was previously gated behind [data-theme="dark"], which
-   nothing in the app ever sets -- the base theme is dark now, so this runs
-   unconditionally.
-   ══════════════════════════════════════════ */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    radial-gradient(60rem 40rem at 12% -8%,  var(--blob-b) 0%, transparent 62%),
-    radial-gradient(48rem 34rem at 92% 12%,  var(--blob-a) 0%, transparent 60%),
-    radial-gradient(52rem 40rem at 72% 88%,  var(--blob-c) 0%, transparent 62%),
-    radial-gradient(38rem 30rem at 28% 62%,  var(--blob-b) 0%, transparent 58%);
-}
-
-

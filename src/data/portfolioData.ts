@@ -1,362 +1,155 @@
 export const personalInfo = {
   name: 'Abhinav Tarigoppula',
-  firstName: 'Abhinav',
-  tagline: 'Final-year CSE (AI/ML) student building production LLM & RAG systems. Open source contributor — 27 PRs merged across 16 orgs including unsloth (69k★), HuggingFace, agno (41k★), pydantic, black, Celery, redis-py, mem0 (62k★), prowler, Weaviate, Apache Maven, Mercari & Snipe-IT.',
-  role: 'Final-Year AI/ML Student · Open Source Contributor · AI Engineering',
+  role: 'AI/ML engineer · open-source contributor',
+  intro: 'Final-year B.Tech CSE (AI/ML) student at GITAM. I build LLM and RAG systems, fine-tune vision-language models, and fix real bugs in the Python libraries AI teams depend on.',
   email: 'abhinaaavvv07187@gmail.com',
-  phone: '+91-9121611029',
   location: 'Visakhapatnam, India',
   resumeUrl: '/ABHINAV_RESUME.pdf',
 };
-
-export const about = {
-  bio: "I'm Abhinav — final-year B.Tech CSE (AI/ML) student at GITAM University. I fine-tuned a vision-language model with QLoRA for document extraction and forgery detection, and have 27 PRs merged across 16 organisations — unsloth (69k★), HuggingFace, agno (41k★), pydantic, black, Celery, redis-py, mem0 (62k★), prowler, Weaviate, marimo (YC), Apache Maven, Mercari and Snipe-IT — with code shipping in huggingface_hub v1.17.0 on PyPI. I also built CodeHound — an AST static analyzer that surfaces real async-safety bugs in AI frameworks. My focus is AI engineering: making intelligent systems work outside the notebook.",
-};
-
-export const whyIDoThis = {
-  headline: "Why I'm building in AI",
-  story: [
-    {
-      label: "The moment it clicked",
-      text: "During my first year, I watched a friend struggle with mental health for months without access to affordable support. I didn't have a solution then — but I had Python and free time. That turned into SoulSync. It wasn't perfect. But it worked well enough to help someone, and that changed what I thought software was for.",
-    },
-    {
-      label: "What I actually believe",
-      text: "Most AI demos are slick. Most AI in production is messy. The gap between the two is where I want to work — close enough to the real problem to build something that doesn't fall apart outside a notebook.",
-    },
-    {
-      label: "Where I am right now",
-      text: "Final year of a four-year degree. Interned at OneStop AI, shipped production RAG pipelines, merged PRs into HuggingFace and 15 other orgs, solved 200+ DSA problems. I'm not trying to look ready. I'm trying to be ready.",
-    },
-  ],
-};
-
-export const challenges = [
-  {
-    problem: "PathForge: RAG responses were generic — not personalised to user skill gaps",
-    context: "Initial RAG pipeline retrieved top-k chunks without filtering by user's current knowledge level. Output was accurate but not actionable.",
-    fix: "Added a skill-gap scoring layer before retrieval — user profile embeddings filtered vector search results to context relevant to their level. Rewrote prompt templates to inject gap analysis into every query.",
-    result: "Response relevance improved significantly. Prompt engineering reduced average token usage per query by ~30%.",
-  },
-  {
-    problem: "OneStop AI: inference latency at 2.4s per request",
-    context: "Real-time prediction pipeline was bottlenecked on preprocessing — feature engineering ran synchronously with model inference.",
-    fix: "Decoupled preprocessing into an async pipeline. Batched low-priority requests. Pruned one redundant layer after profiling with PyTorch's autograd profiler.",
-    result: "Latency dropped to 1.97s — 18% reduction. Three production projects impacted.",
-  },
-  {
-    problem: "SoulSync: emotion classification at 34% accuracy",
-    context: "Generic sentence embeddings couldn't distinguish neutral text from emotional distress — the vocabulary overlap was too high.",
-    fix: "Fine-tuned a sentence-transformer on a mental-health-specific dataset. Replaced single-class output with multi-label emotion scoring.",
-    result: "Classification accuracy reached 81%. Context tracking cut irrelevant responses by ~60%.",
-  },
-];
 
 export const socials = {
   github: 'https://github.com/kratos0718',
   linkedin: 'https://www.linkedin.com/in/abhinav0702/',
   leetcode: 'https://leetcode.com/u/GV2023000367/',
+  researchgate: 'https://www.researchgate.net/profile/Abhinav-Tarigoppula',
+};
+
+export const stats = [
+  { num: '29', label: 'PRs merged upstream' },
+  { num: '18', label: 'open-source orgs' },
+  { num: '400k+', label: 'combined GitHub stars' },
+];
+
+export const about = [
+  "Most AI demos work in a notebook and fall apart in production. I like the part in between: agents that call tools safely, retrieval that returns the right context, and async code that doesn't freeze an event loop.",
+  'That last one turned into CodeHound, a static analyzer I wrote. The bugs it found were fixed and merged in unsloth, agno, pydantic, Black and Weaviate, and I have since had fixes merged in Celery, redis-py, scapy, pymodbus and Apache Maven.',
+];
+
+export const skills = [
+  'Python', 'PyTorch', 'Transformers', 'LangChain', 'RAG', 'LLM tool calling',
+  'FastAPI', 'SQL', 'React', 'TypeScript', 'Docker', 'Java',
+];
+
+export const education = {
+  degree: 'B.Tech, Computer Science & Engineering (AI/ML)',
+  institution: 'GITAM University, Visakhapatnam',
+  period: '2023 – 2027',
+  cgpa: '8.12',
 };
 
 export const career = [
   {
     role: 'AI & Data Advisory Intern',
     company: 'PwC Launchpad Advisory Program',
-    logo: { img: '/logos/pwc.jpg' },
-    period: 'Feb 2026 – Jul 2026',
-    type: 'Remote',
+    period: 'Feb – Jul 2026',
     points: [
-      "Selected for PwC's flagship program focused on GenAI, Prompt Engineering, and Data Systems.",
-      'Built and optimized LLM prompt workflows for real-world enterprise use cases.',
-      'Gained hands-on exposure to enterprise data architectures & AI-driven solutions.',
-      'Achieved Level 10 | 1500+ XP demonstrating top performance in the cohort.',
+      'Built LLM prompt workflows for enterprise GenAI and data use cases.',
+      'Reached Level 10 (1500+ XP), top performance in the cohort.',
     ],
   },
   {
     role: 'AI/ML Engineering Intern',
     company: 'AVAIntern',
-    logo: { img: '/logos/avaintern.jpg' },
-    period: 'May 2026 – Jun 2026',
-    type: 'On-site · Visakhapatnam',
+    period: 'May – Jun 2026',
     points: [
-      'Developed and evaluated 5+ ML models on datasets of 10,000+ records, achieving up to 92% prediction accuracy through feature engineering and hyperparameter tuning.',
-      'Automated data preprocessing and analysis workflows using Python, Pandas, and Scikit-learn, reducing manual data preparation time by 40%.',
-      'Performed EDA and model evaluation across 15+ features, improving model performance by 18%; communicated findings to stakeholders via interactive visualizations.',
+      'Built and evaluated 5+ ML models on 10,000+ record datasets, reaching up to 92% accuracy.',
+      'Automated preprocessing with Pandas and scikit-learn, cutting manual data prep by 40%.',
     ],
   },
   {
     role: 'Machine Learning & AI Intern',
     company: 'OneStop AI',
-    logo: { img: '/logos/onestop.jpg' },
-    period: 'May 2025 – Aug 2025',
-    type: 'Remote',
+    period: 'May – Aug 2025',
     points: [
-      'Improved model accuracy by 12% across 3 production AI projects via hyperparameter tuning and architecture optimization.',
-      'Reduced real-time inference latency by 18% through async pipeline refactoring and model-level optimizations.',
-      'Engineered end-to-end data pipelines — preprocessing, feature engineering, scalable inference — processing thousands of records per batch.',
-      'Strengthened deployment reliability by integrating monitoring and model performance tracking with senior engineers.',
+      'Improved model accuracy by 12% across 3 production projects.',
+      'Cut real-time inference latency by 18% by moving preprocessing into an async pipeline.',
     ],
-  },
-];
-
-export const achievements = [
-  {
-    title: 'Research Paper Accepted — IEEE ISED 2026 · NIT Warangal',
-    org: 'IEEE · ISED 2026 at NIT Warangal',
-    year: '2026',
-    type: 'Research',
-    description: 'Co-authored paper on ML-based student performance prediction using ensemble methods and explainable AI (SHAP), accepted at the 14th International Conference on Intelligent Systems and Embedded Design (ISED 2026), NIT Warangal — published by IEEE.',
-    icon: '📄',
-  },
-  {
-    title: 'Top 5 — AI & ML Hackathon · BITS Pilani Hyderabad',
-    org: 'Techgyan Technologies · BITS Pilani',
-    year: '2025',
-    type: 'Hackathon',
-    description: 'Ranked Top 5 at the AI & Machine Learning Hackathon hosted by Techgyan Technologies at BITS Pilani, Hyderabad — 24-hour in-person competition.',
-    icon: '🏆',
-  },
-  {
-    title: 'GitHub Galaxy Brain — Accepted Answers',
-    org: 'GitHub Achievements',
-    year: '2026',
-    type: 'Open Source',
-    description: 'Earned for answers marked as accepted by the people who asked them. Diagnosed a WebKitGTK DMA-BUF failure that was surfacing as a WebUI error, and found an unguarded confirmation prompt in Snipe-IT that made a documented --force flag ineffective — the second became an upstream pull request. Six of the seven obtainable GitHub achievements.',
-    icon: '🧠',
-  },
-  {
-    title: 'Merged into HuggingFace — huggingface_hub · PR #4289',
-    org: 'HuggingFace · huggingface/huggingface_hub',
-    year: '2026',
-    type: 'Open Source',
-    description: 'PR reviewed and merged by Lucain Pouget (Wauplin) — lead maintainer at HuggingFace. Documented missing Args: entries in lfs.py, hf_file_system.py, and repocard_data.py. Ships to every Python developer who installs huggingface_hub — one of the most downloaded AI libraries on PyPI.',
-    icon: '🤗',
-  },
-  {
-    title: 'PwC Launchpad Advisory Program — AI & Data Advisory Intern',
-    org: 'PricewaterhouseCoopers India',
-    year: '2026',
-    type: 'Internship',
-    description: "Selected for PwC's flagship GenAI & Data Advisory internship. Built LLM prompt workflows, explored enterprise AI architectures, and achieved Level 10 | 1500+ XP — top performance in the cohort.",
-    icon: '🏢',
-  },
-  {
-    title: 'Smart India Hackathon — Participant',
-    org: 'Government of India',
-    year: '2024',
-    type: 'Hackathon',
-    description: "Built SoulSync — an AI mental health chatbot — and participated in India's largest national hackathon, competing against 1M+ student participants.",
-    icon: '🇮🇳',
-  },
-  {
-    title: '212 DSA Problems — 127 Active Days',
-    org: 'Self-directed · LeetCode: GV2023000367',
-    year: '2025',
-    type: 'Achievement',
-    description: '212 problems solved (91 Easy · 108 Medium · 13 Hard). 354 submissions in the past year, 127 active days, 82-day max streak. Consistent grind, not bursts.',
-    icon: '⚔️',
-  },
-  {
-    title: 'CGPA 8.12 — Top semester in ML-heavy sem (SGPA 8.83)',
-    org: 'GITAM University · B.Tech CSE AI/ML',
-    year: '2025',
-    type: 'Academic',
-    description: 'Outstanding (O) in Machine Learning, A+ in AI & Deep Learning (Sem 6), A+ in DBMS & Automata. CGPA trajectory improved each semester — 7.66 → 7.75 → 7.82 → 8.12 — with best SGPA (8.83) in the most ML-intensive semester.',
-    icon: '🎓',
-  },
-  {
-    title: 'Production ML Deployment',
-    org: 'OneStop AI · Internship',
-    year: '2025',
-    type: 'Technical',
-    description: 'Delivered measurable performance improvements across 3 live ML systems — not demos, not side projects. Actual production pipelines, measured results.',
-    icon: '🚀',
   },
 ];
 
 export const projects = [
   {
-    title: 'CodeHound',
-    subtitle: 'Python AST Static Analyzer',
-    description: 'AST-based static analysis tool that detects async-safety and correctness bugs in Python — blocking calls in async, fire-and-forget tasks, mutable defaults, unclosed file handles. Bugs it surfaced were merged upstream by maintainers at unsloth (69k★), mem0 (62k★), agno (41k★), black (42k★), weaviate, xorbitsai & pydantic-ai — 9 accepted fixes across 7 organisations. ~750 LOC, zero dependencies, CI-ready, archived with a citable DOI.',
-    tech: ['Python', 'ast', 'pytest', 'GitHub Actions'],
-    live: 'https://github.com/kratos0718/codehound',
-    liveNow: true,
-    github: 'https://github.com/kratos0718/codehound',
-    year: '2026',
-    stat: { num: '9', label: 'bugs found & merged upstream' },
-    images: [],
+    title: 'AgentDesk',
+    subtitle: 'Multi-agent assistant for customer support',
+    description: 'A planner agent routes each request to knowledge, data and action agents that use validated tool calls. RAG over policy docs with citations, prompt-injection and PII guardrails, human approval for large refunds, and an eval harness.',
+    tech: ['Python', 'FastAPI', 'Tool calling', 'RAG', 'SQL'],
+    link: 'https://github.com/kratos0718/agentdesk',
     linkLabel: 'GitHub',
-    caseStudy: null,
+  },
+  {
+    title: 'DocGuard-VLM',
+    subtitle: 'Fine-tuned vision-language model',
+    description: 'Qwen2-VL-2B fine-tuned with QLoRA for receipt field extraction and forgery detection. Field-extraction validity went from 25% to 92% and forgery F1 from 0.21 to 0.60 over zero-shot.',
+    tech: ['PyTorch', 'PEFT / QLoRA', 'unsloth', 'Qwen2-VL'],
+    link: 'https://github.com/kratos0718/docguard-vlm',
+    linkLabel: 'GitHub',
   },
   {
     title: 'PathForge',
-    subtitle: 'AI Placement Preparation System',
-    description: 'End-to-end AI placement prep platform with LLM pipelines for role-specific study material and mock interviews. RAG over FAISS/Pinecone for context-aware Q&A. Intelligent roadmap engine analyses skill gaps and auto-generates structured learning paths.',
-    tech: ['Python', 'LangChain', 'OpenAI API', 'FAISS', 'FastAPI', 'React'],
-    live: 'https://www.pathforge.online/auth',
-    liveNow: true,
-    github: 'https://github.com/kratos0718',
-    year: '2025',
-    stat: { num: '-30%', label: 'token usage' },
-    images: ['/logos/projects/pathforge.svg'],
-    caseStudy: {
-      problem: 'RAG retrieved generic chunks — responses weren\'t personalised to the user\'s actual skill gaps.',
-      fix: 'Built a skill-gap scoring layer before retrieval. User profile embeddings filter vector search to level-relevant context. Rewrote prompt templates to inject gap analysis into every query.',
-      result: 'Token usage cut ~30%. Responses became context-aware to individual skill levels. Live at pathforge.online.',
-    },
+    subtitle: 'AI placement preparation platform',
+    description: 'Generates role-specific study material and mock interviews. A skill-gap scoring layer filters retrieval before prompting, which cut token usage by about 30%.',
+    tech: ['LangChain', 'FAISS', 'FastAPI', 'React'],
+    link: 'https://www.pathforge.online/',
+    linkLabel: 'Live site',
   },
   {
-    title: 'MarkMe',
-    subtitle: 'Smart Attendance System',
-    description: 'Triple-layer attendance verification combining real-time face recognition, GPS geo-fencing (100m radius), and rotating 6-digit session keys — eliminating proxy attendance entirely. Client-side face detection ensures biometric data never leaves the device.',
-    tech: ['Python', 'JavaScript', 'Face Recognition', 'GPS Geo-fencing', 'Liveness Detection'],
-    live: 'https://mark-me-ih3h.vercel.app/',
-    liveNow: true,
-    github: 'https://github.com/kratos0718/MarkMe',
-    year: '2025',
-    stat: { num: '0', label: 'proxy incidents' },
-    images: ['/logos/projects/markme.svg'],
-    caseStudy: null,
-  },
-  {
-    title: 'SoulSync',
-    subtitle: 'AI Mental Health Chatbot · SIH 2024',
-    description: 'Transformer-based emotion classification delivering personalised emotional support. Fine-tuned sentence-transformer on mental-health-specific dataset. Multi-label emotion scoring and context-aware multi-turn conversation tracking. Built for Smart India Hackathon 2024.',
-    tech: ['Python', 'NLP', 'Transformers', 'FastAPI'],
-    live: 'https://soulsyncfinal.vercel.app/',
-    github: 'https://github.com/kratos0718/SoulSync',
-    year: '2024',
-    stat: { num: '81%', label: 'accuracy' },
-    images: ['/logos/projects/soulsync.svg'],
-    caseStudy: null,
-  },
-  {
-    title: 'Click N Cut',
-    subtitle: 'Full-Stack Camera Rental Platform',
-    description: 'Full-stack camera rental and editing services platform. Optimised state management, RESTful backend, real-time availability updates, and seamless booking workflows. First project where I owned the entire stack solo from UI to deployment.',
-    tech: ['React.js', 'Node.js', 'REST APIs'],
-    live: 'https://clickn-cut.vercel.app/',
-    github: 'https://github.com/kratos0718',
-    year: '2024',
-    stat: { num: 'solo', label: 'full-stack' },
-    images: ['/logos/projects/clickncut.svg'],
-    caseStudy: null,
-  },
-  {
-    title: 'PaperMind',
-    subtitle: 'RAG-Powered arXiv Paper Explainer',
-    description: 'RAG pipeline that explains arXiv papers with streaming responses and D3.js knowledge graphs. Built with LangChain, Next.js, OpenAI API — deployed on Vercel.',
-    tech: ['Python', 'LangChain', 'Next.js', 'D3.js', 'RAG', 'Vercel'],
-    live: 'https://github.com/kratos0718',
-    liveNow: false,
-    github: 'https://github.com/kratos0718',
-    year: '2025',
-    stat: { num: 'RAG', label: 'arxiv explainer' },
-    images: ['/logos/projects/papermind.svg'],
-    caseStudy: null,
+    title: 'CodeHound',
+    subtitle: 'Python static analyzer',
+    description: 'AST checks for async-safety and correctness bugs: blocking calls in async code, fire-and-forget tasks, leaked handles, mutable defaults. Its findings became merged fixes in 7 organisations.',
+    tech: ['Python', 'ast', 'pytest', 'GitHub Actions'],
+    link: 'https://github.com/kratos0718/codehound',
+    linkLabel: 'GitHub',
   },
 ];
 
-export const publications = [
+export const openSource = {
+  listUrl: 'https://github.com/kratos0718/open-source-contributions',
+  highlights: [
+    { repo: 'unslothai/unsloth', stars: '77k', number: 6135, what: 'A time.sleep inside an async route froze the event loop for up to 30 seconds.' },
+    { repo: 'psf/black', stars: '42k', number: 5432, what: 'Two grammar-file handles in the pgen converter were opened and never closed.' },
+    { repo: 'pydantic/pydantic', stars: '29k', number: 13858, what: 'A dead isinstance check validated the wrong object and discarded the result.' },
+    { repo: 'huggingface/huggingface_hub', stars: '3.9k', number: 4289, what: 'Documented missing public-API parameters. Shipped in v1.17.0.' },
+    { repo: 'redis/redis-py', stars: '13.6k', number: 4345, what: 'An exception inside utils.pipeline() leaked a pooled connection.' },
+    { repo: 'celery/kombu', stars: '3.1k', number: 2676, what: 'The SQS transport shared queue caches and clients across every connection in a process.' },
+    { repo: 'secdev/scapy', stars: '12.6k', number: 5204, what: 'A missing tcpreplay binary surfaced as UnboundLocalError instead of a clear error.' },
+    { repo: 'pymodbus-dev/pymodbus', stars: '2.8k', number: 3036, what: 'Every device-identification object shared one class-level dict.' },
+  ],
+  alsoIn: 'Also merged in mem0, agno, marimo, Weaviate, Prowler, pydantic-ai, Xorbits Inference, HuggingFace accelerate and peft, Apache Maven, Mercari and Snipe-IT.',
+};
+
+export const research = [
   {
-    title: 'Machine Learning-Based Student Performance Prediction: A Comparative Study Using Ensemble Methods and Explainable AI',
-    shortTitle: 'Student Performance Prediction with Ensemble ML & XAI',
-    type: 'IEEE',
-    date: '2026',
-    reads: 0,
-    coAuthors: ['Deepak Jaggupalli', 'Tarigoppula Sree Sai Abhinav', 'Chandrakanta Mahanty'],
-    abstract: 'A comparative study of ensemble methods for predicting student academic performance, paired with SHAP-based explainability so the drivers behind each prediction are inspectable rather than opaque. Accepted at the 14th IEEE International Symposium on Intelligent Systems and Embedded Design (ISED 2026), NIT Warangal.',
-    tags: ['Ensemble Methods', 'Explainable AI', 'SHAP', 'Educational Data Mining', 'IEEE'],
-    link: 'https://www.researchgate.net/profile/Abhinav-Tarigoppula',
-    featured: true,
-    status: 'Accepted — IEEE ISED 2026 · NIT Warangal',
+    title: 'ML-Based Student Performance Prediction: A Comparative Study Using Ensemble Methods and Explainable AI',
+    venue: 'IEEE ISED 2026 · NIT Warangal',
+    status: 'Accepted',
   },
   {
-    title: 'Behavior-Driven Adaptive Learning Agents for Personalized and Intelligent Education',
-    shortTitle: 'Behavior-Driven Adaptive Learning Agents',
-    type: 'IEEE',
-    date: '2026',
-    reads: 0,
-    coAuthors: ['Deepak Jaggupalli', 'Tarigoppula Sree Sai Abhinav', 'Chandrakanta Mahanty'],
-    abstract: 'Proposes a behavior-driven adaptive learning framework using intelligent agents to deliver personalised education experiences. The system analyses learner behavior patterns to dynamically adjust content, pacing, and difficulty — enabling truly intelligent, responsive education at scale.',
-    tags: ['Adaptive Learning', 'Intelligent Agents', 'Personalization', 'AI in Education', 'Behavior Analysis'],
-    link: 'https://www.researchgate.net/profile/Abhinav-Tarigoppula',
-    featured: true,
-    status: 'Under Review — IEEE',
+    title: 'ICTIRL-2026 · GITAM School of Law',
+    venue: 'Springer Nature – Atlantis Press proceedings',
+    status: 'Abstract accepted',
   },
   {
-    title: 'HAPS: A Hybrid AI Proctoring System for Unified Online and Offline Examination Integrity Using 2-Longitudinal-Stream CNNs, YOLO, and Multi-Modal Behavioral Analysis',
-    shortTitle: 'HAPS: Hybrid AI Proctoring System',
-    type: 'Preprint',
-    date: 'May 2026',
-    reads: 12,
-    coAuthors: ['Abhinav Tarigoppula', 'Deepak Jaggupalli', 'Jaggupalli Pujith'],
-    abstract: 'A hybrid AI-driven proctoring architecture combining dual-stream CNNs, YOLO object detection, and multi-modal behavioural signals to ensure examination integrity across both online and offline settings.',
-    tags: ['CNNs', 'YOLO', 'Computer Vision', 'Multi-Modal AI'],
-    link: 'https://www.researchgate.net/profile/Abhinav-Tarigoppula',
-    featured: true,
+    title: 'From Compression Ratios to Wall-Clock Gains: Lightweight Deep Learning on Edge Hardware',
+    venue: 'Springer book chapter · first author',
+    status: 'Abstract submitted',
   },
   {
-    title: 'AI, ML and DL-Based Integrated Drone Detection and Autonomous Defence Systems: A Review',
-    shortTitle: 'AI/ML/DL Drone Detection & Autonomous Defence',
-    type: 'Preprint',
-    date: 'March 2026',
-    reads: 45,
-    coAuthors: ['Deepak Jaggupalli', 'Abhinav Tarigoppula', 'Jaggupalli Pujith'],
-    abstract: 'Comprehensive review of AI, Machine Learning, and Deep Learning techniques applied to drone detection and autonomous defence, surveying state-of-the-art architectures and deployment strategies.',
-    tags: ['Deep Learning', 'Drone Detection', 'Computer Vision', 'Autonomous Systems'],
-    link: 'https://www.researchgate.net/profile/Abhinav-Tarigoppula',
-    featured: false,
+    title: 'HAPS: A Hybrid AI Proctoring System Using Dual-Stream CNNs, YOLO and Multi-Modal Behavioural Analysis',
+    venue: 'ResearchGate',
+    status: 'Preprint',
   },
 ];
 
-export const techStack = [
-  'Python', 'JavaScript', 'Java',
-  'LangChain', 'OpenAI API', 'RAG',
-  'TensorFlow', 'PyTorch', 'Scikit-learn',
-  'React.js', 'Node.js', 'FastAPI',
-  'FAISS', 'Docker', 'Kubernetes',
-  'AWS', 'OpenCV', 'SQL',
+export const achievements = [
+  'Top 5 at the AI & ML Hackathon, BITS Pilani Hyderabad (2025)',
+  'Smart India Hackathon 2024 participant with SoulSync, an AI mental-health chatbot',
+  'GitHub Galaxy Brain and Pull Shark achievements',
+  '212 LeetCode problems, 82-day max streak',
 ];
 
-export const whatIDo = [
-  {
-    title: 'LLM & RAG Engineering',
-    description: 'Building production LLM pipelines with LangChain, OpenAI API, and vector databases (FAISS/Pinecone). RAG systems that retrieve context, not just keywords.',
-    icon: '🤖',
-  },
-  {
-    title: 'AI & Machine Learning',
-    description: 'Training, fine-tuning, and shipping models with TensorFlow, PyTorch, and Scikit-learn. From notebook to production inference pipeline.',
-    icon: '🧠',
-  },
-  {
-    title: 'Full Stack Development',
-    description: 'End-to-end systems with React.js, Node.js, and FastAPI. I own the stack from UI to cloud infrastructure.',
-    icon: '⚡',
-  },
-];
-
-export const education = [
-  {
-    degree: 'B.Tech in Computer Science & Engineering (AI/ML)',
-    institution: 'GITAM University',
-    location: 'Visakhapatnam, Andhra Pradesh',
-    period: '2023 – 2027 · Final Year',
-    cgpa: '8.12',
-    highlight: 'O in Machine Learning · A+ in AI & Deep Learning',
-  },
-  {
-    degree: 'Intermediate (Class XII) — MPC',
-    institution: 'FIITJEE',
-    location: 'Andhra Pradesh',
-    period: '2020 – 2022',
-  },
-  {
-    degree: 'Schooling (Class I – X)',
-    institution: 'Sri Prakash Vidyaniketan',
-    location: 'Visakhapatnam, Andhra Pradesh',
-    period: '2015 – 2020',
-  },
+export const certifications = [
+  'Anthropic Academy: Claude API, MCP, Agent Skills',
+  'Salesforce Agentblazer Champion 2026',
+  'AWS Solutions Architecture simulation',
+  'Udemy: Mastering AI Agents',
 ];
