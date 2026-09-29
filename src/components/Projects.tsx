@@ -8,15 +8,23 @@ export default function Projects() {
       <div className="project-grid">
         {projects.map(p => (
           <article key={p.title} className="card project">
+            <div className="project-stat">
+              <strong>{p.stat.num}</strong>
+              <span>{p.stat.label}</span>
+            </div>
             <h3 className="item-title">{p.title}</h3>
-            <p className="muted">{p.subtitle}</p>
+            <p className="project-sub">{p.subtitle}</p>
             <p className="project-desc">{p.description}</p>
             <ul className="chips chips-sm">
               {p.tech.map(t => <li key={t}>{t}</li>)}
             </ul>
-            <a className="text-link" href={p.link} target="_blank" rel="noopener noreferrer">
-              {p.linkLabel} <FiArrowUpRight size={14} />
-            </a>
+            <div className="project-links">
+              {p.links.map(l => (
+                <a key={l.url} className="text-link" href={l.url} target="_blank" rel="noopener noreferrer">
+                  {l.label} <FiArrowUpRight size={14} />
+                </a>
+              ))}
+            </div>
           </article>
         ))}
       </div>
