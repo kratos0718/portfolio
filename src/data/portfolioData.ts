@@ -2,7 +2,7 @@ export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   headline: 'I build AI systems that hold up in production, and fix the open-source libraries they run on.',
   role: 'AI/ML Engineer · Open-Source Contributor · IEEE Author',
-  intro: 'Final-year B.Tech CSE (AI/ML) at GITAM. Three AI internships including PwC, a fine-tuned vision-language model, a multi-agent system, and 43 bug fixes merged across 24 open-source orgs, including unsloth, pydantic, Black, asyncpg, redis-py, Celery and HuggingFace.',
+  intro: 'Final-year B.Tech CSE (AI/ML) at GITAM. Three AI internships including PwC, a fine-tuned vision-language model, a multi-agent system, and 44 bug fixes merged across 25 open-source orgs, including unsloth, pydantic, Black, asyncpg, redis-py, Celery and HuggingFace.',
   email: 'abhinaaavvv07187@gmail.com',
   location: 'Visakhapatnam, India',
   photo: '/images/abhinav.jpg',
@@ -21,8 +21,8 @@ export const socials = {
 
 // Checked 2026-11-12 with `gh search prs --author kratos0718 --merged`, own repos excluded.
 export const stats = [
-  { num: '43', label: 'PRs merged upstream' },
-  { num: '24', label: 'open-source orgs' },
+  { num: '44', label: 'PRs merged upstream' },
+  { num: '25', label: 'open-source orgs' },
   { num: '400k+', label: 'combined GitHub stars' },
   { num: '3', label: 'AI internships' },
 ];
@@ -224,6 +224,7 @@ export const openSource = {
     { org: 'mem0ai', name: 'mem0', stars: '66k' },
     { org: 'agno-agi', name: 'agno', stars: '42k' },
     { org: 'psf', name: 'Black', stars: '42k' },
+    { org: 'jax-ml', name: 'JAX (Google)', stars: '36.6k' },
     { org: 'pydantic', name: 'pydantic', stars: '29k' },
     { org: 'marimo-team', name: 'marimo', stars: '23k' },
     { org: 'huggingface', name: 'HuggingFace', stars: '22k' },
@@ -247,6 +248,7 @@ export const openSource = {
   ],
   highlights: [
     { repo: 'unslothai/unsloth', org: 'unslothai', stars: '77k', number: 6135, what: 'A time.sleep inside an async route froze the whole event loop for up to 30 seconds. Replaced with a non-blocking wait.' },
+    { repo: 'jax-ml/jax', org: 'jax-ml', stars: '36.6k', number: 42430, what: 'jax.random.choice dropped the non-sampled dimensions when asked for zero samples, so its output shape disagreed with NumPy\'s Generator.choice.' },
     { repo: 'psf/black', org: 'psf', stars: '42k', number: 5432, what: 'Two grammar-file handles in the pgen converter were opened and never closed.' },
     { repo: 'pydantic/pydantic', org: 'pydantic', stars: '29k', number: 13858, what: 'A dead isinstance check validated the wrong object and silently discarded the result.' },
     { repo: 'redis/redis-py', org: 'redis', stars: '13.6k', number: 4345, what: 'An exception inside utils.pipeline() leaked a pooled connection on every failure.' },
@@ -257,6 +259,7 @@ export const openSource = {
     { repo: 'pymodbus-dev/pymodbus', org: 'pymodbus-dev', stars: '2.8k', number: 3036, what: 'Every device-identification object shared one class-level dict, so devices overwrote each other.' },
   ],
   all: [
+    { repo: 'jax-ml/jax', number: 42430, title: 'Keep the non-sampled dimensions in jax.random.choice when no samples are drawn' },
     { repo: 'pytest-dev/pyfakefs', number: 1344, title: 'Fail renaming a file to or from a path with a trailing separator' },
     { repo: 'ogx-ai/ogx', number: 6226, title: 'Finish in-flight expired file batch cleanup on provider shutdown' },
     { repo: 'svinota/pyroute2', number: 1492, title: 'plan9: keep fids per session and inodes per filesystem' },
