@@ -2,13 +2,13 @@ export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   headline: 'I build AI systems that hold up in production, and fix the open-source libraries they run on.',
   role: 'AI/ML Engineer · Open-Source Contributor · IEEE Author',
-  intro: 'Final-year B.Tech CSE (AI/ML) at GITAM. Three AI internships including PwC, a fine-tuned vision-language model, a multi-agent system, and 29 bug fixes merged into projects like unsloth, Black, pydantic, redis-py, Celery and HuggingFace.',
+  intro: 'Final-year B.Tech CSE (AI/ML) at GITAM. Three AI internships including PwC, a fine-tuned vision-language model, a multi-agent system, and 43 bug fixes merged across 24 open-source orgs, including unsloth, pydantic, Black, asyncpg, redis-py, Celery and HuggingFace.',
   email: 'abhinaaavvv07187@gmail.com',
   location: 'Visakhapatnam, India',
   photo: '/images/abhinav.jpg',
   resumeUrl: '/ABHINAV_RESUME.pdf',
-  now: 'Fixing connection and event-loop bugs in Celery and asyncpg, and writing the full ICTIRL-2026 paper.',
-  updated: 'September 2026',
+  now: 'Fixing edge cases in JAX, dask and pyfakefs found by differential testing against NumPy, SciPy and the real OS.',
+  updated: 'November 2026',
 };
 
 export const socials = {
@@ -19,17 +19,17 @@ export const socials = {
   orcid: 'https://orcid.org/0009-0005-1542-0221',
 };
 
-// Checked 2026-09-29 with `gh search prs --author kratos0718 --merged`, own repos excluded.
+// Checked 2026-11-12 with `gh search prs --author kratos0718 --merged`, own repos excluded.
 export const stats = [
-  { num: '29', label: 'PRs merged upstream' },
-  { num: '18', label: 'open-source orgs' },
+  { num: '43', label: 'PRs merged upstream' },
+  { num: '24', label: 'open-source orgs' },
   { num: '400k+', label: 'combined GitHub stars' },
   { num: '3', label: 'AI internships' },
 ];
 
 export const about = [
   "Most AI demos work in a notebook and fall apart in production. I like the part in between: agents that call tools safely, retrieval that returns the right context, fine-tuned models that are measured honestly, and async code that doesn't freeze an event loop.",
-  'That last one turned into CodeHound, a static analyzer I wrote. The bugs it found were fixed and merged in unsloth, agno, pydantic, Black and Weaviate, and I have since had fixes merged in Celery, redis-py, scapy, pymodbus and Apache Maven. Every one came with a regression test and went through the maintainers\' review.',
+  'That last one turned into CodeHound, a static analyzer I wrote. The bugs it found were fixed and merged in unsloth, agno, pydantic, Black and Weaviate, and I have since had fixes merged in Celery, asyncpg, redis-py, scapy, pyfakefs, pymodbus and Apache Maven. Every one came with a regression test and went through the maintainers\' review.',
   "Alongside that I've shipped ML in three internships (PwC, AVAIntern, OneStop AI), had a paper accepted at IEEE ISED 2026, and placed Top 5 at the BITS Pilani AI/ML hackathon.",
 ];
 
@@ -216,7 +216,7 @@ export const projects = [
   },
 ];
 
-// Star counts from the GitHub API, 2026-09-29.
+// Star counts from the GitHub API, 2026-11-12.
 export const openSource = {
   listUrl: 'https://github.com/kratos0718/open-source-contributions',
   orgs: [
@@ -230,10 +230,16 @@ export const openSource = {
     { org: 'grokability', name: 'Snipe-IT', stars: '15k' },
     { org: 'prowler-cloud', name: 'Prowler', stars: '15k' },
     { org: 'redis', name: 'redis-py', stars: '13.6k' },
+    { org: 'ogx-ai', name: 'OGX', stars: '8.5k' },
+    { org: 'MagicStack', name: 'asyncpg', stars: '8.1k' },
     { org: 'secdev', name: 'scapy', stars: '12.6k' },
     { org: 'xorbitsai', name: 'Xorbits', stars: '9.6k' },
     { org: 'celery', name: 'Celery', stars: '3.1k' },
     { org: 'pymodbus-dev', name: 'pymodbus', stars: '2.8k' },
+    { org: 'svinota', name: 'pyroute2', stars: '1.1k' },
+    { org: 'pytest-dev', name: 'pyfakefs', stars: '' },
+    { org: 'joblib', name: 'loky', stars: '' },
+    { org: 'cunla', name: 'fakeredis', stars: '' },
     { org: 'weaviate', name: 'Weaviate', stars: '' },
     { org: 'apache', name: 'Apache Maven', stars: '' },
     { org: 'mercari', name: 'Mercari', stars: '' },
@@ -246,10 +252,25 @@ export const openSource = {
     { repo: 'redis/redis-py', org: 'redis', stars: '13.6k', number: 4345, what: 'An exception inside utils.pipeline() leaked a pooled connection on every failure.' },
     { repo: 'celery/kombu', org: 'celery', stars: '3.1k', number: 2676, what: 'The SQS transport shared queue caches and AWS clients across every connection in a process.' },
     { repo: 'secdev/scapy', org: 'secdev', stars: '12.6k', number: 5204, what: 'A missing tcpreplay binary crashed with UnboundLocalError instead of a clear error.' },
-    { repo: 'huggingface/huggingface_hub', org: 'huggingface', stars: '3.9k', number: 4289, what: 'Documented missing public-API parameters. Shipped to PyPI in v1.17.0.' },
+    { repo: 'MagicStack/asyncpg', org: 'MagicStack', stars: '8.1k', number: 1373, what: 'An exception inside a query_logger() block left the logger attached to the connection, so it kept logging every later query.' },
+    { repo: 'ogx-ai/ogx', org: 'ogx-ai', stars: '8.5k', number: 6226, what: 'Shutdown returned while a vector-store cleanup task was still running, so process exit cancelled it and left half-deleted batches.' },
     { repo: 'pymodbus-dev/pymodbus', org: 'pymodbus-dev', stars: '2.8k', number: 3036, what: 'Every device-identification object shared one class-level dict, so devices overwrote each other.' },
   ],
   all: [
+    { repo: 'pytest-dev/pyfakefs', number: 1344, title: 'Fail renaming a file to or from a path with a trailing separator' },
+    { repo: 'ogx-ai/ogx', number: 6226, title: 'Finish in-flight expired file batch cleanup on provider shutdown' },
+    { repo: 'svinota/pyroute2', number: 1492, title: 'plan9: keep fids per session and inodes per filesystem' },
+    { repo: 'joblib/loky', number: 668, title: 'Report os.pipe() errors from Popen._launch instead of UnboundLocalError' },
+    { repo: 'cunla/fakeredis-py', number: 594, title: 'Report a missing member in *BYMEMBER searches instead of crashing' },
+    { repo: 'cunla/fakeredis-py', number: 593, title: 'Pad BITOP operands and treat missing keys as empty' },
+    { repo: 'celery/billiard', number: 467, title: 'Refuse to close a Process that is still running' },
+    { repo: 'celery/billiard', number: 466, title: 'Raise ValueError when using a closed Queue' },
+    { repo: 'celery/billiard', number: 465, title: 'Reject a non-positive maxtasksperchild in Pool' },
+    { repo: 'celery/kombu', number: 2683, title: "Don't mask open errors in the filesystem transport" },
+    { repo: 'celery/kombu', number: 2681, title: 'Scope the zookeeper queue cache to the channel' },
+    { repo: 'celery/kombu', number: 2680, title: 'Track unacked Kafka messages per QoS instance' },
+    { repo: 'celery/kombu', number: 2679, title: 'Azure Storage Queues: scope queue name cache to Connection' },
+    { repo: 'MagicStack/asyncpg', number: 1373, title: 'Remove the query logger when the query_logger() block raises' },
     { repo: 'pymodbus-dev/pymodbus', number: 3036, title: 'Give each ModbusDeviceIdentification its own data' },
     { repo: 'secdev/scapy', number: 5204, title: 'sendpfast: report a missing tcpreplay instead of UnboundLocalError' },
     { repo: 'apache/maven-source-plugin', number: 320, title: 'Fail the aggregate goal for non-POM packaging' },

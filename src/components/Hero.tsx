@@ -7,7 +7,7 @@ export default function Hero() {
     <header className="hero" id="top">
       <div className="hero-grid">
         <div>
-          <p className="eyebrow"><span className="dot" aria-hidden="true" /> Open to AI/ML roles · {personalInfo.location}</p>
+          <p className="eyebrow"><span className="dot" aria-hidden="true" /> Open to AI engineer roles · internships now, full-time 2027 · remote or on-site</p>
           <h1 className="hero-name">{personalInfo.name}</h1>
           <p className="hero-role">{personalInfo.role}</p>
           <p className="hero-headline">{personalInfo.headline}</p>

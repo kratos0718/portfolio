@@ -1,14 +1,10 @@
-import { Suspense, lazy } from 'react';
 import './App.css';
-
-const MainContainer = lazy(() => import('./components/MainContainer'));
+import MainContainer from './components/MainContainer';
 
 export default function App() {
   return (
     <div className="app-wrapper">
-      <Suspense fallback={null}>
-        <MainContainer />
-      </Suspense>
+      <MainContainer />
     </div>
   );
 }
