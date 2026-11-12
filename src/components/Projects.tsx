@@ -1,5 +1,8 @@
 import { FiArrowUpRight } from 'react-icons/fi';
 import { projects } from '../data/portfolioData';
+import { caseStudies } from '../data/caseStudies';
+
+const caseStudyFor = (title: string) => caseStudies.find(s => s.title.toLowerCase() === title.toLowerCase());
 
 export default function Projects() {
   return (
@@ -23,6 +26,11 @@ export default function Projects() {
               {p.tech.map(t => <li key={t}>{t}</li>)}
             </ul>
             <div className="project-links">
+              {caseStudyFor(p.title) && (
+                <a className="text-link" href={`/projects/${caseStudyFor(p.title)!.slug}/`}>
+                  Case study <FiArrowUpRight size={14} />
+                </a>
+              )}
               {p.links.map(l => (
                 <a key={l.url} className="text-link" href={l.url} target="_blank" rel="noopener noreferrer">
                   {l.label} <FiArrowUpRight size={14} />
