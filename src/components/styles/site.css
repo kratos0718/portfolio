@@ -448,3 +448,17 @@ a.card:hover, .project:hover { transform: translateY(-2px); }
   .cs-stats { grid-template-columns: 1fr; gap: 16px; }
   .cs-tagline { font-size: 17px; }
 }
+
+/* ── Open-source page (/open-source/) ── */
+.os-group { margin-top: 28px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.os-group h3 { display: flex; justify-content: space-between; gap: 12px; padding: 14px 24px; font-size: 17px; font-weight: 600; border-bottom: 1px solid var(--border); }
+.os-meta { font-family: var(--font-mono); font-size: 12px; font-weight: 400; color: var(--text-dim); align-self: center; }
+.os-prs { list-style: none; padding: 4px 24px 8px; }
+.os-prs li + li { border-top: 1px solid var(--stroke-subtle); }
+.os-prs a { display: grid; grid-template-columns: minmax(200px, 300px) 1fr; gap: 16px; padding: 10px 0; font-size: 14px; }
+.os-prs a:hover .all-title { color: var(--text); }
+.cs-list a { color: var(--text); border-bottom: 1px solid var(--border-hover); }
+@media (max-width: 720px) {
+  .os-group h3, .os-prs { padding-left: 16px; padding-right: 16px; }
+  .os-prs a { grid-template-columns: 1fr; gap: 2px; }
+}

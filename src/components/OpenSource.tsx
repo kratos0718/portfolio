@@ -59,9 +59,14 @@ export default function OpenSource() {
         </ul>
       </details>
 
-      <a className="btn" href={openSource.listUrl} target="_blank" rel="noopener noreferrer">
-        Contributions tracker on GitHub <FiArrowUpRight size={15} />
-      </a>
+      <div className="hero-actions">
+        <a className="btn" href="/open-source/">
+          Every merged PR, by project <FiArrowUpRight size={15} />
+        </a>
+        <a className="btn" href={openSource.listUrl} target="_blank" rel="noopener noreferrer">
+          Contributions tracker on GitHub <FiArrowUpRight size={15} />
+        </a>
+      </div>
     </section>
   );
 }

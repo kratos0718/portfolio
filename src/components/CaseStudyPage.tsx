@@ -86,6 +86,7 @@ export default function CaseStudyPage({ study }: { study: CaseStudy }) {
                 <a href={`/projects/${s.slug}/`}>{s.title}</a>
               </span>
             ))}
+            {' · '}<a href="/open-source/">Open-source contributions</a>
           </p>
         </footer>
       </main>

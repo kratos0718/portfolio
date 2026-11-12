@@ -3,6 +3,7 @@
 //    JavaScript still see it (the client then hydrates it);
 //  - dist/projects/<slug>/index.html is written for every case study as a
 //    script-free page with its own title, description and structured data;
+//  - dist/open-source/index.html lists every merged pull request;
 //  - dist/sitemap.xml lists all of them.
 import { build } from 'vite';
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
@@ -20,7 +21,7 @@ await build({
   build: { ssr: 'src/entry-server.tsx', outDir, emptyOutDir: true },
 });
 
-const { render, renderCaseStudy, caseStudies } = await import(
+const { render, renderCaseStudy, renderOpenSource, openSourceCount, openSourceOrgs, caseStudies } = await import(
   pathToFileURL(path.join(outDir, 'entry-server.js')).href
 );
 
@@ -40,59 +41,96 @@ function setMeta(html, attr, key, value) {
   return html.replace(re, `$1${escapeAttr(value)}$2`);
 }
 
-for (const study of caseStudies) {
-  const url = `${SITE}/projects/${study.slug}/`;
+// Writes a script-free page at dist/<route>index.html from the home template,
+// with its own title, description, canonical URL, keywords and JSON-LD.
+async function writeStaticPage({ route, metaTitle, metaDescription, keywords, ogType, ld, body }) {
+  const url = `${SITE}/${route}`;
   let html = template;
-  html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeText(study.metaTitle)}</title>`);
-  html = setMeta(html, 'name', 'description', study.metaDescription);
+  html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeText(metaTitle)}</title>`);
+  html = setMeta(html, 'name', 'description', metaDescription);
   html = html.replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${url}" />`);
-  html = setMeta(html, 'property', 'og:type', 'article');
-  html = setMeta(html, 'property', 'og:title', study.metaTitle);
-  html = setMeta(html, 'property', 'og:description', study.metaDescription);
+  html = setMeta(html, 'property', 'og:type', ogType);
+  html = setMeta(html, 'property', 'og:title', metaTitle);
+  html = setMeta(html, 'property', 'og:description', metaDescription);
   html = setMeta(html, 'property', 'og:url', url);
-  html = setMeta(html, 'name', 'twitter:title', study.metaTitle);
-  html = setMeta(html, 'name', 'twitter:description', study.metaDescription);
+  html = setMeta(html, 'name', 'twitter:title', metaTitle);
+  html = setMeta(html, 'name', 'twitter:description', metaDescription);
   html = html.replace(/<meta name="keywords"[^>]*>\s*/, '');
   html = html.replace(
     '<meta name="author"',
-    `<meta name="keywords" content="${escapeAttr(study.keywords.join(', '))}" />\n    <meta name="author"`,
+    `<meta name="keywords" content="${escapeAttr(keywords.join(', '))}" />\n    <meta name="author"`,
   );
-
-  const ld = {
-    '@context': 'https://schema.org',
-    '@type': 'TechArticle',
-    headline: `${study.title}: ${study.tagline}`,
-    description: study.metaDescription,
-    url,
-    datePublished: study.published,
-    dateModified: '2026-11-12',
-    keywords: study.keywords.join(', '),
-    image: `${SITE}/og-image.png`,
-    author: { '@type': 'Person', '@id': `${SITE}/#person`, name: 'Abhinav Tarigoppula', url: `${SITE}/` },
-    about: {
-      '@type': 'SoftwareSourceCode',
-      name: study.title,
-      codeRepository: study.repo,
-      programmingLanguage: 'Python',
-    },
-  };
   html = html.replace(
     /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
-    `<script type="application/ld+json">\n${JSON.stringify(ld, null, 2)}\n    </script>`,
+    `<script type="application/ld+json">\n${JSON.stringify({ '@context': 'https://schema.org', url, ...ld }, null, 2)}\n    </script>`,
   );
 
   // Static page: drop the client bundle, keep the stylesheet.
   html = html.replace(/\s*<script type="module"[^>]*><\/script>/g, '');
   html = html.replace(/\s*<link rel="modulepreload"[^>]*>/g, '');
-  html = html.replace(marker, `<div id="root">${renderCaseStudy(study.slug)}</div>`);
+  html = html.replace(marker, `<div id="root">${body}</div>`);
 
-  const dir = path.join(dist, 'projects', study.slug);
+  const dir = path.join(dist, route);
   await mkdir(dir, { recursive: true });
   await writeFile(path.join(dir, 'index.html'), html);
+  return url;
 }
 
+const author = { '@type': 'Person', '@id': `${SITE}/#person`, name: 'Abhinav Tarigoppula', url: `${SITE}/` };
+const pages = [];
+
+for (const study of caseStudies) {
+  pages.push(
+    await writeStaticPage({
+      route: `projects/${study.slug}/`,
+      metaTitle: study.metaTitle,
+      metaDescription: study.metaDescription,
+      keywords: study.keywords,
+      ogType: 'article',
+      body: renderCaseStudy(study.slug),
+      ld: {
+        '@type': 'TechArticle',
+        headline: `${study.title}: ${study.tagline}`,
+        description: study.metaDescription,
+        datePublished: study.published,
+        dateModified: '2026-11-12',
+        keywords: study.keywords.join(', '),
+        image: `${SITE}/og-image.png`,
+        author,
+        about: {
+          '@type': 'SoftwareSourceCode',
+          name: study.title,
+          codeRepository: study.repo,
+          programmingLanguage: 'Python',
+        },
+      },
+    }),
+  );
+}
+
+const osTitle = `Open-source contributions: ${openSourceCount} merged pull requests — Abhinav Tarigoppula`;
+const osDescription = `Every pull request Abhinav Tarigoppula has had merged upstream: ${openSourceCount} bug fixes across ${openSourceOrgs} organisations including unsloth, pydantic, Black, asyncpg, redis-py, Celery and HuggingFace.`;
+pages.push(
+  await writeStaticPage({
+    route: 'open-source/',
+    metaTitle: osTitle,
+    metaDescription: osDescription,
+    keywords: ['Abhinav Tarigoppula', 'open source', 'Python', 'pull requests', 'unsloth', 'pydantic', 'Black', 'asyncpg', 'redis-py', 'Celery', 'HuggingFace', 'JAX', 'dask'],
+    ogType: 'profile',
+    body: renderOpenSource(),
+    ld: {
+      '@type': 'CollectionPage',
+      name: osTitle,
+      description: osDescription,
+      dateModified: '2026-11-12',
+      author,
+      about: author,
+    },
+  }),
+);
+
 const today = new Date().toISOString().slice(0, 10);
-const urls = [`${SITE}/`, ...caseStudies.map(s => `${SITE}/projects/${s.slug}/`)];
+const urls = [`${SITE}/`, ...pages];
 await writeFile(
   path.join(dist, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
@@ -104,4 +142,4 @@ await writeFile(
 );
 
 await rm(outDir, { recursive: true, force: true });
-console.log(`prerendered dist/index.html and ${caseStudies.length} case studies`);
+console.log(`prerendered dist/index.html and ${pages.length} static pages`);
