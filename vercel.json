@@ -1,0 +1,8 @@
+{
+  "headers": [
+    {
+      "source": "/ABHINAV_RESUME.pdf",
+      "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+    }
+  ]
+}
