@@ -2,7 +2,7 @@ export const personalInfo = {
   name: 'Abhinav Tarigoppula',
   headline: 'I build AI systems that hold up in production, and fix the open-source libraries they run on.',
   role: 'AI/ML Engineer · Open-Source Contributor · IEEE Author',
-  intro: 'Final-year B.Tech CSE (AI/ML) at GITAM. Three AI internships including PwC, a fine-tuned vision-language model, a multi-agent system, and 48 bug fixes merged across 28 open-source orgs, including unsloth, pydantic, Black, asyncpg, redis-py, Celery and HuggingFace.',
+  intro: 'Final-year B.Tech CSE (AI/ML) at GITAM. Three AI internships including PwC, a fine-tuned vision-language model, a multi-agent system, and 50 bug fixes merged across 30 open-source orgs, including unsloth, pydantic, Black, asyncpg, redis-py, Celery and HuggingFace.',
   email: 'abhinaaavvv07187@gmail.com',
   location: 'Visakhapatnam, India',
   photo: '/images/abhinav.jpg',
@@ -21,8 +21,8 @@ export const socials = {
 
 // Checked 2026-11-12 with `gh search prs --author kratos0718 --merged`, own repos excluded.
 export const stats = [
-  { num: '48', label: 'PRs merged upstream' },
-  { num: '28', label: 'open-source orgs' },
+  { num: '50', label: 'PRs merged upstream' },
+  { num: '30', label: 'open-source orgs' },
   { num: '400k+', label: 'combined GitHub stars' },
   { num: '3', label: 'AI internships' },
 ];
@@ -238,9 +238,11 @@ export const openSource = {
     { org: 'xorbitsai', name: 'Xorbits', stars: '9.6k' },
     { org: 'celery', name: 'Celery', stars: '3.1k' },
     { org: 'pymodbus-dev', name: 'pymodbus', stars: '2.8k' },
+    { org: 'galaxyproject', name: 'Galaxy', stars: '1.9k' },
     { org: 'amd', name: 'AMD GAIA', stars: '1.6k' },
     { org: 'svinota', name: 'pyroute2', stars: '1.1k' },
     { org: 'pytest-dev', name: 'pyfakefs', stars: '' },
+    { org: 'microsoft', name: 'Microsoft (semantic-link-labs)', stars: '' },
     { org: 'rodrigo-arenas', name: 'Sklearn-genetic-opt', stars: '' },
     { org: 'joblib', name: 'loky', stars: '' },
     { org: 'cunla', name: 'fakeredis', stars: '' },
@@ -262,6 +264,8 @@ export const openSource = {
     { repo: 'pymodbus-dev/pymodbus', org: 'pymodbus-dev', stars: '2.8k', number: 3036, what: 'Every device-identification object shared one class-level dict, so devices overwrote each other.' },
   ],
   all: [
+    { repo: 'galaxyproject/galaxy', number: 24901, title: 'Leave the revision index out of format2 workflow exports' },
+    { repo: 'microsoft/semantic-link-labs', number: 1368, title: 'Read the JSON body in get_published/staging_spark_compute' },
     { repo: 'amd/gaia', number: 7544, title: 'Qualify the remaining nothing-leaves-the-PC privacy claims in the docs' },
     { repo: 'rodrigo-arenas/Sklearn-genetic-opt', number: 404, title: 'Point the examples npm scripts at build_docs.py' },
     { repo: 'TagStudioDev/TagStudio', number: 1566, title: 'Decode UTF-8 text previews as UTF-8' },
