@@ -54,9 +54,9 @@ function useClock() {
   const [time, setTime] = useState('');
   useEffect(() => {
     const fmt = () => new Date().toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour: 'numeric', minute: '2-digit' });
-    setTime(fmt());
+    const first = window.setTimeout(() => setTime(fmt()), 0);
     const id = window.setInterval(() => setTime(fmt()), 15000);
-    return () => clearInterval(id);
+    return () => { clearTimeout(first); clearInterval(id); };
   }, []);
   return time;
 }
