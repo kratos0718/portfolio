@@ -320,12 +320,21 @@ export const openSource = {
 };
 
 export const researchStats = [
-  { num: '5', label: 'research works' },
+  { num: '6', label: 'research works' },
   { num: '1', label: 'accepted at IEEE' },
-  { num: '3', label: 'as first author' },
+  { num: '4', label: 'as first author' },
 ];
 
 export const research = [
+  {
+    title: 'Async Landmines in the AI Stack: An AST-Based Empirical Study of Concurrency and Resource-Management Defects in Popular Python AI/ML Frameworks',
+    venue: 'Zenodo preprint · DOI 10.5281/zenodo.24367554',
+    status: 'Published',
+    authors: 'Sole author',
+    summary: 'CodeHound finds 1,377 async-safety and resource defects across 29 Python AI/ML frameworks; maintainers confirmed 11 of the 12 fixes they reviewed, 9 of them merged.',
+    tags: ['Static analysis', 'asyncio', 'Empirical SE'],
+    url: 'https://doi.org/10.5281/zenodo.24367554',
+  },
   {
     title: 'Machine Learning-Based Student Performance Prediction: A Comparative Study Using Ensemble Methods and Explainable AI',
     venue: 'IEEE ISED 2026 · NIT Warangal',

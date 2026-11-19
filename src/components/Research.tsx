@@ -28,7 +28,7 @@ export default function Research() {
         {research.map(r => (
           <li key={r.title} className="card paper">
             <div className="paper-top">
-              <span className={`status status-${r.status === 'Accepted' ? 'ok' : 'wip'}`}>{r.status}</span>
+              <span className={`status status-${r.status === 'Accepted' || r.status === 'Published' ? 'ok' : 'wip'}`}>{r.status}</span>
               <span className="paper-venue">{r.venue}</span>
             </div>
             <h3 className="item-title">{r.title}</h3>
@@ -37,6 +37,9 @@ export default function Research() {
             <ul className="chips chips-sm">
               {r.tags.map(t => <li key={t}>{t}</li>)}
             </ul>
+            {'url' in r && r.url && (
+              <a className="text-link" href={r.url} target="_blank" rel="noopener noreferrer">Read the paper (DOI)</a>
+            )}
           </li>
         ))}
       </ul>
