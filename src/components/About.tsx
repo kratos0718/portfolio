@@ -19,9 +19,9 @@ const skillIcons: Record<string, IconType> = {
   react: SiReact, node: SiNodedotjs, docker: SiDocker, aws: FaAws, gha: SiGithubactions, pytest: SiPytest, git: SiGit,
 };
 
-type Skill = { name: string; icon?: string; color?: string; img?: string };
+export type Skill = { name: string; icon?: string; color?: string; img?: string };
 
-function SkillChip({ skill }: { skill: Skill }) {
+export function SkillChip({ skill }: { skill: Skill }) {
   const Icon = skill.icon ? skillIcons[skill.icon] : undefined;
   return (
     <li className="skill-chip" style={{ '--brand': skill.color ?? 'var(--text-dim)' } as CSSProperties}>

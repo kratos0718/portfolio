@@ -394,7 +394,7 @@ export const achievements = [
   },
   {
     icon: 'git',
-    title: '29 PRs merged in 18 organisations',
+    title: '51 PRs merged in 31 organisations',
     org: 'Open source',
     year: '2026',
     description: 'Reviewed and merged by maintainers at HuggingFace, pydantic, Black, redis-py, Celery, unsloth, Apache and more, with code shipping on PyPI.',
