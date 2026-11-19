@@ -17,6 +17,7 @@ export const socials = {
   leetcode: 'https://leetcode.com/u/GV2023000367/',
   researchgate: 'https://www.researchgate.net/profile/Abhinav-Tarigoppula',
   orcid: 'https://orcid.org/0009-0005-1542-0221',
+  scholar: 'https://scholar.google.com/citations?user=2LcRmRcAAAAJ',
 };
 
 // Checked 2026-11-12 with `gh search prs --author kratos0718 --merged`, own repos excluded.

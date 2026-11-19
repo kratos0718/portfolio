@@ -4,7 +4,7 @@ import {
   FiLinkedin, FiMail, FiMapPin, FiCode, FiCpu, FiLayers, FiServer, FiArrowUp,
 } from 'react-icons/fi';
 import type { CSSProperties } from 'react';
-import { SiOrcid, SiResearchgate } from 'react-icons/si';
+import { SiGooglescholar, SiOrcid, SiResearchgate } from 'react-icons/si';
 import Banner from './Banner';
 import { numerals } from './numerals';
 import { SkillChip } from '../components/About';
@@ -390,6 +390,7 @@ export default function Home() {
         <Section id="research" title="Research" aside={<span className="v2-links">
           <a className="v2-btn" href={socials.researchgate} target="_blank" rel="noopener noreferrer"><SiResearchgate size={14} /> ResearchGate</a>
           <a className="v2-btn" href={socials.orcid} target="_blank" rel="noopener noreferrer"><SiOrcid size={14} /> ORCID</a>
+          <a className="v2-btn" href={socials.scholar} target="_blank" rel="noopener noreferrer"><SiGooglescholar size={14} /> Google Scholar</a>
         </span>}>
           <dl className="v2-rstats">
             {researchStats.map(r => <div key={r.label}><dt>{r.num}</dt><dd>{r.label}</dd></div>)}
@@ -473,6 +474,7 @@ export default function Home() {
             <a className="v2-btn" href={socials.leetcode} target="_blank" rel="noopener noreferrer"><FiCode size={15} /> LeetCode</a>
             <a className="v2-btn" href={socials.researchgate} target="_blank" rel="noopener noreferrer"><SiResearchgate size={14} /> ResearchGate</a>
             <a className="v2-btn" href={socials.orcid} target="_blank" rel="noopener noreferrer"><SiOrcid size={14} /> ORCID</a>
+            <a className="v2-btn" href={socials.scholar} target="_blank" rel="noopener noreferrer"><SiGooglescholar size={14} /> Google Scholar</a>
           </div>
         </section>
 
