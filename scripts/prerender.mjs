@@ -4,6 +4,7 @@
 //  - dist/projects/<slug>/index.html is written for every case study as a
 //    script-free page with its own title, description and structured data;
 //  - dist/open-source/index.html lists every merged pull request;
+//  - dist/writing/<slug>/index.html is written for every article;
 //  - dist/sitemap.xml lists all of them.
 import { build } from 'vite';
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
@@ -21,7 +22,7 @@ await build({
   build: { ssr: 'src/entry-server.tsx', outDir, emptyOutDir: true },
 });
 
-const { render, renderCaseStudy, renderOpenSource, openSourceCount, openSourceOrgs, caseStudies } = await import(
+const { render, renderCaseStudy, renderOpenSource, renderArticle, openSourceCount, openSourceOrgs, caseStudies, articles } = await import(
   pathToFileURL(path.join(outDir, 'entry-server.js')).href
 );
 
@@ -103,6 +104,31 @@ for (const study of caseStudies) {
           codeRepository: study.repo,
           programmingLanguage: 'Python',
         },
+      },
+    }),
+  );
+}
+
+for (const article of articles) {
+  pages.push(
+    await writeStaticPage({
+      route: `writing/${article.slug}/`,
+      metaTitle: article.metaTitle,
+      metaDescription: article.metaDescription,
+      keywords: article.keywords,
+      ogType: 'article',
+      body: renderArticle(article.slug),
+      ld: {
+        '@type': 'BlogPosting',
+        headline: article.title,
+        description: article.metaDescription,
+        datePublished: article.published,
+        dateModified: article.published,
+        keywords: article.keywords.join(', '),
+        image: `${SITE}/og-image.png`,
+        author,
+        publisher: author,
+        mainEntityOfPage: `${SITE}/writing/${article.slug}/`,
       },
     }),
   );

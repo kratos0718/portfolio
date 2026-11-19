@@ -4,7 +4,7 @@ import { caseStudies } from '../data/caseStudies';
 import { personalInfo, socials } from '../data/portfolioData';
 import './styles/site.css';
 
-function BlockView({ block }: { block: Block }) {
+export function BlockView({ block }: { block: Block }) {
   if (block.type === 'p') return <p>{block.text}</p>;
   if (block.type === 'list') {
     return (
@@ -87,6 +87,7 @@ export default function CaseStudyPage({ study }: { study: CaseStudy }) {
               </span>
             ))}
             {' · '}<a href="/open-source/">Open-source contributions</a>
+            {' · '}<a href="/writing/five-bug-patterns-in-python-ai-infrastructure/">Five bug patterns in Python AI infrastructure</a>
           </p>
         </footer>
       </main>
