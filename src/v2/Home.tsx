@@ -6,6 +6,7 @@ import {
 import type { CSSProperties } from 'react';
 import { SiOrcid, SiResearchgate } from 'react-icons/si';
 import Banner from './Banner';
+import { numerals } from './numerals';
 import { SkillChip } from '../components/About';
 import {
   about, achievements, career, certifications, education, openSource, personalInfo, projects, research,
@@ -83,7 +84,7 @@ function Section({ id, title, aside, children }: { id: string; title: string; as
   return (
     <section id={id} className="v2-section v2-reveal">
       <div className="v2-head">
-        <h2>{title}</h2>
+        <h2>{numerals(title)}</h2>
         {aside}
       </div>
       {children}
