@@ -253,6 +253,11 @@ export default function Home() {
 
         <Sep />
 
+        <Section id="stack" title="Tech stack">
+          <StackTabs />
+        </Section>
+        <Sep />
+
         <Section id="experience" title="Experience">
           <ul className="v2-jobs">
             {career.map((j, i) => (
@@ -421,11 +426,6 @@ export default function Home() {
           </>
         )}
 
-        <Sep />
-
-        <Section id="stack" title="Tech stack">
-          <StackTabs />
-        </Section>
 
         <Sep />
 
