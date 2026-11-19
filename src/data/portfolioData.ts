@@ -320,9 +320,9 @@ export const openSource = {
 };
 
 export const researchStats = [
-  { num: '6', label: 'research works' },
+  { num: '9', label: 'research works' },
   { num: '1', label: 'accepted at IEEE' },
-  { num: '4', label: 'as first author' },
+  { num: '7', label: 'as first author' },
 ];
 
 export const research = [
@@ -334,6 +334,33 @@ export const research = [
     summary: 'CodeHound finds 1,377 async-safety and resource defects across 29 Python AI/ML frameworks; maintainers confirmed 11 of the 12 fixes they reviewed, 9 of them merged.',
     tags: ['Static analysis', 'asyncio', 'Empirical SE'],
     url: 'https://doi.org/10.5281/zenodo.24367554',
+  },
+  {
+    title: 'Five Recurring Defect Patterns in Python AI Infrastructure: Lessons from 51 Merged Upstream Fixes',
+    venue: 'Zenodo technical note · DOI 10.5281/zenodo.24372911',
+    status: 'Published',
+    authors: 'Sole author',
+    summary: 'Blocking calls in async code, happy-path-only cleanup, shared state, fire-and-forget tasks and empty-input edge cases, each with the merged fixes and the tests that expose them.',
+    tags: ['asyncio', 'Software defects', 'Open source'],
+    url: 'https://doi.org/10.5281/zenodo.24372911',
+  },
+  {
+    title: 'Identical Seeds, Coupled Splits: A Post-Mortem on Robustness Evaluation in LoRA Fine-Tuning of Qwen2-VL-2B for Document OCR and Forgery Detection',
+    venue: 'Zenodo technical report · DOI 10.5281/zenodo.24372913',
+    status: 'Published',
+    authors: 'Sole author',
+    summary: 'How bit-for-bit identical confusion matrices on clean and adversarial test sets exposed a seeding bug that coupled the splits, and which DocGuard-VLM results still stand.',
+    tags: ['Vision-language models', 'QLoRA', 'Evaluation'],
+    url: 'https://doi.org/10.5281/zenodo.24372913',
+  },
+  {
+    title: 'Merged Open-Source Pull Requests in Python AI/ML and Infrastructure Projects (2026)',
+    venue: 'Zenodo dataset · DOI 10.5281/zenodo.24372797',
+    status: 'Published',
+    authors: 'Sole author',
+    summary: 'All 51 merged pull requests across 37 repositories in 31 organisations, with dates, diff sizes and repository stars, collected from the GitHub API.',
+    tags: ['Dataset', 'Mining software repositories', 'GitHub'],
+    url: 'https://doi.org/10.5281/zenodo.24372797',
   },
   {
     title: 'Machine Learning-Based Student Performance Prediction: A Comparative Study Using Ensemble Methods and Explainable AI',
