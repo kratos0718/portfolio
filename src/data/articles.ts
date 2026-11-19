@@ -20,10 +20,10 @@ export const articles: Article[] = [
   {
     slug: 'five-bug-patterns-in-python-ai-infrastructure',
     title: 'Five bug patterns I keep finding in Python AI infrastructure',
-    tagline: 'What 50 merged pull requests across 30 open-source projects taught me about where reliable-looking Python code breaks',
-    metaTitle: 'Five bug patterns in Python AI infrastructure, from 50 merged pull requests — Abhinav Tarigoppula',
+    tagline: 'What 51 merged pull requests across 31 open-source projects taught me about where reliable-looking Python code breaks',
+    metaTitle: 'Five bug patterns in Python AI infrastructure, from 51 merged pull requests — Abhinav Tarigoppula',
     metaDescription:
-      'Blocked event loops, cleanup that only runs on the happy path, state shared between instances, fire-and-forget tasks and empty-input edge cases: five bug patterns behind 50 merged fixes in unsloth, JAX, pydantic, redis-py, asyncpg, Celery and more.',
+      'Blocked event loops, cleanup that only runs on the happy path, state shared between instances, fire-and-forget tasks and empty-input edge cases: five bug patterns behind 51 merged fixes in unsloth, JAX, pydantic, redis-py, asyncpg, Celery and more.',
     keywords: ['Python', 'asyncio', 'bug patterns', 'open source', 'static analysis', 'AI infrastructure', 'resource leaks', 'event loop', 'codehound'],
     published: '2026-11-19',
     readingMinutes: 7,
@@ -33,7 +33,7 @@ export const articles: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Most of the Python that runs AI systems is glue: model servers, agent loops, connection pools, file and queue handling. It passes its tests because tests exercise the happy path. Over the last six months I have had 50 pull requests merged into 30 open-source projects, among them unsloth, JAX, pydantic, Black, redis-py, asyncpg, Celery and Galaxy. Almost none of those bugs were exotic. The same five patterns came up again and again.',
+            text: 'Most of the Python that runs AI systems is glue: model servers, agent loops, connection pools, file and queue handling. It passes its tests because tests exercise the happy path. Over the last six months I have had 51 pull requests merged into 31 open-source projects, among them unsloth, JAX, pydantic, Black, redis-py, asyncpg, Celery and Galaxy. Almost none of those bugs were exotic. The same five patterns came up again and again.',
           },
           {
             type: 'p',
