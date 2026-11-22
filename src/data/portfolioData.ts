@@ -22,7 +22,7 @@ export const socials = {
 
 // Checked 2026-11-12 with `gh search prs --author kratos0718 --merged`, own repos excluded.
 export const stats = [
-  { num: '52', label: 'PRs merged upstream' },
+  { num: '53', label: 'PRs merged upstream' },
   { num: '31', label: 'open-source orgs' },
   { num: '400k+', label: 'combined GitHub stars' },
   { num: '3', label: 'AI internships' },
@@ -266,6 +266,7 @@ export const openSource = {
     { repo: 'pymodbus-dev/pymodbus', org: 'pymodbus-dev', stars: '2.8k', number: 3036, what: 'Every device-identification object shared one class-level dict, so devices overwrote each other.' },
   ],
   all: [
+    { repo: 'Juneo-Lab/decision-forge', number: 88, title: 'Reject non-array events and targets files with a one-line error' },
     { repo: 'galaxyproject/galaxy', number: 24940, title: 'Name each GCard select checkbox after its card' },
     { repo: 'GoogleCloudPlatform/professional-services-data-validator', number: 1896, title: 'Detect NOT NULL columns in Spanner schema validation' },
     { repo: 'galaxyproject/galaxy', number: 24901, title: 'Leave the revision index out of format2 workflow exports' },
@@ -423,7 +424,7 @@ export const achievements = [
   },
   {
     icon: 'git',
-    title: '52 PRs merged in 31 organisations',
+    title: '53 PRs merged in 32 organisations',
     org: 'Open source',
     year: '2026',
     description: 'Reviewed and merged by maintainers at HuggingFace, pydantic, Black, redis-py, Celery, unsloth, Apache and more, with code shipping on PyPI.',
